@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - SEED</title>
-    
+
     <link rel="stylesheet" href="./assets/pluggins/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/pluggins/remixicon/remixicon.css">
 
@@ -17,6 +17,104 @@
 
 <body class="light mode">
 
+    <!-- Sidebar Start -->
+    <div class="app-sidebar__overlay active" data-bs-toggle="sidebar"></div>
+    <nav class="sidebar open">
+        <header>
+            <div class="image-text">
+                <div class="image">
+                    <img src="./assets/images/brand/logo.png" alt="logo">
+                </div>
+                <div class="text logo-text">
+                    <h1 class="fs-24">SEED</h1>
+                </div>
+            </div>
+        </header>
+        <div class="toggle_icon">
+            <span class="toggle">
+                <i class="ri-arrow-right-s-line"></i>
+            </span>
+        </div>
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links flex gap-5 flex-col ps-0">
+                    <div class="top-menu-links">
+                        <p class="p-l-20 p-b-8 fs-12 title-menu">General</p>
+                        <li class="nav-link">
+                            <a href="dash-admin.html">
+                                <i class="ri-dashboard-fill icon"></i>
+                                <span class="text nav-text">Dashboard</span>
+                                <span class="tooltip">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="assignment.html">
+                                <i class="ri-file-chart-fill icon"></i>
+                                <span class="text nav-text">Student Management</span>
+                                <span class="tooltip">Student Management</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="list.html">
+                                <i class="ri-file-list-2-fill icon"></i>
+                                <span class="text nav-text">User Management</span>
+                                <span class="tooltip">User Management</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="bookmarks.html">
+                                <i class="ri-bookmark-fill icon"></i>
+                                <span class="text nav-text">Appointments</span>
+                                <span class="tooltip">Appointments</span>
+                            </a>
+                        </li>
+                    </div>
+                    <div class="bottom-menu-links">
+                        <p class="p-l-20 p-b-8 fs-12 title-menu">Others</p>
+                        <li class="nav-link">
+                            <a href="settings.html">
+                                <i class="ri-settings-5-fill icon"></i>
+                                <span class="text nav-text">Forms and Files</span>
+                                <span class="tooltip">Forms and Files</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="settings.html">
+                                <i class="ri-settings-5-fill icon"></i>
+                                <span class="text nav-text">Account Settings</span>
+                                <span class="tooltip">Account Settings</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="settings.html">
+                                <i class="ri-settings-5-fill icon"></i>
+                                <span class="text nav-text">Help and Supporrt</span>
+                                <span class="tooltip">Help and Supporrt</span>
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="bottom-content flex justify-content-center">
+
+                <a href="#" class="btn btn-light text-primary">
+                   <div class="p-1 rounded-circle bg-primary">
+                    <i class="ri-shut-down-line text-white fs-20"></i>
+                   </div>
+                    <span class="fs-14">Logout</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar End  -->
+
+    <div class="overlay_section"></div>
+    <main class="home">
+        <h1>Home</h1>
+
+    </main>
 
 
 
@@ -26,7 +124,7 @@
 
     <script src="./assets/pluggins/jquery/jquery-3.6.3.min.js"></script>
     <script src="./assets/pluggins/bootstrap/js/bootstrap.bundle.min.js"></script>
-    
+
     <script src="./assets/pluggins/scrollreveal/scrollreveal.js"></script>
     <script src="./assets/js/index.js"></script>
 
