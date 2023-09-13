@@ -32,9 +32,15 @@
 }
 
 body.dark {
-    --body-color: #18191a;
+    --body-color: #242424;
     --sidebar-color: #242526;
     --primary-color: #3a3b3c;
+    --body-light-primary: #242424;
+    --body-light: #242424;
+
+
+    --shadow-neo: 6px 6px 9px #1e1e1e,
+    -6px -6px 9px #2a2a2a;
 }
 
 @font-face {
@@ -618,6 +624,9 @@ body.dark .home .text {
     gap: 12px;
     flex-shrink: 0;
     border-radius: 8px;
+}
+body.dark .navbar_container .nav-search {
+    box-shadow: var(--shadow-neo);
 }
 
 .navbar_container .nav-search input {

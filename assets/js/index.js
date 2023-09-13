@@ -3,9 +3,9 @@ const body = document.querySelector("body"),
     sidebarToggle = body.querySelector(".app-sidebar__toggle"),
     toggle = body.querySelector(".toggle"),
     searchBtn = body.querySelector(".search-box"),
-    modeSwitch = body.querySelector(".toggle-switch"),
+    modeSwitch = body.querySelectorAll(".toggle-switch"),
     modeText = body.querySelector(".mode-text"),
-    overlaysection  = body.querySelector(".overlay_section ");
+    overlaysection = body.querySelector(".overlay_section ");
 
 
 $(function () {
@@ -84,6 +84,7 @@ $(sidebarToggle, overlaysection).click(function (e) {
 
 $(modeSwitch).click(function (e) {
     e.preventDefault();
+    $(this).find('i').toggleClass('ri-moon-fill ri-sun-fill')
     body.classList.toggle("dark");
     if (body.classList.contains("dark")) {
         localStorage.setItem("dark_mode", "dark");
