@@ -18,7 +18,9 @@
 </head>
 
 <body class="light mode">
-
+    <div class="popup-toggle d-block d-lg-none">
+        <i class="ri-moon-fill fs-25 text-primary"></i>
+    </div>
     <!-- Sidebar Start -->
     <div class="app-sidebar__overlay active" data-bs-toggle="sidebar"></div>
     <nav class="sidebar open">
@@ -38,8 +40,8 @@
             </span>
         </div>
         <div class="menu-bar">
-            <div class="menu">
-                <ul class="menu-links flex gap-5 flex-col ps-0">
+            <div class="menu h-full">
+                <ul class="menu-links flex gap-5 h-full flex-col ps-0 justify-content-evenly">
                     <div class="top-menu-links">
                         <p class="p-l-20 p-b-8 fs-12 title-menu">General</p>
                         <li class="nav-link">
@@ -119,31 +121,57 @@
 
 
         <!-- NAVBAR START  -->
-        <nav class="navbar navbar-expand-lg bg-light">
+        <nav class="navbar bg-light py-4">
             <div class="container-fluid">
                 <div class="navbar_container navbar-menu-wrapper d-flex align-items-center">
                     <a aria-label="hide-sidebar" class="d-lg-none app-sidebar__toggle" data-bs-toggle="sidebar"
                         href="javascript:void(0);">
-                        <i class="ri-menu-4-line text-white"></i>
+                        <i class="ri-menu-2-line text-primary fs-25"></i>
                     </a>
-                </div>
-                <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                </form>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <form class="d-flex d-none d-md-block" role="search">
+                        <div class="nav-search">
+                            <i class="ri-search-line fs-25"></i>
+                            <input class="" type="search" placeholder="Search" aria-label="Search">
+                        </div>
+                    </form>
+                    <ul class="navbar-nav mb-0 flex-row gap-4 flex-m">
+                        <li class="nav-item d-block d-md-none">
+
+                            <div class="dropdown d-block d-lg-none position-static">
+                                <a href="javascript:void(0);" class="nav-link icon" data-bs-toggle="dropdown">
+                                    <i class="ri-search-line fs-25 text-primary"></i>
+                                </a>
+                                <div class="dropdown-menu header-search dropdown-menu-start">
+                                    <div class="input-group w-100 p-2">
+                                        <input type="text" class="form-control" placeholder="Search....">
+                                        <div class="input-group-text btn btn-primary">
+                                            <i class="ri-search-line fs-25"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item d-none d-lg-block">
+                            <i class="ri-moon-fill fs-25 text-primary"></i>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <div class="pos-relative">
+                                <i class="ri-notification-4-fill fs-25 not text-primary"></i>
+                                <div class="nav-notification"></div>
+                            </div>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled">Disabled</a>
+                        <li class="nav-item gap-2 flex-m">
+                            <a class="nav-link">
+                                <div class="pro-pic rounded-circle">
+                                    <img src="./assets/images/user.png" alt="">
+                                </div>
+                            </a>
+                            <div class="pro-data flex-col flex-c d-none d-md-flex">
+                                <p class="pro-name fs-14 fw-500">Harris M</p>
+                                <p class="pro-pos fs-12">Admin</p>
+                            </div>
                         </li>
                     </ul>
-
                 </div>
             </div>
         </nav>
@@ -151,7 +179,7 @@
 
 
         <!-- Main Content Start  -->
-        <div class="content h-screen">
+        <div class="content pb-4">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
@@ -159,7 +187,7 @@
 
 
 
-                            
+
                         </div>
                     </div>
                 </div>

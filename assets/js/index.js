@@ -4,7 +4,8 @@ const body = document.querySelector("body"),
     toggle = body.querySelector(".toggle"),
     searchBtn = body.querySelector(".search-box"),
     modeSwitch = body.querySelector(".toggle-switch"),
-    modeText = body.querySelector(".mode-text");
+    modeText = body.querySelector(".mode-text"),
+    overlaysection  = body.querySelector(".overlay_section ");
 
 
 $(function () {
@@ -22,8 +23,9 @@ $(function () {
 
 
     var side_close = localStorage.getItem("side_close");
-    if (side_close == "open") {
-        $(sidebar).removeClass("close");
+    console.log(side_close);
+    if (side_close == "close") {
+        $(sidebar).removeClass("open");
         $(sidebar).addClass(side_close);
     }
     var dark_mode = localStorage.getItem("dark_mode");
@@ -50,14 +52,14 @@ $(toggle).click(function (e) {
         $(sidebar).addClass("open");
         localStorage.setItem("side_close", "open");
         var side_close = localStorage.getItem("side_close");
-        // console.log(side_close);
+        console.log(side_close);
     } else {
         $(sidebar).addClass("close");
         $(sidebar).removeClass("open");
         $(body).removeClass("sidenav-toggled");
         localStorage.setItem("side_close", "close");
         var side_close = localStorage.getItem("side_close");
-        // console.log(side_close);
+        console.log(side_close);
     }
 });
 $(body).click(function (e) {
@@ -67,7 +69,7 @@ $(body).click(function (e) {
         $(".overlay_section").removeClass("overlay_home");
     }
 });
-$(sidebarToggle).click(function (e) {
+$(sidebarToggle, overlaysection).click(function (e) {
     e.preventDefault();
     if ($(body).hasClass("sidenav-toggled")) {
         $(body).removeClass("sidenav-toggled");
