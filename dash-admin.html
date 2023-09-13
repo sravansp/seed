@@ -7,6 +7,8 @@
     <title>Admin Dashboard - SEED</title>
 
     <link rel="stylesheet" href="./assets/pluggins/bootstrap/css/bootstrap.min.css">
+
+    <!-- Icon Used: Remix Icon | https://remixicon.com/-->
     <link rel="stylesheet" href="./assets/pluggins/remixicon/remixicon.css">
 
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -42,28 +44,28 @@
                         <p class="p-l-20 p-b-8 fs-12 title-menu">General</p>
                         <li class="nav-link">
                             <a href="dash-admin.html">
-                                <i class="ri-dashboard-fill icon"></i>
+                                <i class="ri-home-4-fill icon"></i>
                                 <span class="text nav-text">Dashboard</span>
                                 <span class="tooltip">Dashboard</span>
                             </a>
                         </li>
                         <li class="nav-link">
                             <a href="assignment.html">
-                                <i class="ri-file-chart-fill icon"></i>
+                                <i class="ri-team-fill icon"></i>
                                 <span class="text nav-text">Student Management</span>
                                 <span class="tooltip">Student Management</span>
                             </a>
                         </li>
                         <li class="nav-link">
                             <a href="list.html">
-                                <i class="ri-file-list-2-fill icon"></i>
+                                <i class="ri-user-2-fill icon"></i>
                                 <span class="text nav-text">User Management</span>
                                 <span class="tooltip">User Management</span>
                             </a>
                         </li>
                         <li class="nav-link">
                             <a href="bookmarks.html">
-                                <i class="ri-bookmark-fill icon"></i>
+                                <i class="ri-calendar-fill icon"></i>
                                 <span class="text nav-text">Appointments</span>
                                 <span class="tooltip">Appointments</span>
                             </a>
@@ -73,7 +75,7 @@
                         <p class="p-l-20 p-b-8 fs-12 title-menu">Others</p>
                         <li class="nav-link">
                             <a href="settings.html">
-                                <i class="ri-settings-5-fill icon"></i>
+                                <i class="ri-file-copy-2-fill icon"></i>
                                 <span class="text nav-text">Forms and Files</span>
                                 <span class="tooltip">Forms and Files</span>
                             </a>
@@ -87,7 +89,7 @@
                         </li>
                         <li class="nav-link">
                             <a href="settings.html">
-                                <i class="ri-settings-5-fill icon"></i>
+                                <i class="ri-customer-service-2-fill icon"></i>
                                 <span class="text nav-text">Help and Supporrt</span>
                                 <span class="tooltip">Help and Supporrt</span>
                             </a>
@@ -97,13 +99,15 @@
             </div>
 
             <div class="bottom-content flex justify-content-center">
-
+                <!-- <li class="nav-link"> -->
                 <a href="#" class="btn btn-light text-primary">
-                   <div class="p-1 rounded-circle bg-primary">
-                    <i class="ri-shut-down-line text-white fs-20"></i>
-                   </div>
-                    <span class="fs-14">Logout</span>
+                    <div class="p-1 rounded-circle bg-primary">
+                        <i class="ri-shut-down-line text-white fs-20"></i>
+                    </div>
+                    <span class="text nav-text text-primary">Logout</span>
+                    <!-- <span class="tooltip">Logout</span> -->
                 </a>
+                <!-- </li> -->
             </div>
         </div>
     </nav>
@@ -112,7 +116,55 @@
 
     <div class="overlay_section"></div>
     <main class="home">
-        <h1>Home</h1>
+
+
+        <!-- NAVBAR START  -->
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+                <div class="navbar_container navbar-menu-wrapper d-flex align-items-center">
+                    <a aria-label="hide-sidebar" class="d-lg-none app-sidebar__toggle" data-bs-toggle="sidebar"
+                        href="javascript:void(0);">
+                        <i class="ri-menu-4-line text-white"></i>
+                    </a>
+                </div>
+                <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                </form>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Disabled</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+
+
+        <!-- Main Content Start  -->
+        <div class="content h-screen">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="wrapper-primary-light bg-primary-light h-screen w-full">
+
+
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </main>
 
