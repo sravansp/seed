@@ -10,6 +10,7 @@
     --main-primary: #30D5C7;
 
     --primary-color: #4A9F95;
+    --bg-primary-color: #4A9F95;
     --secondary-color: #F2F2F2;
     --btn-color: var(--primary-color);
 
@@ -17,8 +18,9 @@
 
     /* Shadow  */
     --shadow-neo: 2.17893px 2.17893px 6.5368px 0px rgba(174, 174, 192, 0.40), -2.17893px -2.17893px 6.5368px 0px #FFF;
-    /* --shadow-neo: 6px 6px 9px #becbca,
-    -6px -6px 9px #ffffff; */
+
+    --shadow-neo-inset: 6px 6px 9px #becbca,
+    -6px -6px 9px #ffffff;
 
     --shadow-b: 0px 5px 8px 0px rgba(0, 101, 83, 0.08), 0px 2px 0px 0px rgba(130, 188, 171, 0.08);
 
@@ -32,15 +34,18 @@
 }
 
 body.dark {
-    --body-color: #242424;
-    --sidebar-color: #242526;
-    --primary-color: #3a3b3c;
-    --body-light-primary: #242424;
-    --body-light: #242424;
+    --body-color: #1a2826;
+    --sidebar-color: #1a2826;
+    --primary-color: #4A9F95;
+    --bg-primary-color: #1a2826;
+    --body-light-primary: #1a2826;
+    --body-light: #1a2826;
 
 
-    --shadow-neo: 6px 6px 9px #1e1e1e,
-    -6px -6px 9px #2a2a2a;
+    --shadow-neo: 5px 5px 8px #15201e,
+    -5px -5px 8px #1f302e;
+    --shadow-neo-inset: inset 5px 5px 8px #15201e,
+    inset -5px -5px 8px #1f302e;
 }
 
 @font-face {
@@ -212,13 +217,24 @@ a {
 }
 
 .sidebar li:not(.active):hover {
-    background-color: var(--primary-color);
+    background-color: var(--bg-primary-color);
     transition: var(--tran-03);
 }
 
 .sidebar li.active {
-    background-color: var(--primary-color);
+    background-color: var(--bg-primary-color);
     transition: var(--tran-03);
+}
+
+body.dark .sidebar li.active {
+    /* background-color: var(--primary-color); */
+    transition: var(--tran-03);
+    box-shadow: var(--shadow-neo-inset);
+}
+body.dark .sidebar li:not(.active):hover  {
+    /* background-color: var(--primary-color); */
+    transition: var(--tran-03);
+    box-shadow: var(--shadow-neo-inset);
 }
 
 .sidebar header .image,
@@ -458,7 +474,7 @@ body.dark .sidebar .toggle_icon .toggle {
 
 body.dark .sidebar li a:hover .icon,
 body.dark .sidebar li a:hover .text {
-    color: var(--text-color);
+    color: var(--text-white);
 }
 
 .sidebar .menu-bar {
@@ -626,7 +642,7 @@ body.dark .home .text {
     border-radius: 8px;
 }
 body.dark .navbar_container .nav-search {
-    box-shadow: var(--shadow-neo);
+    box-shadow: var(--shadow-neo-inset);
 }
 
 .navbar_container .nav-search input {
