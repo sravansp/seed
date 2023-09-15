@@ -118,6 +118,9 @@ input {
 .bg-primary-light {
     background-color: var(--body-light-primary) !important;
 }
+.bg-light {
+    background-color: var(--body-light);
+}
 
 .wrapper-primary-light {
     border-radius: 14px;
