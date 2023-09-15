@@ -4,9 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Components - SEED</title>
+    <title>Admin Dashboard - SEED</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="./assets/pluggins/bootstrap/css/bootstrap.min.css">
+
+    <!-- Icon Used: Remix Icon | https://remixicon.com/-->
     <link rel="stylesheet" href="./assets/pluggins/remixicon/remixicon.css">
 
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -16,72 +25,344 @@
 </head>
 
 <body class="light mode">
+    <div class="popup-toggle toggle-switch d-block d-lg-none">
+        <i class="ri-moon-fill fs-25 text-primary"></i>
+    </div>
+    <!-- Sidebar Start -->
+    <div class="app-sidebar__overlay active" data-bs-toggle="sidebar"></div>
+    <nav class="sidebar open">
+        <header>
+            <div class="image-text">
+                <div class="image">
+                    <img src="./assets/images/brand/logo.png" alt="logo">
+                </div>
+                <div class="text logo-text">
+                    <h1 class="fs-24">SEED</h1>
+                </div>
+            </div>
+        </header>
+        <div class="toggle_icon">
+            <span class="toggle">
+                <i class="ri-arrow-right-s-line"></i>
+            </span>
+        </div>
+        <div class="menu-bar">
+            <div class="menu h-full">
+                <ul class="menu-links flex gap-5 h-full flex-col ps-0 justify-content-evenly">
+                    <div class="top-menu-links">
+                        <p class="p-l-20 p-b-8 fs-12 title-menu">General</p>
+                        <li class="nav-link">
+                            <a href="dash-admin.html">
+                                <i class="ri-home-4-fill icon"></i>
+                                <span class="text nav-text">Dashboard</span>
+                                <span class="tooltip">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="intake-form.html">
+                                <i class="ri-team-fill icon"></i>
+                                <span class="text nav-text">Student Management</span>
+                                <span class="tooltip">Student Management</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="list.html">
+                                <i class="ri-user-2-fill icon"></i>
+                                <span class="text nav-text">User Management</span>
+                                <span class="tooltip">User Management</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="bookmarks.html">
+                                <i class="ri-calendar-fill icon"></i>
+                                <span class="text nav-text">Appointments</span>
+                                <span class="tooltip">Appointments</span>
+                            </a>
+                        </li>
+                    </div>
+                    <div class="bottom-menu-links">
+                        <p class="p-l-20 p-b-8 fs-12 title-menu">Others</p>
+                        <li class="nav-link">
+                            <a href="settings.html">
+                                <i class="ri-file-copy-2-fill icon"></i>
+                                <span class="text nav-text">Forms and Files</span>
+                                <span class="tooltip">Forms and Files</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="settings.html">
+                                <i class="ri-settings-5-fill icon"></i>
+                                <span class="text nav-text">Account Settings</span>
+                                <span class="tooltip">Account Settings</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="settings.html">
+                                <i class="ri-customer-service-2-fill icon"></i>
+                                <span class="text nav-text">Help and Supporrt</span>
+                                <span class="tooltip">Help and Supporrt</span>
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
 
-    <main>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
+            <div class="bottom-content flex justify-content-center">
+                <!-- <li class="nav-link"> -->
+                <a href="#" class="btn btn-light text-primary">
+                    <div class="p-1 rounded-circle bg-primary">
+                        <i class="ri-shut-down-line text-white fs-20"></i>
+                    </div>
+                    <span class="text nav-text text-primary">Logout</span>
+                    <!-- <span class="tooltip">Logout</span> -->
+                </a>
+                <!-- </li> -->
+            </div>
+        </div>
+    </nav>
+    <!-- Sidebar End  -->
+
+    <div class="overlay_section"></div>
+    <main class="home">
 
 
-                    <div class="component-section mt-5">
+        <!-- NAVBAR START  -->
+        <nav class="navbar py-4">
+            <div class="container-fluid">
+                <div class="navbar_container navbar-menu-wrapper d-flex align-items-center">
+                    <a aria-label="hide-sidebar" class="d-lg-none app-sidebar__toggle" data-bs-toggle="sidebar"
+                        href="javascript:void(0);">
+                        <i class="ri-menu-2-line text-primary fs-25"></i>
+                    </a>
+                    <form class="d-flex d-none d-md-block" role="search">
+                        <div class="nav-search">
+                            <i class="ri-search-line fs-25"></i>
+                            <input class="" type="search" placeholder="Search" aria-label="Search">
+                        </div>
+                    </form>
+                    <ul class="navbar-nav mb-0 flex-row gap-4 flex-m">
+                        <li class="nav-item d-block d-md-none">
 
-                        <!-- RADIO BUTTON  -->
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h3>Radio button</h3>
+                            <div class="dropdown d-block d-lg-none position-static">
+                                <a href="javascript:void(0);" class="nav-link icon" data-bs-toggle="dropdown">
+                                    <i class="ri-search-line fs-25 text-primary"></i>
+                                </a>
+                                <div class="dropdown-menu header-search dropdown-menu-start">
+                                    <div class="input-group w-100 p-2">
+                                        <input type="text" class="form-control" placeholder="Search....">
+                                        <div class="input-group-text btn btn-primary">
+                                            <i class="ri-search-line fs-25"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item d-none d-lg-block">
+                            <div class="toggle-switch">
+                                <i class="ri-moon-fill fs-25 text-primary"></i>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="pos-relative">
+                                <i class="ri-notification-4-fill fs-25 not text-primary"></i>
+                                <div class="nav-notification"></div>
+                            </div>
+                        </li>
+                        <li class="nav-item gap-2 flex-m">
+                            <a class="nav-link">
+                                <div class="pro-pic rounded-circle">
+                                    <img src="./assets/images/user.png" alt="">
+                                </div>
+                            </a>
+                            <div class="pro-data flex-col flex-c d-none d-md-flex">
+                                <p class="pro-name fs-14 fw-500">Harris M</p>
+                                <p class="pro-pos fs-12">Admin</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-                                <div class="flex gap-3">
+
+
+        <!-- Main Content Start  -->
+        <div class="content pb-4">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+
+
+                        <div class="component-section mt-5 p-5">
+
+                            <!-- RADIO BUTTON  -->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3>Radio button</h3>
+
+                                    <div class="flex gap-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault1">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                Default radio
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault2" checked>
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                Default checked radio
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <!-- CHECK BOX -->
+                            <div class="row mt-3">
+                                <div class="col-md-12">
+                                    <h3>Check Box</h3>
+
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                            id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            Default radio
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Default checkbox
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                            id="flexRadioDefault2" checked>
-                                        <label class="form-check-label" for="flexRadioDefault2">
-                                            Default checked radio
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                                            checked>
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Checked checkbox
                                         </label>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- CHECK BOX -->
-                        <div class="row mt-3">
-                            <div class="col-md-12">
-                                <h3>Check Box</h3>
 
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        Default checkbox
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
-                                        checked>
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                        Checked checkbox
-                                    </label>
+
+                            <!-- BUTTONS -->
+                            <div class="row mt-3">
+                                <div class="col-md-12">
+                                    <h3>Buttons</h3>
+
+                                    <div class="button-group flex gap-3">
+                                        <button type="button" class="btn btn-light">Button Light</button>
+                                        <button type="button" class="btn btn-primary">Button Primary</button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                         <!-- BUTTONS -->
-                         <div class="row mt-3">
-                            <div class="col-md-12">
-                                <h3>Buttons</h3>
 
-                                <button type="button" class="btn btn-light">Button Light</button>
-                                <button type="button" class="btn btn-primary">Button Primary</button>
+
+                            <!-- INPUT AND TEXT AREA -->
+                            <div class="row mt-3">
+                                <div class="col-md-12">
+                                    <h3>INPUT AND TEXT AREA</h3>
+
+                                    <div class="input-group flex-nowrap mb-3">
+                                        <span class="input-group-text" id="addon-wrapping">1.</span>
+                                        <input type="text" class="form-control" placeholder="Username"
+                                            aria-label="Username" aria-describedby="addon-wrapping">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                                            placeholder="name@example.com">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlTextarea1" class="form-label">Example
+                                            textarea</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1"
+                                            rows="3"></textarea>
+                                    </div>
+                                </div>
                             </div>
+
+
+
+                            <!-- ACCORDIAN -->
+                            <div class="row mt-3">
+                                <div class="col-md-12">
+                                    <h3>ACCORDIAN</h3>
+
+                                    <div class="accordion flex-col gap-4" id="accordionPanelsStayOpenExample">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                                    aria-controls="panelsStayOpen-collapseOne">
+                                                    Communication Difficulties
+                                                </button>
+                                            </h2>
+                                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                                                aria-labelledby="panelsStayOpen-headingOne">
+                                                <div class="accordion-body">
+                                                    <strong>This is the first item's accordion body.</strong> It is shown by
+                                                    default, until the collapse plugin adds the appropriate classes that we use
+                                                    to style each element. These classes control the overall appearance, as well
+                                                    as the showing and hiding via CSS transitions. You can modify any of this
+                                                    with custom CSS or overriding our default variables. It's also worth noting
+                                                    that just about any HTML can go within the <code>.accordion-body</code>,
+                                                    though the transition does limit overflow.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
+                                                    aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                                    Hearing and Vision Impairment <span></span>
+                                                </button>
+                                            </h2>
+                                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                                                aria-labelledby="panelsStayOpen-headingTwo">
+                                                <div class="accordion-body">
+                                                    <strong>This is the second item's accordion body.</strong> It is hidden by
+                                                    default, until the collapse plugin adds the appropriate classes that we use
+                                                    to style each element. These classes control the overall appearance, as well
+                                                    as the showing and hiding via CSS transitions. You can modify any of this
+                                                    with custom CSS or overriding our default variables. It's also worth noting
+                                                    that just about any HTML can go within the <code>.accordion-body</code>,
+                                                    though the transition does limit overflow.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
+                                                    aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                                    Academic Difficulties
+                                                </button>
+                                            </h2>
+                                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                                                aria-labelledby="panelsStayOpen-headingThree">
+                                                <div class="accordion-body">
+                                                    <strong>This is the third item's accordion body.</strong> It is hidden by
+                                                    default, until the collapse plugin adds the appropriate classes that we use
+                                                    to style each element. These classes control the overall appearance, as well
+                                                    as the showing and hiding via CSS transitions. You can modify any of this
+                                                    with custom CSS or overriding our default variables. It's also worth noting
+                                                    that just about any HTML can go within the <code>.accordion-body</code>,
+                                                    though the transition does limit overflow.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            
+
+
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
@@ -89,6 +370,12 @@
 
 
 
+    <div class="preloader">
+        <div class="loader">
+            <img src="./assets/images/brand/logo_org.png" alt="">
+            <span></span>
+        </div>
+    </div>
 
 
 
