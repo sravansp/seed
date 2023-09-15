@@ -80,6 +80,31 @@ p {
 a {
     text-decoration: none !important;
 }
+input {
+    outline: none;
+    border: none;
+}
+
+
+
+::-webkit-scrollbar-track
+{
+	/* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 4px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: var(--bg-main-primary);
+	/* border: 2px solid #555555; */
+}
+
 
 /* Default Classes  */
 .text-primary {
@@ -112,138 +137,6 @@ a {
 
 
 
-
-/* BS5 Form Classes */
-.form-control:focus {
-    color: #212529;
-    background-color: #fff;
-    border-color: var(--primary-color);
-    outline: 0;
-    box-shadow: none;
-}
-
-.form-check-input:checked {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-}
-
-.form-check-input:focus {
-    border-color: var(--primary-color);
-    outline: 0;
-    box-shadow: none;
-}
-
-.form-check-input {
-    width: 1.3em;
-    height: 1.3em;
-    margin-top: 0.05em;
-}
-
-.input-group-text {
-    background-color: #fff;
-}
-
-.btn {
-    height: 50px;
-    border-radius: 7px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-}
-
-.btn-primary {
-    --bs-btn-color: #fff;
-    --bs-btn-bg: var(--primary-color);
-    --bs-btn-border-color: var(--primary-color);
-    --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: var(--primary-color) !important;
-    --bs-btn-hover-border-color: var(--primary-color);
-    --bs-btn-focus-shadow-rgb: 49, 132, 253;
-    --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: var(--primary-color);
-    --bs-btn-active-border-color: var(--primary-color);
-    --bs-btn-active-shadow: inset 5px 5px 6px #3d847c, inset -5px -5px 6px #57baae;
-    --bs-btn-disabled-color: #fff;
-    --bs-btn-disabled-bg: var(--primary-color);
-    --bs-btn-disabled-border-color: var(--primary-color);
-}
-
-.btn-primary:active {
-    box-shadow: inset 6px 6px 12px #3e867d,
-    inset -6px -6px 12px #56b8ad;
-}
-
-.btn-light {
-    --bs-btn-color: #000;
-    --bs-btn-bg: var(--secondary-color);
-    --bs-btn-border-color: var(--secondary-color);
-    --bs-btn-hover-color: #000;
-    --bs-btn-hover-bg: var(--secondary-color);
-    --bs-btn-hover-border-color: var(--primary-color);
-    --bs-btn-focus-shadow-rgb: 211, 212, 213;
-    --bs-btn-active-color: #000;
-    --bs-btn-active-bg: var(--secondary-color);
-    --bs-btn-active-border-color: var(--secondary-color);
-    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-    --bs-btn-disabled-color: #000;
-    --bs-btn-disabled-bg: var(--secondary-color);
-    --bs-btn-disabled-border-color: var(--secondary-color);
-}
-
-.btn-light:active {
-    box-shadow: inset 6px 6px 12px #cbcbcb,
-    inset -6px -6px 12px #ffffff;
-}
-
-
-.accordion-item:first-of-type {
-    border-radius: 7px;
-}
-.accordion-item {
-    color: var(--text-black);
-    background-color: transparent;
-    border: none;
-    border-radius: 7px;
-}
-.accordion-item:first-of-type .accordion-button {
-    border-radius: 7px;
-}
-
-button:focus:not(:focus-visible) {
-    outline: 0;
-}
-.accordion-button{
-    border-radius: 7px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    background-color: var(--body-light);
-    color: var(--primary-color);
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.accordion-button:focus {
-    z-index: 3;
-    border: none;
-    border-color: none;
-    outline: 0;
-    box-shadow: none;
-}
-.accordion-button:not(.collapsed) {
-    color: var(--primary-color);
-    background-color: var(--body-light);
-    box-shadow: none;
-}
-.accordion-button:not(.collapsed)::after {
-    background-image: var(--bs-accordion-btn-icon);
-}
-
-.accordion-body {
-    margin-top: 12px;
-    background-color: var(--body-light);
-    border-radius: 7px;
-}
 
 /* ===== Sidebar ===== */
 .sidebar {

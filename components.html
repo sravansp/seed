@@ -18,8 +18,10 @@
     <!-- Icon Used: Remix Icon | https://remixicon.com/-->
     <link rel="stylesheet" href="./assets/pluggins/remixicon/remixicon.css">
 
+    <link rel="stylesheet" href="./assets/css/pluggins.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/util.css">
+
 
 
 </head>
@@ -204,14 +206,14 @@
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="flexRadioDefault"
                                                 id="flexRadioDefault1">
-                                            <label class="form-check-label" for="flexRadioDefault1">
+                                            <label class="form-check-label p-l-10" for="flexRadioDefault1">
                                                 Default radio
                                             </label>
                                         </div>
                                         <div class="form-check">
                                             <input class="form-check-input" type="radio" name="flexRadioDefault"
                                                 id="flexRadioDefault2" checked>
-                                            <label class="form-check-label" for="flexRadioDefault2">
+                                            <label class="form-check-label p-l-10" for="flexRadioDefault2">
                                                 Default checked radio
                                             </label>
                                         </div>
@@ -228,14 +230,14 @@
 
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                        <label class="form-check-label" for="flexCheckDefault">
+                                        <label class="form-check-label p-l-10" for="flexCheckDefault">
                                             Default checkbox
                                         </label>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
                                             checked>
-                                        <label class="form-check-label" for="flexCheckChecked">
+                                        <label class="form-check-label p-l-10" for="flexCheckChecked">
                                             Checked checkbox
                                         </label>
                                     </div>
@@ -284,6 +286,45 @@
 
 
 
+                            <!-- SELECT2 Select Box -->
+                            <div class="row mt-3">
+                                <div class="col-md-12">
+                                    <h3>SELECT2 Select Box</h3>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="form-label"> Company</label>
+                                            <select class="form-control select2-select select2-show-search form-select"
+                                                data-placeholder="Choose one">
+                                                <option label="Choose one"></option>
+                                                <option value="AZ">Arizona</option>
+                                                <option value="CO">Colorado</option>
+                                                <option value="ID">Idaho</option>
+                                                <option value="MT">Montana</option>
+                                                <option value="NE">Nebraska</option>
+                                                <option value="NM">New Mexico</option>
+                                                <option value="ND">North Dakota</option>
+                                                <option value="UT">Utah</option>
+                                                <option value="WY">Wyoming</option>
+                                                <option value="AL">Alabama</option>
+                                                <option value="AR">Arkansas</option>
+                                                <option value="IL">Illinois</option>
+                                                <option value="IA">Iowa</option>
+                                                <option value="KS">Kansas</option>
+                                                <option value="KY">Kentucky</option>
+                                                <option value="LA">Louisiana</option>
+                                                <option value="MN">Minnesota</option>
+                                                <option value="MS">Mississippi</option>
+                                                <option value="MO">Missouri</option>
+                                                <option value="OK">Oklahoma</option>
+                                                <option value="SD">South Dakota</option>
+                                                <option value="TX">Texas</option>
+                                                <option value="TN">Tennessee</option>
+                                                <option value="WI">Wisconsin</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             <!-- ACCORDIAN -->
                             <div class="row mt-3">
                                 <div class="col-md-12">
@@ -298,15 +339,22 @@
                                                     Communication Difficulties
                                                 </button>
                                             </h2>
-                                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                                            <div id="panelsStayOpen-collapseOne"
+                                                class="accordion-collapse collapse show"
                                                 aria-labelledby="panelsStayOpen-headingOne">
                                                 <div class="accordion-body">
-                                                    <strong>This is the first item's accordion body.</strong> It is shown by
-                                                    default, until the collapse plugin adds the appropriate classes that we use
-                                                    to style each element. These classes control the overall appearance, as well
-                                                    as the showing and hiding via CSS transitions. You can modify any of this
-                                                    with custom CSS or overriding our default variables. It's also worth noting
-                                                    that just about any HTML can go within the <code>.accordion-body</code>,
+                                                    <strong>This is the first item's accordion body.</strong> It is
+                                                    shown by
+                                                    default, until the collapse plugin adds the appropriate classes that
+                                                    we use
+                                                    to style each element. These classes control the overall appearance,
+                                                    as well
+                                                    as the showing and hiding via CSS transitions. You can modify any of
+                                                    this
+                                                    with custom CSS or overriding our default variables. It's also worth
+                                                    noting
+                                                    that just about any HTML can go within the
+                                                    <code>.accordion-body</code>,
                                                     though the transition does limit overflow.
                                                 </div>
                                             </div>
@@ -314,20 +362,27 @@
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
                                                 <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
-                                                    aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                                    aria-controls="panelsStayOpen-collapseTwo">
                                                     Hearing and Vision Impairment <span></span>
                                                 </button>
                                             </h2>
                                             <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
                                                 aria-labelledby="panelsStayOpen-headingTwo">
                                                 <div class="accordion-body">
-                                                    <strong>This is the second item's accordion body.</strong> It is hidden by
-                                                    default, until the collapse plugin adds the appropriate classes that we use
-                                                    to style each element. These classes control the overall appearance, as well
-                                                    as the showing and hiding via CSS transitions. You can modify any of this
-                                                    with custom CSS or overriding our default variables. It's also worth noting
-                                                    that just about any HTML can go within the <code>.accordion-body</code>,
+                                                    <strong>This is the second item's accordion body.</strong> It is
+                                                    hidden by
+                                                    default, until the collapse plugin adds the appropriate classes that
+                                                    we use
+                                                    to style each element. These classes control the overall appearance,
+                                                    as well
+                                                    as the showing and hiding via CSS transitions. You can modify any of
+                                                    this
+                                                    with custom CSS or overriding our default variables. It's also worth
+                                                    noting
+                                                    that just about any HTML can go within the
+                                                    <code>.accordion-body</code>,
                                                     though the transition does limit overflow.
                                                 </div>
                                             </div>
@@ -335,20 +390,27 @@
                                         <div class="accordion-item">
                                             <h2 class="accordion-header" id="panelsStayOpen-headingThree">
                                                 <button class="accordion-button collapsed" type="button"
-                                                    data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
-                                                    aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                                    aria-controls="panelsStayOpen-collapseThree">
                                                     Academic Difficulties
                                                 </button>
                                             </h2>
                                             <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
                                                 aria-labelledby="panelsStayOpen-headingThree">
                                                 <div class="accordion-body">
-                                                    <strong>This is the third item's accordion body.</strong> It is hidden by
-                                                    default, until the collapse plugin adds the appropriate classes that we use
-                                                    to style each element. These classes control the overall appearance, as well
-                                                    as the showing and hiding via CSS transitions. You can modify any of this
-                                                    with custom CSS or overriding our default variables. It's also worth noting
-                                                    that just about any HTML can go within the <code>.accordion-body</code>,
+                                                    <strong>This is the third item's accordion body.</strong> It is
+                                                    hidden by
+                                                    default, until the collapse plugin adds the appropriate classes that
+                                                    we use
+                                                    to style each element. These classes control the overall appearance,
+                                                    as well
+                                                    as the showing and hiding via CSS transitions. You can modify any of
+                                                    this
+                                                    with custom CSS or overriding our default variables. It's also worth
+                                                    noting
+                                                    that just about any HTML can go within the
+                                                    <code>.accordion-body</code>,
                                                     though the transition does limit overflow.
                                                 </div>
                                             </div>
@@ -358,7 +420,50 @@
                             </div>
 
 
-                            
+                            <!-- SAMPLE FORM SECTION  -->
+                            <div class="row mt-3">
+                                <h3>SAMPLE FORM SECTION </h3>
+                                <div class="col-12 col-md-6">
+                                    <p class="fs-16">Question Name</p>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="flex gap-3 flex-wrap mb-3 fs-14">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadio1">
+                                            <label class="form-check-label p-l-10" for="flexRadio1">
+                                                Default radio
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadio2">
+                                            <label class="form-check-label p-l-10" for="flexRadio2">
+                                                Default radio
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadio3">
+                                            <label class="form-check-label p-l-10" for="flexRadio3">
+                                                Default radio
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadio4" checked>
+                                            <label class="form-check-label p-l-10" for="flexRadio4">
+                                                Default checked radio
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <!-- <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label> -->
+                                        <textarea class="form-control fs-14" placeholder="Small Description" id="exampleFormControlTextarea1"
+                                            rows="3"></textarea>
+                                    </div>
+                                </div>
+                            </div>
 
 
                         </div>
@@ -383,6 +488,7 @@
     <script src="./assets/pluggins/jquery/jquery-3.6.3.min.js"></script>
     <script src="./assets/pluggins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+    <script src="./assets/pluggins/select2/js/select2.full.min.js"></script>
     <script src="./assets/pluggins/scrollreveal/scrollreveal.js"></script>
     <script src="./assets/js/index.js"></script>
 
