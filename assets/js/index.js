@@ -8,9 +8,9 @@ const body = document.querySelector("body"),
     overlaysection = body.querySelector(".overlay_section ");
 
 $(window).on('load', function () {
-    setTimeout(function () { // allowing 3 secs to fade out loader
+    // setTimeout(function () { // allowing 3 secs to fade out loader
         $('.preloader').fadeOut('slow');
-    }, 500);
+    // }, 500);
 });
 
  //______Select2
