@@ -692,6 +692,13 @@
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
+.form-label {
+    font-size: var(--text-size2) !important;
+    margin-bottom: 1.5rem;
+}
+.form-check-label {
+    color: var(--text-black) !important;
+}
 .form-check-input:checked {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
@@ -742,6 +749,8 @@
     --bs-btn-disabled-color: #fff;
     --bs-btn-disabled-bg: var(--primary-color);
     --bs-btn-disabled-border-color: var(--primary-color);
+    --bs-btn-focus-box-shadow: inset 6px 6px 12px #3e867d,
+    inset -6px -6px 12px #56b8ad;
 }
 
 .btn-primary:active {
@@ -764,6 +773,8 @@
     --bs-btn-disabled-color: #000;
     --bs-btn-disabled-bg: var(--secondary-color);
     --bs-btn-disabled-border-color: var(--secondary-color);
+    --bs-btn-focus-box-shadow: inset 6px 6px 12px #cbcbcb,
+        inset -6px -6px 12px #ffffff;
 }
 
 .btn-light {
@@ -828,3 +839,42 @@ button:focus:not(:focus-visible) {
     background-color: var(--body-light);
     border-radius: 7px;
 }
+
+
+
+
+
+
+
+/* ================Responsive=====================  */
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    :root {
+        --p-wpl: 10px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    :root {
+        --p-wpl: 35px;
+    }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    :root {
+        --p-wpl: 64px;
+    }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {}
