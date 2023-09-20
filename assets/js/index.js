@@ -120,6 +120,10 @@ function formWizard() {
     $(document).ready(function () {
         // click on next button
         $('.form-wizard-next-btn').click(function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+              });
             var parentFieldset = $(this).parents('.wizard-fieldset');
             var currentActiveStep = $(this).parents('.form-wizard').find('.form-wizard-steps .active');
             var next = $(this);

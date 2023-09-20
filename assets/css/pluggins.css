@@ -694,7 +694,7 @@
 
 .form-label {
     font-size: var(--text-size2) !important;
-    margin-bottom: 1.5rem;
+    /* margin-bottom: 1.5rem; */
 }
 .form-check-label {
     color: var(--text-black) !important;

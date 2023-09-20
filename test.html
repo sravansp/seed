@@ -1,11 +1,1458 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <p>hfhgfh</p>
+    <fieldset class="wizard-fieldset show">
+        <div class="inner-wrapper w-full h-full bg-light bradius-7 mb-3 p-4">
+            <div class="row">
+                <div class="col-12">
+                    <p class="fs-16 mb-4 text-black">
+                        Present Problems Noted By Parents
+                    </p>
+                    <div class="flex gap-3 flex-wrap mb-3 fs-14">
+                        <div class="input-group flex-nowrap mb-3">
+                            <span class="input-group-text" id="addon-wrapping">1.</span>
+                            <input type="text" class="form-control" placeholder="" aria-label="Username"
+                                aria-describedby="addon-wrapping" />
+                            <button type="button" class="input-group-text bg-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"><i class="ri-delete-bin-fill text-white"></i></button>
+                        </div>
+                        <div class="input-group flex-nowrap mb-3">
+                            <span class="input-group-text" id="addon-wrapping">2.</span>
+                            <input type="text" class="form-control" placeholder="" aria-label="Username"
+                                aria-describedby="addon-wrapping" />
+                            <button type="button" class="input-group-text bg-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"><i class="ri-delete-bin-fill text-white"></i></button>
+                        </div>
+                        <div class="input-group flex-nowrap mb-3">
+                            <span class="input-group-text" id="addon-wrapping">3.</span>
+                            <input type="text" class="form-control" placeholder="" aria-label="Username"
+                                aria-describedby="addon-wrapping" />
+                            <button type="button" class="input-group-text bg-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"><i class="ri-delete-bin-fill text-white"></i></button>
+                        </div>
+                        <div class="input-group flex-nowrap mb-3">
+                            <span class="input-group-text" id="addon-wrapping">4.</span>
+                            <input type="text" class="form-control" placeholder="" aria-label="Username"
+                                aria-describedby="addon-wrapping" />
+                            <button type="button" class="input-group-text bg-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"><i class="ri-delete-bin-fill text-white"></i></button>
+                        </div>
+                        <div class="input-group flex-nowrap mb-3">
+                            <span class="input-group-text" id="addon-wrapping">5.</span>
+                            <input type="text" class="form-control" placeholder="" aria-label="Username"
+                                aria-describedby="addon-wrapping" />
+                            <button type="button" class="input-group-text bg-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"><i class="ri-delete-bin-fill text-white"></i></button>
+                        </div>
+                        <button class="btn btn-light">
+                            Add More+
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="inner-wrapper w-full h-full bg-light bradius-7 mb-3 p-4">
+            <div class="row">
+                <div class="col-12">
+                    <p class="fs-16 mb-4 text-black">Onset</p>
+                    <div class="mb-3 fs-14">
+                        <textarea class="form-control" placeholder="Write onset problems."
+                            id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="inner-wrapper w-full h-full bg-light bradius-7 mb-3 p-4">
+            <div class="row mt-4">
+                <div class="col-12 col-md-6">
+                    <p class="fs-16 mb-4 text-black">
+                        Academic Difficulties <span class="text-muted">(Select the box if the problem occurs)</span>
+                    </p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="mb-3 fs-14 form-items-wrapper">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1" />
+                            <label class="form-check-label p-l-10" for="flexCheckDefault1">
+                                Reading
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" />
+                            <label class="form-check-label p-l-10" for="flexCheckDefault2">
+                                Slow
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3" />
+                            <label class="form-check-label p-l-10" for="flexCheckDefault3">
+                                Spelling
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault4" />
+                            <label class="form-check-label p-l-10" for="flexCheckDefault4">
+                                Give Up Easily
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault5" />
+                            <label class="form-check-label p-l-10" for="flexCheckDefault5">
+                                Handwriting
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault6" />
+                            <label class="form-check-label p-l-10" for="flexCheckDefault6">
+                                Poor Memory
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault7" />
+                            <label class="form-check-label p-l-10" for="flexCheckDefault7">
+                                Written Expression
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault8" />
+                            <label class="form-check-label p-l-10" for="flexCheckDefault8">
+                                Poor Motivation
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault9" />
+                            <label class="form-check-label p-l-10" for="flexCheckDefault9">
+                                Arithmetic
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault10" />
+                            <label class="form-check-label p-l-10" for="flexCheckDefault10">
+                                Grade Repetition
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="inner-wrapper w-full h-full bg-light bradius-7 mb-3 p-4">
+            <div class="row mt-4">
+                <div class="col-12 col-md-6">
+                    <p class="fs-16 mb-4 text-black">
+                        Attention Difficulties <span class="text-muted">(Select one from the box, if the problem
+                            occurs)</span>
+                    </p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="mb-3 fs-14 form-items-wrapper">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadio1" />
+                            <label class="form-check-label p-l-10" for="flexRadio1">
+                                Short Duration of Attention
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadio2" />
+                            <label class="form-check-label p-l-10" for="flexRadio2">
+                                Impulsive
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadio3" />
+                            <label class="form-check-label p-l-10" for="flexRadio3">
+                                Easily Distracted
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadio4"
+                                checked />
+                            <label class="form-check-label p-l-10" for="flexRadio4">
+                                Restless
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="inner-wrapper w-full h-full bg-light bradius-7 mb-3 p-4">
+            <div class="row mt-4">
+                <div class="col-12 col-md-6">
+                    <p class="fs-16 mb-4 text-black">
+                        Communication Difficulties <span class="text-muted">(Select one from the box, if the problem
+                            occurs)</span>
+                    </p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="mb-3 fs-14 form-items-wrapper">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadio5" />
+                            <label class="form-check-label p-l-10" for="flexRadio5">
+                                Receptive Language
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadio6" />
+                            <label class="form-check-label p-l-10" for="flexRadio6">
+                                Expensive Language
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadio7" />
+                            <label class="form-check-label p-l-10" for="flexRadio7">
+                                Speech
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="inner-wrapper w-full h-full bg-light bradius-7 mb-3 p-4">
+            <div class="row mt-4">
+                <div class="col-12 col-md-6">
+                    <p class="fs-16 mb-4 text-black">
+                        Hearing and Vision Impairment <span class="text-muted">(Select one from the box, if the problem
+                            occurs)</span>
+                    </p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="mb-3 fs-14 form-items-wrapper">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadio8" />
+                            <label class="form-check-label p-l-10" for="flexRadio8">
+                                Reading
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadio9" />
+                            <label class="form-check-label p-l-10" for="flexRadio9">
+                                Slow
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="inner-wrapper w-full h-full bg-light bradius-7 mb-3 p-4">
+            <div class="row mt-4">
+                <div class="col-12 col-md-12">
+                    <p class="fs-16 mb-4 text-black">
+                        Sensory and Social Behavior Difficulties <span class="text-muted">(Select the box if the problem
+                            occurs)</span>
+                    </p>
+                </div>
+                <div class="col-12 col-md-12">
+                    <div class="mb-3 fs-14 form-items-wrapper">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault11" />
+                            <label class="form-check-label p-l-10" for="flexCheckDefault11">
+                                Hypersensitive / Hyposensitive to Light
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault12" />
+                            <label class="form-check-label p-l-10" for="flexCheckDefault12">
+                                Does not Respond to Name
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault13 " />
+                            <label class="form-check-label p-l-10" for="flexCheckDefault13 ">
+                                Hypersensitive / Hyposensitive to Smell
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault14" />
+                            <label class="form-check-label p-l-10" for="flexCheckDefault14">
+                                Echolalia
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault15" />
+                            <label class="form-check-label p-l-10" for="flexCheckDefault15">
+                                Hypersensitive / Hyposensitive to Touch
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault16" />
+                            <label class="form-check-label p-l-10" for="flexCheckDefault16">
+                                No Spontaneous Communication
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault17" />
+                            <label class="form-check-label p-l-10" for="flexCheckDefault17">
+                                Hypersensitive / Hyposensitive to Sound
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault18" />
+                            <label class="form-check-label p-l-10" for="flexCheckDefault18">
+                                Prefers to be Alone
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault19" />
+                            <label class="form-check-label p-l-10" for="flexCheckDefault19">
+                                Hypersensitive / Hyposensitive to Taste
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault20" />
+                            <label class="form-check-label p-l-10" for="flexCheckDefault20">
+                                Limited Social Interaction
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="inner-wrapper w-full h-full bg-light bradius-7 mb-3 p-4">
+            <div class="row">
+                <div class="col-12">
+                    <p class="fs-16 mb-4 text-black">
+                        Previous Consultation / Assessments / Treatments / Therapy <span class="text-muted">(From other
+                            clinics or centers)</span>
+                    </p>
+                    <div class="mb-3 fs-14">
+                        <textarea class="form-control" placeholder="Enter the previous assessment details."
+                            id="exampleFormControlTextarea1" rows="6"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="inner-wrapper w-full h-full bg-light bradius-7 mb-3 p-4">
+            <div class="row">
+                <div class="col-12">
+                    <p class="fs-16 mb-4 text-black">
+                        Present Medications
+                    </p>
+                    <div class="mb-3 fs-14">
+                        <textarea class="form-control" placeholder="Enter the present medication details."
+                            id="exampleFormControlTextarea1" rows="6"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="inner-wrapper w-full h-full bg-light bradius-7 mb-3 p-4">
+            <div class="row">
+                <div class="col-12">
+                    <p class="fs-16 mb-4 text-black">
+                        Developmental and Medical History
+                    </p>
+                    <p class="fs-16 mb-4 text-success">
+                        Pedigree Chart
+                    </p>
+                    <div class="mb-3 fs-14">
+                        <textarea class="form-control"
+                            placeholder="Enter the developmental and medical history details."
+                            id="exampleFormControlTextarea1" rows="6"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="inner-wrapper w-full h-full bg-light bradius-7 mb-3 p-4">
+            <div class="row">
+                <div class="col-12">
+                    <p class="fs-16 mb-4 text-black">
+                        History of Disability / Psychiatric Disorders in the Family
+                    </p>
+                    <div class="mb-3 fs-14">
+                        <textarea class="form-control" placeholder="Enter the History details."
+                            id="exampleFormControlTextarea1" rows="6"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group wizard-buttons-group mt-4">
+            <a href="javascript:;" class="form-wizard-next-btn float-right btn btn-primary">Save
+                and Continue</a>
+        </div>
+    </fieldset>
+    <fieldset class="wizard-fieldset">
+        <!-- ACCORDIAN -->
+        <div class="row mt-3">
+            <div class="col-md-12">
+                <div class="accordion flex-col gap-4" id="accordionPanelsStayOpenExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                aria-controls="panelsStayOpen-collapseOne">
+                                Pre Natal History
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                            aria-labelledby="panelsStayOpen-headingOne">
+                            <div class="accordion-body">
+                                <div class="inner-wrapper flex-col gap-4 p-4 w-full h-full bg-light bradius-7 mb-3">
+                                    <!--Each Ouestion Items Start  -->
+                                    <!--Item-->
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-md-5">
+                                            <p class="fs-16 mb-4 text-black">
+                                                Infertility
+                                            </p>
+                                        </div>
+                                        <div class="col-12 col-md-7">
+                                            <div class="mb-3 fs-14 form-items-wrapper">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio10" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio10">
+                                                        Yes
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio11" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio11">
+                                                        No
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <!-- <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label> -->
+                                                <textarea class="form-control fs-14" placeholder="Infertility Details"
+                                                    id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Item-->
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-md-5">
+                                            <p class="fs-16 mb-4 text-black">
+                                                Previous Abortion
+                                            </p>
+                                        </div>
+                                        <div class="col-12 col-md-7">
+                                            <div class="mb-3 fs-14 form-items-wrapper">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio12" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio12">
+                                                        Yes
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio13" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio13">
+                                                        No
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <!-- <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label> -->
+                                                <textarea class="form-control fs-14"
+                                                    placeholder="Previous Abortion Details"
+                                                    id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Item-->
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-md-5">
+                                            <p class="fs-16 mb-4 text-black">
+                                                Peri-Natal / Neo-Natal Death
+                                            </p>
+                                        </div>
+                                        <div class="col-12 col-md-7">
+                                            <div class="mb-3 fs-14 form-items-wrapper">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio14" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio14">
+                                                        Yes
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio15" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio15">
+                                                        No
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <!-- <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label> -->
+                                                <textarea class="form-control fs-14"
+                                                    placeholder="Peri-Natal / Neo-Natal Death Details"
+                                                    id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Item-->
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-md-5">
+                                            <p class="fs-16 mb-4 text-black">
+                                                Pregnancy
+                                            </p>
+                                        </div>
+                                        <div class="col-12 col-md-7">
+                                            <div class="mb-3 fs-14 form-items-wrapper">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio16" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio16">
+                                                        Single
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio17" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio17">
+                                                        Multiple
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!--Item-->
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-md-5">
+                                            <p class="fs-16 mb-4 text-black">
+                                                Parity
+                                            </p>
+                                        </div>
+                                        <div class="col-12 col-md-7">
+                                            <div class="mb-3 fs-14 form-items-wrapper">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio18" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio18">
+                                                        G
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio19" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio19">
+                                                        P
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Item-->
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-md-5">
+                                            <label for="exampleFormControlInput1" class="form-label">Age of Mother
+                                                at
+                                                Conception</label>
+                                        </div>
+                                        <div class="col-12 col-md-7">
+                                            <input type="number" class="form-control md-" id="exampleFormControlInput1"
+                                                placeholder="Enter the Age" />
+                                        </div>
+                                    </div>
+
+                                    <!--Item-->
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-md-5">
+                                            <p class="fs-16 mb-4 text-black">
+                                                Bleeding
+                                            </p>
+                                        </div>
+                                        <div class="col-12 col-md-7">
+                                            <div class="mb-3 fs-14 form-items-wrapper">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio20" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio20">
+                                                        Yes
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio21" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio21">
+                                                        No
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <!-- <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label> -->
+                                                <textarea class="form-control fs-14" placeholder="Bleeding Details"
+                                                    id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Item-->
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-md-5">
+                                            <p class="fs-16 mb-4 text-black">
+                                                Foetal Movements
+                                            </p>
+                                        </div>
+                                        <div class="col-12 col-md-7">
+                                            <div class="mb-3 fs-14 form-items-wrapper">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio22" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio22">
+                                                        Normal
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio23" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio23">
+                                                        Excessive
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio24" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio24">
+                                                        Sluggish
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!--Item-->
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-md-5">
+                                            <p class="fs-16 mb-4 text-black">
+                                                Nutritional Status
+                                            </p>
+                                        </div>
+                                        <div class="col-12 col-md-7">
+                                            <div class="mb-3 fs-14 form-items-wrapper">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio25" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio25">
+                                                        Under Weight
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio26" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio26">
+                                                        Normal Weight
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio27" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio27">
+                                                        Over Weight
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!--Item-->
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-md-5">
+                                            <p class="fs-16 mb-4 text-black">
+                                                Hyperemesis
+                                            </p>
+                                        </div>
+                                        <div class="col-12 col-md-7">
+                                            <div class="mb-3 fs-14 form-items-wrapper">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio28" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio28">
+                                                        Mild Hyperemesis
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio29" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio29">
+                                                        Moderate Hyperemesis
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio30" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio30">
+                                                        Severe Hyperemesis
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!--Item-->
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-md-5">
+                                            <p class="fs-16 mb-4 text-black">
+                                                IUGR / SGA
+                                            </p>
+                                        </div>
+                                        <div class="col-12 col-md-7">
+                                            <div class="mb-3 fs-14 form-items-wrapper">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio31" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio31">
+                                                        Appropriate Growth (AGA)
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio32" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio32">
+                                                        Intrauterine Growth
+                                                        Restriction (IUGR)
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio33" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio33">
+                                                        Intrauterine Growth
+                                                        Restriction (IUGR)
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <!--Item-->
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-md-5">
+                                            <p class="fs-16 mb-4 text-black">
+                                                Trauma
+                                            </p>
+                                        </div>
+                                        <div class="col-12 col-md-7">
+                                            <div class="mb-3 fs-14 form-items-wrapper">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio34" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio34">
+                                                        Not at all
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio35" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio35">
+                                                        A little bit
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio36" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio36">
+                                                        Moderately
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio37" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio37">
+                                                        Extremely
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <!-- <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label> -->
+                                                <textarea class="form-control fs-14" placeholder="Trauma Details"
+                                                    id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <!--Item-->
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-md-5">
+                                            <p class="fs-16 mb-4 text-black">
+                                                Teratogens
+                                            </p>
+                                        </div>
+                                        <div class="col-12 col-md-7">
+                                            <div class="mb-3 fs-14 form-items-wrapper">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault21" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault21">
+                                                        Drugs
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault22" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault22">
+                                                        Hormones
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault23" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault23">
+                                                        Alcohols
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault24" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault24">
+                                                        Tobacco
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault25" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault25">
+                                                        Irradiation
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                                <!-- <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label> -->
+                                                <textarea class="form-control fs-14"
+                                                    placeholder="More details about teratogens"
+                                                    id="exampleFormControlTextarea1" rows="5"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <!--Item-->
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-md-5">
+                                            <p class="fs-16 mb-4 text-black">
+                                                Cardio-Pulmonary Dysfunction
+                                            </p>
+                                        </div>
+                                        <div class="col-12 col-md-7">
+                                            <div class="mb-3 fs-14 form-items-wrapper">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio38" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio38">
+                                                        Yes
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio39" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio39">
+                                                        No
+                                                    </label>
+                                                </div>
+
+                                            </div>
+                                            <div class="mb-3">
+                                                <!-- <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label> -->
+                                                <textarea class="form-control fs-14"
+                                                    placeholder="More details about Cardio-Pulmonary Dysfunction"
+                                                    id="exampleFormControlTextarea1" rows="5"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!--Item-->
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-md-5">
+                                            <p class="fs-16 mb-4 text-black">
+                                                Hypertension
+                                            </p>
+                                        </div>
+                                        <div class="col-12 col-md-7">
+                                            <div class="mb-3 fs-14 form-items-wrapper">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault26" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault26">
+                                                        Antedated
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault27" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault27">
+                                                        Essential Hypertension
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault28" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault28">
+                                                        Pre-Eclamptic Toxemia
+                                                    </label>
+                                                </div>
+
+                                            </div>
+                                            <div class="mb-3">
+                                                <!-- <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label> -->
+                                                <textarea class="form-control fs-14"
+                                                    placeholder="More details about Hypertension"
+                                                    id="exampleFormControlTextarea1" rows="5"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <!--Item-->
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-md-5">
+                                            <p class="fs-16 mb-4 text-black">
+                                                Edema Severity
+                                            </p>
+                                        </div>
+                                        <div class="col-12 col-md-7">
+                                            <div class="mb-3 fs-14 form-items-wrapper">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault29" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault29">
+                                                        None
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault30" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault30">
+                                                        Mild
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault31" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault31">
+                                                        Moderate
+                                                    </label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <!--Item-->
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-md-5">
+                                            <p class="fs-16 mb-4 text-black">
+                                                Proteinuria
+                                            </p>
+                                        </div>
+                                        <div class="col-12 col-md-7">
+                                            <div class="mb-3 fs-14 form-items-wrapper">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio40" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio40">
+                                                        Yes
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio41" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio41">
+                                                        No
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <!--Item-->
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-md-5">
+                                            <p class="fs-16 mb-4 text-black">
+                                                Rh Incompatibility
+                                            </p>
+                                        </div>
+                                        <div class="col-12 col-md-7">
+                                            <div class="mb-3 fs-14 form-items-wrapper">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio42" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio42">
+                                                        Yes
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio43" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio43">
+                                                        No
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <!--Item-->
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-md-5">
+                                            <p class="fs-16 mb-4 text-black">
+                                                Gestational
+                                                Diabetes
+                                            </p>
+                                        </div>
+                                        <div class="col-12 col-md-7">
+                                            <div class="mb-3 fs-14 form-items-wrapper">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio44" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio44">
+                                                        Yes
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio45" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio45">
+                                                        No
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!--Item-->
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-md-5">
+                                            <p class="fs-16 mb-4 text-black">
+                                                Hypo / Hyper
+                                                Thyroidism
+                                            </p>
+                                        </div>
+                                        <div class="col-12 col-md-7">
+                                            <div class="mb-3 fs-14 form-items-wrapper">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio46" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio46">
+                                                        Yes
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio47" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio47">
+                                                        No
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <!--Item-->
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-md-5">
+                                            <p class="fs-16 mb-4 text-black">
+                                                TORCH: Toxoplasmosis / Rubella /
+                                                Cytomegalovirus
+                                                Infection / Herpes / Other
+                                                Infections.
+                                            </p>
+                                        </div>
+                                        <div class="col-12 col-md-7">
+                                            <div class="mb-3 fs-14 form-items-wrapper">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault32" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault32">
+                                                        Toxoplasmosis
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault33" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault33">
+                                                        Rubella
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault34" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault34">
+                                                        Cytomegalovirus
+                                                        Infection
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault35" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault35">
+                                                        Herpes
+                                                        Infection
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault36" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault36">
+                                                        Other Infections
+                                                        Infection
+                                                    </label>
+                                                </div>
+
+                                            </div>
+                                            <div class="mb-3">
+                                                <!-- <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label> -->
+                                                <textarea class="form-control fs-14"
+                                                    placeholder="More details about TORCH"
+                                                    id="exampleFormControlTextarea1" rows="5"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <!--Item-->
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-md-5">
+                                            <p class="fs-16 mb-4 text-black">
+                                                Fever with Rashes
+                                            </p>
+                                        </div>
+                                        <div class="col-12 col-md-7">
+                                            <div class="mb-3 fs-14 form-items-wrapper">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio48" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio48">
+                                                        Yes
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio49" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio49">
+                                                        No
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <!--Item-->
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-md-5">
+                                            <p class="fs-16 mb-4 text-black">
+                                                Placenta Previa
+                                            </p>
+                                        </div>
+                                        <div class="col-12 col-md-7">
+                                            <div class="mb-3 fs-14 form-items-wrapper">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault37" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault37">
+                                                        No Placenta Previa
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault38" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault38">
+                                                        Marginal Placenta Previa
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault39" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault39">
+                                                        Complete Placenta Previa
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault40" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault40">
+                                                        Other
+                                                    </label>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="mb-3">
+                                                <!-- <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label> -->
+                                                <textarea class="form-control fs-14"
+                                                    placeholder="More details about Placenta Previa"
+                                                    id="exampleFormControlTextarea1" rows="5"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <!--Item-->
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-md-5">
+                                            <p class="fs-16 mb-4 text-black">
+                                                Abruptio Placenta Previa
+                                            </p>
+                                        </div>
+                                        <div class="col-12 col-md-7">
+                                            <div class="mb-3 fs-14 form-items-wrapper">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault41" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault41">
+                                                        No Abruptio Placenta
+                                                        Previa
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault42" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault42">
+                                                        Marginal Abruptio
+                                                        Placenta Previa
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault43" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault43">
+                                                        Complete Abruptio
+                                                        Placenta Previa
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault44" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault44">
+                                                        Other
+                                                    </label>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="mb-3">
+                                                <!-- <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label> -->
+                                                <textarea class="form-control fs-14"
+                                                    placeholder="More details about Abruptio Placenta Previa"
+                                                    id="exampleFormControlTextarea1" rows="5"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Item-->
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-md-5">
+                                            <p class="fs-16 mb-4 text-black">
+                                                Placental Infarcts
+                                            </p>
+                                        </div>
+                                        <div class="col-12 col-md-7">
+                                            <div class="mb-3 fs-14 form-items-wrapper">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault45" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault45">
+                                                        No Placental Issues
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault46" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault46">
+                                                        Mild Placental Issues
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault47" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault47">
+                                                        Severe Placental Issues
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault48" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault48">
+                                                        Placental Infarcts
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault49" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault49">
+                                                        Other
+                                                    </label>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="mb-3">
+                                                <!-- <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label> -->
+                                                <textarea class="form-control fs-14"
+                                                    placeholder="More details about Placental Insufficiency"
+                                                    id="exampleFormControlTextarea1" rows="5"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <!--Item-->
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-md-5">
+                                            <p class="fs-16 mb-4 text-black">
+                                                Placental Insufficiency
+                                            </p>
+                                        </div>
+                                        <div class="col-12 col-md-7">
+                                            <div class="mb-3 fs-14 form-items-wrapper">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio50" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio50">
+                                                        Yes
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadio51" />
+                                                    <label class="form-check-label p-l-10" for="flexRadio51">
+                                                        No
+                                                    </label>
+                                                </div>
+
+                                            </div>
+                                            <div class="mb-3">
+                                                <!-- <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label> -->
+                                                <textarea class="form-control fs-14"
+                                                    placeholder="More details about Placental Insufficiency"
+                                                    id="exampleFormControlTextarea1" rows="5"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--Item-->
+                                    <div class="row mt-3">
+                                        <div class="col-12 col-md-5">
+                                            <p class="fs-16 mb-4 text-black">
+                                                Assisted Conception Methods
+                                            </p>
+                                        </div>
+                                        <div class="col-12 col-md-7">
+                                            <div class="mb-3 fs-14 form-items-wrapper">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault50" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault50">
+                                                        IVF (In Vitro Fertilization)
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault51" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault51">
+                                                        ART (Assisted Reproductive Technology)
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault52" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault52">
+                                                        IVM (In Vitro Maturation)
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault53" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault53">
+                                                        ICSI (Intracytoplasmic Sperm Injection)
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="checkboxDefault" id="flexCheckDefault54" />
+                                                    <label class="form-check-label p-l-10" for="flexCheckDefault54">
+                                                        None
+                                                    </label>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="mb-3">
+                                                <!-- <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label> -->
+                                                <textarea class="form-control fs-14"
+                                                    placeholder="More details about Assisted Conception Methods"
+                                                    id="exampleFormControlTextarea1" rows="5"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row mt-3">
+                                        <div class="col-12">
+                                            <p class="fs-16 mb-4 text-black">Any Other Details Related to Pre-Natal
+                                                History</p>
+                                            <div class="mb-3 fs-14">
+                                                <textarea class="form-control" placeholder="Describe Details."
+                                                    id="exampleFormControlTextarea1" rows="5"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group wizard-buttons-group mt-4">
+            <a href="javascript:;" class="form-wizard-previous-btn float-left btn btn-light">Previous
+                Step</a>
+            <a href="javascript:;" class="form-wizard-next-btn float-right btn btn-primary">Save
+                and Continue</a>
+        </div>
+    </fieldset>
 </body>
+
 </html>
