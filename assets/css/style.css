@@ -143,12 +143,12 @@ input {
 }
 
 .shadow-neo {
-    box-shadow: var(--shadow-neo)
+    box-shadow: var(--shadow-neo);
 }
 
 .shadow-soft {
     /* Shadow B */
-    box-shadow: var(--shadow-b)
+    box-shadow: var(--shadow-b);
 }
 
 .bradius-7 {
