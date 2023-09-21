@@ -142,6 +142,13 @@ input {
     padding: var(--p-wpl);
 }
 
+.wrapper-light {
+    border-radius: 14px;
+    background-color: var(--body-light);
+    box-shadow: var(--shadow-neo);
+    padding: var(--p-wpl);
+}
+
 .shadow-neo {
     box-shadow: var(--shadow-neo);
 }
