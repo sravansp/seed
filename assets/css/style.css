@@ -14,6 +14,7 @@
     --bg-primary-color: #4A9F95;
 
     --secondary-color: #F2F2F2;
+    --dark-gray: #BABABA;
 
     --btn-color: var(--primary-color);
 
@@ -166,6 +167,9 @@ input {
     border-radius: var(--bradius-14);
 }
 
+.sub-title-left {
+    font-size: 12px;
+}
 
 
 /* ===== Sidebar ===== */
@@ -810,9 +814,9 @@ body.dark .navbar_container .nav-search {
 
 .form-wizard .wizard-buttons-group {
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+    flex-direction: column;
     gap: 20px;
-    ;
 
 }
 
@@ -1071,7 +1075,13 @@ body.dark .navbar_container .nav-search {
 
 
 
+.inner-wrapper .inner-right {
+    border-bottom: 1px solid var(--dark-gray);
+}
 
+.inner-wrapper .inner-right:not(:first-child) {
+    padding-top: 20px;
+}
 
 
 
@@ -1100,7 +1110,14 @@ body.dark .navbar_container .nav-search {
 
     .form-items-wrapper {
         display: grid;
-        grid-template-columns: repeat(2, auto);
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .form-wizard .wizard-buttons-group {
+        display: flex;
+        justify-content: end;
+        gap: 20px;
+        flex-direction: row;
     }
 
 }
@@ -1121,3 +1138,11 @@ body.dark .navbar_container .nav-search {
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {}
+
+/* XXX-Large devices (larger desktops, 1800px and up) */
+@media (min-width: 1800px) {
+    .form-items-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 33.33333%);
+    }
+}
