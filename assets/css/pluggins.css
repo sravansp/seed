@@ -698,6 +698,7 @@
 }
 .form-check-label {
     color: var(--text-black) !important;
+    cursor: pointer;
 }
 .form-check-input:checked {
     background-color: var(--primary-color);
