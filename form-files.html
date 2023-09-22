@@ -199,34 +199,34 @@
       </nav>
 
       <!-- Main Content Start  -->
-      <div class="content pb-4">
+      <div class="content pb-4 ">
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-12">
               <div
-                class="wrapper-primary-light bg-primary-light h-screen w-full"
+                class="wrapper-light  h-screen w-full"
               >
                 <div class="container m-10">
-                  <div class="col-md-8 col-sm-6">
+                  <div class="">
                     <div
-                      class="w-full m-5 p-3 form flex flex-col gap-3 rounded-2 h-100 bg-white c-black fs-20"
+                      class="w-full  form flex flex-col gap-3 rounded-2 h-100 bg-white c-black fs-20"
                     >
                       <span>Forms</span>
-                      <a class="text-black fs-20 p-l-20" href="#"
+                      <a class="text-dark fs-20 p-l-20" href="#"
                         >Registration Form</a
                       >
-                      <div class="accordion" id="accordionExample">
+                      <div class="accordion form-list" id="accordionExample">
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="headingOne">
                             <button
-                              class="accordion-button text-dark fs-20 collapsed"
+                              class="accordion-button text-dark  fs-20 collapsed"
                               type="button"
                               data-bs-toggle="collapse"
                               data-bs-target="#collapseOne"
                               aria-expanded="false"
                               aria-controls="collapseOne"
                             >
-                              IN TAKE Forms
+                              In Take Forms
                             </button>
                           </h2>
                           <div
@@ -236,7 +236,7 @@
                             data-bs-parent="#accordionExample"
                           >
                             <div
-                              class="accordion-body sub-form fs-16 flex flex-col gap-3"
+                              class="accordion-body sub-form fs-16  flex flex-col gap-3"
                             >
                               <a href="#">Present Problems</a>
                               <a href="#">Pre Natal History</a>
@@ -258,7 +258,7 @@
                         <div class="accordion-item">
                           <h2 class="accordion-header" id="headingTwo">
                             <button
-                              class="accordion-button text-dark fs-20 collapsed"
+                              class="accordion-button text-dark  fs-20 collapsed"
                               type="button"
                               data-bs-toggle="collapse"
                               data-bs-target="#collapseTwo"
@@ -290,7 +290,7 @@
                                     class="accordion-header"
                                   >
                                     <button
-                                      class="accordion-button text-secondary fs-16"
+                                      class="accordion-button  form-btn"
                                       type="button"
                                       data-bs-toggle="collapse"
                                       data-bs-target="#regularCollapseFirst"
@@ -325,7 +325,7 @@
                                     class="accordion-header"
                                   >
                                     <button
-                                      class="accordion-button text-secondary fs-16"
+                                      class="accordion-button  form-btn"
                                       type="button"
                                       data-bs-toggle="collapse"
                                       data-bs-target="#regularCollapseSecond"
@@ -375,7 +375,7 @@
                                     class="accordion-header"
                                   >
                                     <button
-                                      class="accordion-button text-secondary fs-16"
+                                      class="accordion-button  form-btn"
                                       type="button"
                                       data-bs-toggle="collapse"
                                       data-bs-target="#regularCollapseFourth"
@@ -426,7 +426,7 @@
                                     class="accordion-header"
                                   >
                                     <button
-                                      class="accordion-button text-secondary fs-16"
+                                      class="accordion-button  form-btn"
                                       type="button"
                                       data-bs-toggle="collapse"
                                       data-bs-target="#regularCollapseFifth"
@@ -471,7 +471,7 @@
                                     class="accordion-header"
                                   >
                                     <button
-                                      class="accordion-button text-secondary fs-16"
+                                      class="accordion-button  form-btn"
                                       type="button"
                                       data-bs-toggle="collapse"
                                       data-bs-target="#regularCollapseSixth"
@@ -506,10 +506,10 @@
                             </div>
                           </div>
                         </div>
-                        <div class="accordion-item">
+                        <div class="accordion-item form-list">
                           <h2 class="accordion-header" id="headingThree">
                             <button
-                              class="accordion-button text-dark fs-20 collapsed"
+                              class="accordion-button text-dark  fs-20 collapsed"
                               type="button"
                               data-bs-toggle="collapse"
                               data-bs-target="#collapseThree"
@@ -534,7 +534,7 @@
                                   class="accordion-header"
                                 >
                                   <button
-                                    class="accordion-button text-secondary fs-16"
+                                    class="accordion-button  form-btn"
                                     type="button"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#regularCollapseFirst"
@@ -572,7 +572,7 @@
                                     class="accordion-header"
                                   >
                                     <button
-                                      class="accordion-button text-secondary fs-16"
+                                      class="accordion-button  form-btn"
                                       type="button"
                                       data-bs-toggle="collapse"
                                       data-bs-target="#regularCollapseSecond"
@@ -608,7 +608,7 @@
                                     class="accordion-header"
                                   >
                                     <button
-                                      class="accordion-button text-secondary fs-16"
+                                      class="accordion-button  form-btn"
                                       type="button"
                                       data-bs-toggle="collapse"
                                       data-bs-target="#regularCollapseFourth"
@@ -642,7 +642,7 @@
                                     class="accordion-header"
                                   >
                                     <button
-                                      class="accordion-button text-secondary fs-16"
+                                      class="accordion-button  form-btn"
                                       type="button"
                                       data-bs-toggle="collapse"
                                       data-bs-target="#regularCollapseFifth"
@@ -707,13 +707,32 @@
     background-color: var(--bs-accordion-bg);
     border: none;
 }
+.accordion-button{
+  padding-top: 0 !important;
+margin-top: 5px !important;
+padding-bottom: 20px !important;
 
+}
 
 .accordion-button:focus {
     z-index: 3;
     border-color:white;
     outline: 0px;
     box-shadow: none;
+}
+.form-list button{
+  font-size: 20px;
+  font-weight: 500;
+  color: #545F71;
+
+
+}
+
+.form-btn{
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  color: 
+#9BA5B7 !important;
 }
     </style>
 
