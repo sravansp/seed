@@ -13,8 +13,8 @@ $(window).on('load', function () {
     }, 200);
 });
 
- //______Select2
- $(function (e) {
+//______Select2
+$(function (e) {
     'use strict'
 
     // Select2
@@ -123,7 +123,7 @@ function formWizard() {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
-              });
+            });
             var parentFieldset = $(this).parents('.wizard-fieldset');
             var currentActiveStep = $(this).parents('.form-wizard').find('.form-wizard-steps .active');
             var next = $(this);
@@ -223,3 +223,22 @@ function formWizard() {
     });
 
 }
+
+$(document).ready(function () {
+    // Get the number of radio buttons
+    var numRadioButtons = $("input[type='radio']").length;
+
+    // Iterate over the radio buttons
+    for (var i = 0; i < numRadioButtons; i++) {
+        // Get the current radio button
+        var radioButton = $("input[type='radio']").eq(i);
+
+        // Create an ID for the radio button
+        var radioButtonId = "radio-button-" + (i + 1);
+        radioButton.attr("id", radioButtonId);
+
+        // Create a label for the radio button
+        var label = radioButton.parent().find('label');
+        label.attr("for", radioButtonId);
+    }
+});
