@@ -241,4 +241,22 @@ $(document).ready(function () {
         var label = radioButton.parent().find('label');
         label.attr("for", radioButtonId);
     }
+
+
+    // Get the number of checkboxs
+    var numCheckbox = $("input[type='checkbox']").length;
+
+    // Iterate over the checkboxs
+    for (var i = 0; i < numCheckbox; i++) {
+        // Get the current checkbox
+        var chekBox = $("input[type='checkbox']").eq(i);
+
+        // Create an ID for the checkbox
+        var chekBoxId = "checkbox-" + (i + 1);
+        chekBox.attr("id", chekBoxId);
+
+        // Create a label for the checkbox
+        var label = chekBox.parent().find('label');
+        label.attr("for", chekBoxId);
+    }
 });

@@ -123,6 +123,7 @@ input {
 .text-black {
     color: var(--text-black) !important;
 }
+
 .text-white {
     color: var(--text-white) !important;
 }
@@ -135,8 +136,16 @@ input {
     background-color: var(--body-light-primary) !important;
 }
 
+.bg-main-primary {
+    background: var(--bg-main-primary);
+}
+
 .bg-light {
     background-color: var(--body-light) !important;
+}
+
+.bg-card {
+    background: var(--card-gradient);
 }
 
 .wrapper-primary-light {
