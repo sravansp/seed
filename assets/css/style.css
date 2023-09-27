@@ -136,6 +136,10 @@ input {
     background-color: var(--body-light-primary) !important;
 }
 
+.bg-secondary {
+    background-color: var(--secondary-color) !important;
+}
+
 .bg-main-primary {
     background: var(--bg-main-primary);
 }
@@ -1234,6 +1238,34 @@ body.dark .navbar_container .nav-search {
     }
 
 }
+
+.editor_section {
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    min-height: 146px;
+    height: auto;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ================ RESPONSIVE =====================  */
 

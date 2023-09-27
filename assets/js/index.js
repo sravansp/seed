@@ -224,6 +224,42 @@ function formWizard() {
 
 }
 
+
+
+
+var toolbarOptions = [
+    ["bold", "italic", "underline"],
+    [{
+        align: [],
+    }, ],
+    [{
+            list: "ordered",
+        },
+        {
+            list: "bullet",
+        },
+    ],
+    [{
+            indent: "-1",
+        },
+        {
+            indent: "+1",
+        },
+    ],
+    [{
+        header: [1, 2, 3, 4, 5, 6, false],
+    }, ],
+
+    ["clean"],
+];
+var quill = new Quill("#editor", {
+    modules: {
+        toolbar: toolbarOptions,
+    },
+    placeholder: "Type here ",
+    theme: "snow",
+});
+
 $(document).ready(function () {
     // Get the number of radio buttons
     var numRadioButtons = $("input[type='radio']").length;

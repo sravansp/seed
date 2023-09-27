@@ -727,7 +727,7 @@
 }
 
 .btn {
-    height: 50px;
+    /* height: 50px; */
     border-radius: 7px;
     display: flex;
     justify-content: center;
@@ -757,6 +757,29 @@
 .btn-primary:active {
     box-shadow: inset 6px 6px 12px #3e867d,
         inset -6px -6px 12px #56b8ad;
+}
+.btn-main-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--main-primary);
+    --bs-btn-border-color: var(--main-primary);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--main-primary) !important;
+    --bs-btn-hover-border-color: var(--main-primary);
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--main-primary);
+    --bs-btn-active-border-color: var(--main-primary);
+    --bs-btn-active-shadow: inset 5px 5px 6px #3d847c, inset -5px -5px 6px #57baae;
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: var(--main-primary);
+    --bs-btn-disabled-border-color: var(--main-primary);
+    --bs-btn-focus-box-shadow: inset 6px 6px 12px #3e867d,
+    inset -6px -6px 12px #56b8ad;
+}
+
+.btn-main-primary:active {
+    box-shadow: inset 6px 6px 12px #29b5a9,
+                inset -6px -6px 12px #37f5e5;
 }
 
 .btn-light {
