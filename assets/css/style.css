@@ -29,7 +29,7 @@
     --shadow-neo-inset: 6px 6px 9px #becbca,
         -6px -6px 9px #ffffff;
     --shadow-b: 0px 5px 8px 0px rgba(0, 101, 83, 0.08), 0px 2px 0px 0px rgba(130, 188, 171, 0.08);
-
+    --shadow-a: 0px 5px 50px 0px rgba(0, 67, 101, 0.08);
     /* ====== FS ====== */
     --text-size: 14px;
     --text-size2: 16px;
@@ -173,6 +173,9 @@ input {
 .shadow-soft {
     /* Shadow B */
     box-shadow: var(--shadow-b);
+}
+.shadow-a {
+    box-shadow: var(--shadow-a);
 }
 
 .bradius-7 {
@@ -437,7 +440,7 @@ body.dark .sidebar .toggle_icon .toggle {
     display: flex;
     align-items: center;
     gap: 20px;
-    border-radius: 14px;
+    border-radius: 30px;
     height: 40px;
     padding: 10px;
 }
