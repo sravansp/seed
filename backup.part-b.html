@@ -1,0 +1,2042 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - SEED</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="./assets/images/favicon/site.webmanifest" />
+    <link rel="mask-icon" href="./assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="stylesheet" href="./assets/pluggins/bootstrap/css/bootstrap.min.css" />
+
+    <!-- Icon Used: Remix Icon | https://remixicon.com/-->
+    <link rel="stylesheet" href="./assets/pluggins/remixicon/remixicon.css" />
+
+    <link rel="stylesheet" href="./assets/css/pluggins.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/util.css" />
+</head>
+
+<body class="light mode">
+    <div class="popup-toggle toggle-switch d-block d-lg-none">
+        <i class="ri-moon-fill fs-25 text-primary"></i>
+    </div>
+    <!-- Sidebar Start -->
+    <div class="app-sidebar__overlay active" data-bs-toggle="sidebar"></div>
+    <nav class="sidebar open">
+        <header>
+            <div class="image-text">
+                <div class="image">
+                    <img src="./assets/images/brand/logo.png" alt="logo" />
+                </div>
+                <div class="text logo-text">
+                    <h1 class="fs-24">SEED</h1>
+                </div>
+            </div>
+        </header>
+        <div class="toggle_icon">
+            <span class="toggle">
+                <i class="ri-arrow-right-s-line"></i>
+            </span>
+        </div>
+        <div class="menu-bar">
+            <div class="menu h-full">
+                <ul class="menu-links flex gap-5 h-full flex-col ps-0 justify-content-evenly">
+                    <div class="top-menu-links">
+                        <p class="p-l-20 p-b-8 fs-12 title-menu">General</p>
+                        <li class="nav-link">
+                            <a href="dash-admin.html">
+                                <i class="ri-home-4-fill icon"></i>
+                                <span class="text nav-text">Dashboard</span>
+                                <span class="tooltip">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="intake-form.html">
+                                <i class="ri-team-fill icon"></i>
+                                <span class="text nav-text">Student Management</span>
+                                <span class="tooltip">Student Management</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="list.html">
+                                <i class="ri-user-2-fill icon"></i>
+                                <span class="text nav-text">User Management</span>
+                                <span class="tooltip">User Management</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="bookmarks.html">
+                                <i class="ri-calendar-fill icon"></i>
+                                <span class="text nav-text">Appointments</span>
+                                <span class="tooltip">Appointments</span>
+                            </a>
+                        </li>
+                    </div>
+                    <div class="bottom-menu-links">
+                        <p class="p-l-20 p-b-8 fs-12 title-menu">Others</p>
+                        <li class="nav-link">
+                            <a href="./form-files.html">
+                                <i class="ri-file-copy-2-fill icon"></i>
+                                <span class="text nav-text">Forms and Files</span>
+                                <span class="tooltip">Forms and Files</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="components.html">
+                                <i class="ri-settings-5-fill icon"></i>
+                                <span class="text nav-text">Account Settings</span>
+                                <span class="tooltip">Account Settings</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="help.html">
+                                <i class="ri-customer-service-2-fill icon"></i>
+                                <span class="text nav-text">Help and Supporrt</span>
+                                <span class="tooltip">Help and Supporrt</span>
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="bottom-content flex justify-content-center">
+                <!-- <li class="nav-link"> -->
+                <a href="#" class="btn btn-light text-primary">
+                    <div class="p-1 rounded-circle bg-primary">
+                        <i class="ri-shut-down-line text-white fs-20"></i>
+                    </div>
+                    <span class="text nav-text text-primary">Logout</span>
+                    <!-- <span class="tooltip">Logout</span> -->
+                </a>
+                <!-- </li> -->
+            </div>
+        </div>
+    </nav>
+    <!-- Sidebar End  -->
+
+    <div class="overlay_section"></div>
+    <main class="home">
+        <!-- NAVBAR START  -->
+        <nav class="navbar py-4">
+            <div class="container-fluid">
+                <div class="navbar_container navbar-menu-wrapper d-flex align-items-center">
+                    <a aria-label="hide-sidebar" class="d-lg-none app-sidebar__toggle" data-bs-toggle="sidebar"
+                        href="javascript:void(0);">
+                        <i class="ri-menu-2-line text-primary fs-25"></i>
+                    </a>
+                    <form class="d-flex d-none d-md-block" role="search">
+                        <div class="nav-search">
+                            <i class="ri-search-line fs-25"></i>
+                            <input class="" type="search" placeholder="Search" aria-label="Search" />
+                        </div>
+                    </form>
+                    <ul class="navbar-nav mb-0 flex-row gap-4 flex-m">
+                        <li class="nav-item d-block d-md-none">
+                            <div class="dropdown d-block d-lg-none position-static">
+                                <a href="javascript:void(0);" class="nav-link icon" data-bs-toggle="dropdown">
+                                    <i class="ri-search-line fs-25 text-primary"></i>
+                                </a>
+                                <div class="dropdown-menu header-search dropdown-menu-start">
+                                    <div class="input-group w-100 p-2">
+                                        <input type="text" class="form-control" placeholder="Search...." />
+                                        <div class="input-group-text btn btn-primary">
+                                            <i class="ri-search-line fs-25"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item d-none d-lg-block">
+                            <div class="toggle-switch">
+                                <i class="ri-moon-fill fs-25 text-primary"></i>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="pos-relative">
+                                <i class="ri-notification-4-fill fs-25 not text-primary"></i>
+                                <div class="nav-notification"></div>
+                            </div>
+                        </li>
+                        <li class="nav-item gap-2 flex-m">
+                            <a class="nav-link">
+                                <div class="pro-pic rounded-circle">
+                                    <img src="./assets/images/user.png" alt="" />
+                                </div>
+                            </a>
+                            <div class="pro-data flex-col flex-c d-none d-md-flex">
+                                <p class="pro-name fs-14 fw-500">Harris M</p>
+                                <p class="pro-pos fs-12">Admin</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content Start  -->
+        <div class="content pb-4">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="wrapper-primary-light bg-primary-light w-full">
+                            <div class="form-wizard">
+                                <div class="row mb-5 mt-4">
+                                    <div class="col-md-12">
+                                        <div class="button-group flex gap-3">
+                                            <a href="" type="button" class="btn btn-light"><i class="ri-arrow-left-line fs-20 pe-2"></i>Go Back to Forms</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="row mb-5">
+                                    <div class="col-6">
+                                        <div class="form-title-header">
+                                            <h1 class="text-primary fs-24">
+                                                Psycho Educational Assessment Report
+                                            </h1>
+                                        </div>
+                                    </div>
+                                 
+                                </div> -->
+                                <div class="row py-5">
+                                    <div class=" col-lg-6 col-md-6 col-sm-6 col-6">
+                                        <div class="text-1">Psycho Educational Assessment Report</div>
+                                    </div>
+                                    <div class=" col-lg-6 col-md-6 col-sm-6 col-6">
+                                        <div class="text-2">For internees (Part-B)</div>
+                                    </div>
+                                 </div>
+                                <form action="" method="post" role="form">
+                                    <div class="row mb-5">
+                                        <div class="col-md-12">
+                                            <ul class="nav nav-pills nav-fill gap-3" id="pills-tab" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link active" id="pills-home-tab"
+                                                        data-bs-toggle="pill" data-bs-target="#pills-home" type="button"
+                                                        role="tab" aria-controls="pills-home"
+                                                        aria-selected="true">Page-1</button>
+                                                </li>
+
+
+                                                <li class="nav-item" role="presentation">
+                                                    <button class="nav-link" id="pills-profile-tab"
+                                                        data-bs-toggle="pill" data-bs-target="#pills-profile"
+                                                        type="button" role="tab" aria-controls="pills-profile"
+                                                        aria-selected="false">Page-2</button>
+                                                </li>
+                                            </ul>
+                                            <div class="tab-content" id="pills-tabContent">
+                                                <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                                    aria-labelledby="pills-home-tab" tabindex="0">
+                                                    <!-- ACCORDIAN -->
+                                                    <div class="row mt-3">
+                                                        <div class="col-md-12">
+                                                            <div class="accordion flex-col gap-4"
+                                                                id="accordionPanelsStayOpenExample">
+                                                                <div class="accordion-item">
+                                                                    <h2 class="accordion-header"
+                                                                        id="panelsStayOpen-headingOne">
+                                                                        <button class="accordion-button" type="button"
+                                                                            data-bs-toggle="collapse"
+                                                                            data-bs-target="#panelsStayOpen-collapseOne"
+                                                                            aria-expanded="true"
+                                                                            aria-controls="panelsStayOpen-collapseOne">
+                                                                            Basic Information
+                                                                        </button>
+                                                                    </h2>
+                                                                    <div id="panelsStayOpen-collapseOne"
+                                                                        class="accordion-collapse collapse show"
+                                                                        aria-labelledby="panelsStayOpen-headingOne">
+                                                                        <div class="accordion-body">
+                                                                            <div
+                                                                                class="inner-wrapper w-full h-full bg-light bradius-7 mb-3">
+                                                                                <!--Each Ouestion Items Start  -->
+                                                                                <!--Item-->
+
+                                                                                <div class="row">
+                                                                                    <div
+                                                                                        class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                                                                        <label class="control-label">
+                                                                                            Name
+                                                                                            of Child</label>
+                                                                                    </div>
+                                                                                    <div
+                                                                                        class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                                                                        <input class="form-control"
+                                                                                            type="text"
+                                                                                            placeholder="Type Student Name"
+                                                                                            aria-label="default input example">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="row mt-5">
+                                                                                    <div class="col-12 col-md-6">
+                                                                                        <p class="fs-16 mb-4">Purpose of
+                                                                                            Assessment</p>
+                                                                                    </div>
+                                                                                    <div class="col-12 col-md-6">
+                                                                                        <div
+                                                                                            class="mb-3 fs-14 form-items-wrapper">
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault1">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault1">
+                                                                                                    Assessment for
+                                                                                                    identification
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault2">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault2">
+                                                                                                    Program
+                                                                                                    Planing/Intervation
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault3">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault3">
+                                                                                                    Re Assessment
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault4">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault4">
+                                                                                                    Others
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault5">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault5">
+                                                                                                    Admission to School
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault1">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault1">
+                                                                                                    Progress Monitoring
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault2">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault2">
+                                                                                                    Progress Monitoring
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault3">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault3">
+                                                                                                    Certification
+                                                                                                </label>
+                                                                                            </div>
+
+                                                                                        </div>
+                                                                                        <div class="mb-3">
+                                                                                            <!-- <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label> -->
+                                                                                            <textarea
+                                                                                                class="form-control fs-14"
+                                                                                                placeholder="Specify other Details"
+                                                                                                id="exampleFormControlTextarea1"
+                                                                                                rows="3"></textarea>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                                <hr>
+                                                                                <div class="row mt-5">
+                                                                                    <div class="col-12 col-md-6">
+                                                                                        <p class="fs-16 mb-4">Presenting
+                                                                                            Difficulties</p>
+                                                                                    </div>
+                                                                                    <div class="col-12 col-md-6">
+                                                                                        <div
+                                                                                            class="mb-3 fs-14 form-items-wrapper">
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault1">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault1">
+                                                                                                    Reading
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault2">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault2">
+                                                                                                    Spelling
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault3">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault3">
+                                                                                                    Written Expression
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault4">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault4">
+                                                                                                    Incomplete Notes
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault5">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault5">
+                                                                                                    Subject Learning
+                                                                                                    Difficulties
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault1">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault1">
+                                                                                                    Gives Up Easily
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault2">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault2">
+                                                                                                    Poor Motivation
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault3">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault3">
+                                                                                                    Study Skill
+                                                                                                    Difficulties
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault4">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault4">
+                                                                                                    Coordination
+                                                                                                    Difficulties
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault5">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault5">
+                                                                                                    Mathematics
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault5">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault5">
+                                                                                                    Handwriting
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault5">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault5">
+                                                                                                    Arithmetic
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault5">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault5">
+                                                                                                    Language Learning
+                                                                                                    Difficulties
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault5">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault5">
+                                                                                                    Slow
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault5">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault5">
+                                                                                                    Poor Memory
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault5">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault5">
+                                                                                                    Grade Repetition
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault5">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault5">
+                                                                                                    Dislike for School
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault5">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault5">
+                                                                                                    Clumsy
+                                                                                                </label>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+
+
+                                                                                </div>
+                                                                                <hr>
+                                                                                <div class="row mt-5">
+                                                                                    <div class="col-12 col-md-6">
+                                                                                        <p class="fs-16 mb-4">Attention
+                                                                                            Difficulties</p>
+                                                                                    </div>
+                                                                                    <div class="col-12 col-md-6">
+                                                                                        <div
+                                                                                            class="mb-3 fs-14 form-items-wrapper">
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault1">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault1">
+                                                                                                    Short duration of
+                                                                                                    Attention
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault2">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault2">
+                                                                                                    Impulsivity
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault3">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault3">
+                                                                                                    Easily Distracted
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault4">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault4">
+                                                                                                    Restless
+                                                                                                </label>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <hr>
+
+                                                                                <div class="row mt-5">
+                                                                                    <div class="col-12 col-md-6">
+                                                                                        <p class="fs-16 mb-4">
+                                                                                            Communication
+                                                                                            Difficulties</p>
+                                                                                    </div>
+                                                                                    <div class="col-12 col-md-6">
+                                                                                        <div
+                                                                                            class="mb-3 fs-14 form-items-wrapper">
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault1">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault1">
+                                                                                                    Receptive Language
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault2">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault2">
+                                                                                                    Speech
+                                                                                                </label>
+                                                                                            </div>
+                                                                                            <div class="form-check">
+                                                                                                <input
+                                                                                                    class="form-check-input"
+                                                                                                    type="checkbox"
+                                                                                                    value=""
+                                                                                                    id="flexCheckDefault3">
+                                                                                                <label
+                                                                                                    class="form-check-label p-l-10"
+                                                                                                    for="flexCheckDefault3">
+                                                                                                    Expressive Language
+                                                                                                </label>
+                                                                                            </div>
+
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+                                                                            <hr>
+
+                                                                            <div class="row mt-3">
+                                                                                <div class="col-12 col-md-6">
+                                                                                    <p class="fs-16 mb-4">Sensory and
+                                                                                        Social Behaviour
+                                                                                        Difficulties<span>(select the
+                                                                                            box if the problem
+                                                                                            occurs)</span>
+                                                                                    </p>
+                                                                                </div>
+                                                                                <div class="col-12 col-md-6">
+                                                                                    <div
+                                                                                        class="mb-3 fs-14 form-items-wrapper">
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault2">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault2">
+                                                                                                Hypersensitive /
+                                                                                                Hyposensitive to Light
+                                                                                            </label>
+                                                                                        </div>
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault1">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault1">
+                                                                                                Hypersensitive /
+                                                                                                Hyposensitive to Smell
+                                                                                            </label>
+                                                                                        </div>
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault2">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault2">
+                                                                                                Hypersensitive /
+                                                                                                Hyposensitive to Touch
+                                                                                            </label>
+                                                                                        </div>
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Expressive Language
+                                                                                            </label>
+                                                                                        </div>
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Hypersensitive /
+                                                                                                Hyposensitive to Sound
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Hypersensitive /
+                                                                                                Hyposensitive to Taste
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Sensory Seeking
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Cover Eyes / Ears
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Easily Overstimulated
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Preference for Hard Toys
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                High pain Threshold
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Low Pain Threshold
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Infatuation with Fan or
+                                                                                                Light Switches
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Obsession with Wheels
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Spinning Wheels
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Gazing at Hands
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Hand Flapping
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Finger Posting
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Counting Fingers
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Face Scrunching
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Bouncing UP and Down
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Spinning in circles
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Rocking back and Forth
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Jumping Up and Down
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Breath Holding
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Trouble Sleeping
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Unusual Fears, Habits,,
+                                                                                                or Mannerisms
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Frequent Nightmares
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Excessive Use of Gadgets
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Shy
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                ADL
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Thumb Sucking
+                                                                                            </label>
+                                                                                        </div>
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault1">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault1">
+                                                                                                Does not Respond to Name
+                                                                                            </label>
+                                                                                        </div>
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault2">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault2">
+                                                                                                Echolalia
+                                                                                            </label>
+                                                                                        </div>
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                No Spontaneous
+                                                                                                Communication
+                                                                                            </label>
+                                                                                        </div>
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Prefers to be Alone
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Limited Social
+                                                                                                Interaction
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                No / Fleeting Eye
+                                                                                                Contact
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Side-Eye Glancing
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                More Interested in
+                                                                                                Objects than in People
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Limited / Restricted
+                                                                                                Play
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Lining Things Up
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Dangerous Behavior
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                No Pretend Play
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Eye Level Play
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Standing Upside Down
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Toe Walking
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Stomping
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Head Wobbling
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Hard Blinking
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Headshaking
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Head Banging
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Meltdowns
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Hand Leading
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Sibling Rivalry
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Disobedient
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Temper Tantrums
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Stubborn
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Anger
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Aggressive
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Anxious
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Wet Beds
+                                                                                            </label>
+                                                                                        </div>
+
+                                                                                        <div class="form-check">
+                                                                                            <input
+                                                                                                class="form-check-input"
+                                                                                                type="checkbox" value=""
+                                                                                                id="flexCheckDefault3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexCheckDefault3">
+                                                                                                Bite Nails
+                                                                                            </label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group wizard-buttons-group mt-4">
+                                                        <a href="javascript:;"
+                                                            class="form-wizard-previous-btn float-left btn btn-light">Previous
+                                                            Step</a>
+                                                        <a href="javascript:;"
+                                                            class="form-wizard-next-btn float-right btn btn-primary">Save
+                                                            and Continue</a>
+                                                    </div>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                            aria-labelledby="pills-profile-tab" tabindex="0">
+                                            <div class="row mt-3">
+                                                <div class="col-md-12">
+                                                    <div class="accordion flex-col gap-4"
+                                                        id="accordionPanelsStayOpenExample">
+                                                        <div class="accordion-item">
+                                                            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                                                <button class="accordion-button" type="button"
+                                                                    data-bs-toggle="collapse"
+                                                                    data-bs-target="#panelsStayOpen-collapseOne"
+                                                                    aria-expanded="true"
+                                                                    aria-controls="panelsStayOpen-collapseOne">
+                                                                    Current Education
+                                                                </button>
+                                                            </h2>
+                                                            <div id="panelsStayOpen-collapseOne"
+                                                                class="accordion-collapse collapse show"
+                                                                aria-labelledby="panelsStayOpen-headingOne">
+                                                                <div class="accordion-body">
+                                                                    <div
+                                                                        class="inner-wrapper w-full h-full bg-light bradius-7 mb-3">
+                                                                        <div class="row">
+                                                                            <div class="col-12 col-md-6 col-lg-3">
+                                                                                    <div class="form-check">
+                                                                                        <input class="form-check-input"
+                                                                                            type="radio"
+                                                                                            name="flexRadioDefault"
+                                                                                            id="flexRadioDefault1">
+                                                                                        <label
+                                                                                            class="form-check-label p-l-10"
+                                                                                            for="flexRadioDefault1">
+                                                                                            Regular School
+                                                                                        </label>
+                                                                                    </div>
+                                                                            </div>
+                                                                            <div class="col-12 col-md-6 col-lg-3">
+                                                                                <div class="form-check">
+                                                                                    <input class="form-check-input"
+                                                                                        type="radio"
+                                                                                        name="flexRadioDefault"
+                                                                                        id="flexRadioDefault2"
+                                                                                        checked>
+                                                                                    <label
+                                                                                        class="form-check-label p-l-10"
+                                                                                        for="flexRadioDefault2">
+                                                                                        Special School
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-12 col-md-6 col-lg-3">
+                                                                                <div class="form-check">
+                                                                                    <input class="form-check-input"
+                                                                                        type="radio"
+                                                                                        name="flexRadioDefault"
+                                                                                        id="flexRadioDefault2"
+                                                                                        checked>
+                                                                                    <label
+                                                                                        class="form-check-label p-l-10"
+                                                                                        for="flexRadioDefault2">
+                                                                                        Home School
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="col-12 col-md-6 col-lg-3">
+                                                                                <div class="form-check">
+                                                                                    <input class="form-check-input"
+                                                                                        type="radio"
+                                                                                        name="flexRadioDefault"
+                                                                                        id="flexRadioDefault2"
+                                                                                        checked>
+                                                                                    <label
+                                                                                        class="form-check-label p-l-10"
+                                                                                        for="flexRadioDefault2">
+                                                                                        Other
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>       
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            <div class="row mt-3">
+                                                <div class="col-md-12">
+                                                    <div class="accordion flex-col gap-4"id="accordionPanelsStayOpenExample">
+                                                        <div class="accordion-item">
+                                                            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                                                                <button class="accordion-button collapsed" type="button"
+                                                                    data-bs-toggle="collapse"
+                                                                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                                                    aria-controls="panelsStayOpen-collapseTwo">
+                                                                    Educational Placement <span></span>
+                                                                </button>
+                                                            </h2>
+                                                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                                                                aria-labelledby="panelsStayOpen-headingTwo">
+                                                                <div class="accordion-body">
+                                                                        <div
+                                                                            class="inner-wrapper w-full h-full bg-light bradius-7 mb-3">
+    
+    
+                                                                            <div class="row mt-3">
+                                                                                <div
+                                                                                    class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                                                                    <label class="control-label">
+                                                                                        <p class="fs-16 mb-3">Entered in the
+                                                                                            current school in class</p>
+                                                                                    </label>
+                                                                                </div>
+                                                                                <div
+                                                                                    class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                                                                    <input class="form-control" type="text"
+                                                                                        placeholder="Type Student Name"
+                                                                                        aria-label="default input example">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row mt-5">
+                                                                                <div class="col-12 col-md-6">
+                                                                                    <p class="fs-16 mb-4">Age</p>
+                                                                                </div>
+                                                                                <div class="col-12 col-md-6">
+                                                                                    <div
+                                                                                        class="mb-3 fs-14 form-items-wrapper">
+                                                                                        <div class="form-check">
+                                                                                            <input class="form-check-input"
+                                                                                                type="radio"
+                                                                                                name="flexRadioDefault"
+                                                                                                id="flexRadio1">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexRadio1">
+                                                                                                Regular School
+                                                                                            </label>
+                                                                                        </div>
+                                                                                        <div class="form-check">
+                                                                                            <input class="form-check-input"
+                                                                                                type="radio"
+                                                                                                name="flexRadioDefault"
+                                                                                                id="flexRadio2">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexRadio2">
+                                                                                                Special School
+                                                                                            </label>
+                                                                                        </div>
+                                                                                        <div class="form-check">
+                                                                                            <input class="form-check-input"
+                                                                                                type="radio"
+                                                                                                name="flexRadioDefault"
+                                                                                                id="flexRadio3">
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexRadio3">
+                                                                                                Home School
+                                                                                            </label>
+                                                                                        </div>
+                                                                                        <div class="form-check">
+                                                                                            <input class="form-check-input"
+                                                                                                type="radio"
+                                                                                                name="flexRadioDefault"
+                                                                                                id="flexRadio4" checked>
+                                                                                            <label
+                                                                                                class="form-check-label p-l-10"
+                                                                                                for="flexRadio4">
+                                                                                                Other
+                                                                                            </label>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row mt-3">
+                                                                                <div
+                                                                                    class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                                                                    <label class=" control-label">
+                                                                                        <p class="fs-16 mb-3">Board</p>
+                                                                                    </label>
+                                                                                </div>
+                                                                                <div
+                                                                                    class=" col-lg-6 col-md-6 col-sm-6 col-6">
+                                                                                    <input class="form-control" type="text"
+                                                                                        placeholder="Type Board"
+                                                                                        aria-label="default input example">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row mt-3">
+                                                                                <div
+                                                                                    class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                                                                    <label class=" control-label">
+                                                                                        <p class="fs-16 mb-3">Classroom Strength</p>
+                                                                                    </label>
+                                                                                </div>
+                                                                                <div
+                                                                                    class=" col-lg-6 col-md-6 col-sm-6 col-6">
+                                                                                    <input class="form-control" type="text"
+                                                                                        placeholder="Type Classroom Strength"
+                                                                                        aria-label="default input example">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row mt-3">
+                                                                                <div
+                                                                                    class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                                                                    <label class=" control-label">
+                                                                                        <p class="fs-16 mb-3">Grades Repeated</p>
+                                                                                    </label>
+                                                                                </div>
+                                                                                <div
+                                                                                    class=" col-lg-6 col-md-6 col-sm-6 col-6">
+                                                                                    <input class="form-control" type="text"
+                                                                                        placeholder="Type Grades Reported"
+                                                                                        aria-label="default input example">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row mt-3">
+                                                                                <div
+                                                                                    class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                                                                    <label class=" control-label">
+                                                                                        <p class="fs-16 mb-3">Attendance</p>
+                                                                                    </label>
+                                                                                </div>
+                                                                                <div
+                                                                                    class=" col-lg-6 col-md-6 col-sm-6 col-6">
+                                                                                    <input class="form-control" type="text"
+                                                                                        placeholder="Type Attendance rate"
+                                                                                        aria-label="default input example">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row mt-3">
+                                                                                <div
+                                                                                    class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                                                                    <label class=" control-label">
+                                                                                        <p class="fs-16 mb-3">Academic Performance</p>
+                                                                                    </label>
+                                                                                </div>
+                                                                                <div
+                                                                                    class=" col-lg-6 col-md-6 col-sm-6 col-6">
+                                                                                    <input class="form-control" type="text"
+                                                                                        placeholder="Type Academic Performance"
+                                                                                        aria-label="default input example">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row mt-3">
+                                                                                <div
+                                                                                    class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                                                                    <label class=" control-label">
+                                                                                        <p class="fs-16 mb-3">Peer Group Adjustment</p>
+                                                                                    </label>
+                                                                                </div>
+                                                                                <div
+                                                                                    class=" col-lg-6 col-md-6 col-sm-6 col-6">
+                                                                                    <input class="form-control" type="text"
+                                                                                        placeholder="Type Peer Group Adjustment"
+                                                                                        aria-label="default input example">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row mt-3">
+                                                                                <div
+                                                                                    class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                                                                    <label class=" control-label">
+                                                                                        <p class="fs-16 mb-3">Special Educational Services</p>
+                                                                                    </label>
+                                                                                </div>
+                                                                                <div
+                                                                                    class=" col-lg-4 col-md-4 col-sm-4 col-4">
+                                                                                    <input class="form-control" type="text"
+                                                                                        placeholder="Enter Special Education Services"
+                                                                                        aria-label="default input example">
+                                                                                        <div class="divtext1 mt-3 flex-col gap-3"></div>
+                                                                                </div>
+                                                                                <div
+                                                                                class=" col-lg-2 col-md-2 col-sm-2 col-2">
+                                                                                <button type="button" class="btn-1" id="btn-text1"><i class="ri-add-line"></i></button>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row mt-3">
+                                                                                <div
+                                                                                    class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                                                                    <label class=" control-label">
+                                                                                        <p class="fs-16 mb-3">Has Received Related Services</p>
+                                                                                    </label>
+                                                                                </div>
+                                                                                <div
+                                                                                    class=" col-lg-4 col-md-4 col-sm-4 col-4">
+                                                                                    <input class="form-control" type="text"
+                                                                                        placeholder="Has Received Related Services"
+                                                                                        aria-label="default input example">
+                                                                                        <div class="divtext2 mt-3 flex-col gap-3"></div>
+                                                                                </div>
+                                                                                <div
+                                                                                class=" col-lg-2 col-md-2 col-sm-2 col-2">
+                                                                                 <button type="button" class="btn-1" id="btn-text2"><i class="ri-add-line"></i></button>
+                                                                               
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row mt-3">
+                                                    <div class="col-md-12">
+                                                        <div class="accordion flex-col gap-4" id="accordionPanelsStayOpenExample">
+                                                            <div class="accordion-item">
+                                                                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                                                                    <button class="accordion-button collapsed" type="button"
+                                                                        data-bs-toggle="collapse"
+                                                                        data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                                                        aria-controls="panelsStayOpen-collapseThree">
+                                                                        Relevant Developmental/Health/Medical Findings
+                                                                    </button>
+                                                                </h2>
+                                                                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                                                                    aria-labelledby="panelsStayOpen-headingThree">
+                                                                    <div class="accordion-body">
+                                                                        <div class="row mt-3">
+                                                                            <div
+                                                                                class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                                                                <label class=" control-label">
+                                                                                    <p class="fs-16 mb-3">Birth & Developmental History</p>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div
+                                                                                class=" col-lg-6 col-md-6 col-sm-6 col-6">
+                                                                                <input class="form-control" type="text"
+                                                                                    placeholder="Type Details"
+                                                                                    aria-label="default input example">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row mt-3">
+                                                                            <div
+                                                                                class="col-lg-6 col-md-6  col-6">
+                                                                                <label class=" control-label">
+                                                                                    <p class="fs-16 mb-3">Previous Consultations, Assessments, and Diagnosis</p>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div
+                                                                                class=" col-lg-6 col-md-6  col-6">
+                                                                                <input class="form-control" type="text"
+                                                                                    placeholder="Type Details"
+                                                                                    aria-label="default input example">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="row mt-3">
+                                                                            <div
+                                                                                class="col-lg-6 col-md-6  col-6">
+                                                                                <label class=" control-label">
+                                                                                    <p class="fs-16 mb-3">Current Treatments</p>
+                                                                                </label>
+                                                                            </div>
+                                                                            <div
+                                                                                class=" col-lg-6 col-md-6 col-6">
+                                                                                <input class="form-control" type="text"
+                                                                                    placeholder="Type Details"
+                                                                                    aria-label="default input example">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group wizard-buttons-group mt-4">
+                                                    <a href="javascript:;"
+                                                        class="form-wizard-previous-btn float-left btn btn-light">Previous
+                                                        Step</a>
+                                                    <a href="javascript:;"
+                                                        class="form-wizard-submit float-right btn btn-primary">Submit</a>
+                                                </div>
+                                            </fieldset>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <style>
+        .text-primary {
+            color: #007A6B !important;
+            font-family: poppins;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 20px;
+        }
+
+        .text-1 {
+            color: #007A6B;
+            font-family: poppins;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 20px;
+        }
+
+
+        .text-2 {
+            color: #1A1A1A;
+            text-align: right;
+            font-family: poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 20px;
+
+        }
+
+        .nav-pills .nav-link,
+        .nav-pills .show>.nav-link {
+            background-color: #e2f2f1 !important;
+            color: #007A6B;
+            font-size: 20px;
+            font-style: normal;
+            font-family: poppins;
+            font-weight: 600;
+            line-height: 20px;
+            text-align: left;
+           
+        }
+
+        .nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+            color: #007A6B;
+            box-shadow: var(--shadow-neo);
+        }
+
+        p span {
+            font-size: 14px;
+            color: gray;
+        }
+
+        .ri-add-circle-fill{
+            color: #4A9F95;
+            font-size: 25px;
+          
+        }
+
+        .btn-1{
+            width: 30px;
+            height: 30px;
+            border-radius: 30px;
+            background-color: #4A9F95;
+            outline: none;
+            border: none;
+        }
+        .ri-add-line{
+            font-size: 20px;
+            color: white;
+        }
+      
+
+      
+
+     
+    </style>
+
+    <div class="preloader">
+        <div class="loader">
+            <img src="./assets/images/brand/logo_org.png" alt="" />
+            <span></span>
+        </div>
+    </div>
+
+    <script src="./assets/pluggins/jquery/jquery-3.6.3.min.js"></script>
+    <script src="./assets/pluggins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./assets/pluggins/select2/js/select2.full.min.js"></script>
+    <script src="./assets/pluggins/scrollreveal/scrollreveal.js"></script>
+    <script src="./assets/js/index.js"></script>
+
+    <script>
+        $(function(){
+            let inner = '';
+            inner += '<div class="input-group flex-nowrap mb-3">\
+                        <input type="text" class="form-control" placeholder="Enter Special Education Services" aria-label="Username" aria-describedby="addon-wrapping" />\
+                        <button type="button" class="input-group-text bg-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">\
+                            <i class="ri-delete-bin-fill text-white"></i>\
+                            </button>\
+                           </div>';
+
+                           
+            $('#btn-text1').click(function(){
+                $('.divtext1').append(inner);
+
+            })
+            $('#btn-text2').click(function(){
+                $('.divtext2').append(inner);
+
+            })
+        })
+    </script>
+</body>
+
+</html>

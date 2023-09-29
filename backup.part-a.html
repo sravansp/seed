@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - SEED</title>
+
+    <link rel="stylesheet" href="./assets/pluggins/bootstrap/css/bootstrap.min.css">
+
+    <!-- Icon Used: Remix Icon | https://remixicon.com/-->
+    <link rel="stylesheet" href="./assets/pluggins/remixicon/remixicon.css">
+
+    <link rel="stylesheet" href="./assets/css/pluggins.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/util.css">
+
+    <style>
+        .inner-wrapper {
+
+            border: 0px solid black;
+            background-color: white;
+            padding: 30px 15px;
+            border-radius: 7px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 40px;
+
+        }
+
+        p {
+            color: #FF6A6A;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            letter-spacing: 0.42px;
+            text-align: justify;
+        }
+/* 
+        .text-div {
+            display: flex;
+            gap: 355px;
+            padding: 50px 10px;
+
+        } */
+
+        .text-1 {
+            color: #007A6B;
+            font-family: poppins;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 20px;
+        }
+
+        .text-2 {
+            color: #1A1A1A;
+            text-align: right;
+            font-family: poppins;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 20px;
+
+        }
+
+        .btn-div {
+            display: flex;
+            float: right;
+            padding:  8px;
+            gap: 10px;
+        }
+
+    </style>
+</head>
+
+<body class="light mode">
+    <div class="popup-toggle toggle-switch d-block d-lg-none">
+        <i class="ri-moon-fill fs-25 text-primary"></i>
+    </div>
+    <!-- Sidebar Start -->
+    <div class="app-sidebar__overlay active" data-bs-toggle="sidebar"></div>
+    <nav class="sidebar open">
+        <header>
+            <div class="image-text">
+                <div class="image">
+                    <img src="./assets/images/brand/logo.png" alt="logo">
+                </div>
+                <div class="text logo-text">
+                    <h1 class="fs-24">SEED</h1>
+                </div>
+            </div>
+        </header>
+        <div class="toggle_icon">
+            <span class="toggle">
+                <i class="ri-arrow-right-s-line"></i>
+            </span>
+        </div>
+        <div class="menu-bar">
+            <div class="menu h-full">
+                <ul class="menu-links flex gap-5 h-full flex-col ps-0 justify-content-evenly">
+                    <div class="top-menu-links">
+                        <p class="p-l-20 p-b-8 fs-12 title-menu">General</p>
+                        <li class="nav-link">
+                            <a href="dash-admin.html">
+                                <i class="ri-home-4-fill icon"></i>
+                                <span class="text nav-text">Dashboard</span>
+                                <span class="tooltip">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="assignment.html">
+                                <i class="ri-team-fill icon"></i>
+                                <span class="text nav-text">Student Management</span>
+                                <span class="tooltip">Student Management</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="list.html">
+                                <i class="ri-user-2-fill icon"></i>
+                                <span class="text nav-text">User Management</span>
+                                <span class="tooltip">User Management</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="bookmarks.html">
+                                <i class="ri-calendar-fill icon"></i>
+                                <span class="text nav-text">Appointments</span>
+                                <span class="tooltip">Appointments</span>
+                            </a>
+                        </li>
+                    </div>
+                    <div class="bottom-menu-links">
+                        <p class="p-l-20 p-b-8 fs-12 title-menu">Others</p>
+                        <li class="nav-link">
+                            <a href="settings.html">
+                                <i class="ri-file-copy-2-fill icon"></i>
+                                <span class="text nav-text">Forms and Files</span>
+                                <span class="tooltip">Forms and Files</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="settings.html">
+                                <i class="ri-settings-5-fill icon"></i>
+                                <span class="text nav-text">Account Settings</span>
+                                <span class="tooltip">Account Settings</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="settings.html">
+                                <i class="ri-customer-service-2-fill icon"></i>
+                                <span class="text nav-text">Help and Supporrt</span>
+                                <span class="tooltip">Help and Supporrt</span>
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="bottom-content flex justify-content-center">
+                <!-- <li class="nav-link"> -->
+                <a href="#" class="btn btn-light text-primary">
+                    <div class="p-1 rounded-circle bg-primary">
+                        <i class="ri-shut-down-line text-white fs-20"></i>
+                    </div>
+                    <span class="text nav-text text-primary">Logout</span>
+                    <!-- <span class="tooltip">Logout</span> -->
+                </a>
+                <!-- </li> -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar End  -->
+
+    <div class="overlay_section"></div>
+    <main class="home">
+
+
+        <!-- NAVBAR START  -->
+        <nav class="navbar py-4">
+            <div class="container-fluid">
+                <div class="navbar_container navbar-menu-wrapper d-flex align-items-center">
+                    <a aria-label="hide-sidebar" class="d-lg-none app-sidebar__toggle" data-bs-toggle="sidebar"
+                        href="javascript:void(0);">
+                        <i class="ri-menu-2-line text-primary fs-25"></i>
+                    </a>
+                    <form class="d-flex d-none d-md-block" role="search">
+                        <div class="nav-search">
+                            <i class="ri-search-line fs-25"></i>
+                            <input class="" type="search" placeholder="Search" aria-label="Search">
+                        </div>
+                    </form>
+                    <ul class="navbar-nav mb-0 flex-row gap-4 flex-m">
+                        <li class="nav-item d-block d-md-none">
+
+                            <div class="dropdown d-block d-lg-none position-static">
+                                <a href="javascript:void(0);" class="nav-link icon" data-bs-toggle="dropdown">
+                                    <i class="ri-search-line fs-25 text-primary"></i>
+                                </a>
+                                <div class="dropdown-menu header-search dropdown-menu-start">
+                                    <div class="input-group w-100 p-2">
+                                        <input type="text" class="form-control" placeholder="Search....">
+                                        <div class="input-group-text btn btn-primary">
+                                            <i class="ri-search-line fs-25"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item d-none d-lg-block">
+                            <div class="toggle-switch">
+                                <i class="ri-moon-fill fs-25 text-primary"></i>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div class="pos-relative">
+                                <i class="ri-notification-4-fill fs-25 not text-primary"></i>
+                                <div class="nav-notification"></div>
+                            </div>
+                        </li>
+                        <li class="nav-item gap-2 flex-m">
+                            <a class="nav-link">
+                                <div class="pro-pic rounded-circle">
+                                    <img src="./assets/images/user.png" alt="">
+                                </div>
+                            </a>
+                            <div class="pro-data flex-col flex-c d-none d-md-flex">
+                                <p class="pro-name fs-14 fw-500">Harris M</p>
+                                <p class="pro-pos fs-12">Admin</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <!-- Main Content Start  -->
+        <div class="content pb-4">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="wrapper-primary-light bg-primary-light  w-full">
+                            <div class="row mb-5 mt-0">
+                                <div class="col-md-12">
+                                    <div class="button-group flex gap-3">
+                                        <a href="" type="button" class="btn btn-light"><i class="ri-arrow-left-line fs-20 pe-2"></i>Go Back to Forms</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row py-5">
+                            <div class=" col-lg-6 col-md-6 col-sm-6 col-6">
+                                <div class="text-1">Psycho Educational Assessment Report</div>
+                            </div>
+                            <div class=" col-lg-6 col-md-6 col-sm-6 col-6">
+                                <div class="text-2">For internees (Part-A)</div>
+                            </div>
+                            </div>
+                            <div class="inner-wrapper">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                        <label class="control-label">Student Name</label>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                        <input class="form-control" type="text" placeholder="Type Student Name"
+                                            aria-label="default input example">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                        <label class="control-label">Date of Birth</label>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                                        <select class="form-select form-select-md" aria-label=".form-select-lg example" id="dob_dd">
+                                            <option selected>DD</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                                        <select class="form-select form-select-md" aria-label=".form-select-lg example" id="dob_mm">
+                                            <option selected>MM</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                                        <select class="form-select form-select-md" aria-label=".form-select-lg example" id="dob_yy">
+                                            <option selected>YYYY</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                        <label class=" control-label">Age</label>
+                                    </div>
+                                    <div class=" col-lg-6 col-md-6 col-sm-6 col-6">
+                                        <input class="form-control" type="text" placeholder="Type Student Age"
+                                            aria-label="default input example">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                        <label class="control-label">Gender</label>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                                        <input class="form-control" type="text" placeholder=" Age"
+                                            aria-label="default input example">
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-4"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                        <label class="control-label">Class</label>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                        <input class="form-control" type="text" placeholder=" Type Student Class"
+                                            aria-label="default input example">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                        <label class="control-label">School</label>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                        <input class="form-control" type="text" placeholder=" Type Student School"
+                                            aria-label="default input example">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                        <label class="control-label">Month and Year of Assessment</label>
+                                    </div>
+
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                                        <select class="form-select form-select-md" aria-label=".form-select-lg example">
+                                            <option selected>MM</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                                        <select class="form-select form-select-md" aria-label=".form-select-lg example">
+                                            <option selected>YYYY</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-2"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                        <label class="control-label">Date of Report</label>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                        <input class="form-control" type="text" placeholder=" Type Date of Report"
+                                            aria-label="default input example">
+                                    </div>
+                                </div>
+                                <p>This report is CONFIDENTIAL and should be restricted to the family, teachers, and
+                                    other persons with a professional
+                                    interest in helping this child.it relates to the condition and needs of the child as
+                                    seen at the time of assessment.Due
+                                    to the changing and developing nature of children the information and
+                                    recommendations contained in this report are
+                                    meant for current use.Reference to or use of the information in this report in
+                                    future Years should be made with
+                                    considerable caution
+                                </p>
+                            </div>
+                            <div class="btn-div"><button type="button" class="btn btn-light">Previous Step</button>
+                                <button type="button" class="btn btn-primary">Save Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./assets/pluggins/jquery/jquery-3.6.3.min.js"></script>
+    <script src="./assets/pluggins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./assets/pluggins/scrollreveal/scrollreveal.js"></script>
+    <script src="./assets/js/index.js"></script>
+
+</body>
+
+</html>
