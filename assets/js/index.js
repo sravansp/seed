@@ -5,7 +5,7 @@ const body = document.querySelector("body"),
     searchBtn = body.querySelector(".search-box"),
     modeSwitch = body.querySelectorAll(".toggle-switch"),
     modeText = body.querySelector(".mode-text"),
-    overlaysection = body.querySelector(".overlay_section ");
+    overlayHome = body.querySelectorAll(".overlay_section");
 
 $(window).on('load', function () {
     setTimeout(function () { // allowing 3 secs to fade out loader
@@ -84,6 +84,26 @@ $(toggle).click(function (e) {
         console.log(side_close);
     }
 });
+
+$(overlayHome).click(function (e) {
+    console.log("hiiiii");
+    e.preventDefault();
+    if ($(sidebar).hasClass("close")) {
+        $(sidebar).removeClass("close");
+        $(sidebar).addClass("open");
+        localStorage.setItem("side_close", "open");
+        var side_close = localStorage.getItem("side_close");
+        console.log(side_close);
+    } else {
+        $(sidebar).addClass("close");
+        $(sidebar).removeClass("open");
+        $(body).removeClass("sidenav-toggled");
+        localStorage.setItem("side_close", "close");
+        var side_close = localStorage.getItem("side_close");
+        console.log(side_close);
+    }
+});
+
 $(body).click(function (e) {
     if ($(body).hasClass("sidenav-toggled") && screen.width < 992) {
         $(".overlay_section").addClass("overlay_home");
@@ -91,7 +111,7 @@ $(body).click(function (e) {
         $(".overlay_section").removeClass("overlay_home");
     }
 });
-$(sidebarToggle, overlaysection).click(function (e) {
+$(sidebarToggle, overlayHome).click(function (e) {
     e.preventDefault();
     if ($(body).hasClass("sidenav-toggled")) {
         $(body).removeClass("sidenav-toggled");
