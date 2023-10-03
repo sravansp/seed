@@ -223,8 +223,6 @@
                         <h2 class="fs-24">INDIVIDUALIZED EDUCATION PLAN</h2>
                         <span> For SEN Department (Form C)</span>
                       </div>
-
-                     
                     </section>
 
                     <div class="tab-content">
@@ -249,8 +247,8 @@
                                     aria-expanded="true"
                                     aria-controls="panelsStayOpen-collapseOne"
                                   >
-                                  SKILL AND SUBJECT AREAS TO WHICH THE IEP APPLIES:
-
+                                    SKILL AND SUBJECT AREAS TO WHICH THE IEP
+                                    APPLIES:
                                   </button>
                                 </h2>
                                 <div
@@ -259,30 +257,43 @@
                                   aria-labelledby="panelsStayOpen-headingOne"
                                 >
                                   <div class="accordion-body">
-                                    <div class="header-title rounded-3 mb-3 fs-20 p-2">
-
-                                     
-                                      
-                             <div class="col-md-12">
-                                            <div class="row ">
-                                                <div class="col-12 col-md-5">
-                                                    <label for="exampleFormControlInput1" class="form-label">Skill Domain→</label>
-                                                </div>
-                                                <div class="col-12  col-md-7">
-                                                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                                                        placeholder="Enter Skill Domain">
-                                                </div>
-                                            </div>
+                                    <div
+                                      class="header-title rounded-3 mb-3 fs-20 p-2"
+                                    >
+                                      <div class="col-md-12">
+                                        <div class="row">
+                                          <div class="col-12 col-md-5">
+                                            <label
+                                              for="exampleFormControlInput1"
+                                              class="form-label"
+                                              >Skill Domain→</label
+                                            >
+                                          </div>
+                                          <div class="col-12 col-md-7">
+                                            <input
+                                              type="email"
+                                              class="form-control"
+                                              id="exampleFormControlInput1"
+                                              placeholder="Enter Skill Domain"
+                                            />
+                                          </div>
                                         </div>
-                                  
                                       </div>
-                                      <div class="annual-goal ">
-                                    <span>Annual Goal</span>
-                                      </div>
+                                    </div>
+                                    <div class="annual-goal">
+                                      <span>Annual Goal</span>
+                                      <p>
+                                        (What challenging, yet attainable, goal
+                                        can we expect the student to meet by the
+                                        end of this academic year?)
+                                      </p>
+                                    </div>
+                                    <div>
+                                      
+                                    </div>
                                   </div>
                                 </div>
                               </div>
-                           
                             </div>
                           </div>
                         </div>
@@ -297,7 +308,8 @@
                           >
                             Previous Step
                           </button>
-                          <button onclick="window.location.href='IEP_partD.html';"
+                          <button
+                            onclick="window.location.href='IEP_partD.html';"
                             type="button"
                             class="btn next-step"
                             id="n-btn1"
@@ -306,8 +318,6 @@
                           </button>
                         </div>
                       </div>
-                     
-                     
                     </div>
                   </div>
                 </div>
@@ -551,11 +561,20 @@
         font-size: 14px !important;
         width: auto !important;
       }
-      .annual-goal span{
+      .annual-goal{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      .annual-goal span {
         font-size: 20px;
         font-weight: 600;
       }
-    
+      .annual-goal p{
+        color: #007A6B;
+        font-size: 12px;
+        font-weight: 300;
+      }
     </style>
 
     <script
