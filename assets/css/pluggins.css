@@ -867,7 +867,9 @@ button:focus:not(:focus-visible) {
 
 
 
-
+.wizard-fieldset .accordion-body {
+    padding: 0 !important;
+}
 
 
 
