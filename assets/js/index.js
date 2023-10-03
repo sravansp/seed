@@ -265,6 +265,7 @@ var quill = new Quill("#editor", {
     theme: "snow",
 });
 
+
 $(document).ready(function () {
     // Get the number of radio buttons
     var numRadioButtons = $("input[type='radio']").length;
