@@ -192,7 +192,12 @@ function formWizard() {
         //click on form submit button
         $(document).on("click", ".form-wizard .form-wizard-submit", function () {
             var parentFieldset = $(this).parents('.wizard-fieldset');
+            var next = $(this);
+            var nextWizardStep = false;
+            next.parents('.wizard-fieldset').removeClass("show", "400");
             var currentActiveStep = $(this).parents('.form-wizard').find('.form-wizard-steps .active');
+            // currentActiveStep.removeClass('active').addClass('activated').next().addClass('active', "400");
+            next.parents('.wizard-fieldset').next('.wizard-fieldset').addClass("show", "400");
             parentFieldset.find('.wizard-required').each(function () {
                 var thisValue = $(this).val();
                 if (thisValue == "") {
@@ -298,19 +303,19 @@ $(document).ready(function () {
 });
 
 function printtag(tagid) {
-    var hashid = "#"+ tagid;
+    var hashid = "#" + tagid;
     // var tagname =  $(hashid).prop("tagName").toLowerCase() ;
-    var attributes = ""; 
+    var attributes = "";
     var attrs = document.getElementById(tagid).attributes;
-      $.each(attrs,function(i,elem){
-        attributes +=  " "+  elem.name+" ='"+elem.value+"' " ;
-      })
-    var divToPrint= $(hashid).html() ;
-    var head = "<html><head>"+ $("head").html() + "</head>" ;
-    var allcontent = head + "<body  onload='window.print()' >"+  divToPrint +  "</body></html>"  ;
-    var newWin=window.open('','Print-Window');
+    $.each(attrs, function (i, elem) {
+        attributes += " " + elem.name + " ='" + elem.value + "' ";
+    })
+    var divToPrint = $(hashid).html();
+    var head = "<html><head>" + $("head").html() + "</head>";
+    var allcontent = head + "<body  onload='window.print()' >" + divToPrint + "</body></html>";
+    var newWin = window.open('', 'Print-Window');
     newWin.document.open();
     newWin.document.write(allcontent);
     newWin.document.close();
-   // setTimeout(function(){newWin.close();},10);
+    // setTimeout(function(){newWin.close();},10);
 }

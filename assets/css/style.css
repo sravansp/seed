@@ -965,16 +965,18 @@ body.dark .navbar_container .nav-search {
     border-top: 1px solid var(--body-light-primary); */
 }
 
+
 .form-wizard .form-wizard-steps li span {
     background-color: var(--body-light-primary);
     border-radius: 50%;
     display: inline-block;
-    height: 40px;
-    line-height: 40px;
+    height: 20px;
+    line-height: 20px;
     position: relative;
     text-align: center;
-    width: 40px;
+    width: 21px;
     z-index: 1;
+    font-size: 9px;
 }
 
 .form-wizard .form-wizard-steps li:last-child::after {
@@ -1296,6 +1298,24 @@ body.dark .navbar_container .nav-search {
         justify-content: end;
         gap: 20px;
         flex-direction: row;
+    }
+    .form-wizard .wizard-buttons-group.wizard-final {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-direction: row;
+    }
+    .form-wizard .form-wizard-steps li span {
+        background-color: var(--body-light-primary);
+        border-radius: 50%;
+        display: inline-block;
+        height: 40px;
+        line-height: 40px;
+        position: relative;
+        text-align: center;
+        width: 40px;
+        z-index: 1;
+        font-size: 20px;
     }
 
 }
