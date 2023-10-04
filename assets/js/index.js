@@ -13,6 +13,25 @@ $(window).on('load', function () {
     }, 200);
 });
 
+
+if (document.querySelector(".wrapper-login")) {
+    const sign_in_btn = document.querySelector("#sign-in-btn");
+    const sign_up_btn = document.querySelector("#sign-up-btn");
+    const container = document.querySelector(".wrapper-login");
+    
+    sign_up_btn.addEventListener("click", () => {
+      container.classList.add("sign-up-mode");
+    });
+    
+    sign_in_btn.addEventListener("click", () => {
+      container.classList.remove("sign-up-mode");
+    });
+}
+
+
+
+
+
 //______Select2
 $(function (e) {
     'use strict'
@@ -340,3 +359,4 @@ function printtag(tagid) {
     newWin.document.close();
     // setTimeout(function(){newWin.close();},10);
 }
+
