@@ -720,12 +720,44 @@
 .form-check-input[type=checkbox] {
     border-radius: 0.438rem;
 }
-
+.form-switch .form-check-input {
+    width: 3em !important;
+    border-radius: 2em !important;
+}
+.form-switch {
+    display: block;
+    min-height: 0;
+    padding-left: 1.5em;
+    margin-bottom: 0;
+}
 .input-group-text {
     background-color: var(--body-light);
     min-width: 39px;
 }
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+    color: var(--bs-btn-active-color);
+    background-color: var(--bs-btn-active-bg);
+    border-color: transparent;
+}
 
+/* actual dropdown animation */
+/* .dropdown-menu {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
+    max-height: 0;
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.dropdown-menu.show {
+    max-height: 200px;
+    opacity: 1;
+} */
 .btn {
     /* height: 50px; */
     border-radius: 7px;
@@ -811,7 +843,11 @@
         inset -6px -6px 12px #ffffff;
 }
 
-
+.btn-close:focus {
+    outline: 0;
+    box-shadow: none !important;
+    opacity: 1;
+}
 .accordion-item:first-of-type {
     border-radius: 7px;
 }

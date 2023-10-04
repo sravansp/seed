@@ -813,8 +813,7 @@ body.dark .navbar_container .nav-search {
 }
 
 .admin-dash-user .table-dash {
-    height: 440px;
-    background: var(--body-light-primary);
+    height: auto;
     border-radius: 14px;
     box-shadow: var(--shadow-neo);
     width: 100%;
