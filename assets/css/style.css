@@ -1748,7 +1748,50 @@ body.dark .navbar_container .nav-search {
 
 }
 
+/* =============== Pagination css  ===============*/
 
+
+.pagination.pagination-circle .page-item.active .page-link {
+    border-radius: 3.5px;
+}
+.pagination .page-item .page-link:hover {
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+    background-color: var(--body-light-primary);
+    cursor: pointer;
+}
+.pagination.pg-blue .page-item.active .page-link:hover {
+    background-color: var(--bg-primary-color);
+    box-shadow: var(--shadow-neo);
+}
+.pagination .page-item.active .page-link {
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+    background-color: var(--bg-primary-color);
+    color: #fff;
+}
+.pagination .page-item .page-link {
+    -webkit-transition: all .3s linear;
+    transition: all .3s linear;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+    font-size: .9rem;
+    color: #999;
+    font-weight:bold;
+}
+
+.pagination.pagination-circle .page-item .page-link {
+    margin-left: 2px;
+    margin-right: 2px;
+    border-radius: 3.5px;
+}
+.pagination .page-item.active .page-link{
+    box-shadow: var(--shadow-neo);
+}
+.page-link{
+  border:none!important;
+}
 
 
 

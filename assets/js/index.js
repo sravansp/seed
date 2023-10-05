@@ -359,3 +359,20 @@ function printtag(tagid) {
     newWin.document.close();
     // setTimeout(function(){newWin.close();},10);
 }
+
+
+
+function switchfp() {
+    if (document.querySelector('.fp-1')) {
+        alert("jj")
+
+        if (document.querySelector('.fp-1').style.display == 'none') {
+            document.querySelector('.fp-1').style.display = 'block';
+            document.querySelector('.fp-2').style.display = 'none';
+        }
+        else {
+            document.querySelector('.fp-1').style.display = 'none';
+            document.querySelector('.fp-2').style.display = 'block';
+        }
+    }
+}

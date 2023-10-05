@@ -32,24 +32,41 @@
         </div>
         <div class="wrapper-body row flex-c-m">
             <div class="wrapper-fp p-4 shadow-neo bradius-14 bg-primary-light p-4">
-                <form action="">
+                <div class="fp-1">
+                    <form action="">
+                        <div class="flex-col gap-4">
+                            <div>
+                                <p class="fs-20 fw-semibold">Reset your password</p>
+                                <p class="fs-14">Type in your registered email address to reset password</p>
+                            </div>
+                            <div class="input-field flex-m ps-4">
+                                <input type="email" placeholder="Email Address *" name="email" />
+                            </div>
+                            <a href="#" type="button" class="btn btn-primary py-2" onclick="switchfp()">
+                                Next
+                                <i class="ri-arrow-right-line ps-2"></i>
+                            </a>
+                            <a href="./login.html" class="btn btn-light py-2">
+                                Back to Login
+                            </a>
+                        </div>
+                    </form>
+                </div>
+                <div class="fp-2" style="display: none;">
                     <div class="flex-col gap-4">
                         <div>
-                            <p class="fs-20 fw-semibold">Reset your password</p>
-                            <p class="fs-14">Type in your registered email address to reset password</p>
-                        </div>
-                        <div class="input-field flex-m ps-4">
-                            <input type="email" placeholder="Email Address *" name="email" />
+                            <p class="fs-20 fw-semibold">Recovery Email Sent!</p>
+                            <p class="fs-14">Please check your email for next steps to reset your password.</p>
                         </div>
                         <a href="#" type="button" class="btn btn-primary py-2">
-                            Next
+                            Contact Support
                             <i class="ri-arrow-right-line ps-2"></i>
                         </a>
                         <a href="./login.html" class="btn btn-light py-2">
                             Back to Login
                         </a>
-                    </div>
-                </form>
+                    </div></div>
+                
             </div>
         </div>
         <div class="wrapper-footer row">
