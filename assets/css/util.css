@@ -7457,6 +7457,9 @@ EFFECT   EFFECT   EFFECT   EFFECT   EFFECT   EFFECT  EFFECT
 
 /* width  */
 
+.w-110 {
+	width: 110px;
+}
 .w-130 {
 	width: 130px;
 }

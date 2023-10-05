@@ -33,32 +33,41 @@
 
 
                 <form action="#" class="sign-in-form">
-                    <img src="./assets/images/brand/logo_org.png" alt="">
+                    <img class="w-70" src="./assets/images/brand/logo_org.png" alt="">
                     <h2 class="title">Hello ! Welcome back</h2>
-                    <div class="input-field">
-                        <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username" />
+                    <h1 class="fs-30 fw-semibold">Login</h1>
+                    <div class="input-field flex-m ps-4">
+                        <input type="text" placeholder="Type your username" />
                     </div>
-                    <div class="input-field">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" />
+                    <div class="input-field flex-m ps-4">
+                        <input type="password" placeholder="Type your password" />
                     </div>
-                    <input type="submit" value="Login" class="btn btn-primary w-full" />
-                    <button class="btn btn-light w-full" type="button" id="sign-up-btn">
+                    <div class="flex-sb-m w-full gap-4">
+                        <a href="./dash-admin.html" type="submit" class="btn btn-primary w-full py-2">LogIn</a>
+                        <a href="./forgot-pass.html" class="other-text">Forgot Password?</a>
+                    </div>
+                    <div class="flex-m">
+                        <input class="form-check-input" type="checkbox" value="" id="remember-me">
+                        <label class="form-check-label p-l-10 other-text" for="remember-me">
+                            Remember me?
+                        </label>
+                    </div>
+                    <!-- <button class="btn btn-light w-full py-2" type="button" id="sign-up-btn">
                         Create new Account
-                    </button>
-                    <p class="social-text">Or</p>
-                    <div id="gSignInWrapper">
-                        <div id="customBtn" class="customGPlusSignIn">
-                            <span class="icon"></span>
-                            <span class="buttonText">Sign up with Google</span>
+                    </button> -->
+
+                    <!-- <p class="other-text">Or</p> -->
+                    <div id="gSignInWrapper" class="w-full">
+                        <div id="customBtn" class="customGPlusSignIn w-full flex-c-m gap-2 py-2 bradius-7">
+                            <img src="./assets/images/Google_Logo.svg" alt="">
+                            <span class="buttonText">Sign in with Google</span>
                         </div>
                     </div>
                     <div id="name"></div>
                 </form>
 
 
-                <form action="#" class="sign-up-form">
+                <!-- <form action="#" class="sign-up-form">
                     <h2 class="title">Sign up</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
@@ -91,23 +100,24 @@
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                     </div>
-                </form>
+                </form> -->
             </div>
         </div>
 
         <div class="panels-container">
             <div class="panel left-panel">
                 <div class="content">
-                    <h3>New here ?</h3>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
-                        ex ratione. Aliquid!
-                    </p>
-
+                    <img class="img-side-1 image" src="./assets/images/1.png" alt="">
+                    <img class="img-side-2 image" src="./assets/images/2.png" alt="">
+                    <img class="img-side-3 image" src="./assets/images/2.png" alt="">
+                    <h1 class="fs-40 text-primary fw-semibold">Healing Hands. </h1>
+                    <h1 class="fs-40 text-white fw-semibold">For Your Little Hearts.</h1>
+                    <img src="./assets/images/login_side1.webp" class="image4" alt="">
+                    <!-- <img src="./assets/images/Vector1.svg" class="image3" alt="">
+                    <img src="./assets/images/Vector2.svg" class="image2" alt=""> -->
                 </div>
-                <img src="img/log.svg" class="image" alt="" />
             </div>
-            <div class="panel right-panel">
+            <!-- <div class="panel right-panel">
                 <div class="content">
                     <h3>One of us ?</h3>
                     <p>
@@ -117,7 +127,7 @@
 
                 </div>
                 <img src="img/register.svg" class="image" alt="" />
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -172,19 +182,16 @@
 
     <style type="text/css">
         #customBtn {
-            display: inline-block;
             color: #444;
             white-space: nowrap;
-
-            border-radius: 10px;
             background: #FFF;
-
             /* Neu new */
             box-shadow: 2.17893px 2.17893px 6.5368px 0px rgba(174, 174, 192, 0.40), -2.17893px -2.17893px 6.5368px 0px #FFF;
         }
 
         #customBtn:hover {
             cursor: pointer;
+            background-color: var(--bg-main-primary);
         }
 
         span.label {
@@ -192,23 +199,20 @@
             font-weight: normal;
         }
 
-        span.icon {
-            background: url('/identity/sign-in/g-normal.png') transparent 5px 50% no-repeat;
-            display: inline-block;
-            vertical-align: middle;
-            width: 42px;
-            height: 42px;
+        .customGPlusSignIn img {
+            width: 20px;
+            height: 20px;
         }
-
+        #customBtn:hover span.buttonText {
+color: var(--text-white);
+        }
         span.buttonText {
-            display: inline-block;
-            vertical-align: middle;
-            padding-left: 42px;
-            padding-right: 42px;
-            font-size: 14px;
-            font-weight: bold;
-            /* Use the Roboto font that is loaded in the <head> */
-            font-family: 'Roboto', sans-serif;
+            color: var(--Text-Gray, rgba(26, 26, 26, 0.41));
+            font-family: Poppins;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
         }
     </style>
 </body>

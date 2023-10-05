@@ -18,13 +18,13 @@ if (document.querySelector(".wrapper-login")) {
     const sign_in_btn = document.querySelector("#sign-in-btn");
     const sign_up_btn = document.querySelector("#sign-up-btn");
     const container = document.querySelector(".wrapper-login");
-    
+
     sign_up_btn.addEventListener("click", () => {
-      container.classList.add("sign-up-mode");
+        container.classList.add("sign-up-mode");
     });
-    
+
     sign_in_btn.addEventListener("click", () => {
-      container.classList.remove("sign-up-mode");
+        container.classList.remove("sign-up-mode");
     });
 }
 
@@ -86,7 +86,7 @@ $(function () {
 });
 
 
-$(toggle,overlayHome).click(function (e) {
+$(toggle, overlayHome).click(function (e) {
     e.preventDefault();
     if ($(sidebar).hasClass("close")) {
         $(sidebar).removeClass("close");
@@ -270,40 +270,40 @@ function formWizard() {
 
 
 
+if (document.querySelector("#editor")) {
+    var toolbarOptions = [
+        ["bold", "italic", "underline"],
+        [{
+            align: [],
+        }, ],
+        [{
+                list: "ordered",
+            },
+            {
+                list: "bullet",
+            },
+        ],
+        [{
+                indent: "-1",
+            },
+            {
+                indent: "+1",
+            },
+        ],
+        [{
+            header: [1, 2, 3, 4, 5, 6, false],
+        }, ],
 
-var toolbarOptions = [
-    ["bold", "italic", "underline"],
-    [{
-        align: [],
-    }, ],
-    [{
-            list: "ordered",
+        ["clean"],
+    ];
+    var quill = new Quill("#editor", {
+        modules: {
+            toolbar: toolbarOptions,
         },
-        {
-            list: "bullet",
-        },
-    ],
-    [{
-            indent: "-1",
-        },
-        {
-            indent: "+1",
-        },
-    ],
-    [{
-        header: [1, 2, 3, 4, 5, 6, false],
-    }, ],
-
-    ["clean"],
-];
-var quill = new Quill("#editor", {
-    modules: {
-        toolbar: toolbarOptions,
-    },
-    placeholder: "Type here ",
-    theme: "snow",
-});
-
+        placeholder: "Type here ",
+        theme: "snow",
+    });
+}
 
 $(document).ready(function () {
     // Get the number of radio buttons
@@ -359,4 +359,3 @@ function printtag(tagid) {
     newWin.document.close();
     // setTimeout(function(){newWin.close();},10);
 }
-
