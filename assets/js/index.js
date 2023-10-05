@@ -364,7 +364,7 @@ function printtag(tagid) {
 
 function switchfp() {
     if (document.querySelector('.fp-1')) {
-        alert("jj")
+
 
         if (document.querySelector('.fp-1').style.display == 'none') {
             document.querySelector('.fp-1').style.display = 'block';
