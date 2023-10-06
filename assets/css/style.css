@@ -15,6 +15,7 @@
 
     --secondary-color: #F2F2F2;
     --dark-gray: #BABABA;
+    --text-gray: #1A1A1A;
 
     --btn-color: var(--primary-color);
 
@@ -133,6 +134,9 @@ input {
 
 .text-white {
     color: var(--text-white) !important;
+}
+.text-gray {
+    color: var(--text-gray) !important;
 }
 
 .bg-primary {
@@ -813,7 +817,7 @@ body.dark .navbar_container .nav-search {
 }
 
 .admin-dash-user .calender-dash {
-    height: 230px;
+    height: auto;
     border-radius: 14px;
     box-shadow: var(--shadow-neo);
     width: 100%;
@@ -1856,6 +1860,10 @@ body.dark .navbar_container .nav-search {
 
     .wrapper-login form {
         padding: 0rem 10rem;
+    }
+    .admin-dash-user .calender-dash {
+        height: 230px;
+
     }
     
 

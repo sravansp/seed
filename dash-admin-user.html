@@ -192,10 +192,10 @@
             <div class="container-fluid px-md-4">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="wrapper-body admin-dash-user w-full">
+                        <div class="wrapper-body admin-dash-user w-full flex-col gap-4">
                             <div class="row">
-                                <div class="col-md-5">
-                                    <div class="row mb-">
+                                <div class="col-md-4">
+                                    <div class="row">
                                         <div class="col-12">
                                             <a class="card-dash bg-card flex-m gap-3 p-4" data-bs-toggle="modal"
                                                 data-bs-target="#exampleModal">
@@ -225,20 +225,44 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-7">
-                                    <div class="calender-dash">
-
+                                <div class="col-md-8">
+                                    <div class="calender-dash p-4">
+                                        <div class="row h-full gap-3 gap-md-0">
+                                            <div class="col-12 col-md-3">
+                                                <div
+                                                    class="user-card bg-secondary bradius-7 h-full w-full flex-col gap-2 flex-c-m p-3">
+                                                    <h1 class="fs-64 fw-semibold text-main-primary">32</h1>
+                                                    <p class="fs-16 text-gray">Internees</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                 <div
+                                                    class="user-card bg-secondary bradius-7 h-full w-full flex-col gap-2 flex-c-m p-3">
+                                                    <h1 class="fs-64 fw-semibold text-main-primary">12</h1>
+                                                    <p class="fs-16 text-gray">Consultants </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                 <div
+                                                    class="user-card bg-secondary bradius-7 h-full w-full flex-col gap-2 flex-c-m p-3">
+                                                    <h1 class="fs-64 fw-semibold text-main-primary">27</h1>
+                                                    <p class="fs-16 text-gray">Schools</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-3">
+                                                 <div
+                                                    class="user-card bg-secondary bradius-7 h-full w-full flex-col gap-2 flex-c-m p-3">
+                                                    <h1 class="fs-64 fw-semibold text-main-primary">4</h1>
+                                                    <p class="fs-16 text-gray">Receptionists</p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-12">
-                                    <div class="table-dash p-4 flex-col gap-4 bg-light">
-                                        <div class="table-header flex-sb flex-col-l-sm">
-                                            <h1 class="fs-24 fw-semibold">All Users ( <span id="usercount">248</span> )
-                                            </h1>
-                                            <a href="#" class="fs-12">View All</a>
-                                        </div>
+                                <div class="col-12">
+                                    <div class="inner-wrapper w-full h-full bg-light bradius-7 mb-3 p-4">
                                         <div class="filter-row flex-col gap-2">
                                             <div class="row filters gap-3 gap-md-0">
                                                 <div class="col-12 col-md-3 mb-3">
@@ -257,46 +281,49 @@
                                                     <input type="text" class="form-control" name="" id=""
                                                         aria-describedby="Enter Score" placeholder="Enter Score">
                                                 </div>
+
                                                 <div class="col-12 col-md-3 mb-3">
-                                                    <label for="" class="form-label"> Filter Name</label>
+                                                    <label for="" class="form-label">Sort By</label>
                                                     <select
                                                         class="form-control select2-select select2-show-search form-select"
-                                                        data-placeholder="Select Type">
-                                                        <option label="Select Type"></option>
+                                                        data-placeholder="Sort By">
+                                                        <option label="Sort By"></option>
                                                         <option value="AZ">User</option>
                                                         <option value="CO">Admin</option>
                                                         <option value="ID">Sen Dept</option>
                                                     </select>
                                                 </div>
-                                                <div class="col-12 col-md-3 mb-3">
-                                                    <label for="" class="form-label"> Filter Name</label>
-                                                    <input type="text" class="form-control" name="" id=""
-                                                        aria-describedby="Enter Score" placeholder="Enter Score">
-                                                </div>
-                                                <div class="col-12 col-md-3 mb-3">
-                                                    <label for="" class="form-label"> Filter Name</label>
-                                                    <input type="text" class="form-control" name="" id=""
-                                                        aria-describedby="Enter Score" placeholder="Enter Score">
-                                                </div>
-                                                <!-- <div class="col-12 col-md-3 mb-3">
-                                                    <button class="btn btn-primary flex gap-2">More Filters <i
+                                                <div class="col-12 col-md-2 mb-3 flex align-items-end">
+                                                    <button class="btn btn-primary flex gap-2">Filter <i
                                                             class="ri-equalizer-fill"></i></button>
                                                     </select>
-                                                </div> -->
+                                                </div>
                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="inner-wrapper table-dash p-4 flex-col gap-4 bg-primary-light">
+                                        <div class="table-header flex-sb flex-col-l-sm">
+                                            <h1 class="fs-24 fw-semibold">All Users ( <span id="usercount">248</span> )
+                                            </h1>
+                                            <a href="#" class="fs-12">View All</a>
                                         </div>
 
 
-                                        <div class="table-responsive">
+
+                                        <div class="table-responsive bg-light bradius-7">
                                             <table class="table table-hover align-middle fs-12">
                                                 <thead class="table-light fw-semibold">
                                                     <tr class="">
-                                                        <th>Admission ID</th>
-                                                        <th>Name of User</th>
-                                                        <th>Designation</th>
-                                                        <th>Access Level</th>
-                                                        <th>Status</th>
-                                                        <th>Action</th>
+                                                        <th scope="col">Admission ID</th>
+                                                        <th scope="col">Name of User</th>
+                                                        <th scope="col">Designation</th>
+                                                        <th scope="col">Access Level</th>
+                                                        <th scope="col">Status</th>
+                                                        <th scope="col">Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -567,13 +594,13 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="mb-3 fs-14 row">
-                        <div class="col-12 col-md-6 form-input">
+                    <div class="fs-14 row">
+                        <div class="col-12 col-md-6 form-input mb-3">
                             <label for="" class="form-label">Full Name</label>
                             <input type="text" class="form-control" name="" id="" aria-describedby="Enter Full Name"
                                 placeholder="Enter Full Name">
                         </div>
-                        <div class="col-12 col-md-6 form-input">
+                        <div class="col-12 col-md-6 form-input mb-3">
                             <label for="" class="form-label">Type</label>
                             <select class="form-control select2-select select2-show-search form-select"
                                 data-placeholder="Select Type">
@@ -583,12 +610,12 @@
                                 <option value="ID">Sen Dept</option>
                             </select>
                         </div>
-                        <div class="col-12 col-md-6 form-input">
+                        <div class="col-12 col-md-6 form-input mb-3">
                             <label for="" class="form-label">Designation</label>
                             <input type="text" class="form-control" name="" id="" aria-describedby="Enter Designation"
                                 placeholder="Enter Designation">
                         </div>
-                        <div class="col-12 col-md-6 form-input">
+                        <div class="col-12 col-md-6 form-input mb-3">
                             <label for="" class="form-label">Access Level</label>
                             <select class="form-control select2-select select2-show-search form-select"
                                 data-placeholder="Select Access Level">
@@ -598,7 +625,7 @@
                                 <option value="ID">Sen Dept</option>
                             </select>
                         </div>
-                        <div class="col-12 col-md-6 form-input">
+                        <div class="col-12 col-md-6 form-input mb-3">
                             <label for="" class="form-label">Mobile Number</label>
                             <input type="text" class="form-control" name="" id="" aria-describedby="Enter Mobile No."
                                 placeholder="Enter Mobile No.">
