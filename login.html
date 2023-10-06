@@ -37,10 +37,13 @@
                     <h2 class="title">Hello ! Welcome back</h2>
                     <h1 class="fs-30 fw-semibold">Login</h1>
                     <div class="input-field flex-m ps-4">
-                        <input type="text" placeholder="Type your username" />
+                        <input type="text" placeholder="Type your username" id="login-username"/>
                     </div>
                     <div class="input-field flex-m ps-4">
-                        <input type="password" placeholder="Type your password" />
+                        <input type="password" placeholder="Type your password" id="login-password"/>
+                        <span class="p-viewer">
+                            <i toggle="#password-field" class="ri-eye-fill field_icon toggle-password"></i>
+                        </span>
                     </div>
                     <div class="flex-sb-m w-full gap-4">
                         <a href="./dash-admin.html" type="submit" class="btn btn-primary w-full py-2">LogIn</a>

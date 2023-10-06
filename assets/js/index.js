@@ -14,21 +14,33 @@ $(window).on('load', function () {
 });
 
 
-if (document.querySelector(".wrapper-login")) {
-    const sign_in_btn = document.querySelector("#sign-in-btn");
-    const sign_up_btn = document.querySelector("#sign-up-btn");
-    const container = document.querySelector(".wrapper-login");
+// if (document.querySelector(".wrapper-login")) {
+//     const sign_in_btn = document.querySelector("#sign-in-btn");
+//     const sign_up_btn = document.querySelector("#sign-up-btn");
+//     const container = document.querySelector(".wrapper-login");
 
-    sign_up_btn.addEventListener("click", () => {
-        container.classList.add("sign-up-mode");
-    });
+//     sign_up_btn.addEventListener("click", () => {
+//         container.classList.add("sign-up-mode");
+//     });
 
-    sign_in_btn.addEventListener("click", () => {
-        container.classList.remove("sign-up-mode");
-    });
-}
+//     sign_in_btn.addEventListener("click", () => {
+//         container.classList.remove("sign-up-mode");
+//     });
+// }
 
 
+// Password eye button 
+$(".toggle-password").click(function (e) {
+    e.preventDefault();
+    $(this).toggleClass("ri-eye-fill ri-eye-off-fill");
+    var input = $("#login-password");
+    if (input.attr("type") === "password") {
+        input.attr("type", "text");
+    } else {
+        input.attr("type", "password");
+    }
+
+});
 
 
 
@@ -74,19 +86,10 @@ $(function () {
         $(body).addClass(dark_mode);
     }
 
-
-    // Select 2 
-    // $("#sas").select2({
-    //     closeOnSelect: false
-    // });
-    // $("#grade").select2({
-    //     closeOnSelect: false
-    // });
-
 });
 
 
-$(toggle, overlayHome).click(function (e) {
+$(toggle).click(function (e) {
     e.preventDefault();
     if ($(sidebar).hasClass("close")) {
         $(sidebar).removeClass("close");
@@ -104,24 +107,24 @@ $(toggle, overlayHome).click(function (e) {
     }
 });
 
-// $(overlayHome).click(function (e) {
-//     console.log("hiiiii");
-//     e.preventDefault();
-//     if ($(sidebar).hasClass("close")) {
-//         $(sidebar).removeClass("close");
-//         $(sidebar).addClass("open");
-//         localStorage.setItem("side_close", "open");
-//         var side_close = localStorage.getItem("side_close");
-//         console.log(side_close);
-//     } else {
-//         $(sidebar).addClass("close");
-//         $(sidebar).removeClass("open");
-//         $(body).removeClass("sidenav-toggled");
-//         localStorage.setItem("side_close", "close");
-//         var side_close = localStorage.getItem("side_close");
-//         console.log(side_close);
-//     }
-// });
+$(overlayHome).click(function (e) {
+    console.log("hiiiii");
+    e.preventDefault();
+    if ($(sidebar).hasClass("close")) {
+        $(sidebar).removeClass("close");
+        $(sidebar).addClass("open");
+        localStorage.setItem("side_close", "open");
+        var side_close = localStorage.getItem("side_close");
+        console.log(side_close);
+    } else {
+        $(sidebar).addClass("close");
+        $(sidebar).removeClass("open");
+        $(body).removeClass("sidenav-toggled");
+        localStorage.setItem("side_close", "close");
+        var side_close = localStorage.getItem("side_close");
+        console.log(side_close);
+    }
+});
 
 $(body).click(function (e) {
     if ($(body).hasClass("sidenav-toggled") && screen.width < 992) {
@@ -369,8 +372,7 @@ function switchfp() {
         if (document.querySelector('.fp-1').style.display == 'none') {
             document.querySelector('.fp-1').style.display = 'block';
             document.querySelector('.fp-2').style.display = 'none';
-        }
-        else {
+        } else {
             document.querySelector('.fp-1').style.display = 'none';
             document.querySelector('.fp-2').style.display = 'block';
         }
