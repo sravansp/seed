@@ -226,6 +226,11 @@ input {
     border: none;
 }
 
+.inner-wrapper {
+    margin-bottom: 1rem !important;
+
+}
+
 /* ===== Sidebar ===== */
 .sidebar {
     position: fixed;
@@ -803,6 +808,7 @@ body.dark .navbar_container .nav-search {
     transition: 0.5s;
     border-radius: 7px;
 }
+
 /* ============ Navbar End ============  */
 
 
@@ -1481,6 +1487,7 @@ body.dark .navbar_container .nav-search {
     transition: 0.3s;
     cursor: pointer;
 }
+
 .input-field .p-viewer .toggle-password:hover {
     color: var(--primary-color);
 }
@@ -1489,6 +1496,7 @@ body.dark .navbar_container .nav-search {
 .input-field input:focus~.p-viewer .toggle-password {
     color: var(--primary-color);
 }
+
 .errorTxt1 {
     position: absolute;
     top: 40px;
@@ -1880,7 +1888,7 @@ body.dark .navbar_container .nav-search {
     background-color: transparent;
     font-size: .9rem;
     color: #999;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 .pagination.pagination-circle .page-item .page-link {
@@ -1925,6 +1933,134 @@ body.dark .navbar_container .nav-search {
 ul.collection li {
     list-style: none;
 }
+
+
+/* Image Uplaod Profile page CSS  */
+
+.avatar-upload {
+    position: relative;
+    max-width: 250px;
+    margin: auto;
+}
+
+.avatar-upload .avatar-edit {
+    position: absolute;
+    right: -10px;
+    z-index: 1;
+    top: -10px;
+}
+
+.avatar-upload .avatar-edit input {
+    display: none;
+}
+
+.avatar-upload .avatar-edit input+label {
+    width: 32px;
+    height: 32px;
+    color: white;
+    font-size: 24px;
+    border-radius: 17px;
+    background: var(--bg-main-primary);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar-upload .avatar-edit input+label:hover {
+    background: var(--bg-primary-color);
+}
+
+/* .avatar-upload .avatar-edit input+label:after {
+    content: "\f040";
+    font-family: 'FontAwesome';
+    color: #757575;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: auto;
+} */
+
+.avatar-upload .avatar-preview {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    border-radius: var(--bradius-14);
+    border: 5px solid var(--main-primary);
+    box-shadow: var(--shadow-neo);
+    overflow: hidden;
+}
+
+.avatar-upload .avatar-preview>div {
+    width: 100%;
+    height: 100%;
+    /* border-radius: 100%; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.profile .profile-card {
+    height: 100px;
+}
+
+.profile .profile-card.one {
+    background: #DCFCE7;
+}
+
+.profile .profile-card.two {
+    background: #FFF4DE;
+}
+
+.profile .profile-card.three {
+    background: #D1DCFA;
+}
+
+.profile .profile-card.one .rounded-circle {
+    background: #3CD856;
+}
+
+.profile .profile-card.two .rounded-circle {
+    background: #FF947A;
+}
+
+.profile .profile-card.three .rounded-circle {
+    background: #789FFE;
+}
+
+.profile-inputs .form-input input {
+    height: 50px;
+    padding-left: 5px;
+}
+
+.profile-inputs .form-input h6 {
+    font-size: 14px;
+    position: absolute;
+    background: var(--body-light);
+    top: -0.5rem;
+    margin-bottom: 0;
+    left: 1rem;
+    /* transform: translateY(0); */
+    transition: 0.3s;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+
+.profile-inputs .form-input input:focus~h6 {
+    color: var(--primary-color);
+}
+
+
+
+
+
+
+
 
 
 
@@ -1995,6 +2131,10 @@ ul.collection li {
 
     }
 
+    .avatar-upload .avatar-preview {
+        width: 200px;
+        height: 200px;
+    }
 
 }
 
@@ -2012,6 +2152,10 @@ ul.collection li {
         --p-wpl: 64px;
     }
 
+    .avatar-upload .avatar-preview {
+        width: 240px;
+        height: 240px;
+    }
 
 
 }

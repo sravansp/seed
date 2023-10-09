@@ -179,6 +179,7 @@
     cursor: pointer;
     float: right;
     font-weight: bold;
+    display: none;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__placeholder {
@@ -759,17 +760,39 @@
 .was-validated .form-check-input:invalid~.form-check-label {
     color: #dc3545 !important;
 }
+
 .form-select.invalid .select2-container--default .select2-selection--single {
     border-color: #dc3545 !important;
 }
 
 .form-control.invalid,
 .was-validated .form-control:invalid,
-.form-control.invalid .select2-container--default .select2-selection--single  {
+.form-control.invalid .select2-container--default .select2-selection--single {
     border-color: #dc3545 !important;
 }
 
+.form-control.is-invalid:focus,
+.was-validated .form-control:invalid:focus {
+    border-color: #dc3545;
+    box-shadow: none;
+}
 
+.form-control.invalid,
+.was-validated .form-control:invalid~h6 {
+    border-color: #dc3545 !important;
+    color: #dc3545 !important;
+}
+
+.form-control.is-valid:focus,
+.was-validated .form-control:valid:focus {
+    border-color: var(--primary-color);
+    box-shadow: none;
+}
+
+.form-control.is-valid,
+.was-validated .form-control:valid {
+    border-color: var(--primary-color);
+}
 
 /* actual dropdown animation */
 /* .dropdown-menu {
