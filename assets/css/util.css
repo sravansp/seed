@@ -7497,6 +7497,9 @@ EFFECT   EFFECT   EFFECT   EFFECT   EFFECT   EFFECT  EFFECT
 
 /* heifht  */
 
+.h-100px {
+	height: 100px;
+}
 .h-110 {
 	height: 110px;
 }
@@ -7511,6 +7514,9 @@ EFFECT   EFFECT   EFFECT   EFFECT   EFFECT   EFFECT  EFFECT
 }
 .h-60 {
 	height: 60px;
+}
+.h-50px {
+	height: 50px;
 }
 .h-52 {
 	height: 52px;
