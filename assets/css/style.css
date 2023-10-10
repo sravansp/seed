@@ -820,6 +820,7 @@ body.dark .navbar_container .nav-search {
     box-shadow: var(--shadow-neo);
     width: 100%;
     margin-bottom: 40px;
+    overflow: hidden;
 }
 
 .admin-dash .calender-dash {
@@ -848,6 +849,42 @@ body.dark .navbar_container .nav-search {
     position: relative;
     overflow: hidden;
     cursor: pointer;
+}
+
+.admin-dash .circle-back-1 {
+    width: 202.653px;
+    height: 202.653px;
+    transform: rotate(-34.87deg);
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: linear-gradient(180deg, rgba(48, 213, 199, 0.20) 0%, rgba(250, 250, 250, 0.15) 81.46%, rgba(250, 250, 250, 0.01) 100%);
+    right: -3rem;
+    top: -1rem;
+    opacity: 0.7;
+}
+
+.admin-dash .circle-back-2 {
+    width: 205px;
+    height: 205px;
+    transform: rotate(-34.87deg);
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: linear-gradient(180deg, rgba(48, 213, 199, 0.20) 0%, rgba(250, 250, 250, 0.15) 81.46%, rgba(250, 250, 250, 0.01) 100%);
+    right: -3rem;
+    top: 6rem;
+    opacity: 0.7;
+}
+
+.admin-dash .circle-back-3 {
+    width: 125.803px;
+    height: 125.803px;
+    transform: rotate(-34.87deg);
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: linear-gradient(180deg, rgba(48, 213, 199, 0.20) 0%, rgba(250, 250, 250, 0.15) 81.46%, rgba(250, 250, 250, 0.01) 100%);
+    right: -2rem;
+    top: 10rem;
+    opacity: 0.7;
 }
 
 .admin-dash-user .card-dash .user-add-icon {
@@ -2089,6 +2126,7 @@ ul.collection li {
     align-items: center;
     transition: 0.3s;
 }
+
 .table-calendar td a:hover {
     background: var(--bg-primary-color) !important;
     color: var(--text-white);
@@ -2131,6 +2169,7 @@ ul.collection li {
     margin-top: 0;
     font-size: 16px;
 }
+
 .table-calendar .event-count {
     position: absolute;
     width: 14px;
@@ -2142,6 +2181,7 @@ ul.collection li {
     top: 0px;
     right: 0px;
 }
+
 /* ==================Calendar CSS END==================== */
 
 
@@ -2165,6 +2205,7 @@ ul.collection li {
     height: 8px;
     border-radius: 30px;
 }
+
 .verified-v {
     background-color: var(--secondary-color);
     border-radius: 30px;
