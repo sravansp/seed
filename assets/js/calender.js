@@ -134,16 +134,14 @@ showCalendar(currentMonth, currentYear);
 function next() {
     currentYear = currentMonth === 11 ? currentYear + 1 : currentYear;
     currentMonth = (currentMonth + 1) % 12;
-    selectYear.value = currentYear; // Update the year select box
-    selectMonth.value = currentMonth + 1; // Update the month select box (+1 because months are 0-based)
+    updateSelectBoxes();
     showCalendar(currentMonth, currentYear);
 }
 
 function previous() {
     currentYear = currentMonth === 0 ? currentYear - 1 : currentYear;
     currentMonth = currentMonth === 0 ? 11 : currentMonth - 1;
-    selectYear.value = currentYear; // Update the year select box
-    selectMonth.value = currentMonth + 1; // Update the month select box (+1 because months are 0-based)
+    updateSelectBoxes();
     showCalendar(currentMonth, currentYear);
     console.log(currentMonth);
 }
@@ -265,4 +263,13 @@ function showCalendar(month, year) {
 
 function daysInMonth(iMonth, iYear) {
     return 32 - new Date(iYear, iMonth, 32).getDate();
+}
+
+function updateSelectBoxes() {
+    selectYear.value = currentYear;
+    selectMonth.value = currentMonth;
+
+    // Trigger the change event for the Select2 select boxes
+    $(selectYear).trigger('change.select2');
+    $(selectMonth).trigger('change.select2');
 }
