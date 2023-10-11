@@ -17,6 +17,7 @@
     --dark-gray: #BABABA;
     --text-gray: #1A1A1A;
 
+    --dark-Green: #007A6B;
     --btn-color: var(--primary-color);
 
     --card-gradient: linear-gradient(111deg, #30D5C7 -8.96%, rgba(94, 220, 210, 0.74) 10.94%, rgba(147, 229, 222, 0.44) 41.78%, rgba(189, 236, 232, 0.21) 76.6%, rgba(226, 242, 241, 0.00) 137.38%);
@@ -928,6 +929,60 @@ body.dark .navbar_container .nav-search {
     width: 100%;
 }
 
+
+
+.table-dash .dropdown-menu {
+    /* position: absolute;
+    top: 65px;
+    right: -25px;
+    display: block;
+    opacity: 0;
+    visibility: hidden; */
+    /* transform: translateX(50px); */
+    /* transition: all .5s; */
+    box-shadow: var(--shadow-neo);
+    background: var(--body-light-primary);
+    border: none;
+    border-radius: 14px;
+    overflow: hidden;
+    --bs-dropdown-padding-x: 0.5rem;
+    /* display: flex;
+    flex-direction: column;
+    gap: 2px; */
+    font-size: 12px;
+}
+
+/* .table-dash .dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+} */
+
+.table-dash .dropdown-menu[data-bs-popper] {
+    top: 65px;
+    left: unset;
+    margin-top: var(--bs-dropdown-spacer);
+}
+
+.table-dash .dropdown-item.active,
+.dropdown-item:active {
+    color: var(--bs-dropdown-link-active-color);
+    text-decoration: none;
+    background-color: var(--bg-primary-color);
+    border-radius: 7px;
+}
+
+.table-dash .dropdown-item {
+    border-radius: 7px;
+}
+
+/* .table-dash .dropdown-item:focus,
+.dropdown-item:hover {
+    color: var(--text-white);
+    background-color: var(--bg-primary-color);
+    transition: 0.5s;
+    border-radius: 7px;
+} */
 
 
 
@@ -2207,7 +2262,7 @@ ul.collection li {
 }
 
 .verified-v {
-    background-color: var(--secondary-color);
+    background-color: var(--body-light-primary);
     border-radius: 30px;
     display: flex;
     padding: 2px 8px 2px 6px;
@@ -2215,19 +2270,26 @@ ul.collection li {
     align-items: center;
     gap: 6px;
     width: fit-content;
-    color: #007A6B;
+    color: var(--dark-Green);
     font-size: 12px;
     font-weight: 600;
 }
 
 .verified-v .dot {
-    background-color: #14BA6D;
+    background-color: var(--dark-Green);
     width: 8px;
     height: 8px;
     border-radius: 30px;
 }
 
-
+.form-input {
+    position: relative;
+}
+.form-input .p-viewer {
+    position: absolute;
+    right: 30px;
+    bottom: 10px;
+}
 
 
 
@@ -2311,6 +2373,12 @@ ul.collection li {
         width: 200px;
         height: 200px;
     }
+    .form-input .p-viewer {
+        position: absolute;
+        right: 1.8rem;
+        bottom: 1.8rem;
+    }
+    
 
 }
 
