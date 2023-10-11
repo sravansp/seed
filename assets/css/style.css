@@ -2292,6 +2292,16 @@ ul.collection li {
 }
 
 
+/* ADMIN DASH BOARD PIE CHART CSS  */
+.pie-admin-dash {
+    width: auto !important;
+    height: auto !important;
+}
+
+.pie-admin-dash svg {
+    height: 150px;
+    width: 150px;
+}
 
 
 
