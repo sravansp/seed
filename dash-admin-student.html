@@ -60,7 +60,7 @@
                             </a>
                         </li>
                         <li class="nav-link">
-                           <a href="dash-admin-student.html">
+                            <a href="dash-admin-student.html">
                                 <i class="ri-team-fill icon"></i>
                                 <span class="text nav-text">Student Management</span>
                                 <span class="tooltip">Student Management</span>
@@ -208,8 +208,8 @@
                                                 <a href="./dash-admin.html">Home</a>
                                             </li>
                                             <li class="breadcrumb-item active" aria-current="page">
-                                                <i class="ri-user-2-fill fs-20 text-primary"></i>
-                                                <span>User Management</span>
+                                                <i class="ri-team-fill fs-20 text-primary"></i>
+                                                <span>Student Management</span>
                                             </li>
                                         </ol>
                                     </nav>
@@ -217,76 +217,10 @@
                             </div>
                             <!-- BREADCRUMB END-->
 
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <a class="card-dash bg-card flex-m gap-3 p-4" data-bs-toggle="modal"
-                                                data-bs-target="#exampleModal">
-                                                <div class="user-add-icon h-full px-3 flex-c-m">
-                                                    <i class="ri-user-add-fill text-primary fs-20"></i>
-                                                </div>
-                                                <p class="fs-20 fw-semibold text-black">
-                                                    Register User
-                                                </p>
-                                                <div class="pos-absolute card-dash-circle1"></div>
-                                                <div class="pos-absolute card-dash-circle2"></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="card-dash bg-primary-light flex-m gap-3 p-4">
-                                                <div class="user-add-icon h-full px-3 flex-c-m">
-                                                    <i class="ri-user-add-fill text-primary fs-20"></i>
-                                                </div>
-                                                <p class="fs-20 fw-semibold text-black">
-                                                    Manage Students
-                                                </p>
-                                                <div class="pos-absolute card-dash-circle1"></div>
-                                                <div class="pos-absolute card-dash-circle2"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="calender-dash p-4">
-                                        <div class="row h-full gap-3 gap-md-0">
-                                            <div class="col-12 col-md-3">
-                                                <div
-                                                    class="user-card bg-secondary bradius-7 h-full w-full flex-col gap-2 flex-c-m p-3">
-                                                    <h1 class="fs-64 fw-semibold text-main-primary">32</h1>
-                                                    <p class="fs-16 text-gray">Internees</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-md-3">
-                                                <div
-                                                    class="user-card bg-secondary bradius-7 h-full w-full flex-col gap-2 flex-c-m p-3">
-                                                    <h1 class="fs-64 fw-semibold text-main-primary">12</h1>
-                                                    <p class="fs-16 text-gray">Consultants </p>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-md-3">
-                                                <div
-                                                    class="user-card bg-secondary bradius-7 h-full w-full flex-col gap-2 flex-c-m p-3">
-                                                    <h1 class="fs-64 fw-semibold text-main-primary">27</h1>
-                                                    <p class="fs-16 text-gray">Schools</p>
-                                                </div>
-                                            </div>
-                                            <div class="col-12 col-md-3">
-                                                <div
-                                                    class="user-card bg-secondary bradius-7 h-full w-full flex-col gap-2 flex-c-m p-3">
-                                                    <h1 class="fs-64 fw-semibold text-main-primary">4</h1>
-                                                    <p class="fs-16 text-gray">Receptionists</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
                             <div class="row">
                                 <div class="col-12">
-                                    <div class="inner-wrapper w-full h-full bg-light bradius-7 mb-3 p-4">
+                                    <div class="inner-wrapper w-full h-full bg-light bradius-14 mb-3 p-4">
                                         <div class="filter-row flex-col gap-2">
                                             <div class="row filters gap-3 gap-md-0">
                                                 <div class="col-12 col-md-3 mb-3">
@@ -329,12 +263,12 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div class="inner-wrapper table-dash p-4 flex-col gap-4 bg-primary-light">
-                                        <div class="table-header flex-sb flex-col-l-sm">
+                                    <div class="inner-wrapper table-dash p-4 flex-col gap-4 bg-light">
+                                        <!-- <div class="table-header flex-sb flex-col-l-sm">
                                             <h1 class="fs-24 fw-semibold">All Users ( <span id="usercount">248</span> )
                                             </h1>
                                             <a href="#" class="fs-12">View All</a>
-                                        </div>
+                                        </div> -->
 
 
 
@@ -342,17 +276,24 @@
                                             <table class="table table-hover align-middle fs-12">
                                                 <thead class="table-light fw-semibold">
                                                     <tr class="">
-                                                        <th scope="col">Admission ID</th>
-                                                        <th scope="col">Name of User</th>
-                                                        <th scope="col">Designation</th>
-                                                        <th scope="col">Access Level</th>
+                                                        <th scope="col"><i class="ri-image-2-fill text-dark-gray fs-15"></i></th>
+                                                        <th scope="col">Student Name</th>
+                                                        <th scope="col">Standard</th>
+                                                        <th scope="col">Assessment Type</th>
+                                                        <th scope="col">Referral Source</th>
                                                         <th scope="col">Status</th>
                                                         <th scope="col">Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td scope="row">Item</td>
+                                                        <td scope="row">
+                                                            <div class="img-table w-25px h-25px rounded-circle overflow-hidden">
+                                                                <img class="w-full h-full object-center object-cover"
+                                                                    src="./assets/images/user.jpg" alt="">
+                                                            </div>
+                                                        </td>
+                                                        <td>Item</td>
                                                         <td>Item</td>
                                                         <td>Item</td>
                                                         <td>Item</td>
@@ -378,7 +319,13 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td scope="row">Item</td>
+                                                        <td scope="row">
+                                                            <div class="img-table w-25px h-25px rounded-circle overflow-hidden">
+                                                                <img class="w-full h-full object-center object-cover"
+                                                                    src="./assets/images/user.webp" alt="">
+                                                            </div>
+                                                        </td>
+                                                        <td>Item</td>
                                                         <td>Item</td>
                                                         <td>Item</td>
                                                         <td>Item</td>
@@ -403,7 +350,13 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td scope="row">Item</td>
+                                                        <td scope="row">
+                                                            <div class="img-table w-25px h-25px rounded-circle overflow-hidden">
+                                                                <img class="w-full h-full object-center object-cover"
+                                                                    src="./assets/images/user.jpg" alt="">
+                                                            </div>
+                                                        </td>
+                                                        <td>Item</td>
                                                         <td>Item</td>
                                                         <td>Item</td>
                                                         <td>Item</td>
@@ -429,7 +382,13 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td scope="row">Item</td>
+                                                         <td scope="row">
+                                                            <div class="img-table w-25px h-25px rounded-circle overflow-hidden">
+                                                                <img class="w-full h-full object-center object-cover"
+                                                                    src="./assets/images/user.webp" alt="">
+                                                            </div>
+                                                        </td>
+                                                        <td>Item</td>
                                                         <td>Item</td>
                                                         <td>Item</td>
                                                         <td>Item</td>
@@ -454,7 +413,13 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td scope="row">Item</td>
+                                                        <td scope="row">
+                                                            <div class="img-table w-25px h-25px rounded-circle overflow-hidden">
+                                                                <img class="w-full h-full object-center object-cover"
+                                                                    src="./assets/images/user.jpg" alt="">
+                                                            </div>
+                                                        </td>
+                                                        <td>Item</td>
                                                         <td>Item</td>
                                                         <td>Item</td>
                                                         <td>Item</td>
@@ -480,7 +445,13 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td scope="row">Item</td>
+                                                         <td scope="row">
+                                                            <div class="img-table w-25px h-25px rounded-circle overflow-hidden">
+                                                                <img class="w-full h-full object-center object-cover"
+                                                                    src="./assets/images/user.webp" alt="">
+                                                            </div>
+                                                        </td>
+                                                        <td>Item</td>
                                                         <td>Item</td>
                                                         <td>Item</td>
                                                         <td>Item</td>
@@ -498,14 +469,20 @@
                                                                 <li><button class="dropdown-item"
                                                                         type="button">Action</button></li>
                                                                 <li><button class="dropdown-item" type="button">Another
-                                                                        action</button></li>
+                                                                        ac tion</button></li>
                                                                 <li><button class="dropdown-item"
                                                                         type="button">Something else here</button></li>
                                                             </ul>
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td scope="row">Item</td>
+                                                        <td scope="row">
+                                                            <div class="img-table w-25px h-25px rounded-circle overflow-hidden">
+                                                                <img class="w-full h-full object-center object-cover"
+                                                                    src="./assets/images/user.jpg" alt="">
+                                                            </div>
+                                                        </td>
+                                                        <td>Item</td>
                                                         <td>Item</td>
                                                         <td>Item</td>
                                                         <td>Item</td>
@@ -531,7 +508,13 @@
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td scope="row">Item</td>
+                                                         <td scope="row">
+                                                            <div class="img-table w-25px h-25px rounded-circle overflow-hidden">
+                                                                <img class="w-full h-full object-center object-cover"
+                                                                    src="./assets/images/user.webp" alt="">
+                                                            </div>
+                                                        </td>
+                                                        <td>Item</td>
                                                         <td>Item</td>
                                                         <td>Item</td>
                                                         <td>Item</td>

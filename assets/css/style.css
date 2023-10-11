@@ -141,7 +141,9 @@ input {
 .text-gray {
     color: var(--text-gray) !important;
 }
-
+.text-dark-gray {
+    color: var(--dark-gray);
+}
 .bg-primary {
     background-color: var(--primary-color) !important;
 }
@@ -160,6 +162,10 @@ input {
 
 .bg-light {
     background-color: var(--body-light) !important;
+}
+
+.bg-dark-gray {
+    background-color: var(--dark-gray);
 }
 
 .bg-card {
@@ -2285,6 +2291,7 @@ ul.collection li {
 .form-input {
     position: relative;
 }
+
 .form-input .p-viewer {
     position: absolute;
     right: 30px;
@@ -2383,12 +2390,13 @@ ul.collection li {
         width: 200px;
         height: 200px;
     }
+
     .form-input .p-viewer {
         position: absolute;
         right: 1.8rem;
         bottom: 1.8rem;
     }
-    
+
 
 }
 
