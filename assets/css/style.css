@@ -825,7 +825,7 @@ body.dark .navbar_container .nav-search {
 }
 
 .admin-dash .calendar-dash {
-    height: 500px;
+    /* height: 500px; */
     border-radius: 14px;
     box-shadow: var(--shadow-neo);
     width: 100%;
