@@ -32,24 +32,38 @@
         </div>
         <div class="wrapper-body row flex-c-m">
             <div class="wrapper-fp p-4 shadow-neo bradius-14 bg-primary-light p-4">
-                <form action="">
-                    <div class="flex-col gap-4">
+                <form action="" class="needs-validation" novalidate>
+                    <div class="row flex-col gap-4">
                         <div>
                             <p class="fs-20 fw-semibold">Reset your password</p>
                             <p class="fs-14">Type in your new password</p>
                         </div>
-                        <div class="input-field flex-m ps-4">
-                            <input type="password" placeholder="New password *" name="password" />
+                        <div class="col-12">
+                            <input type="password" class="input-field" placeholder="New password *" name="password"
+                                required />
+                            <div class="invalid-feedback">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt amet asperiores hic
+                                animi totam
+                            </div>
                         </div>
-                        <div class="input-field flex-m ps-4">
-                            <input type="password" placeholder="Retry new password *" name="rpassword" />
+                        <div class="col-12">
+                            <input type="password" class="input-field" placeholder="Retry new password *"
+                                name="rpassword" required />
+                            <div class="invalid-feedback">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt amet asperiores hic
+                                animi totam
+                            </div>
                         </div>
-                        <a href="#" type="button" class="btn btn-primary py-2">
-                            Reset Password
-                        </a>
-                        <a href="./login.html" class="btn btn-light py-2">
-                            Back to Login
-                        </a>
+                        <div class="col-12">
+                            <button href="#" type="submit" class="btn btn-primary py-2 w-full">
+                                Reset Password
+                            </button>
+                        </div>
+                        <div class="col-12">
+                            <a href="./login.html" class="btn btn-light py-2 w-full">
+                                Back to Login
+                            </a>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -81,7 +95,7 @@
     <!-- <script src="./assets/pluggins/pagination/jquery.twbsPagination.min.js"></script> -->
     <script src="./assets/pluggins/scrollreveal/scrollreveal.js"></script>
     <script src="./assets/js/index.js"></script>
-  
+
 </body>
 
 </html>

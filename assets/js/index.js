@@ -418,6 +418,7 @@ $("#imageUpload").change(function () {
 // ============Admin Dashboard Circular Progress Bar============= 
 
 window.addEventListener("DOMContentLoaded", () => {
+    if (document.querySelector('.pie')) {
     // update circle when range change
     const pie = document.querySelectorAll(".pie");
     // const range = document.querySelector('[type="range"]');
@@ -452,5 +453,12 @@ window.addEventListener("DOMContentLoaded", () => {
             circle.initial(element);
         });
     }
+}
 
+});
+
+jQuery(document).ready(function($) {
+    $(".clickable-row").click(function() {
+        window.location = $(this).data("href");
+    });
 });

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - SEED</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="./assets/pluggins/bootstrap/css/bootstrap.min.css">
+
+    <!-- Icon Used: Remix Icon | https://remixicon.com/-->
+    <link rel="stylesheet" href="./assets/pluggins/remixicon/remixicon.css">
+
+    <link rel="stylesheet" href="./assets/css/pluggins.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/util.css">
+
+
+</head>
+
+<body class="light mode">
+    <div class="popup-toggle toggle-switch d-block d-lg-none">
+        <i class="ri-moon-fill fs-25 text-primary"></i>
+    </div>
+    <!-- Sidebar Start -->
+    <div class="app-sidebar__overlay active" data-bs-toggle="sidebar"></div>
+    <nav class="sidebar open">
+        <header>
+            <div class="image-text">
+                <div class="image">
+                    <img src="./assets/images/brand/logo.png" alt="logo">
+                </div>
+                <div class="text logo-text">
+                    <h1 class="fs-24">SEED</h1>
+                </div>
+            </div>
+        </header>
+        <div class="toggle_icon">
+            <span class="toggle">
+                <i class="ri-arrow-right-s-line"></i>
+            </span>
+        </div>
+        <div class="menu-bar">
+            <div class="menu h-full">
+                <ul class="menu-links flex gap-5 h-full flex-col ps-0 justify-content-evenly">
+                    <div class="top-menu-links">
+                        <p class="p-l-20 p-b-8 fs-12 title-menu">General</p>
+                        <li class="nav-link">
+                            <a href="dash-admin.html">
+                                <i class="ri-home-4-fill icon"></i>
+                                <span class="text nav-text">Dashboard</span>
+                                <span class="tooltip">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="dash-admin-student.html">
+                                <i class="ri-team-fill icon"></i>
+                                <span class="text nav-text">Student Management</span>
+                                <span class="tooltip">Student Management</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="dash-admin-user.html">
+                                <i class="ri-user-2-fill icon"></i>
+                                <span class="text nav-text">User Management</span>
+                                <span class="tooltip">User Management</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="bookmarks.html">
+                                <i class="ri-calendar-fill icon"></i>
+                                <span class="text nav-text">Appointments</span>
+                                <span class="tooltip">Appointments</span>
+                            </a>
+                        </li>
+                    </div>
+                    <div class="bottom-menu-links">
+                        <p class="p-l-20 p-b-8 fs-12 title-menu">Others</p>
+                        <li class="nav-link">
+                            <a href="/form-files.html">
+                                <i class="ri-file-copy-2-fill icon"></i>
+                                <span class="text nav-text">Forms and Files</span>
+                                <span class="tooltip">Forms and Files</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="components.html">
+                                <i class="ri-settings-5-fill icon"></i>
+                                <span class="text nav-text">Account Settings</span>
+                                <span class="tooltip">Account Settings</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="help.html">
+                                <i class="ri-customer-service-2-fill icon"></i>
+                                <span class="text nav-text">Help and Supporrt</span>
+                                <span class="tooltip">Help and Supporrt</span>
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="bottom-content flex justify-content-center">
+                <!-- <li class="nav-link"> -->
+                <a href="./login.html" class="btn btn-light text-primary">
+                    <div class="p-1 rounded-circle bg-primary">
+                        <i class="ri-shut-down-line text-white fs-20"></i>
+                    </div>
+                    <span class="text nav-text text-primary">Logout</span>
+                    <!-- <span class="tooltip">Logout</span> -->
+                </a>
+                <!-- </li> -->
+            </div>
+        </div>
+    </nav>
+    <!-- Sidebar End  -->
+
+    <div class="overlay_section"></div>
+    <main class="home">
+
+
+        <!-- NAVBAR START  -->
+        <nav class="navbar py-4">
+            <div class="container-fluid px-md-4">
+                <div class="navbar_container navbar-menu-wrapper d-flex align-items-center">
+                    <a aria-label="hide-sidebar" class="d-lg-none app-sidebar__toggle" data-bs-toggle="sidebar"
+                        href="javascript:void(0);">
+                        <i class="ri-menu-2-line text-primary fs-25"></i>
+                    </a>
+                    <form class="d-flex d-none d-md-block" role="search">
+                        <div class="nav-search">
+                            <i class="ri-search-line fs-25"></i>
+                            <input class="" type="search" placeholder="Search" aria-label="Search">
+                        </div>
+                    </form>
+                    <ul class="navbar-nav mb-0 flex-row gap-4 flex-m">
+                        <li class="nav-item d-block d-md-none">
+
+                            <div class="dropdown d-block d-lg-none position-static">
+                                <a href="javascript:void(0);" class="nav-link icon" data-bs-toggle="dropdown">
+                                    <i class="ri-search-line fs-25 text-primary"></i>
+                                </a>
+                                <div class="dropdown-menu header-search dropdown-menu-start">
+                                    <div class="input-group w-100 p-2">
+                                        <input type="text" class="form-control" placeholder="Search....">
+                                        <div class="btn btn-primary">
+                                            <i class="ri-search-line fs-25"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- <li class="nav-item d-none d-lg-block">
+                            <div class="toggle-switch">
+                                <i class="ri-moon-fill fs-25 text-primary"></i>
+                            </div>
+                        </li> -->
+                        <li class="nav-item">
+                            <div class="pos-relative">
+                                <i class="ri-notification-4-fill fs-25 not text-primary"></i>
+                                <div class="nav-notification"></div>
+                            </div>
+                        </li>
+                        <li class="nav-item gap-2 flex-m dropdown user-drop">
+                            <a class="nav-link" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="pro-pic rounded-circle">
+                                    <img src="./assets/images/user.png" alt="">
+                                </div>
+                            </a>
+                            <div class="pro-data flex-col flex-c d-none d-md-flex">
+                                <p class="pro-name fs-14 fw-500">Harris M</p>
+                                <p class="pro-pos fs-12">Admin</p>
+                            </div>
+                            <div class="dropdown-menu">
+                                <a href="./profile.html" class="dropdown-item fs-14">Profile</a>
+                                <a href="#" class="dropdown-item fs-14">Sign Out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <!-- Main Content Start  -->
+        <div class="content pb-4">
+
+            <div class="container-fluid px-md-4 p-4">
+                <div class="wrapper-pass flex-c-m gap-4 h-70vh">
+                    <div class="wrapper-body row flex-c-m">
+                        <div class="wrapper-fp p-4 shadow-neo bradius-14 bg-primary-light p-4">
+                            <div class="fp-1">
+                                <form action="">
+                                    <div class="flex-col gap-4">
+                                        <div>
+                                            <p class="fs-20 fw-semibold text-primary">Student IN-TAKE Registration</p>
+                                        </div>
+                                        <div class="input">
+                                            <label for="" class="form-label">Student Registration ID</label>
+                                            <div class="input-field flex-m ps-4">
+                                                <input type="text" placeholder="Type student registration id"
+                                                    name="reg-id" />
+                                            </div>
+
+                                        </div>
+
+                                       <div class="btns-group flex-sb flex-col-l-sm gap-3">
+                                        <a href="#" class="btn btn-light bg-white py-2 w-full ">
+                                            Cancel
+                                        </a>
+                                        <a href="#" type="button" class="btn btn-primary py-2 w-full text-nowrap">
+                                            Get Registration Details
+                                        </a>
+                                       </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="fp-2" style="display: none;">
+                                <div class="flex-col gap-4">
+                                    <div>
+                                        <p class="fs-20 fw-semibold">Recovery Email Sent!</p>
+                                        <p class="fs-14">Please check your email for next steps to reset your password.
+                                        </p>
+                                    </div>
+                                    <a href="#" type="button" class="btn btn-primary py-2">
+                                        Contact Support
+                                        <i class="ri-arrow-right-line ps-2"></i>
+                                    </a>
+                                    <a href="./login.html" class="btn btn-light py-2">
+                                        Back to Login
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <div class="preloader">
+        <div class="loader">
+            <img src="./assets/images/brand/logo_org.png" alt="">
+            <span></span>
+        </div>
+    </div>
+
+
+
+
+    <script src="./assets/pluggins/jquery/jquery-3.6.3.min.js"></script>
+    <script src="./assets/pluggins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./assets/pluggins/select2/js/select2.full.min.js"></script>
+    <script src="./assets/pluggins/pagination/jquery.twbsPagination.min.js"></script>
+    <script src="./assets/pluggins/scrollreveal/scrollreveal.js"></script>
+    <script src="./assets/js/index.js"></script>
+
+</body>
+
+</html>
