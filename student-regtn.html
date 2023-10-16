@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - SEED</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="./assets/images/favicon/site.webmanifest" />
+    <link rel="mask-icon" href="./assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="stylesheet" href="./assets/pluggins/bootstrap/css/bootstrap.min.css" />
+
+    <!-- Icon Used: Remix Icon | https://remixicon.com/-->
+    <link rel="stylesheet" href="./assets/pluggins/remixicon/remixicon.css" />
+
+    <link rel="stylesheet" href="./assets/css/pluggins.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/util.css" />
+</head>
+
+<body class="light mode">
+    <div class="popup-toggle toggle-switch d-block d-lg-none">
+        <i class="ri-moon-fill fs-25 text-primary"></i>
+    </div>
+    <!-- Sidebar Start -->
+    <div class="app-sidebar__overlay active" data-bs-toggle="sidebar"></div>
+    <nav class="sidebar open">
+        <header>
+            <div class="image-text">
+                <div class="image">
+                    <img src="./assets/images/brand/logo.png" alt="logo" />
+                </div>
+                <div class="text logo-text">
+                    <h1 class="fs-24">SEED</h1>
+                </div>
+            </div>
+        </header>
+        <div class="toggle_icon">
+            <span class="toggle">
+                <i class="ri-arrow-right-s-line"></i>
+            </span>
+        </div>
+        <div class="menu-bar">
+            <div class="menu h-full">
+                <ul class="menu-links flex gap-5 h-full flex-col ps-0 justify-content-evenly">
+                    <div class="top-menu-links">
+                        <p class="p-l-20 p-b-8 fs-12 title-menu">General</p>
+                        <li class="nav-link">
+                            <a href="dash-admin.html">
+                                <i class="ri-home-4-fill icon"></i>
+                                <span class="text nav-text">Dashboard</span>
+                                <span class="tooltip">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="dash-admin-student.html">
+                                <i class="ri-team-fill icon"></i>
+                                <span class="text nav-text">Student Management</span>
+                                <span class="tooltip">Student Management</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="dash-admin-user.html">
+                                <i class="ri-user-2-fill icon"></i>
+                                <span class="text nav-text">User Management</span>
+                                <span class="tooltip">User Management</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="dash-admin-appoinment.html">
+                                <i class="ri-calendar-fill icon"></i>
+                                <span class="text nav-text">Appointments</span>
+                                <span class="tooltip">Appointments</span>
+                            </a>
+                        </li>
+                    </div>
+                    <div class="bottom-menu-links">
+                        <p class="p-l-20 p-b-8 fs-12 title-menu">Others</p>
+                        <li class="nav-link">
+                            <a href="/form-files.html">
+                                <i class="ri-file-copy-2-fill icon"></i>
+                                <span class="text nav-text">Forms and Files</span>
+                                <span class="tooltip">Forms and Files</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="components.html">
+                                <i class="ri-settings-5-fill icon"></i>
+                                <span class="text nav-text">Account Settings</span>
+                                <span class="tooltip">Account Settings</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="help.html">
+                                <i class="ri-customer-service-2-fill icon"></i>
+                                <span class="text nav-text">Help and Supporrt</span>
+                                <span class="tooltip">Help and Supporrt</span>
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="bottom-content flex justify-content-center">
+                <!-- <li class="nav-link"> -->
+                <a href="./login.html" class="btn btn-light text-primary">
+                    <div class="p-1 rounded-circle bg-primary">
+                        <i class="ri-shut-down-line text-white fs-20"></i>
+                    </div>
+                    <span class="text nav-text text-primary">Logout</span>
+                    <!-- <span class="tooltip">Logout</span> -->
+                </a>
+                <!-- </li> -->
+            </div>
+        </div>
+    </nav>
+    <!-- Sidebar End  -->
+
+    <div class="overlay_section"></div>
+    <main class="home">
+        <!-- NAVBAR START  -->
+        <nav class="navbar py-4">
+            <div class="container-fluid px-md-4">
+                <div class="navbar_container navbar-menu-wrapper d-flex align-items-center">
+                    <a aria-label="hide-sidebar" class="d-lg-none app-sidebar__toggle" data-bs-toggle="sidebar"
+                        href="javascript:void(0);">
+                        <i class="ri-menu-2-line text-primary fs-25"></i>
+                    </a>
+                    <form class="d-flex d-none d-md-block" role="search">
+                        <div class="nav-search">
+                            <i class="ri-search-line fs-25"></i>
+                            <input class="" type="search" placeholder="Search" aria-label="Search" />
+                        </div>
+                    </form>
+                    <ul class="navbar-nav mb-0 flex-row gap-4 flex-m">
+                        <li class="nav-item d-block d-md-none">
+                            <div class="dropdown d-block d-lg-none position-static">
+                                <a href="javascript:void(0);" class="nav-link icon" data-bs-toggle="dropdown">
+                                    <i class="ri-search-line fs-25 text-primary"></i>
+                                </a>
+                                <div class="dropdown-menu header-search dropdown-menu-start">
+                                    <div class="input-group w-100 p-2">
+                                        <input type="text" class="form-control" placeholder="Search...." />
+                                        <div class="btn btn-primary">
+                                            <i class="ri-search-line fs-25"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- <li class="nav-item d-none d-lg-block">
+                            <div class="toggle-switch">
+                                <i class="ri-moon-fill fs-25 text-primary"></i>
+                            </div>
+                        </li> -->
+                        <li class="nav-item">
+                            <div class="pos-relative">
+                                <i class="ri-notification-4-fill fs-25 not text-primary"></i>
+                                <div class="nav-notification"></div>
+                            </div>
+                        </li>
+                        <li class="nav-item gap-2 flex-m dropdown user-drop">
+                            <a class="nav-link" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="pro-pic rounded-circle">
+                                    <img src="./assets/images/user.png" alt="" />
+                                </div>
+                            </a>
+                            <div class="pro-data flex-col flex-c d-none d-md-flex">
+                                <p class="pro-name fs-14 fw-500">Harris M</p>
+                                <p class="pro-pos fs-12">Admin</p>
+                            </div>
+                            <div class="dropdown-menu">
+                                <a href="./profile.html" class="dropdown-item fs-14">Profile</a>
+                                <a href="#" class="dropdown-item fs-14">Sign Out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content Start  -->
+        <div class="content pb-4">
+            <div class="container-fluid px-md-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="wrapper-body admin-dash-user w-full flex-col gap-4">
+                            <!-- BREADCRUMB  -->
+                            <div class="row flex-m">
+                                <div class="col-12">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb mb-0">
+                                            <li class="breadcrumb-item">
+                                                <i class="ri-home-4-fill fs-20 text-primary"></i>
+                                                <a href="./dash-admin.html">Home</a>
+                                            </li>
+                                            <li class="breadcrumb-item active" aria-current="page">
+                                                <i class="ri-team-fill fs-20 text-primary"></i>
+                                                <span>Student Management</span>
+                                            </li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                            <!-- BREADCRUMB END-->
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="inner-wrapper w-full h-full bg-light bradius-7 mb-3 p-4">
+                                        <div class="row mb-3">
+                                            <div class="col-12 col-md-5">
+                                                <p class="fs-16 mb-4">Question Name</p>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                                <div class="">
+                                                    <form action="seed_mst_stud_reg_add" method="post">
+                                                        <div id="div_studreg_name">
+                                                            <label for="studreg_name" class="form-label">Student Name
+                                                                <span class="mandatory"> *</span> </label><input
+                                                                type="text" name="studreg_name" value=""
+                                                                label="Student Name" in-put="text" class="form-control"
+                                                                id="studreg_name" maxlength="500"
+                                                                placeholder="Enter Student Name" />
+                                                        </div>
+                                                        <div id="div_studreg_details_by">
+                                                            <label for="studreg_details_by" class="form-label">Details
+                                                                Provided By
+                                                                <span class="mandatory"> *</span> </label><input
+                                                                type="text" name="studreg_details_by" value=""
+                                                                label="Details Provided By" in-put="text"
+                                                                class="form-control" id="studreg_details_by"
+                                                                maxlength="500"
+                                                                placeholder="Enter Details Provided By" />
+                                                        </div>
+                                                        <div id="div_studreg_details_relation"
+                                                            data-select2-id="select2-data-div_studreg_details_relation">
+                                                            <label id="lab_studreg_details_relation"
+                                                                for="studreg_details_relation"
+                                                                class="form-label">Relationship To Student
+                                                                <span class="mandatory"> *</span> </label><select
+                                                                label="Relationship To Student" in-put="select"
+                                                                class="select2-select form-control form-select select2-hidden-accessible"
+                                                                name="studreg_details_relation"
+                                                                id="studreg_details_relation" maxlength="500"
+                                                                placeholder="Enter Relationship To Student"
+                                                                data-select2-id="select2-data-studreg_details_relation"
+                                                                tabindex="-1" aria-hidden="true"></select><span
+                                                                class="select2 select2-container select2-container--default select2-container--below"
+                                                                dir="ltr" data-select2-id="select2-data-287-e3vi"
+                                                                style="width: 100%"><span class="selection"><span
+                                                                        class="select2-selection select2-selection--single"
+                                                                        role="combobox" aria-haspopup="true"
+                                                                        aria-expanded="false" tabindex="0"
+                                                                        aria-disabled="false"
+                                                                        aria-labelledby="select2-studreg_details_relation-container"
+                                                                        aria-controls="select2-studreg_details_relation-container"><span
+                                                                            class="select2-selection__rendered"
+                                                                            id="select2-studreg_details_relation-container"
+                                                                            role="textbox" aria-readonly="true"
+                                                                            title="- - Select - -"><span
+                                                                                class="select2-selection__placeholder">-
+                                                                                - Select - -</span></span><span
+                                                                            class="select2-selection__arrow"
+                                                                            role="presentation"><b
+                                                                                role="presentation"></b></span></span></span><span
+                                                                    class="dropdown-wrapper"
+                                                                    aria-hidden="true"></span></span>
+                                                        </div>
+                                                        <div id="div_studreg_ref_source"
+                                                            data-select2-id="select2-data-div_studreg_ref_source">
+                                                            <label id="lab_studreg_ref_source" for="studreg_ref_source"
+                                                                class="form-label">Referral Source
+                                                                <span class="mandatory"> *</span> </label><select
+                                                                label="Referral Source" in-put="select"
+                                                                class="select2-select form-control form-select select2-hidden-accessible"
+                                                                name="studreg_ref_source" id="studreg_ref_source"
+                                                                maxlength="500" placeholder="Enter Referral Source"
+                                                                data-select2-id="select2-data-studreg_ref_source"
+                                                                tabindex="-1" aria-hidden="true"></select><span
+                                                                class="select2 select2-container select2-container--default select2-container--below"
+                                                                dir="ltr" data-select2-id="select2-data-288-5zf0"
+                                                                style="width: 100%"><span class="selection"><span
+                                                                        class="select2-selection select2-selection--single"
+                                                                        role="combobox" aria-haspopup="true"
+                                                                        aria-expanded="false" tabindex="0"
+                                                                        aria-disabled="false"
+                                                                        aria-labelledby="select2-studreg_ref_source-container"
+                                                                        aria-controls="select2-studreg_ref_source-container"><span
+                                                                            class="select2-selection__rendered"
+                                                                            id="select2-studreg_ref_source-container"
+                                                                            role="textbox" aria-readonly="true"
+                                                                            title="- - Select - -"><span
+                                                                                class="select2-selection__placeholder">-
+                                                                                - Select - -</span></span><span
+                                                                            class="select2-selection__arrow"
+                                                                            role="presentation"><b
+                                                                                role="presentation"></b></span></span></span><span
+                                                                    class="dropdown-wrapper"
+                                                                    aria-hidden="true"></span></span>
+                                                        </div>
+                                                        <div id="div_studreg_nationality">
+                                                            <label id="lab_studreg_nationality"
+                                                                for="studreg_nationality" class="form-label">Nationality
+                                                                <span class="mandatory"> *</span> </label><select
+                                                                label="Nationality" in-put="select"
+                                                                class="select2-select form-control form-select select2-hidden-accessible"
+                                                                name="studreg_nationality" id="studreg_nationality"
+                                                                maxlength="500" placeholder="Enter Nationality"
+                                                                data-select2-id="select2-data-studreg_nationality"
+                                                                tabindex="-1" aria-hidden="true"></select><span
+                                                                class="select2 select2-container select2-container--default"
+                                                                dir="ltr" data-select2-id="select2-data-289-sct9"
+                                                                style="width: 100%"><span class="selection"><span
+                                                                        class="select2-selection select2-selection--single"
+                                                                        role="combobox" aria-haspopup="true"
+                                                                        aria-expanded="false" tabindex="0"
+                                                                        aria-disabled="false"
+                                                                        aria-labelledby="select2-studreg_nationality-container"
+                                                                        aria-controls="select2-studreg_nationality-container"><span
+                                                                            class="select2-selection__rendered"
+                                                                            id="select2-studreg_nationality-container"
+                                                                            role="textbox" aria-readonly="true"
+                                                                            title="- - Select - -"><span
+                                                                                class="select2-selection__placeholder">-
+                                                                                - Select - -</span></span><span
+                                                                            class="select2-selection__arrow"
+                                                                            role="presentation"><b
+                                                                                role="presentation"></b></span></span></span><span
+                                                                    class="dropdown-wrapper"
+                                                                    aria-hidden="true"></span></span>
+                                                        </div>
+                                                        <div id="div_studreg_dob">
+                                                            <label for="studreg_dob" class="form-label">Date of Birth
+                                                                <span class="mandatory"> *</span> </label><input
+                                                                type="text" name="studreg_dob" value=""
+                                                                label="Date of Birth" in-put="text" class="form-control"
+                                                                id="studreg_dob" maxlength="500"
+                                                                placeholder="Enter Date of Birth" />
+                                                        </div>
+                                                        <div id="div_studreg_class">
+                                                            <label id="lab_studreg_class" for="studreg_class"
+                                                                class="form-label">Class
+                                                                <span class="mandatory"> *</span> </label><select
+                                                                label="Class" in-put="select"
+                                                                class="select2-select form-control form-select select2-hidden-accessible"
+                                                                name="studreg_class" id="studreg_class" maxlength="500"
+                                                                placeholder="Enter Class"
+                                                                data-select2-id="select2-data-studreg_class"
+                                                                tabindex="-1" aria-hidden="true"></select><span
+                                                                class="select2 select2-container select2-container--default"
+                                                                dir="ltr" data-select2-id="select2-data-290-len5"
+                                                                style="width: 100%"><span class="selection"><span
+                                                                        class="select2-selection select2-selection--single"
+                                                                        role="combobox" aria-haspopup="true"
+                                                                        aria-expanded="false" tabindex="0"
+                                                                        aria-disabled="false"
+                                                                        aria-labelledby="select2-studreg_class-container"
+                                                                        aria-controls="select2-studreg_class-container"><span
+                                                                            class="select2-selection__rendered"
+                                                                            id="select2-studreg_class-container"
+                                                                            role="textbox" aria-readonly="true"
+                                                                            title="- - Select - -"><span
+                                                                                class="select2-selection__placeholder">-
+                                                                                - Select - -</span></span><span
+                                                                            class="select2-selection__arrow"
+                                                                            role="presentation"><b
+                                                                                role="presentation"></b></span></span></span><span
+                                                                    class="dropdown-wrapper"
+                                                                    aria-hidden="true"></span></span>
+                                                        </div>
+                                                        <div id="div_studreg_division">
+                                                            <label id="lab_studreg_division" for="studreg_division"
+                                                                class="form-label">Division
+                                                                <span class="mandatory"> *</span> </label><select
+                                                                label="Division" in-put="select"
+                                                                class="select2-select form-control form-select select2-hidden-accessible"
+                                                                name="studreg_division" id="studreg_division"
+                                                                maxlength="500" placeholder="Enter Division"
+                                                                data-select2-id="select2-data-studreg_division"
+                                                                tabindex="-1" aria-hidden="true"></select><span
+                                                                class="select2 select2-container select2-container--default"
+                                                                dir="ltr" data-select2-id="select2-data-291-8ab6"
+                                                                style="width: 100%"><span class="selection"><span
+                                                                        class="select2-selection select2-selection--single"
+                                                                        role="combobox" aria-haspopup="true"
+                                                                        aria-expanded="false" tabindex="0"
+                                                                        aria-disabled="false"
+                                                                        aria-labelledby="select2-studreg_division-container"
+                                                                        aria-controls="select2-studreg_division-container"><span
+                                                                            class="select2-selection__rendered"
+                                                                            id="select2-studreg_division-container"
+                                                                            role="textbox" aria-readonly="true"
+                                                                            title="- - Select - -"><span
+                                                                                class="select2-selection__placeholder">-
+                                                                                - Select - -</span></span><span
+                                                                            class="select2-selection__arrow"
+                                                                            role="presentation"><b
+                                                                                role="presentation"></b></span></span></span><span
+                                                                    class="dropdown-wrapper"
+                                                                    aria-hidden="true"></span></span>
+                                                        </div>
+                                                        <div id="div_studreg_school">
+                                                            <label id="lab_studreg_school" for="studreg_school"
+                                                                class="form-label">School
+                                                                <span class="mandatory"> *</span> </label><select
+                                                                label="School" in-put="select"
+                                                                class="select2-select form-control form-select select2-hidden-accessible"
+                                                                name="studreg_school" id="studreg_school"
+                                                                maxlength="500" placeholder="Enter School"
+                                                                data-select2-id="select2-data-studreg_school"
+                                                                tabindex="-1" aria-hidden="true"></select><span
+                                                                class="select2 select2-container select2-container--default"
+                                                                dir="ltr" data-select2-id="select2-data-292-7vzt"
+                                                                style="width: 100%"><span class="selection"><span
+                                                                        class="select2-selection select2-selection--single"
+                                                                        role="combobox" aria-haspopup="true"
+                                                                        aria-expanded="false" tabindex="0"
+                                                                        aria-disabled="false"
+                                                                        aria-labelledby="select2-studreg_school-container"
+                                                                        aria-controls="select2-studreg_school-container"><span
+                                                                            class="select2-selection__rendered"
+                                                                            id="select2-studreg_school-container"
+                                                                            role="textbox" aria-readonly="true"
+                                                                            title="- - Select - -"><span
+                                                                                class="select2-selection__placeholder">-
+                                                                                - Select - -</span></span><span
+                                                                            class="select2-selection__arrow"
+                                                                            role="presentation"><b
+                                                                                role="presentation"></b></span></span></span><span
+                                                                    class="dropdown-wrapper"
+                                                                    aria-hidden="true"></span></span>
+                                                        </div>
+                                                        <div id="div_studreg_location">
+                                                            <label for="studreg_location" class="form-label">Location
+                                                                <span class="mandatory"> *</span> </label><input
+                                                                type="text" name="studreg_location" value=""
+                                                                label="Location" in-put="text" class="form-control"
+                                                                id="studreg_location" maxlength="500"
+                                                                placeholder="Enter Location" />
+                                                        </div>
+                                                        <div id="div_studreg_addr_name_no1">
+                                                            <label for="studreg_addr_name_no1" class="form-label">House
+                                                                Name/ Number. </label><input type="text"
+                                                                name="studreg_addr_name_no1" value=""
+                                                                label="House Name/ Number." in-put="text"
+                                                                class="form-control" id="studreg_addr_name_no1"
+                                                                maxlength="500"
+                                                                placeholder="Enter House Name/ Number." />
+                                                        </div>
+                                                        <div id="div_studreg_addr_street">
+                                                            <label for="studreg_addr_street" class="form-label">Sreet/
+                                                                Road Name </label><input type="text"
+                                                                name="studreg_addr_street" value=""
+                                                                label="Sreet/ Road Name" in-put="text"
+                                                                class="form-control" id="studreg_addr_street"
+                                                                maxlength="500" placeholder="Enter Sreet/ Road Name" />
+                                                        </div>
+                                                        <div id="div_studreg_addr_city">
+                                                            <label for="studreg_addr_city" class="form-label">City/
+                                                                Place </label><input type="text"
+                                                                name="studreg_addr_city" value="" label="City/ Place"
+                                                                in-put="text" class="form-control"
+                                                                id="studreg_addr_city" maxlength="500"
+                                                                placeholder="Enter City/ Place" />
+                                                        </div>
+                                                        <div id="div_studreg_addr_emrt">
+                                                            <label id="lab_studreg_addr_emrt" for="studreg_addr_emrt"
+                                                                class="form-label">Emirate </label><select
+                                                                label="Emirate" in-put="select"
+                                                                class="select2-select form-control form-select select2-hidden-accessible"
+                                                                name="studreg_addr_emrt" id="studreg_addr_emrt"
+                                                                maxlength="500" placeholder="Enter Emirate"
+                                                                data-select2-id="select2-data-studreg_addr_emrt"
+                                                                tabindex="-1" aria-hidden="true">
+                                                                <option value="1"
+                                                                    data-select2-id="select2-data-300-yorm">
+                                                                    Abu Dhabi
+                                                                </option>
+                                                                <option value="2">Ajman</option>
+                                                                <option value="3">Dubai</option>
+                                                                <option value="4">Fujairah</option>
+                                                                <option value="5">Ras Al Khaimah</option>
+                                                                <option value="6">Sharjah</option>
+                                                                <option value="7">
+                                                                    Umm Al Quwain
+                                                                </option>
+                                                            </select><span
+                                                                class="select2 select2-container select2-container--default"
+                                                                dir="ltr" data-select2-id="select2-data-299-nxx4"
+                                                                style="width: 100%"><span class="selection"><span
+                                                                        class="select2-selection select2-selection--single select2-selection--clearable"
+                                                                        role="combobox" aria-haspopup="true"
+                                                                        aria-expanded="false" tabindex="0"
+                                                                        aria-disabled="false"
+                                                                        aria-labelledby="select2-studreg_addr_emrt-container"
+                                                                        aria-controls="select2-studreg_addr_emrt-container"><button
+                                                                            type="button"
+                                                                            class="select2-selection__clear"
+                                                                            tabindex="-1" title="Remove all items"
+                                                                            aria-label="Remove all items"
+                                                                            aria-describedby="select2-studreg_addr_emrt-container"
+                                                                            data-select2-id="select2-data-301-zihh">
+                                                                            <span
+                                                                                aria-hidden="true">×</span></button><span
+                                                                            class="select2-selection__rendered"
+                                                                            id="select2-studreg_addr_emrt-container"
+                                                                            role="textbox" aria-readonly="true"
+                                                                            title="Abu Dhabi">Abu Dhabi</span><span
+                                                                            class="select2-selection__arrow"
+                                                                            role="presentation"><b
+                                                                                role="presentation"></b></span></span></span><span
+                                                                    class="dropdown-wrapper"
+                                                                    aria-hidden="true"></span></span>
+                                                        </div>
+                                                        <div id="div_studreg_country">
+                                                            <label id="lab_studreg_country" for="studreg_country"
+                                                                class="form-label">Country
+                                                                <span class="mandatory"> *</span> </label><select
+                                                                label="Country" in-put="select"
+                                                                class="form-control form-select" name="studreg_country"
+                                                                id="studreg_country" maxlength="500"
+                                                                placeholder="Enter Country"></select>
+                                                        </div>
+                                                        <div id="div_studreg_father_name">
+                                                            <label for="studreg_father_name" class="form-label">Fathers'
+                                                                Name
+                                                                <span class="mandatory"> *</span> </label><input
+                                                                type="text" name="studreg_father_name" value=""
+                                                                label="Fathers' Name" in-put="text" class="form-control"
+                                                                id="studreg_father_name" maxlength="500"
+                                                                placeholder="Enter Fathers' Name" />
+                                                        </div>
+                                                        <div id="div_studreg_father_age">
+                                                            <label for="studreg_father_age" class="form-label">Fathers'
+                                                                Age
+                                                                <span class="mandatory"> *</span> </label><input
+                                                                type="text" name="studreg_father_age" value=""
+                                                                label="Fathers' Age" in-put="text" class="form-control"
+                                                                id="studreg_father_age" maxlength="500"
+                                                                placeholder="Enter Fathers' Age" />
+                                                        </div>
+                                                        <div id="div_studreg_father_edu">
+                                                            <label for="studreg_father_edu" class="form-label">Fathers'
+                                                                Education </label><input type="text"
+                                                                name="studreg_father_edu" value=""
+                                                                label="Fathers' Education" in-put="text"
+                                                                class="form-control" id="studreg_father_edu"
+                                                                maxlength="500"
+                                                                placeholder="Enter Fathers' Education" />
+                                                        </div>
+                                                        <div id="div_studreg_father_nationality">
+                                                            <label for="studreg_father_nationality"
+                                                                class="form-label">Fathers' Nationality
+                                                                <span class="mandatory"> *</span> </label><input
+                                                                type="text" name="studreg_father_nationality" value=""
+                                                                label="Fathers' Nationality" in-put="text"
+                                                                class="form-control" id="studreg_father_nationality"
+                                                                maxlength="500"
+                                                                placeholder="Enter Fathers' Nationality" />
+                                                        </div>
+                                                        <div id="div_studreg_father_occupation">
+                                                            <label for="studreg_father_occupation"
+                                                                class="form-label">Fathers' Occupation </label><input
+                                                                type="text" name="studreg_father_occupation" value=""
+                                                                label="Fathers' Occupation" in-put="text"
+                                                                class="form-control" id="studreg_father_occupation"
+                                                                maxlength="500"
+                                                                placeholder="Enter Fathers' Occupation" />
+                                                        </div>
+                                                        <div id="div_studreg_father_company">
+                                                            <label for="studreg_father_company"
+                                                                class="form-label">Company </label><input type="text"
+                                                                name="studreg_father_company" value="" label="Company"
+                                                                in-put="text" class="form-control"
+                                                                id="studreg_father_company" maxlength="500"
+                                                                placeholder="Enter Company" />
+                                                        </div>
+                                                        <div id="div_studreg_father_location">
+                                                            <label for="studreg_father_location"
+                                                                class="form-label">Location </label><input type="text"
+                                                                name="studreg_father_location" value="" label="Location"
+                                                                in-put="text" class="form-control"
+                                                                id="studreg_father_location" maxlength="500"
+                                                                placeholder="Enter Location" />
+                                                        </div>
+                                                        <div id="div_studreg_father_mobile_no">
+                                                            <label for="studreg_father_mobile_no"
+                                                                class="form-label">Mobile
+                                                                <span class="mandatory"> *</span> </label><input
+                                                                type="text" name="studreg_father_mobile_no" value=""
+                                                                label="Mobile" in-put="text" class="form-control"
+                                                                id="studreg_father_mobile_no" maxlength="500"
+                                                                placeholder="Enter Mobile" />
+                                                        </div>
+                                                        <div id="div_studreg_father_home_no">
+                                                            <label for="studreg_father_home_no" class="form-label">Land
+                                                                phone number </label><input type="text"
+                                                                name="studreg_father_home_no" value=""
+                                                                label="Land phone number" in-put="text"
+                                                                class="form-control" id="studreg_father_home_no"
+                                                                maxlength="500" placeholder="Enter Land phone number" />
+                                                        </div>
+                                                        <div id="div_studreg_father_office_no">
+                                                            <label for="studreg_father_office_no"
+                                                                class="form-label">Office phone number </label><input
+                                                                type="text" name="studreg_father_office_no" value=""
+                                                                label="Office phone number" in-put="text"
+                                                                class="form-control" id="studreg_father_office_no"
+                                                                maxlength="500"
+                                                                placeholder="Enter Office phone number" />
+                                                        </div>
+                                                        <div id="div_studreg_father_email">
+                                                            <label for="studreg_father_email" class="form-label">e-mail
+                                                                Address
+                                                                <span class="mandatory"> *</span> </label><input
+                                                                type="text" name="studreg_father_email" value=""
+                                                                label="e-mail Address" in-put="text"
+                                                                class="form-control" id="studreg_father_email"
+                                                                maxlength="500" placeholder="Enter e-mail Address" />
+                                                        </div>
+                                                        <div id="div_studreg_mother_name">
+                                                            <label for="studreg_mother_name" class="form-label">Mother's
+                                                                Name
+                                                                <span class="mandatory"> *</span> </label><input
+                                                                type="text" name="studreg_mother_name" value=""
+                                                                label="Mother's Name" in-put="text" class="form-control"
+                                                                id="studreg_mother_name" maxlength="500"
+                                                                placeholder="Enter Mother's Name" />
+                                                        </div>
+                                                        <div id="div_studreg_mother_age">
+                                                            <label for="studreg_mother_age" class="form-label">Mothers
+                                                                Age
+                                                                <span class="mandatory"> *</span> </label><input
+                                                                type="text" name="studreg_mother_age" value=""
+                                                                label="Mothers Age" in-put="text" class="form-control"
+                                                                id="studreg_mother_age" maxlength="500"
+                                                                placeholder="Enter Mothers Age" />
+                                                        </div>
+                                                        <div id="div_studreg_mother_nationality">
+                                                            <label id="lab_studreg_mother_nationality"
+                                                                for="studreg_mother_nationality"
+                                                                class="form-label">Mother's Nationality
+                                                                <span class="mandatory"> *</span> </label><select
+                                                                label="Mother's Nationality" in-put="select"
+                                                                class="select2-select form-control form-select select2-hidden-accessible"
+                                                                name="studreg_mother_nationality"
+                                                                id="studreg_mother_nationality" maxlength="500"
+                                                                placeholder="Enter Mother's Nationality"
+                                                                data-select2-id="select2-data-studreg_mother_nationality"
+                                                                tabindex="-1" aria-hidden="true"></select><span
+                                                                class="select2 select2-container select2-container--default"
+                                                                dir="ltr" data-select2-id="select2-data-302-35m9"
+                                                                style="width: 100%"><span class="selection"><span
+                                                                        class="select2-selection select2-selection--single"
+                                                                        role="combobox" aria-haspopup="true"
+                                                                        aria-expanded="false" tabindex="0"
+                                                                        aria-disabled="false"
+                                                                        aria-labelledby="select2-studreg_mother_nationality-container"
+                                                                        aria-controls="select2-studreg_mother_nationality-container"><span
+                                                                            class="select2-selection__rendered"
+                                                                            id="select2-studreg_mother_nationality-container"
+                                                                            role="textbox" aria-readonly="true"
+                                                                            title="- - Select - -"><span
+                                                                                class="select2-selection__placeholder">-
+                                                                                - Select - -</span></span><span
+                                                                            class="select2-selection__arrow"
+                                                                            role="presentation"><b
+                                                                                role="presentation"></b></span></span></span><span
+                                                                    class="dropdown-wrapper"
+                                                                    aria-hidden="true"></span></span>
+                                                        </div>
+                                                        <div id="div_studreg_mother_edu">
+                                                            <label for="studreg_mother_edu" class="form-label">Mother's
+                                                                Education </label><input type="text"
+                                                                name="studreg_mother_edu" value=""
+                                                                label="Mother's Education" in-put="text"
+                                                                class="form-control" id="studreg_mother_edu"
+                                                                maxlength="500"
+                                                                placeholder="Enter Mother's Education" />
+                                                        </div>
+                                                        <div id="div_studreg_mother_occupation">
+                                                            <label for="studreg_mother_occupation"
+                                                                class="form-label">Mother's Occupation </label><input
+                                                                type="text" name="studreg_mother_occupation" value=""
+                                                                label="Mother's Occupation" in-put="text"
+                                                                class="form-control" id="studreg_mother_occupation"
+                                                                maxlength="500"
+                                                                placeholder="Enter Mother's Occupation" />
+                                                        </div>
+                                                        <div id="div_studreg_mother_company">
+                                                            <label for="studreg_mother_company"
+                                                                class="form-label">Mother's Company </label><input
+                                                                type="text" name="studreg_mother_company" value=""
+                                                                label="Mother's Company" in-put="text"
+                                                                class="form-control" id="studreg_mother_company"
+                                                                maxlength="500" placeholder="Enter Mother's Company" />
+                                                        </div>
+                                                        <div id="div_studreg_mother_location">
+                                                            <label for="studreg_mother_location"
+                                                                class="form-label">Location </label><input type="text"
+                                                                name="studreg_mother_location" value="" label="Location"
+                                                                in-put="text" class="form-control"
+                                                                id="studreg_mother_location" maxlength="500"
+                                                                placeholder="Enter Location" />
+                                                        </div>
+                                                        <div id="div_studreg_mother_mobile_no">
+                                                            <label for="studreg_mother_mobile_no"
+                                                                class="form-label">Mobile
+                                                                <span class="mandatory"> *</span> </label><input
+                                                                type="text" name="studreg_mother_mobile_no" value=""
+                                                                label="Mobile" in-put="text" class="form-control"
+                                                                id="studreg_mother_mobile_no" maxlength="500"
+                                                                placeholder="Enter Mobile" />
+                                                        </div>
+                                                        <div id="div_studreg_mother_home_no">
+                                                            <label for="studreg_mother_home_no"
+                                                                class="form-label">Mother's home number </label><input
+                                                                type="text" name="studreg_mother_home_no" value=""
+                                                                label="Mother's home number" in-put="text"
+                                                                class="form-control" id="studreg_mother_home_no"
+                                                                maxlength="500"
+                                                                placeholder="Enter Mother's home number" />
+                                                        </div>
+                                                        <div id="div_studreg_mother_office_no">
+                                                            <label for="studreg_mother_office_no"
+                                                                class="form-label">Mother's office number </label><input
+                                                                type="text" name="studreg_mother_office_no" value=""
+                                                                label="Mother's office number" in-put="text"
+                                                                class="form-control" id="studreg_mother_office_no"
+                                                                maxlength="500"
+                                                                placeholder="Enter Mother's office number" />
+                                                        </div>
+                                                        <div id="div_studreg_mother_email">
+                                                            <label for="studreg_mother_email"
+                                                                class="form-label">Mother's email address
+                                                                <span class="mandatory"> *</span> </label><input
+                                                                type="text" name="studreg_mother_email" value=""
+                                                                label="Mother's email address" in-put="text"
+                                                                class="form-control" id="studreg_mother_email"
+                                                                maxlength="500"
+                                                                placeholder="Enter Mother's email address" />
+                                                        </div>
+                                                        <div id="div_studreg_family_type"
+                                                            data-select2-id="select2-data-div_studreg_family_type">
+                                                            <label id="lab_studreg_family_type"
+                                                                for="studreg_family_type" class="form-label">Type of
+                                                                Family
+                                                                <span class="mandatory"> *</span> </label><select
+                                                                label="Type of Family" in-put="select"
+                                                                class="select2-select form-control form-select select2-hidden-accessible"
+                                                                name="studreg_family_type" id="studreg_family_type"
+                                                                maxlength="500" placeholder="Enter Type of Family"
+                                                                data-select2-id="select2-data-studreg_family_type"
+                                                                tabindex="-1" aria-hidden="true">
+                                                                <option value="1"
+                                                                    data-select2-id="select2-data-308-3jyd">
+                                                                    Nuclear
+                                                                </option>
+                                                                <option value="2"
+                                                                    data-select2-id="select2-data-313-gf2q">
+                                                                    Extended
+                                                                </option>
+                                                                <option value="3"
+                                                                    data-select2-id="select2-data-314-8h9c">
+                                                                    Joint
+                                                                </option>
+                                                                <option value="4"
+                                                                    data-select2-id="select2-data-315-csje">
+                                                                    Shared
+                                                                </option>
+                                                                <option value="5"
+                                                                    data-select2-id="select2-data-316-vb5f">
+                                                                    Other
+                                                                </option>
+                                                            </select><span
+                                                                class="select2 select2-container select2-container--default select2-container--above"
+                                                                dir="ltr" data-select2-id="select2-data-307-0etj"
+                                                                style="width: 100%"><span class="selection"><span
+                                                                        class="select2-selection select2-selection--single select2-selection--clearable"
+                                                                        role="combobox" aria-haspopup="true"
+                                                                        aria-expanded="false" tabindex="0"
+                                                                        aria-disabled="false"
+                                                                        aria-labelledby="select2-studreg_family_type-container"
+                                                                        aria-controls="select2-studreg_family_type-container"><button
+                                                                            type="button"
+                                                                            class="select2-selection__clear"
+                                                                            tabindex="-1" title="Remove all items"
+                                                                            aria-label="Remove all items"
+                                                                            aria-describedby="select2-studreg_family_type-container"
+                                                                            data-select2-id="select2-data-309-f8en">
+                                                                            <span
+                                                                                aria-hidden="true">×</span></button><span
+                                                                            class="select2-selection__rendered"
+                                                                            id="select2-studreg_family_type-container"
+                                                                            role="textbox" aria-readonly="true"
+                                                                            title="Nuclear">Nuclear</span><span
+                                                                            class="select2-selection__arrow"
+                                                                            role="presentation"><b
+                                                                                role="presentation"></b></span></span></span><span
+                                                                    class="dropdown-wrapper"
+                                                                    aria-hidden="true"></span></span>
+                                                        </div>
+                                                        <div id="div_studreg_mother_tongue">
+                                                            <label id="lab_studreg_mother_tongue"
+                                                                for="studreg_mother_tongue" class="form-label">Mother's
+                                                                Tongue
+                                                                <span class="mandatory"> *</span> </label><select
+                                                                label="Mother's Tongue" in-put="select"
+                                                                class="form-control form-select"
+                                                                name="studreg_mother_tongue" id="studreg_mother_tongue"
+                                                                maxlength="500"
+                                                                placeholder="Enter Mother's Tongue"></select>
+                                                        </div>
+                                                        <div class="">
+                                                            <div class="" onclick="formSubmit(this)">
+                                                                Create
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content p-3">
+                <div class="modal-header border-bottom-0">
+                    <h1 class="modal-title fs-20 text-primary" id="exampleModalLabel">
+                        Register Your User
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="fs-14 row">
+                        <div class="col-12 col-md-6 form-input mb-3">
+                            <label for="" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" name="" id="" aria-describedby="Enter Full Name"
+                                placeholder="Enter Full Name" />
+                        </div>
+                        <div class="col-12 col-md-6 form-input mb-3">
+                            <label for="" class="form-label">Type</label>
+                            <select class="form-control select2-select select2-show-search form-select"
+                                data-placeholder="Select Type">
+                                <option label="Select Type"></option>
+                                <option value="AZ">User</option>
+                                <option value="CO">Admin</option>
+                                <option value="ID">Sen Dept</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-6 form-input mb-3">
+                            <label for="" class="form-label">Designation</label>
+                            <input type="text" class="form-control" name="" id="" aria-describedby="Enter Designation"
+                                placeholder="Enter Designation" />
+                        </div>
+                        <div class="col-12 col-md-6 form-input mb-3">
+                            <label for="" class="form-label">Access Level</label>
+                            <select class="form-control select2-select select2-show-search form-select"
+                                data-placeholder="Select Access Level">
+                                <option label="Select Access Level"></option>
+                                <option value="AZ">Consultant</option>
+                                <option value="CO">Admin</option>
+                                <option value="ID">Sen Dept</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-6 form-input mb-3">
+                            <label for="" class="form-label">Mobile Number</label>
+                            <input type="text" class="form-control" name="" id="" aria-describedby="Enter Mobile No."
+                                placeholder="Enter Mobile No." />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-top-0 flex-c">
+                    <button type="button" class="btn btn-light fs-16" data-bs-dismiss="modal">
+                        Cancel
+                    </button>
+                    <button type="button" class="btn btn-primary fs-16">
+                        Register User
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="preloader">
+        <div class="loader">
+            <img src="./assets/images/brand/logo_org.png" alt="" />
+            <span></span>
+        </div>
+    </div>
+
+    <script src="./assets/pluggins/jquery/jquery-3.6.3.min.js"></script>
+    <script src="./assets/pluggins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./assets/pluggins/select2/js/select2.full.min.js"></script>
+    <script src="./assets/pluggins/pagination/jquery.twbsPagination.min.js"></script>
+    <script src="./assets/pluggins/scrollreveal/scrollreveal.js"></script>
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>

@@ -193,63 +193,119 @@
 
         <!-- Main Content Start  -->
         <div class="content pb-4">
+            <div class="container-fluid px-md-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="wrapper-body admin-dash-user w-full flex-col gap-4">
 
-            <div class="container-fluid px-md-4 p-4">
-                <div class="wrapper-pass flex-c-m gap-4 h-70vh">
-                    <div class="wrapper-body row flex-c-m">
-                        <div class="wrapper-fp p-4 shadow-neo bradius-14 bg-primary-light p-4">
-                            <div class="fp-1">
-                                <form action="">
-                                    <div class="flex-col gap-4">
-                                        <div>
-                                            <p class="fs-20 fw-semibold text-primary">Student IN-TAKE Registration</p>
-                                        </div>
-                                        <div class="input">
-                                            <label for="" class="form-label">Student Registration ID</label>
-                                            <div class="input-field flex-m ps-4">
-                                                <input type="text" placeholder="Type student registration id"
-                                                    name="reg-id" />
+                            <!-- BREADCRUMB  -->
+                            <div class="row flex-m">
+                                <div class="col-12">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb mb-0">
+                                            <li class="breadcrumb-item">
+                                                <i class="ri-home-4-fill fs-20 text-primary"></i>
+                                                <a href="./dash-admin.html">Home</a>
+                                            </li>
+                                            <li class="breadcrumb-item active" aria-current="page">
+                                                <i class="ri-team-fill fs-20 text-primary"></i>
+                                                <span>Student Management</span>
+                                            </li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                            <!-- BREADCRUMB END-->
+
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="flex-sb-m flex-col-l-sm w-full h-full bradius-14 mb-3 p-4">
+                                       <button class="btn-primary btn flex gap-2 py-3">Todays Appointments <i class="ri-calendar-fill"></i></button>
+                                       <button class="btn-light btn flex gap-2 py-3">Appointment History <i class="ri-history-line"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="flex-sb-m p-4 flex-col gap-4">
+                                        <style>
+                                            .appoinment-cal .date-picker a {
+width: 50px;
+background-color: var(--body-light);
+                                            }
+                                        </style>
+                                        <div class="appoinment-cal w-full">
+                                            <div class="container-calendar flex-col gap-3">
+                                                <div class="py-2 bg-main-primary bradius-7 dis-none">
+                                                    <h3 class="fs-16 text-white" id="monthAndYear"></h3>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-6 col-md-3">
+                                                        <select id="month" onchange="jump()"
+                                                            class="form-control select2-select select2-show-search form-select">
+                                                            <option value=0>Jan</option>
+                                                            <option value=1>Feb</option>
+                                                            <option value=2>Mar</option>
+                                                            <option value=3>Apr</option>
+                                                            <option value=4>May</option>
+                                                            <option value=5>Jun</option>
+                                                            <option value=6>Jul</option>
+                                                            <option value=7>Aug</option>
+                                                            <option value=8>Sep</option>
+                                                            <option value=9>Oct</option>
+                                                            <option value=10>Nov</option>
+                                                            <option value=11>Dec</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-6 col-md-3">
+                                                        <select id="year" onchange="jump()"
+                                                            class="form-control select2-select select2-show-search form-select"></select>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <table class="table-calendar" id="calendar"
+                                                            data-lang="en">
+                                                            <thead id="thead-month"></thead>
+                                                            <tbody id="calendar-body"></tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="row">
+                                                    <div class="col-6">
+                                                        <button id="previous" onclick="previous()"
+                                                            class="btn btn-light w-full fs-14 h-52">Previous
+                                                            Month</button>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <button id="next" onclick="next()"
+                                                            class="btn btn-primary w-full fs-14 h-52">Next
+                                                            Month</button>
+                                                    </div>
+
+                                                </div>
                                             </div>
 
                                         </div>
-
-                                       <div class="btns-group flex-sb flex-col-l-sm gap-3">
-                                        <a href="#" class="btn btn-light bg-white py-2 w-full ">
-                                            Cancel
-                                        </a>
-                                        <a href="#" type="button" class="btn btn-primary py-2 w-full text-nowrap">
-                                            Get Registration Details
-                                        </a>
-                                       </div>
                                     </div>
-                                </form>
-                            </div>
-                            <div class="fp-2" style="display: none;">
-                                <div class="flex-col gap-4">
-                                    <div>
-                                        <p class="fs-20 fw-semibold">Recovery Email Sent!</p>
-                                        <p class="fs-14">Please check your email for next steps to reset your password.
-                                        </p>
-                                    </div>
-                                    <a href="#" type="button" class="btn btn-primary py-2">
-                                        Contact Support
-                                        <i class="ri-arrow-right-line ps-2"></i>
-                                    </a>
-                                    <a href="./login.html" class="btn btn-light py-2">
-                                        Back to Login
-                                    </a>
                                 </div>
                             </div>
 
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
 
     </main>
+
+
 
     <div class="preloader">
         <div class="loader">
@@ -267,6 +323,7 @@
     <script src="./assets/pluggins/select2/js/select2.full.min.js"></script>
     <script src="./assets/pluggins/pagination/jquery.twbsPagination.min.js"></script>
     <script src="./assets/pluggins/scrollreveal/scrollreveal.js"></script>
+    <script src="./assets/js/calender.js"></script>
     <script src="./assets/js/index.js"></script>
 
 </body>
