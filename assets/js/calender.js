@@ -16,11 +16,12 @@ createYear = generate_year_range(1970, 2050);
 /** or
  * createYear = generate_year_range( 1970, currentYear );
  */
-
-document.getElementById("year").innerHTML = createYear;
+if (selectYear){
+    document.getElementById("year").innerHTML = createYear;
+}
 
 var calendar = document.getElementById("calendar");
-var lang = calendar.getAttribute("data-lang");
+// var lang = calendar.getAttribute("data-lang");
 
 var months = "";
 var days = "";
@@ -77,53 +78,13 @@ var monthDefault = [
 
 var dayDefault = ["S", "M", "T", "W", "T", "F", "S"];
 
-if (lang == "en") {
+// if (lang == "en") {
     months = monthDefault;
     days = dayDefault;
-} else if (lang == "id") {
-    months = [
-        "Januari",
-        "Februari",
-        "Maret",
-        "April",
-        "Mei",
-        "Juni",
-        "Juli",
-        "Agustus",
-        "September",
-        "Oktober",
-        "November",
-        "Desember",
-    ];
-    days = ["Ming", "Sen", "Sel", "Rab", "Kam", "Jum", "Sab"];
-} else if (lang == "fr") {
-    months = [
-        "Janvier",
-        "Février",
-        "Mars",
-        "Avril",
-        "Mai",
-        "Juin",
-        "Juillet",
-        "Août",
-        "Septembre",
-        "Octobre",
-        "Novembre",
-        "Décembre",
-    ];
-    days = [
-        "dimanche",
-        "lundi",
-        "mardi",
-        "mercredi",
-        "jeudi",
-        "vendredi",
-        "samedi",
-    ];
-} else {
-    months = monthDefault;
-    days = dayDefault;
-}
+// } else {
+    // months = monthDefault;
+    // days = dayDefault;
+// }
 
 var $dataHead = "<tr>";
 for (dhead in days) {
@@ -132,7 +93,7 @@ for (dhead in days) {
 $dataHead += "</tr>";
 
 //alert($dataHead);
-document.getElementById("thead-month").innerHTML = $dataHead;
+    document.getElementById("thead-month").innerHTML = $dataHead;
 
 monthAndYear = document.getElementById("monthAndYear");
 showCalendar(currentMonth, currentYear);
@@ -223,41 +184,6 @@ function showCalendar(month, year) {
                 }
 
 
-                // Check if there is an event for this date
-                // const eventForDate = events.find((event) => {
-                //     const eventDate = new Date(event.date);
-                //     return (
-                //         eventDate.getDate() === date &&
-                //         eventDate.getMonth() === month &&
-                //         eventDate.getFullYear() === year
-                //     );
-                // });
-
-                // // If there is an event, add it to the cell
-                // if (eventForDate) {
-                //     const eventElement = document.createElement("div");
-                //     eventElement.className = "event";
-                //     eventElement.title = eventForDate.title;
-                //     eventElement.textContent = "•";
-                //     // eventElement.textContent = eventForDate.title;
-                //     cell.appendChild(eventElement);
-
-                //     // Add click event to show event details
-                //     eventElement.addEventListener("click", (event) => {
-                //         const eventDetails = document.createElement("div");
-                //         eventDetails.classList.add("event-details");
-                //         eventDetails.textContent = eventForDate.title;
-                //         cell.appendChild(eventDetails);
-
-                //         // Remove event details after 3 seconds (3000 milliseconds)
-                //         setTimeout(() => {
-                //             eventDetails.remove();
-                //         }, 3000);
-                //     });
-                // }
-
-
-
                 row.appendChild(cell);
                 date++;
             }
@@ -317,8 +243,7 @@ const year = today.getFullYear();
 const dayOfWeekName = dayNames[dayOfWeek];
 
 // Display the results
-document.getElementById("date").textContent = day;
+document.getElementById("today").textContent = day;
 document.getElementById("dayOfWeek").textContent = dayOfWeekName;
 document.getElementById("today-month").textContent = monthNames[month];
 document.getElementById("today-year").textContent = year;
-

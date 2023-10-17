@@ -212,8 +212,8 @@
                                                 <a href="./dash-admin-appoinment.html">Appointments</a>
                                             </li>
                                             <li class="breadcrumb-item active" aria-current="page">
-                                                <i class="ri-calendar-event-fill fs-20 text-primary"></i>
-                                                <span>Appointment Calender</span>
+                                                <i class="ri-history-line fs-20 text-primary"></i>
+                                                <span>Appointment History</span>
                                             </li>
                                         </ol>
                                     </nav>
@@ -222,80 +222,67 @@
                             <!-- BREADCRUMB END-->
 
 
-                            
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="header-small bradius-7 rounde bg-main-primary p-4 w-full">
+                                        <h2 class="fs-20 text-white text-center">
+                                            Appointment History
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    
-                                    <div class="container-md px-0 px-lg-5 flex-col gap-4">
+                                    <div
+                                        class="inner-wrapper p-2 p-sm-4 flex-col gap-4 bg-primary-light shadow-neo bradius-14">
+                                        <div class="row">
+                                            <div class="col-4 col-md-3">
+                                                <select id="filterMonth"
+                                                    class="form-control select2-select select2-show-search form-select filterSelect">
+                                                    <option value=0>Jan</option>
+                                                    <option value=1>Feb</option>
+                                                    <option value=2>Mar</option>
+                                                    <option value=3>Apr</option>
+                                                    <option value=4>May</option>
+                                                    <option value=5>Jun</option>
+                                                    <option value=6>Jul</option>
+                                                    <option value=7>Aug</option>
+                                                    <option value=8>Sep</option>
+                                                    <option value=9>Oct</option>
+                                                    <option value=10>Nov</option>
+                                                    <option value=11>Dec</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-4 col-md-3">
+                                                <select id="year"
+                                                    class="form-control select2-select select2-show-search form-select filterSelect">
+                                                    <option value="0">All Years</option>
+                                                    <!-- Populate with years from 1970 to 2050 -->
+                                                </select>
+                                            </div>
+                                        </div>
                                         <div class="row">
                                             <div class="col-12">
-                                                <div class="flex-sb-m flex-col-c-sm w-full h-full bradius-14 mb-3">
-                                                    <a href="./appoinment-todays.html" class="btn-primary btn flex gap-2 py-3">Todays Appointments <i
-                                                            class="ri-calendar-fill"></i></a>
-                                                    <a href="./appoinment-history.html" class="btn-light btn flex gap-2 py-3">Appointment History <i
-                                                            class="ri-history-line"></i></a>
+                                               <div class="events-list">
+                                                <div class="events bradius-7 bg-light p-2 p-sm-4 shadow-soft flex-sb flex-col-l-sm gap-2">
+                                                    <div class="events-col flex-sm-column flex-row flex-sb w-full gap-2">
+                                                        <p class="fs-14 fw-semibold text-black">Aman Ejas</p>
+                                                        <p class="fs-12 text-black">13-05-2022</p>
+                                                    </div>
+                                                    <div class="events-col flex-sm-column flex-row flex-sb w-full gap-2">
+                                                        <p class="fs-12 text-black">(INTAKE Consultation)</p>
+                                                        <p class="fs-12 text-black">9:00 AM to 11:00 AM</p>
+                                                    </div>
+                                                    <div class="events-col flex-sm-column flex-row flex-sb w-full gap-2">
+                                                        <p class="fs-12 text-black">(Student)</p>
+                                                        <a href="#" class="fs-12 text-primary">View Details</a>
+                                                    </div>
                                                 </div>
+                                               </div>
                                             </div>
                                         </div>
-                                        <div class="appoinment-cal w-full p-3 px-md-5 shadow-neo bradius-14">
-                                            <div class="container-calendar flex-col gap-3">
-                                                <div class="py-2 bg-main-primary bradius-7 dis-none">
-                                                    <h3 class="fs-16 text-white" id="monthAndYear"></h3>
-                                                </div>
 
-                                                <div class="row">
-                                                    <div class="col-4 col-md-3">
-                                                        <select id="month" onchange="jump()"
-                                                            class="form-control select2-select select2-show-search form-select">
-                                                            <option value=0>Jan</option>
-                                                            <option value=1>Feb</option>
-                                                            <option value=2>Mar</option>
-                                                            <option value=3>Apr</option>
-                                                            <option value=4>May</option>
-                                                            <option value=5>Jun</option>
-                                                            <option value=6>Jul</option>
-                                                            <option value=7>Aug</option>
-                                                            <option value=8>Sep</option>
-                                                            <option value=9>Oct</option>
-                                                            <option value=10>Nov</option>
-                                                            <option value=11>Dec</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-4 col-md-3">
-                                                        <select id="year" onchange="jump()"
-                                                            class="form-control select2-select select2-show-search form-select"></select>
-                                                    </div>
-                                                    <div class="col-4 col-md-3">
-                                                       <button class="btn btn-light" id="todayButton">Today</button>
-                                                    </div>
-
-                                                </div>
-
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <table class="table-calendar" id="calendar" data-lang="en">
-                                                            <thead id="thead-month"></thead>
-                                                            <tbody id="calendar-body"></tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row flex-c gap-4">
-                                            <div class="col-12 col-md-3 col-xl-2">
-                                                <button id="previous" onclick="previous()"
-                                                    class="btn btn-light w-full fs-14 h-52">Previous
-                                                    Month</button>
-                                            </div>
-                                            <div class="col-12 col-md-3 col-xl-2">
-                                                <button id="next" onclick="next()"
-                                                    class="btn btn-primary w-full fs-14 h-52">Next
-                                                    Month</button>
-                                            </div>
-    
-                                        </div>
                                     </div>
-                                    
                                 </div>
                             </div>
 
@@ -306,6 +293,7 @@
         </div>
 
     </main>
+
 
 
 
@@ -325,8 +313,8 @@
     <script src="./assets/pluggins/select2/js/select2.full.min.js"></script>
     <script src="./assets/pluggins/pagination/jquery.twbsPagination.min.js"></script>
     <script src="./assets/pluggins/scrollreveal/scrollreveal.js"></script>
-    <script src="./assets/js/calender.js"></script>
     <script src="./assets/js/index.js"></script>
+
 
 </body>
 

@@ -2369,6 +2369,9 @@ ul.collection li {
         height: auto;
 
     }
+   .events-list .events .events-col {
+        width: auto !important;
+    }
 }
 
 /* Medium devices (tablets, 768px and up) */
