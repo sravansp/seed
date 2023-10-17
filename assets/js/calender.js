@@ -26,6 +26,12 @@ var months = "";
 var days = "";
 
 
+// Add a "Today" button click event listener
+const todayButton = document.getElementById("todayButton");
+if (todayButton) {
+    todayButton.addEventListener("click", jumpToToday);
+}
+
 // Define an array of events with date information
 const events = [{
         date: "2023-10-15",
@@ -261,6 +267,8 @@ function showCalendar(month, year) {
     }
 }
 
+
+
 function daysInMonth(iMonth, iYear) {
     return 32 - new Date(iYear, iMonth, 32).getDate();
 }
@@ -273,3 +281,44 @@ function updateSelectBoxes() {
     $(selectYear).trigger('change.select2');
     $(selectMonth).trigger('change.select2');
 }
+
+// Function to jump to the current date (today)
+function jumpToToday() {
+    const today = new Date();
+    currentYear = today.getFullYear();
+    currentMonth = today.getMonth();
+    showCalendar(currentMonth, currentYear);
+    updateSelectBoxes();
+}
+
+
+
+const todaydate = new Date();
+
+// Get today's date
+const day = today.getDate();
+
+// Get the day of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
+const dayOfWeek = today.getDay();
+
+// Define an array of day names
+const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+// Get the month (0 = January, 1 = February, ..., 11 = December)
+const month = today.getMonth();
+
+// Define an array of month names
+const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+// Get the year
+const year = today.getFullYear();
+
+// Get the day of the week name
+const dayOfWeekName = dayNames[dayOfWeek];
+
+// Display the results
+document.getElementById("date").textContent = day;
+document.getElementById("dayOfWeek").textContent = dayOfWeekName;
+document.getElementById("today-month").textContent = monthNames[month];
+document.getElementById("today-year").textContent = year;
+
