@@ -16,7 +16,7 @@ createYear = generate_year_range(1970, 2050);
 /** or
  * createYear = generate_year_range( 1970, currentYear );
  */
-if (selectYear){
+if (selectYear) {
     document.getElementById("year").innerHTML = createYear;
 }
 
@@ -79,11 +79,11 @@ var monthDefault = [
 var dayDefault = ["S", "M", "T", "W", "T", "F", "S"];
 
 // if (lang == "en") {
-    months = monthDefault;
-    days = dayDefault;
+months = monthDefault;
+days = dayDefault;
 // } else {
-    // months = monthDefault;
-    // days = dayDefault;
+// months = monthDefault;
+// days = dayDefault;
 // }
 
 var $dataHead = "<tr>";
@@ -93,7 +93,7 @@ for (dhead in days) {
 $dataHead += "</tr>";
 
 //alert($dataHead);
-    document.getElementById("thead-month").innerHTML = $dataHead;
+document.getElementById("thead-month").innerHTML = $dataHead;
 
 monthAndYear = document.getElementById("monthAndYear");
 showCalendar(currentMonth, currentYear);
@@ -217,33 +217,46 @@ function jumpToToday() {
     updateSelectBoxes();
 }
 
+if (document.querySelector("#date-today")) {
+    // Get today's date
+    const todays = new Date();
 
+    // Format the date as "01/01/2023"
+    const formattedDate = `${todays.getDate().toString().padStart(2, '0')}/${(todays.getMonth() + 1).toString().padStart(2, '0')}/${todays.getFullYear()}`;
 
-const todaydate = new Date();
+    // Display the formatted date in the specified <span> element
+    document.getElementById('date-today').textContent = formattedDate;
+}
 
-// Get today's date
-const day = today.getDate();
+if (document.querySelector("#today")) {
 
-// Get the day of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
-const dayOfWeek = today.getDay();
+    const todaydate = new Date();
 
-// Define an array of day names
-const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    // Get today's date
+    const day = today.getDate();
 
-// Get the month (0 = January, 1 = February, ..., 11 = December)
-const month = today.getMonth();
+    // Get the day of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
+    const dayOfWeek = today.getDay();
 
-// Define an array of month names
-const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    // Define an array of day names
+    const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-// Get the year
-const year = today.getFullYear();
+    // Get the month (0 = January, 1 = February, ..., 11 = December)
+    const month = today.getMonth();
 
-// Get the day of the week name
-const dayOfWeekName = dayNames[dayOfWeek];
+    // Define an array of month names
+    const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-// Display the results
-document.getElementById("today").textContent = day;
-document.getElementById("dayOfWeek").textContent = dayOfWeekName;
-document.getElementById("today-month").textContent = monthNames[month];
-document.getElementById("today-year").textContent = year;
+    // Get the year
+    const year = today.getFullYear();
+
+    // Get the day of the week name
+    const dayOfWeekName = dayNames[dayOfWeek];
+
+    // Display the results
+    document.getElementById("today").textContent = day;
+    document.getElementById("dayOfWeek").textContent = dayOfWeekName;
+    document.getElementById("today-month").textContent = monthNames[month];
+    document.getElementById("today-year").textContent = year;
+
+}
