@@ -217,7 +217,7 @@ function jumpToToday() {
     updateSelectBoxes();
 }
 
-if (document.querySelector("#date-today")) {
+if (document.querySelector("#date")) {
     // Get today's date
     const todays = new Date();
 
@@ -225,7 +225,7 @@ if (document.querySelector("#date-today")) {
     const formattedDate = `${todays.getDate().toString().padStart(2, '0')}/${(todays.getMonth() + 1).toString().padStart(2, '0')}/${todays.getFullYear()}`;
 
     // Display the formatted date in the specified <span> element
-    document.getElementById('date-today').textContent = formattedDate;
+    document.getElementById('date').textContent = formattedDate;
 }
 
 if (document.querySelector("#today")) {
