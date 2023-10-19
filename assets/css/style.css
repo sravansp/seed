@@ -142,9 +142,11 @@ input {
 .text-gray {
     color: var(--text-gray) !important;
 }
+
 .text-dark-gray {
     color: var(--dark-gray);
 }
+
 .bg-primary {
     background-color: var(--primary-color) !important;
 }
@@ -2321,12 +2323,14 @@ ul.collection li {
 .appoinment-cal {
     background: var(--Light-Gray, #F2F2F2);
 }
+
 .appoinment-cal .table-calendar {
     height: 320px;
 }
+
 /* Dark mode Toggle popup  */
 .popup-toggle.toggle-switch {
-    display: none  !important;
+    display: none !important;
 }
 
 /* Search Input CSS  */
@@ -2404,7 +2408,8 @@ ul.collection li {
         height: auto;
 
     }
-   .events-list .events .events-col {
+
+    .events-list .events .events-col {
         width: auto !important;
     }
 }
@@ -2551,6 +2556,10 @@ ul.collection li {
 
 /* XXX-Large devices (larger desktops, 1800px and up) */
 @media (min-width: 1800px) {
+    body {
+        zoom: 1.4;
+    }
+
     .form-items-wrapper {
         display: grid;
         grid-template-columns: repeat(3, 33.33333%);
@@ -2559,4 +2568,11 @@ ul.collection li {
     .wrapper-login .image4 {
         width: 650px;
     }
+}
+@media (min-width: 2200px) {
+    body {
+        zoom: 1.5;
+    }
+
+    
 }
