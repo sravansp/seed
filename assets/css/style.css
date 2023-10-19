@@ -2556,9 +2556,9 @@ ul.collection li {
 
 /* XXX-Large devices (larger desktops, 1800px and up) */
 @media (min-width: 1800px) {
-    body {
+    /* body {
         zoom: 1.4;
-    }
+    } */
 
     .form-items-wrapper {
         display: grid;
@@ -2570,9 +2570,9 @@ ul.collection li {
     }
 }
 @media (min-width: 2200px) {
-    body {
+    /* body {
         zoom: 1.5;
-    }
+    } */
 
     
 }
