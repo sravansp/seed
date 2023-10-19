@@ -15,6 +15,9 @@
 
     <link rel="stylesheet" href="./assets/pluggins/bootstrap/css/bootstrap.min.css">
 
+    <!-- DATEPICKER CSS  -->
+    <link rel="stylesheet" href="./assets/pluggins/datetimepicker/css/gijgo.css">
+
     <!-- Icon Used: Remix Icon | https://remixicon.com/-->
     <link rel="stylesheet" href="./assets/pluggins/remixicon/remixicon.css">
 
@@ -60,7 +63,7 @@
                             </a>
                         </li>
                         <li class="nav-link">
-                           <a href="dash-admin-student.html">
+                            <a href="dash-admin-student.html">
                                 <i class="ri-team-fill icon"></i>
                                 <span class="text nav-text">Student Management</span>
                                 <span class="tooltip">Student Management</span>
@@ -371,58 +374,62 @@
                                         </div>
 
                                         <form action="" class="needs-validation" novalidate>
-                                            <div class=" row profile-inputs">
-                                                <div class="col-md-12 mb-4">
-                                                    <div class="form-input pos-relative">
-                                                        <input type="text" class="form-control" name="fullname" id=""
-                                                            required>
-                                                        <h6>Student Name</h6>
-                                                        <div class="invalid-feedback">
-                                                           Required
+                                            <div class="row">
+                                                <div class="col-sm-12 col-lg-9 mb-3">
+                                                    <div class="search-input pos-relative">
+                                                        <label for="stndname" class="form-label">Student Name</label>
+                                                        <input type="text" class="form-control" id="stndname"
+                                                            placeholder="Type Student Name">
+                                                        <div
+                                                            class="autocom-box pos-absolute w-full bg-primary-light shadow-neo">
+                                                        </div>
+                                                    </div>
+                                                        
+                                                </div>
+                                                <div class="col-sm-12 col-lg-9 mb-3">
+                                                    <label for="" class="form-label">Consultation Type</label>
+                                                    <select
+                                                        class="form-control select2-select select2-show-search form-select"
+                                                        data-placeholder="Select Type of consultation">
+                                                        <option label="Choose one"></option>
+                                                        <option value="AZ">Arizona</option>
+                                                        <option value="CO">Colorado</option>
+                                                        <option value="ID">Idaho</option>
+                                                        <option value="MT">Montana</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-12 col-lg-9">
+                                                    <div class="row">
+                                                        <div class="col-md-6 mb-3">
+                                                            <label for="datepicker" class="form-label">Select Date</label>
+                                                            <input type="text" class="form-control" id="datepicker"
+                                                                placeholder="Select date">
+                                                        </div>
+                                                        <div class="col-md-6 mb-4">
+                                                            <label for="datepicker" class="form-label">Select Time</label>
+                                                            <input type="text" class="form-control" id="timepicker"
+                                                                placeholder="Select time">
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-12 mb-4">
-                                                    <div class="form-input pos-relative">
-                                                        <input type="text" class="form-control" name="fullname" id=""
-                                                            value="Seema82@gmail.com">
-                                                        <h6>Email</h6>
-                                                          <div class="invalid-feedback">
-                                                           Required
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 mb-4">
-                                                    <div class="form-input pos-relative">
-                                                        <input type="text" class="form-control" name="fullname" id=""
-                                                            value="City Dubai, United Arab Emirites">
-                                                        <h6>City</h6>
-                                                          <div class="invalid-feedback">
-                                                           Required
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 mb-4">
-                                                    <div class="form-input pos-relative">
-                                                        <input type="text" class="form-control" name="fullname" id=""
-                                                            value="Dubai">
-                                                        <h6>State</h6>
-                                                          <div class="invalid-feedback">
-                                                           Required
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                
+
 
                                                 <div class="col-md-12 mt-5">
-                                                    <div class="row flex-r gap-4 gap-md-0">
-                                                        <div class="col-12 col-md-5 col-lg-4 col-xl-3">
-                                                            <button
-                                                                class="btn btn-light w-full text-nowrap">Cancel</button>
+                                                    <div class="row gap-4 gap-xl-0 flex-c-m">
+                                                        <div class="col-12 col-xl-3 col-xxl-5 t-center">
+                                                            <a href="" class="text-primary fs-14 fw-semibold">Not Registered?</a>
                                                         </div>
-                                                        <div class="col-12 col-md-5 col-lg-4 col-xl-3">
-                                                            <button class="btn btn-primary w-full text-nowrap" type="submit">Save
-                                                                Profile</button>
+                                                        <div class="col-12 col-xl-9 col-xxl-7">
+                                                            <div class="row gap-4 gap-lg-0">
+                                                                <div class="col-12 col-lg-6">
+                                                                    <button
+                                                                        class="btn btn-light w-full text-nowrap">Cancel</button>
+                                                                </div>
+                                                                <div class="col-12 col-lg-6">
+                                                                    <button class="btn btn-primary w-full text-nowrap"
+                                                                        type="submit">Make Appointments</button>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -455,9 +462,21 @@
 
     <script src="./assets/pluggins/select2/js/select2.full.min.js"></script>
     <script src="./assets/pluggins/scrollreveal/scrollreveal.js"></script>
+
+    <!-- DATE PICKER  -->
+    <script src="./assets/pluggins/datetimepicker/js/gijgo.min.js"></script>
+
     <script src="./assets/js/calender.js"></script>
     <script src="./assets/js/index.js"></script>
 
+    <script>
+         $('#datepicker').datepicker({
+            showOtherMonths: true, footer: true, modal: true, header:true 
+        });
+        $('#timepicker').timepicker({
+            format: 'hh.MM TT'
+        });
+    </script>
 </body>
 
 </html>
