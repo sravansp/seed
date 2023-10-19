@@ -191,6 +191,7 @@ function showCalendar(month, year) {
 
         tbl.appendChild(row);
     }
+    updateSelectBoxes();
 }
 
 
