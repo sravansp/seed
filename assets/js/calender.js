@@ -62,6 +62,12 @@ function initializeCalendar() {
         // Add more events as needed
     ];
 
+    const disabledDates = [
+        { date: "2023-10-20", title: "This date is disabled due to an event" },
+        { date: "2023-10-23", title: "This date is also disabled" }
+    ];
+    
+
     var monthDefault = [
         "January",
         "February",
@@ -97,7 +103,7 @@ function initializeCalendar() {
     document.getElementById("thead-month").innerHTML = $dataHead;
 
     monthAndYear = document.getElementById("monthAndYear");
-    
+
     showCalendar(currentMonth, currentYear);
 
     window.showCalendar = showCalendar;
@@ -113,6 +119,12 @@ function initializeCalendar() {
         selectYear.value = year;
         selectMonth.value = month;
 
+
+        // Create a function to check if a date is disabled
+       
+        function isDateDisabled(targetDate) {
+            return disabledDates.some(disabledDate => disabledDate.date === targetDate);
+        }
 
         // Function to count events for a given date
         function countEventsForDate(targetDate) {
@@ -139,8 +151,8 @@ function initializeCalendar() {
                     cell.setAttribute("data-month", month + 1);
                     cell.setAttribute("data-year", year);
                     cell.setAttribute("data-month_name", months[month]);
-                    cell.className = "date-picker";
-                    cell.innerHTML = "<a href='#'>" + date + "</a>";
+
+                 
 
                     if (
                         date === today.getDate() &&
@@ -156,12 +168,27 @@ function initializeCalendar() {
                     // Find the count of events for the current date
                     const eventCount = countEventsForDate(dateString);
 
+
+                    if (isDateDisabled(dateString)) {
+                        cell.className = "disabled";
+                        cell.innerHTML = "<a href='#' class='disabled pos-relative'>" + date + "</a>";
+
+                        // Add a title attribute to the disabled date for the tooltip
+        const disabledDate = disabledDates.find(disabledDate => disabledDate.date === dateString);
+        cell.title = disabledDate.title;
+
+       
+                    } else {
+                        cell.className = "date-picker";
+                        cell.innerHTML = "<a href='#'>" + date + "</a>";
+                    }
+
                     // Display the event count if it's greater than 0
                     if (eventCount > 0) {
                         const eventCountElement = document.createElement("div");
                         eventCountElement.className = "event-count";
                         cell.classList.add("event-cell");
-                        cell.innerHTML = "<a href='#'>" + date + "</a>";
+                        cell.innerHTML = "<a href='./appoinment-todays.html'>" + date + "</a>";
                         eventCountElement.textContent = eventCount;
                         cell.appendChild(eventCountElement);
                     }
@@ -225,6 +252,9 @@ function initializeCalendar() {
         document.getElementById("today-year").textContent = year;
 
     }
+
+
+    
 }
 
 

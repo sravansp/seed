@@ -2204,6 +2204,20 @@ ul.collection li {
     box-shadow: var(--shadow-neo);
 }
 
+.table-calendar td.disabled a {
+    background: #ff8d8d;
+    border-radius: 7px;
+    box-shadow: var(--shadow-neo);
+    color: var(--text-white);
+    cursor: not-allowed;
+}
+.table-calendar td.disabled a:hover {
+    background: #ccc !important;
+    border-radius: 7px;
+    box-shadow: var(--shadow-neo);
+    color: var(--text-white);
+    cursor: not-allowed;
+}
 
 .table-calendar th {
     color: var(--dark-gray);
@@ -2215,6 +2229,16 @@ ul.collection li {
     border-radius: 7px;
     color: var(--text-white);
     box-shadow: var(--shadow-neo);
+}
+
+
+.tooltip {
+    position: absolute;
+    background-color: var(--bg-main-primary) !important;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 999;
 }
 
 
@@ -2369,8 +2393,25 @@ ul.collection li {
 }
 
 
+.seed-tabs .nav-pills .nav-link {
+    color: var(--Text-Gray, rgba(26, 26, 26, 0.41));
+    font-size: 13px;
+    padding: 10px;
+    height: 100%;
+    min-height: 50px;
+}
 
+.seed-tabs .nav-link:focus,
+.seed-tabs .nav-link:hover {
+    background-color: var(--body-light-primary);
+    color: var(--primary-color);
+}
 
+.seed-tabs .nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: var(--bs-nav-pills-link-active-color);
+    background-color: var(--bg-main-primary);
+}
 
 
 
@@ -2522,6 +2563,10 @@ ul.collection li {
         align-items: center;
     }
 
+    /* tabs  */
+    .seed-tabs .nav-pills .nav-link {
+        font-size: 14px;
+    }
 
 }
 
@@ -2531,6 +2576,10 @@ ul.collection li {
         --p-wpl: 35px;
     }
 
+    /* tabs  */
+    .seed-tabs .nav-pills .nav-link {
+        font-size: 16px;
+    }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
@@ -2543,7 +2592,10 @@ ul.collection li {
         width: 240px;
         height: 240px;
     }
-
+ /* tabs  */
+ .seed-tabs .nav-pills .nav-link {
+    font-size: 20px;
+}
 
 }
 
@@ -2569,10 +2621,11 @@ ul.collection li {
         width: 650px;
     }
 }
+
 @media (min-width: 2200px) {
     /* body {
         zoom: 1.5;
     } */
 
-    
+
 }
