@@ -62,11 +62,16 @@ function initializeCalendar() {
         // Add more events as needed
     ];
 
-    const disabledDates = [
-        { date: "2023-10-20", title: "This date is disabled due to an event" },
-        { date: "2023-10-23", title: "This date is also disabled" }
+    const disabledDates = [{
+            date: "2023-10-21",
+            title: "This date is disabled due to an event"
+        },
+        {
+            date: "2023-10-23",
+            title: "This date is also disabled"
+        }
     ];
-    
+
 
     var monthDefault = [
         "January",
@@ -121,7 +126,7 @@ function initializeCalendar() {
 
 
         // Create a function to check if a date is disabled
-       
+
         function isDateDisabled(targetDate) {
             return disabledDates.some(disabledDate => disabledDate.date === targetDate);
         }
@@ -152,8 +157,23 @@ function initializeCalendar() {
                     cell.setAttribute("data-year", year);
                     cell.setAttribute("data-month_name", months[month]);
 
-                 
+                    // Calculate the date string for the current cell
+                    const dateString = `${year}-${month + 1}-${date}`;
 
+
+                    if (isDateDisabled(dateString)) {
+                        cell.className = "disabled";
+                        cell.innerHTML = "<a href='#' class='disabled pos-relative'>" + date + "</a>";
+
+                        // Add a title attribute to the disabled date for the tooltip
+                        const disabledDate = disabledDates.find(disabledDate => disabledDate.date === dateString);
+                        cell.title = disabledDate.title;
+
+
+                    } else {
+                        cell.className = "date-picker";
+                        cell.innerHTML = "<a href='#'>" + date + "</a>";
+                    }
                     if (
                         date === today.getDate() &&
                         year === today.getFullYear() &&
@@ -162,26 +182,9 @@ function initializeCalendar() {
                         cell.className = "date-picker selected";
                     }
 
-                    // Calculate the date string for the current cell
-                    const dateString = `${year}-${month + 1}-${date}`;
 
                     // Find the count of events for the current date
                     const eventCount = countEventsForDate(dateString);
-
-
-                    if (isDateDisabled(dateString)) {
-                        cell.className = "disabled";
-                        cell.innerHTML = "<a href='#' class='disabled pos-relative'>" + date + "</a>";
-
-                        // Add a title attribute to the disabled date for the tooltip
-        const disabledDate = disabledDates.find(disabledDate => disabledDate.date === dateString);
-        cell.title = disabledDate.title;
-
-       
-                    } else {
-                        cell.className = "date-picker";
-                        cell.innerHTML = "<a href='#'>" + date + "</a>";
-                    }
 
                     // Display the event count if it's greater than 0
                     if (eventCount > 0) {
@@ -254,7 +257,7 @@ function initializeCalendar() {
     }
 
 
-    
+
 }
 
 
