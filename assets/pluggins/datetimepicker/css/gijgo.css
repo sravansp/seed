@@ -2478,10 +2478,12 @@ ul.gj-list-md li.disabled > [data-role="wrapper"] > [data-role="expander"] {
     /* right: 0px;
     top: 0px; */
     
-    right: 2%;
+    right: 4%;
     top: 18%;
 
     font-size: 24px;
+    color: #c9c9c9;
+
 }
 
 .gj-picker-md .arrow-begin {
