@@ -419,46 +419,46 @@ $("#imageUpload").change(function () {
 
 window.addEventListener("DOMContentLoaded", () => {
     if (document.querySelector('.pie')) {
-    // update circle when range change
-    const pie = document.querySelectorAll(".pie");
-    // const range = document.querySelector('[type="range"]');
+        // update circle when range change
+        const pie = document.querySelectorAll(".pie");
+        // const range = document.querySelector('[type="range"]');
 
-    // start the animation when the element is in the page view
-    const elements = [].slice.call(document.querySelectorAll(".pie"));
-    const circle = new CircularProgressBar("pie");
+        // start the animation when the element is in the page view
+        const elements = [].slice.call(document.querySelectorAll(".pie"));
+        const circle = new CircularProgressBar("pie");
 
-    // circle.initial();
+        // circle.initial();
 
-    if ("IntersectionObserver" in window) {
-        const config = {
-            root: null,
-            rootMargin: "0px",
-            threshold: 0.75
-        };
+        if ("IntersectionObserver" in window) {
+            const config = {
+                root: null,
+                rootMargin: "0px",
+                threshold: 0.75
+            };
 
-        const ovserver = new IntersectionObserver((entries, observer) => {
-            entries.map((entry) => {
-                if (entry.isIntersecting && entry.intersectionRatio > 0.75) {
-                    circle.initial(entry.target);
-                    observer.unobserve(entry.target);
-                }
+            const ovserver = new IntersectionObserver((entries, observer) => {
+                entries.map((entry) => {
+                    if (entry.isIntersecting && entry.intersectionRatio > 0.75) {
+                        circle.initial(entry.target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, config);
+
+            elements.map((item) => {
+                ovserver.observe(item);
             });
-        }, config);
-
-        elements.map((item) => {
-            ovserver.observe(item);
-        });
-    } else {
-        elements.map((element) => {
-            circle.initial(element);
-        });
+        } else {
+            elements.map((element) => {
+                circle.initial(element);
+            });
+        }
     }
-}
 
 });
 
-jQuery(document).ready(function($) {
-    $(".clickable-row").click(function() {
+jQuery(document).ready(function ($) {
+    $(".clickable-row").click(function () {
         window.location = $(this).data("href");
     });
 });
@@ -481,101 +481,235 @@ jQuery(document).ready(function($) {
 
 if (document.querySelector(".search-input")) {
     let suggestions = [
-      "Alice",
-      "Bob",
-      "Charlie",
-      "David",
-      "Eve",
-      "Frank",
-      "Grace",
-      "Henry",
-      "Ivy",
-      "Jack",
-      "Karen",
-      "Liam",
-      "Mia",
-      "Nora",
-      "Oliver",
-      "Penelope",
-      "Quinn",
-      "Riley",
-      "Sophia",
-      "Theodore",
-      "Ursula",
-      "Victor",
-      "Willow",
-      "Xander",
-      "Yasmine",
-      "Zane",
-      "Ava",
-      "Benjamin",
-      "Catherine",
-      "Daniel",
-      "Emma",
-      "Finn",
-      "Gabriella",
-      "Harrison",
-      "Isabella",
-      "Jacob",
-      "Katherine",
-      "Luna",
-      "Matthew",
-      "Natalie",
-      "Olivia",
-      "Patrick",
-      "Quincy",
-      "Rebecca",
-      "Samuel",
-      "Taylor",
-      "Uma",
-      "Violet"
+        "Alice",
+        "Bob",
+        "Charlie",
+        "David",
+        "Eve",
+        "Frank",
+        "Grace",
+        "Henry",
+        "Ivy",
+        "Jack",
+        "Karen",
+        "Liam",
+        "Mia",
+        "Nora",
+        "Oliver",
+        "Penelope",
+        "Quinn",
+        "Riley",
+        "Sophia",
+        "Theodore",
+        "Ursula",
+        "Victor",
+        "Willow",
+        "Xander",
+        "Yasmine",
+        "Zane",
+        "Ava",
+        "Benjamin",
+        "Catherine",
+        "Daniel",
+        "Emma",
+        "Finn",
+        "Gabriella",
+        "Harrison",
+        "Isabella",
+        "Jacob",
+        "Katherine",
+        "Luna",
+        "Matthew",
+        "Natalie",
+        "Olivia",
+        "Patrick",
+        "Quincy",
+        "Rebecca",
+        "Samuel",
+        "Taylor",
+        "Uma",
+        "Violet"
     ];
-    
+
     // getting all required elements
     const searchWrapper = document.querySelector(".search-input");
     const inputBox = searchWrapper.querySelector("input");
     const suggBox = searchWrapper.querySelector(".autocom-box");
     let webLink;
-    
+
     // if user press any key and release
     inputBox.onkeyup = (e) => {
-      let userData = e.target.value; //user enetered data
-      let emptyArray = [];
-      if (userData) {
-        emptyArray = suggestions.filter((data) => {
-          //filtering array value and user characters to lowercase and return only those words which are start with user enetered chars
-          return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
-        });
-        emptyArray = emptyArray.map((data) => {
-          // passing return data inside li tag
-          return (data = "<li>" + data + "</li>");
-        });
-        searchWrapper.classList.add("active"); //show autocomplete box
-        showSuggestions(emptyArray);
-        let allList = suggBox.querySelectorAll("li");
-        for (let i = 0; i < allList.length; i++) {
-          //adding onclick attribute in all li tag
-          allList[i].setAttribute("onclick", "select(this)");
+        let userData = e.target.value; //user enetered data
+        let emptyArray = [];
+        if (userData) {
+            emptyArray = suggestions.filter((data) => {
+                //filtering array value and user characters to lowercase and return only those words which are start with user enetered chars
+                return data.toLocaleLowerCase().startsWith(userData.toLocaleLowerCase());
+            });
+            emptyArray = emptyArray.map((data) => {
+                // passing return data inside li tag
+                return (data = "<li>" + data + "</li>");
+            });
+            searchWrapper.classList.add("active"); //show autocomplete box
+            showSuggestions(emptyArray);
+            let allList = suggBox.querySelectorAll("li");
+            for (let i = 0; i < allList.length; i++) {
+                //adding onclick attribute in all li tag
+                allList[i].setAttribute("onclick", "select(this)");
+            }
+        } else {
+            searchWrapper.classList.remove("active"); //hide autocomplete box
         }
-      } else {
-        searchWrapper.classList.remove("active"); //hide autocomplete box
-      }
     };
-    
+
     function select(element, event) {
-      let selectData = element.textContent;
-      inputBox.value = selectData;
-      searchWrapper.classList.remove("active");
+        let selectData = element.textContent;
+        inputBox.value = selectData;
+        searchWrapper.classList.remove("active");
     }
-    
+
     function showSuggestions(list) {
-      let listData;
-      if (!list.length) {
-        userValue = inputBox.value;
-        listData = "<li>" + userValue + "</li>";
-      } else {
-        listData = list.join("");
-      }
-      suggBox.innerHTML = listData;
+        let listData;
+        if (!list.length) {
+            userValue = inputBox.value;
+            listData = "<li>" + userValue + "</li>";
+        } else {
+            listData = list.join("");
+        }
+        suggBox.innerHTML = listData;
+    }
+}
+
+
+fileUpload();
+
+function fileUpload() {
+    if(document.querySelector(".browse-files")) {
+        var isAdvancedUpload = function () {
+            var div = document.createElement('div');
+            return (('draggable' in div) || ('ondragstart' in div && 'ondrop' in div)) && 'FormData' in window && 'FileReader' in window;
+        }();
+    
+        let draggableFileArea = document.querySelector(".drag-file-area");
+        let browseFileText = document.querySelector(".browse-files");
+        let uploadIcon = document.querySelector("#upload-icon");
+        let dragDropText = document.querySelector(".dynamic-message");
+        let fileInput = document.querySelector(".default-file-input");
+        let cannotUploadMessage = document.querySelector(".cannot-upload-message");
+        let cancelAlertButton = document.querySelector(".cancel-alert-button");
+        let uploadedFile = document.querySelector(".file-block");
+        let fileName = document.querySelector(".file-name");
+        let fileSize = document.querySelector(".file-size");
+        let progressBar = document.querySelector(".progress-bar");
+        let removeFileButton = document.querySelector(".remove-file-icon");
+        let uploadButton = document.querySelector(".upload-button");
+        let fileFlag = 0;
+    
+        fileInput.addEventListener("click", () => {
+            fileInput.value = '';
+            console.log(fileInput.value);
+        });
+    
+        fileInput.addEventListener("change", e => {
+            console.log(" > " + fileInput.value)
+            uploadIcon.className = 'ri-checkbox-circle-line';
+            dragDropText.innerHTML = 'File Dropped Successfully!';
+            document.querySelector(".label").innerHTML = `<span class="browse-files">
+            <input type="file"
+                class="default-file-input" />
+            <span
+                class="browse-files-text btn btn-primary fs-14">Select
+                File </span>
+        </span>`;
+            uploadButton.innerHTML = `Upload`;
+            fileName.innerHTML = fileInput.files[0].name;
+            fileSize.innerHTML = (fileInput.files[0].size / 1024).toFixed(1) + " KB";
+            uploadedFile.style.cssText = "display: flex;";
+            progressBar.style.width = 0;
+            fileFlag = 0;
+        });
+    
+        uploadButton.addEventListener("click", () => {
+            let isFileUploaded = fileInput.value;
+            if (isFileUploaded != '') {
+                if (fileFlag == 0) {
+                    fileFlag = 1;
+                    var width = 0;
+                    var id = setInterval(frame, 50);
+    
+                    function frame() {
+                        if (width >= 390) {
+                            clearInterval(id);
+                            uploadButton.innerHTML = `<span class="material-icons-outlined upload-button-icon"> check_circle </span> Uploaded`;
+                        } else {
+                            width += 5;
+                            progressBar.style.width = width + "px";
+                        }
+                    }
+                }
+            } else {
+                cannotUploadMessage.style.cssText = "display: flex; animation: fadeIn linear 1.5s;";
+            }
+        });
+    
+        cancelAlertButton.addEventListener("click", () => {
+            cannotUploadMessage.style.cssText = "display: none;";
+        });
+    
+        if (isAdvancedUpload) {
+            ["drag", "dragstart", "dragend", "dragover", "dragenter", "dragleave", "drop"].forEach(evt =>
+                draggableFileArea.addEventListener(evt, e => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                })
+            );
+    
+            ["dragover", "dragenter"].forEach(evt => {
+                draggableFileArea.addEventListener(evt, e => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    uploadIcon.className = 'ri-check-double-line';
+                    dragDropText.innerHTML = 'Drop your file here!';
+                });
+            });
+    
+            draggableFileArea.addEventListener("drop", e => {
+                uploadIcon.className = 'ri-checkbox-circle-line';
+                dragDropText.innerHTML = 'File Dropped Successfully!';
+                document.querySelector(".label").innerHTML = `<span class="browse-files">
+                <input type="file"
+                    class="default-file-input" />
+                <span
+                    class="browse-files-text btn btn-primary fs-14">Select
+                    File </span>
+            </span>`;
+                uploadButton.innerHTML = `Upload`;
+    
+                let files = e.dataTransfer.files;
+                fileInput.files = files;
+                console.log(files[0].name + " " + files[0].size);
+                console.log(document.querySelector(".default-file-input").value);
+                fileName.innerHTML = files[0].name;
+                fileSize.innerHTML = (files[0].size / 1024).toFixed(1) + " KB";
+                uploadedFile.style.cssText = "display: flex;";
+                progressBar.style.width = 0;
+                fileFlag = 0;
+            });
+        }
+    
+        removeFileButton.addEventListener("click", () => {
+            uploadedFile.style.cssText = "display: none;";
+            fileInput.value = '';
+            uploadIcon.className = 'ri-upload-cloud-2-line';
+            dragDropText.innerHTML = 'Drag & drop any file here';
+            document.querySelector(".label").innerHTML = `<span class="browse-files">
+            <input type="file"
+                class="default-file-input" />
+            <span
+                class="browse-files-text btn btn-primary fs-14">Select
+                File </span>
+        </span>`;
+            uploadButton.innerHTML = `Upload`;
+        });
     }
 }

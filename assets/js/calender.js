@@ -105,7 +105,9 @@ function initializeCalendar() {
     $dataHead += "</tr>";
 
     //alert($dataHead);
-    document.getElementById("thead-month").innerHTML = $dataHead;
+    if (document.getElementById("thead-month")) {
+        document.getElementById("thead-month").innerHTML = $dataHead;
+    }
 
     monthAndYear = document.getElementById("monthAndYear");
 
@@ -114,95 +116,98 @@ function initializeCalendar() {
     window.showCalendar = showCalendar;
 
     function showCalendar(month, year) {
-        var firstDay = new Date(year, month).getDay();
 
-        tbl = document.getElementById("calendar-body");
-
-        tbl.innerHTML = "";
-
-        monthAndYear.innerHTML = months[month] + " " + year;
-        selectYear.value = year;
-        selectMonth.value = month;
+        if (document.getElementById("calendar-body")) {
+            var firstDay = new Date(year, month).getDay();
+            tbl = document.getElementById("calendar-body");
+            tbl.innerHTML = "";
 
 
-        // Create a function to check if a date is disabled
 
-        function isDateDisabled(targetDate) {
-            return disabledDates.some(disabledDate => disabledDate.date === targetDate);
-        }
-
-        // Function to count events for a given date
-        function countEventsForDate(targetDate) {
-            return events.filter((event) => event.date === targetDate).length;
-        }
+            monthAndYear.innerHTML = months[month] + " " + year;
+            selectYear.value = year;
+            selectMonth.value = month;
 
 
-        // creating all cells
-        var date = 1;
-        for (var i = 0; i < 6; i++) {
-            var row = document.createElement("tr");
+            // Create a function to check if a date is disabled
 
-            for (var j = 0; j < 7; j++) {
-                if (i === 0 && j < firstDay) {
-                    cell = document.createElement("td");
-                    cellText = document.createTextNode("");
-                    cell.appendChild(cellText);
-                    row.appendChild(cell);
-                } else if (date > daysInMonth(month, year)) {
-                    break;
-                } else {
-                    cell = document.createElement("td");
-                    cell.setAttribute("data-date", date);
-                    cell.setAttribute("data-month", month + 1);
-                    cell.setAttribute("data-year", year);
-                    cell.setAttribute("data-month_name", months[month]);
-
-                    // Calculate the date string for the current cell
-                    const dateString = `${year}-${month + 1}-${date}`;
-
-
-                    if (isDateDisabled(dateString)) {
-                        cell.className = "disabled";
-                        cell.innerHTML = "<a href='#' class='disabled pos-relative'>" + date + "</a>";
-
-                        // Add a title attribute to the disabled date for the tooltip
-                        const disabledDate = disabledDates.find(disabledDate => disabledDate.date === dateString);
-                        cell.title = disabledDate.title;
-
-
-                    } else {
-                        cell.className = "date-picker";
-                        cell.innerHTML = "<a href='#'>" + date + "</a>";
-                    }
-                    if (
-                        date === today.getDate() &&
-                        year === today.getFullYear() &&
-                        month === today.getMonth()
-                    ) {
-                        cell.className = "date-picker selected";
-                    }
-
-
-                    // Find the count of events for the current date
-                    const eventCount = countEventsForDate(dateString);
-
-                    // Display the event count if it's greater than 0
-                    if (eventCount > 0) {
-                        const eventCountElement = document.createElement("div");
-                        eventCountElement.className = "event-count";
-                        cell.classList.add("event-cell");
-                        cell.innerHTML = "<a href='./appoinment-todays.html'>" + date + "</a>";
-                        eventCountElement.textContent = eventCount;
-                        cell.appendChild(eventCountElement);
-                    }
-
-
-                    row.appendChild(cell);
-                    date++;
-                }
+            function isDateDisabled(targetDate) {
+                return disabledDates.some(disabledDate => disabledDate.date === targetDate);
             }
 
-            tbl.appendChild(row);
+            // Function to count events for a given date
+            function countEventsForDate(targetDate) {
+                return events.filter((event) => event.date === targetDate).length;
+            }
+
+
+            // creating all cells
+            var date = 1;
+            for (var i = 0; i < 6; i++) {
+                var row = document.createElement("tr");
+
+                for (var j = 0; j < 7; j++) {
+                    if (i === 0 && j < firstDay) {
+                        cell = document.createElement("td");
+                        cellText = document.createTextNode("");
+                        cell.appendChild(cellText);
+                        row.appendChild(cell);
+                    } else if (date > daysInMonth(month, year)) {
+                        break;
+                    } else {
+                        cell = document.createElement("td");
+                        cell.setAttribute("data-date", date);
+                        cell.setAttribute("data-month", month + 1);
+                        cell.setAttribute("data-year", year);
+                        cell.setAttribute("data-month_name", months[month]);
+
+                        // Calculate the date string for the current cell
+                        const dateString = `${year}-${month + 1}-${date}`;
+
+
+                        if (isDateDisabled(dateString)) {
+                            cell.className = "date-picker disabled";
+                            cell.innerHTML = "<a href='#' class='disabled pos-relative'>" + date + "</a>";
+
+                            // Add a title attribute to the disabled date for the tooltip
+                            const disabledDate = disabledDates.find(disabledDate => disabledDate.date === dateString);
+                            cell.title = disabledDate.title;
+
+
+                        } else {
+                            cell.className = "date-picker";
+                            cell.innerHTML = "<a href='#'>" + date + "</a>";
+                        }
+                        if (
+                            date === today.getDate() &&
+                            year === today.getFullYear() &&
+                            month === today.getMonth()
+                        ) {
+                            cell.className = "date-picker selected";
+                        }
+
+
+                        // Find the count of events for the current date
+                        const eventCount = countEventsForDate(dateString);
+
+                        // Display the event count if it's greater than 0
+                        if (eventCount > 0) {
+                            const eventCountElement = document.createElement("div");
+                            eventCountElement.className = "event-count";
+                            cell.classList.add("event-cell");
+                            cell.innerHTML = "<a href='./appoinment-todays.html'>" + date + "</a>";
+                            eventCountElement.textContent = eventCount;
+                            cell.appendChild(eventCountElement);
+                        }
+
+
+                        row.appendChild(cell);
+                        date++;
+                    }
+                }
+
+                tbl.appendChild(row);
+            }
         }
     }
 
@@ -255,7 +260,6 @@ function initializeCalendar() {
         document.getElementById("today-year").textContent = year;
 
     }
-
 
 
 }
@@ -311,3 +315,60 @@ function previous() {
     updateSelectBoxes();
     showCalendar(currentMonth, currentYear);
 }
+
+
+
+function destroyCalendar() {
+    // Remove event listeners
+    const todayButton = document.getElementById("todayButton");
+    if (todayButton) {
+        todayButton.removeEventListener("click", jumpToToday);
+    }
+
+    // Clear the calendar table
+    const calendarBody = document.getElementById("calendar-body");
+    if (calendarBody) {
+        calendarBody.innerHTML = "";
+    }
+
+    // Clear the select elements
+    // const selectYear = document.getElementById("year");
+    // const selectMonth = document.getElementById("month");
+    // if (selectYear) {
+    //     selectYear.innerHTML = "";
+    // }
+    // if (selectMonth) {
+    //     selectMonth.innerHTML = "";
+    // }
+
+    // Clear the monthAndYear element
+    const monthAndYear = document.getElementById("monthAndYear");
+    if (monthAndYear) {
+        monthAndYear.textContent = "";
+    }
+
+    // Clear any other elements or variables as needed
+    // For example, you may want to clear the "date" and "today" elements if they exist.
+
+    // Nullify global variables
+    today = null;
+    currentMonth = null;
+    currentYear = null;
+    selectYear = null;
+    selectMonth = null;
+    monthAndYear = null;
+
+    // Clear any other global variables used in the calendar
+
+    // Additional cleanup steps if necessary
+
+    // Optionally, you can also remove the global functions you added to the window object:
+    window.jump = null;
+    window.updateSelectBoxes = null;
+    window.jumpToToday = null;
+    window.next = null;
+    window.previous = null;
+}
+
+// To destroy the calendar, call the destroyCalendar function
+// destroyCalendar();

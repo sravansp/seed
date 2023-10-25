@@ -153,7 +153,7 @@ input {
 }
 
 .bg-primary-light {
-    background-color: var(--body-light-primary) !important;
+    background: var(--body-light-primary) !important;
 }
 
 .bg-secondary {
@@ -173,7 +173,7 @@ input {
 }
 
 .bg-card {
-    background: var(--card-gradient);
+    background: var(--card-gradient) !important;
 }
 
 .wrapper-primary-light {
@@ -824,7 +824,7 @@ body.dark .navbar_container .nav-search {
 
 
 
-.admin-dash .card-dash {
+.card-dash {
     height: 230px;
     background: var(--card-gradient);
     border-radius: 14px;
@@ -898,29 +898,49 @@ body.dark .navbar_container .nav-search {
     opacity: 0.7;
 }
 
-.admin-dash-user .card-dash .user-add-icon {
+.card-dash .user-add-icon {
     border-radius: 4px;
     background: rgba(255, 255, 255, 0.30);
 }
 
-.admin-dash-user .card-dash .card-dash-circle1 {
+.card-dash .card-dash-circle1 {
     width: 208.01px;
     height: 208.01px;
     transform: rotate(-78.952deg);
     border-radius: 999px;
     bottom: 10px;
     right: -40px;
+    transition: right 0.8s, bottom 0.8s;
+    transition-timing-function: ease;
     background: linear-gradient(180deg, rgba(48, 213, 199, 0.20) 0%, rgba(250, 250, 250, 0.15) 81.46%, rgba(250, 250, 250, 0.01) 100%);
 }
 
-.admin-dash-user .card-dash .card-dash-circle2 {
+.card-dash .card-dash-circle2 {
     width: 210.419px;
     height: 210.419px;
     transform: rotate(-78.952deg);
     border-radius: 999px;
     top: -40px;
     right: -164px;
+    transition: right 0.8s, top 0.8s;
+    transition-timing-function: ease;
+     transition-delay: 0.1s;
     background: linear-gradient(180deg, rgba(48, 213, 199, 0.20) 0%, rgba(250, 250, 250, 0.15) 81.46%, rgba(250, 250, 250, 0.01) 100%);
+}
+.card-dash:hover .card-dash-circle1 {
+    /* transform: rotate(180deg); */
+    bottom: -74px;
+    right: -13px;
+    transition: right 0.8s, bottom 0.8s;
+    transition-timing-function: ease;
+}
+.card-dash:hover .card-dash-circle2 {
+    /* transform: rotate(205deg); */
+    top: -135px;
+    right: -111px;
+    transition: right 0.8s, top 0.8s;
+    transition-timing-function: ease;
+     transition-delay: 0.1s;
 }
 
 .admin-dash-user .calender-dash {
@@ -2106,31 +2126,31 @@ ul.collection li {
 }
 
 
-.profile .profile-card {
+.profile-card {
     height: 100px;
 }
 
-.profile .profile-card.one {
+.profile-card.one {
     background: #DCFCE7;
 }
 
-.profile .profile-card.two {
+.profile-card.two {
     background: #FFF4DE;
 }
 
-.profile .profile-card.three {
+.profile-card.three {
     background: #D1DCFA;
 }
 
-.profile .profile-card.one .rounded-circle {
+.profile-card.one .rounded-circle {
     background: #3CD856;
 }
 
-.profile .profile-card.two .rounded-circle {
+.profile-card.two .rounded-circle {
     background: #FF947A;
 }
 
-.profile .profile-card.three .rounded-circle {
+.profile-card.three .rounded-circle {
     background: #789FFE;
 }
 
@@ -2212,6 +2232,7 @@ ul.collection li {
     color: var(--text-white);
     cursor: not-allowed;
 }
+
 .table-calendar td.disabled a:hover {
     background: #ccc !important;
     border-radius: 7px;
@@ -2334,8 +2355,10 @@ ul.collection li {
 }
 
 .pie-admin-dash svg {
-    height: 150px;
-    width: 150px;
+    height: 100%;
+    width: 100%;
+    max-height: 150px;
+    max-width: 150px;
 }
 
 
@@ -2413,6 +2436,148 @@ ul.collection li {
     color: var(--bs-nav-pills-link-active-color);
     background-color: var(--bg-main-primary);
 }
+
+
+
+/* File Upload Design CSS  */
+
+.upload-files-container {
+    /* background-color: #f7fff7; */
+    /* width: 420px; */
+    /* padding: 30px 60px; */
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 10px 20px, rgba(0, 0, 0, 0.28) 0px 6px 6px; */
+}
+
+.drag-file-area {
+    border: 1px dashed  var(--Text-Gray, rgba(26, 26, 26, 0.41));;
+    border-radius: 7px;
+    /* margin: 10px 0 15px; */
+    /* padding: 30px 50px; */
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+.drag-file-area #upload-icon {
+    font-size: 40px;
+    opacity: 0.4;
+    color: var(--text-black);
+}
+
+.drag-file-area label {
+    font-size: 19px;
+}
+
+.drag-file-area label .browse-files-text {
+    /* color: var(--primary-color); */
+    /* font-weight: bolder; */
+    cursor: pointer;
+    width: 50%;
+    margin: auto;
+}
+
+.browse-files span {
+    position: relative;
+    top: -25px;
+}
+
+.default-file-input {
+    opacity: 0;
+}
+
+.cannot-upload-message {
+    background-color: #ffc6c4;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    padding: 5px 10px 5px 30px;
+    border-radius: 5px;
+    color: #BB0000;
+    display: none;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.cannot-upload-message span,
+.upload-button-icon {
+    padding-right: 10px;
+}
+
+.cannot-upload-message span:last-child {
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.file-block {
+    color: var(--text-white);
+    background-color: var(--primary-color);
+    transition: all 1s;
+    width: 100%;
+    position: relative;
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0 15px;
+    padding: 10px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.file-info {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.file-icon {
+    margin-right: 10px;
+}
+
+.file-name,
+.file-size {
+    padding: 0 3px;
+}
+
+.remove-file-icon {
+    cursor: pointer;
+}
+
+
+
+.upload-button {
+    font-family: 'Montserrat';
+    background-color: var(--primary-color);
+    color: #f7fff7;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 7.5px 50px;
+    cursor: pointer;
+}
+
+
 
 
 
@@ -2593,10 +2758,11 @@ ul.collection li {
         width: 240px;
         height: 240px;
     }
- /* tabs  */
- .seed-tabs .nav-pills .nav-link {
-    font-size: 20px;
-}
+
+    /* tabs  */
+    .seed-tabs .nav-pills .nav-link {
+        font-size: 20px;
+    }
 
 }
 

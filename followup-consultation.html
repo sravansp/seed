@@ -260,195 +260,353 @@
                                         <div class="tab-content" id="pills-tabContent">
                                             <div class="tab-pane fade show active" id="pills-Follow-Up" role="tabpanel"
                                                 aria-labelledby="pills-Follow-Up-tab" tabindex="0">
-                                                <div class="row">
-                                                    <div class="col-12 mb-4">
-                                                        <div
-                                                            class="header-small bradius-7 bg-secondary p-3 w-full flex-sb-m">
-                                                            <h2 class="fs-16 text-primary text-center">
-                                                                Assessment </h2>
-                                                                <button type="button" class="btn btn-main-primary fs-12 py-1">Add New</button>
+                                                <form action="">
+
+                                                    <div class="row">
+                                                        <div class="col-12 mb-4">
+                                                            <div
+                                                                class="header-small bradius-7 bg-secondary p-2 w-full flex-sb-m">
+                                                                <h2 class="fs-16 text-primary text-center">
+                                                                    Assessment </h2>
+                                                                <button type="button"
+                                                                    class="btn btn-main-primary fs-12 py-1">Add
+                                                                    New</button>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="assesment-section">
-                                                            <div class="row">
-                                                                <div class="col-12 col-md-3 mb-3">
-                                                                    <label for="" class="form-label">Assessment
-                                                                        Type</label>
-                                                                    <select
-                                                                        class="form-control select2-select select2-show-search form-select"
-                                                                        data-placeholder="Select Assessment Type">
-                                                                        <option label="Select Assessment Type"></option>
-                                                                        <option value="AZ">Arizona</option>
-                                                                        <option value="CO">Colorado</option>
-                                                                        <option value="ID">Idaho</option>
-                                                                    </select>
-                                                                </div>
-                                                                <div class="col-12 col-md-3 mb-3">
-                                                                    <label for="" class="form-label">Consultant </label>
-                                                                    <select
-                                                                        class="form-control select2-select select2-show-search form-select"
-                                                                        data-placeholder="Select Assessment Type">
-                                                                        <option label="Select Assessment Type"></option>
-                                                                        <option value="AZ">Arizona</option>
-                                                                        <option value="CO">Colorado</option>
-                                                                        <option value="ID">Idaho</option>
-                                                                    </select>
-                                                                </div>
-                                                                <div class="col-12 col-md-2 mb-3">
-                                                                    <label for="datepicker" class="form-label">Select Date</label>
-                                                                    <input type="text" class="form-control datepicker" id="datepicker"
-                                                                        placeholder="Select date">
-                                                                </div>
-                                                                <div class="col-12 col-md-4 mb-3">
-                                                                    <label for="datepicker" class="form-label">Time</label>
-                                                                    <div class="row flex-sb">
-                                                                        <div class="col-5">
-                                                                            <input type="text" class="form-control timepicker" id="timepicker11"
-                                                                            placeholder="--:--">
-                                                                        </div>
-                                                                        <div class="col-1 flex-c-m text-gray">to</div>
-                                                                        <div class="col-5">
-                                                                            <input type="text" class="form-control timepicker" id="timepicker12"
-                                                                            placeholder="--:--">
+
+                                                        <!-- Add New Click - Add this div  -->
+                                                        <div class="mb-4 col-12">
+                                                            <div class="assesment-section">
+                                                                <div class="row">
+                                                                    <div class="col-12 col-md-3 mb-3">
+                                                                        <label for="" class="form-label">Assessment
+                                                                            Type</label>
+                                                                        <select
+                                                                            class="form-control select2-select select2-show-search form-select"
+                                                                            data-placeholder="Select Assessment Type">
+                                                                            <option label="Select Assessment Type">
+                                                                            </option>
+                                                                            <option value="AZ">Arizona</option>
+                                                                            <option value="CO">Colorado</option>
+                                                                            <option value="ID">Idaho</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-12 col-md-3 mb-3">
+                                                                        <label for="" class="form-label">Consultant
+                                                                        </label>
+                                                                        <select
+                                                                            class="form-control select2-select select2-show-search form-select"
+                                                                            data-placeholder="Select Consultant Type">
+                                                                            <option label="Select Consultant Type">
+                                                                            </option>
+                                                                            <option value="AZ">Arizona</option>
+                                                                            <option value="CO">Colorado</option>
+                                                                            <option value="ID">Idaho</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-12 col-md-2 mb-3">
+                                                                        <label for="datepicker"
+                                                                            class="form-label">Select
+                                                                            Date</label>
+                                                                        <input type="text"
+                                                                            class="form-control datepicker"
+                                                                            id="datepicker" placeholder="Select date">
+                                                                    </div>
+                                                                    <div class="col-12 col-md-4 mb-3">
+                                                                        <label for="datepicker"
+                                                                            class="form-label">Time</label>
+                                                                        <div class="row flex-sb">
+                                                                            <div class="col-5">
+                                                                                <input type="text"
+                                                                                    class="form-control timepicker"
+                                                                                    id="timepicker11"
+                                                                                    placeholder="--:--">
+                                                                            </div>
+                                                                            <div class="col-1 flex-c-m text-gray">to
+                                                                            </div>
+                                                                            <div class="col-5">
+                                                                                <input type="text"
+                                                                                    class="form-control timepicker"
+                                                                                    id="timepicker12"
+                                                                                    placeholder="--:--">
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-12 mb-4">
-                                                        <div
-                                                            class="header-small bradius-7 bg-secondary p-3 w-full flex-sb-m">
-                                                            <h2 class="fs-16 text-primary text-center">
-                                                                Assessment </h2>
-                                                                <button type="button" class="btn btn-main-primary fs-12 py-1">Add New</button>
+                                                    <div class="row">
+                                                        <div class="col-12 mb-4">
+                                                            <div
+                                                                class="header-small bradius-7 bg-secondary p-2 w-full flex-sb-m">
+                                                                <h2 class="fs-16 text-primary text-center">
+                                                                    Intervention </h2>
+                                                                <button type="button"
+                                                                    class="btn btn-main-primary fs-12 py-1">Add
+                                                                    New</button>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="assesment-section">
-                                                            <div class="row">
-                                                                <div class="col-12 col-md-3 mb-3">
-                                                                    <label for="" class="form-label">Assessment
-                                                                        Type</label>
-                                                                    <select
-                                                                        class="form-control select2-select select2-show-search form-select"
-                                                                        data-placeholder="Select Assessment Type">
-                                                                        <option label="Select Assessment Type"></option>
-                                                                        <option value="AZ">Arizona</option>
-                                                                        <option value="CO">Colorado</option>
-                                                                        <option value="ID">Idaho</option>
-                                                                    </select>
-                                                                </div>
-                                                                <div class="col-12 col-md-3 mb-3">
-                                                                    <label for="" class="form-label">Consultant </label>
-                                                                    <select
-                                                                        class="form-control select2-select select2-show-search form-select"
-                                                                        data-placeholder="Select Assessment Type">
-                                                                        <option label="Select Assessment Type"></option>
-                                                                        <option value="AZ">Arizona</option>
-                                                                        <option value="CO">Colorado</option>
-                                                                        <option value="ID">Idaho</option>
-                                                                    </select>
-                                                                </div>
-                                                                <div class="col-12 col-md-2 mb-3">
-                                                                    <label for="datepicker" class="form-label">Select Date</label>
-                                                                    <input type="text" class="form-control datepicker" id="datepicker"
-                                                                        placeholder="Select date">
-                                                                </div>
-                                                                <div class="col-12 col-md-4 mb-3">
-                                                                    <label for="datepicker" class="form-label">Time</label>
-                                                                    <div class="row flex-sb">
-                                                                        <div class="col-5">
-                                                                            <input type="text" class="form-control timepicker" id="timepicker11"
-                                                                            placeholder="--:--">
-                                                                        </div>
-                                                                        <div class="col-1 flex-c-m text-gray">to</div>
-                                                                        <div class="col-5">
-                                                                            <input type="text" class="form-control timepicker" id="timepicker12"
-                                                                            placeholder="--:--">
+
+                                                        <!-- Add New Click - Add this div  -->
+                                                        <div class="mb-4 col-12">
+                                                            <div class="assesment-section">
+                                                                <div class="row">
+                                                                    <div class="col-12 col-md-3 mb-3">
+                                                                        <label for="" class="form-label">Intervention
+                                                                            Type</label>
+                                                                        <select
+                                                                            class="form-control select2-select select2-show-search form-select"
+                                                                            data-placeholder="Select Intervention Type">
+                                                                            <option label="Select Intervention Type">
+                                                                            </option>
+                                                                            <option value="AZ">Arizona</option>
+                                                                            <option value="CO">Colorado</option>
+                                                                            <option value="ID">Idaho</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-12 col-md-3 mb-3">
+                                                                        <label for="" class="form-label">Consultant
+                                                                        </label>
+                                                                        <select
+                                                                            class="form-control select2-select select2-show-search form-select"
+                                                                            data-placeholder="Select Consultant Type">
+                                                                            <option label="Select Consultant Type">
+                                                                            </option>
+                                                                            <option value="AZ">Arizona</option>
+                                                                            <option value="CO">Colorado</option>
+                                                                            <option value="ID">Idaho</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-12 col-md-2 mb-3">
+                                                                        <label for="datepicker"
+                                                                            class="form-label">Select
+                                                                            Date</label>
+                                                                        <input type="text"
+                                                                            class="form-control datepicker"
+                                                                            id="datepicker" placeholder="Select date">
+                                                                    </div>
+                                                                    <div class="col-12 col-md-4 mb-3">
+                                                                        <label for="datepicker"
+                                                                            class="form-label">Time</label>
+                                                                        <div class="row flex-sb">
+                                                                            <div class="col-5">
+                                                                                <input type="text"
+                                                                                    class="form-control timepicker"
+                                                                                    id="timepicker11"
+                                                                                    placeholder="--:--">
+                                                                            </div>
+                                                                            <div class="col-1 flex-c-m text-gray">to
+                                                                            </div>
+                                                                            <div class="col-5">
+                                                                                <input type="text"
+                                                                                    class="form-control timepicker"
+                                                                                    id="timepicker12"
+                                                                                    placeholder="--:--">
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-12 mb-4">
-                                                        <div
-                                                            class="header-small bradius-7 bg-secondary p-3 w-full flex-sb-m">
-                                                            <h2 class="fs-16 text-primary text-center">
-                                                                Assessment </h2>
-                                                                <button type="button" class="btn btn-main-primary fs-12 py-1">Add New</button>
+                                                    <div class="row">
+                                                        <div class="col-12 mb-4">
+                                                            <div
+                                                                class="header-small bradius-7 bg-secondary p-2 w-full flex-sb-m">
+                                                                <h2 class="fs-16 text-primary text-center">
+                                                                    Follow-up Consultation </h2>
+                                                                <button type="button"
+                                                                    class="btn btn-main-primary fs-12 py-1">Add
+                                                                    New</button>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <div class="assesment-section">
-                                                            <div class="row">
-                                                                <div class="col-12 col-md-3 mb-3">
-                                                                    <label for="" class="form-label">Assessment
-                                                                        Type</label>
-                                                                    <select
-                                                                        class="form-control select2-select select2-show-search form-select"
-                                                                        data-placeholder="Select Assessment Type">
-                                                                        <option label="Select Assessment Type"></option>
-                                                                        <option value="AZ">Arizona</option>
-                                                                        <option value="CO">Colorado</option>
-                                                                        <option value="ID">Idaho</option>
-                                                                    </select>
-                                                                </div>
-                                                                <div class="col-12 col-md-3 mb-3">
-                                                                    <label for="" class="form-label">Consultant </label>
-                                                                    <select
-                                                                        class="form-control select2-select select2-show-search form-select"
-                                                                        data-placeholder="Select Assessment Type">
-                                                                        <option label="Select Assessment Type"></option>
-                                                                        <option value="AZ">Arizona</option>
-                                                                        <option value="CO">Colorado</option>
-                                                                        <option value="ID">Idaho</option>
-                                                                    </select>
-                                                                </div>
-                                                                <div class="col-12 col-md-2 mb-3">
-                                                                    <label for="datepicker" class="form-label">Select Date</label>
-                                                                    <input type="text" class="form-control datepicker" id="datepicker"
-                                                                        placeholder="Select date">
-                                                                </div>
-                                                                <div class="col-12 col-md-4 mb-3">
-                                                                    <label for="datepicker" class="form-label">Time</label>
-                                                                    <div class="row flex-sb">
-                                                                        <div class="col-5">
-                                                                            <input type="text" class="form-control timepicker" id="timepicker11"
-                                                                            placeholder="--:--">
-                                                                        </div>
-                                                                        <div class="col-1 flex-c-m text-gray">to</div>
-                                                                        <div class="col-5">
-                                                                            <input type="text" class="form-control timepicker" id="timepicker12"
-                                                                            placeholder="--:--">
+
+                                                        <!-- Add New Click - Add this div  -->
+                                                        <div class="mb-4 col-12">
+                                                            <div class="assesment-section">
+                                                                <div class="row">
+                                                                    <div class="col-12 col-md-3 mb-3">
+                                                                        <label for="" class="form-label">Follow-up
+                                                                            Consultation
+                                                                            Type</label>
+                                                                        <select
+                                                                            class="form-control select2-select select2-show-search form-select"
+                                                                            data-placeholder="Select Follow-up Type">
+                                                                            <option label="Select Follow-up Type">
+                                                                            </option>
+                                                                            <option value="AZ">Arizona</option>
+                                                                            <option value="CO">Colorado</option>
+                                                                            <option value="ID">Idaho</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-12 col-md-3 mb-3">
+                                                                        <label for="" class="form-label">Consultant
+                                                                        </label>
+                                                                        <select
+                                                                            class="form-control select2-select select2-show-search form-select"
+                                                                            data-placeholder="Select Consultant Type">
+                                                                            <option label="Select Consultant Type">
+                                                                            </option>
+                                                                            <option value="AZ">Arizona</option>
+                                                                            <option value="CO">Colorado</option>
+                                                                            <option value="ID">Idaho</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-12 col-md-2 mb-3">
+                                                                        <label for="datepicker"
+                                                                            class="form-label">Select
+                                                                            Date</label>
+                                                                        <input type="text"
+                                                                            class="form-control datepicker"
+                                                                            id="datepicker" placeholder="Select date">
+                                                                    </div>
+                                                                    <div class="col-12 col-md-4 mb-3">
+                                                                        <label for="datepicker"
+                                                                            class="form-label">Time</label>
+                                                                        <div class="row flex-sb">
+                                                                            <div class="col-5">
+                                                                                <input type="text"
+                                                                                    class="form-control timepicker"
+                                                                                    id="timepicker11"
+                                                                                    placeholder="--:--">
+                                                                            </div>
+                                                                            <div class="col-1 flex-c-m text-gray">to
+                                                                            </div>
+                                                                            <div class="col-5">
+                                                                                <input type="text"
+                                                                                    class="form-control timepicker"
+                                                                                    id="timepicker12"
+                                                                                    placeholder="--:--">
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
+
+                                                    <!--Form Submit Button  -->
+                                                    <div class="row flex-r gap-4 gap-md-0">
+                                                        <div class="col-12 col-md-5 col-lg-4 col-xl-3">
+                                                            <button
+                                                                class="btn btn-light w-full text-nowrap shadow-neo">Cancel</button>
+                                                        </div>
+                                                        <div class="col-12 col-md-5 col-lg-4 col-xl-3">
+                                                            <button class="btn btn-primary w-full text-nowrap"
+                                                                type="submit">Create Appointments</button>
+                                                        </div>
+                                                    </div>
+
+                                                </form>
                                             </div>
                                             <div class="tab-pane fade" id="pills-note" role="tabpanel"
-                                                aria-labelledby="pills-note-tab" tabindex="0">...</div>
-                                        </div>
+                                                aria-labelledby="pills-note-tab" tabindex="0">
+                                                <form action="">
 
+                                                    <div class="row">
+                                                        <div class="col-12 mb-4">
+                                                            <div
+                                                                class="header-small bradius-7 bg-secondary p-2 w-full flex-sb-m">
+                                                                <h2 class="fs-16 text-primary text-center">
+                                                                    Description </h2>
+                                                                <button type="button"
+                                                                    class="btn btn-main-primary fs-12 py-1">Add
+                                                                    New</button>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- Add New Click - Add this div  -->
+                                                        <div class="mb-3 col-12">
+                                                            <div class="row">
+                                                                <div class="col-12 mb-4">
+                                                                    <textarea class="form-control" name="" id=""
+                                                                        rows="3"
+                                                                        placeholder="Enter Description"></textarea>
+                                                                </div>
+                                                                <div class="col-12 col-md-6 flex-col gap-4">
+                                                                    <div
+                                                                        class="header-small bradius-7 bg-secondary p-2 w-full flex-sb-m">
+                                                                        <h2 class="fs-16 text-primary text-center">
+                                                                            General Notes </h2>
+                                                                    </div>
+                                                                    <textarea class="form-control" name="" id=""
+                                                                        rows="7"
+                                                                        placeholder="Enter General Notes"></textarea>
+                                                                </div>
+                                                                <div class="col-12 col-md-6 flex-col gap-4">
+                                                                    <div
+                                                                        class="header-small bradius-7 bg-secondary p-2 w-full flex-sb-m">
+                                                                        <h2 class="fs-16 text-primary text-center">
+                                                                            Upload Files </h2>
+                                                                    </div>
+                                                                    <div class="upload-files-container">
+                                                                        <div class="drag-file-area">
+                                                                            <i
+                                                                                class="ri-upload-cloud-2-line upload-icon" id="upload-icon"></i>
+                                                                            <h3
+                                                                                class="dynamic-message fs-14 text-black op-0-4">
+                                                                                Drop your
+                                                                                files here </h3>
+                                                                            <span
+                                                                                class="text-black op-0-4 fs-14">or</span>
+                                                                            <label class="label">
+                                                                                <span class="browse-files">
+                                                                                    <input type="file"
+                                                                                        class="default-file-input" />
+                                                                                    <span
+                                                                                        class="browse-files-text btn btn-primary fs-14">Select
+                                                                                        File </span>
+                                                                                </span>
+                                                                            </label>
+                                                                        </div>
+                                                                        <span class="cannot-upload-message"> <span
+                                                                                class="material-icons-outlined">error</span>
+                                                                            Please select a file first <span
+                                                                                class="material-icons-outlined cancel-alert-button">cancel</span>
+                                                                        </span>
+                                                                        <div class="file-block">
+                                                                            <div class="file-info">
+                                                                                <i class="ri-file-line"></i>
+                                                                                <span class="file-name"> </span> | <span
+                                                                                    class="file-size"> </span>
+                                                                            </div>
+                                                                            <i class="ri-delete-bin-line remove-file-icon"></i>
+                                                                            <div class="progress-bar"> </div>
+                                                                        </div>
+                                                                        <button type="button" class="upload-button dis-none">
+                                                                            Upload </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!--Form Submit Button  -->
+                                                    <div class="row flex-r gap-4 gap-md-0">
+                                                        <div class="col-12 col-md-5 col-lg-4 col-xl-3">
+                                                            <button
+                                                                class="btn btn-light w-full text-nowrap shadow-neo">Cancel</button>
+                                                        </div>
+                                                        <div class="col-12 col-md-5 col-lg-4 col-xl-3">
+                                                            <button class="btn btn-primary w-full text-nowrap"
+                                                                type="submit">Save Notes</button>
+                                                        </div>
+                                                    </div>
+
+                                                </form>
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </main>
 
     <!-- Modal -->
@@ -531,13 +689,13 @@
 
     <script>
         $('.datepicker').datepicker({
-           showOtherMonths: true, footer: true, modal: true, header:true 
-       });
-       $('.timepicker').timepicker({
-           format: 'hh.MM TT',
-           mode: '24hr'
-       });
-   </script>
+            showOtherMonths: true, footer: true, modal: true, header: true
+        });
+        $('.timepicker').timepicker({
+            format: 'hh.MM TT',
+            mode: '24hr'
+        });
+    </script>
 </body>
 
 </html>
