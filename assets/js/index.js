@@ -584,12 +584,12 @@ if (document.querySelector(".search-input")) {
 fileUpload();
 
 function fileUpload() {
-    if(document.querySelector(".browse-files")) {
+    if (document.querySelector(".browse-files")) {
         var isAdvancedUpload = function () {
             var div = document.createElement('div');
             return (('draggable' in div) || ('ondragstart' in div && 'ondrop' in div)) && 'FormData' in window && 'FileReader' in window;
         }();
-    
+
         let draggableFileArea = document.querySelector(".drag-file-area");
         let browseFileText = document.querySelector(".browse-files");
         let uploadIcon = document.querySelector("#upload-icon");
@@ -604,12 +604,12 @@ function fileUpload() {
         let removeFileButton = document.querySelector(".remove-file-icon");
         let uploadButton = document.querySelector(".upload-button");
         let fileFlag = 0;
-    
+
         fileInput.addEventListener("click", () => {
             fileInput.value = '';
             console.log(fileInput.value);
         });
-    
+
         fileInput.addEventListener("change", e => {
             console.log(" > " + fileInput.value)
             uploadIcon.className = 'ri-checkbox-circle-line';
@@ -628,7 +628,7 @@ function fileUpload() {
             progressBar.style.width = 0;
             fileFlag = 0;
         });
-    
+
         uploadButton.addEventListener("click", () => {
             let isFileUploaded = fileInput.value;
             if (isFileUploaded != '') {
@@ -636,7 +636,7 @@ function fileUpload() {
                     fileFlag = 1;
                     var width = 0;
                     var id = setInterval(frame, 50);
-    
+
                     function frame() {
                         if (width >= 390) {
                             clearInterval(id);
@@ -651,11 +651,11 @@ function fileUpload() {
                 cannotUploadMessage.style.cssText = "display: flex; animation: fadeIn linear 1.5s;";
             }
         });
-    
+
         cancelAlertButton.addEventListener("click", () => {
             cannotUploadMessage.style.cssText = "display: none;";
         });
-    
+
         if (isAdvancedUpload) {
             ["drag", "dragstart", "dragend", "dragover", "dragenter", "dragleave", "drop"].forEach(evt =>
                 draggableFileArea.addEventListener(evt, e => {
@@ -663,7 +663,7 @@ function fileUpload() {
                     e.stopPropagation();
                 })
             );
-    
+
             ["dragover", "dragenter"].forEach(evt => {
                 draggableFileArea.addEventListener(evt, e => {
                     e.preventDefault();
@@ -672,7 +672,7 @@ function fileUpload() {
                     dragDropText.innerHTML = 'Drop your file here!';
                 });
             });
-    
+
             draggableFileArea.addEventListener("drop", e => {
                 uploadIcon.className = 'ri-checkbox-circle-line';
                 dragDropText.innerHTML = 'File Dropped Successfully!';
@@ -684,7 +684,7 @@ function fileUpload() {
                     File </span>
             </span>`;
                 uploadButton.innerHTML = `Upload`;
-    
+
                 let files = e.dataTransfer.files;
                 fileInput.files = files;
                 console.log(files[0].name + " " + files[0].size);
@@ -696,7 +696,7 @@ function fileUpload() {
                 fileFlag = 0;
             });
         }
-    
+
         removeFileButton.addEventListener("click", () => {
             uploadedFile.style.cssText = "display: none;";
             fileInput.value = '';
@@ -713,3 +713,33 @@ function fileUpload() {
         });
     }
 }
+
+$(document).ready(function () {
+    if (document.querySelector("#slider1")) {
+        $("#slider1").owlCarousel({
+            loop: true,
+            margin: 10,
+            responsiveClass: true,
+            items: 3,
+            autoplay:true,
+            dots: false,
+            pagination: false,
+            nav: false,
+            smartSpeed: 750,
+            responsive: {
+                0: {
+                    items: 1,
+                    // nav: true
+                },
+                600: {
+                    items: 2,
+                    // nav: false
+                },
+                1300: {
+                    items: 3,
+                    // nav: true,
+                }
+            }
+        });
+    }
+});
