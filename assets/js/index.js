@@ -714,6 +714,76 @@ function fileUpload() {
     }
 }
 
+
+tblRandomColor()
+
+function tblRandomColor() {
+    if (document.querySelectorAll('.ntbl-row')) {
+        const colorNames = ["red", "orange", "#884DFF", "lime", "#00E096", "cyan", "#0095FF", "purple", "indigo", "magenta"];
+
+        function getRandomColor() {
+            if (colorNames.length === 0) {
+                alert("All colors have been used!");
+                return "white"; // Provide a fallback color if all colors have been used.
+            }
+            const randomIndex = Math.floor(Math.random() * colorNames.length);
+            const randomColor = colorNames.splice(randomIndex, 1)[0];
+            return randomColor;
+        }
+
+        const colorBoxes = document.querySelectorAll(".rows");
+
+        colorBoxes.forEach((box) => {
+            const randomColor = getRandomColor();
+            // box.style.backgroundColor = randomColor;
+            box.setAttribute("data-color", randomColor);
+        });
+
+
+
+        // Function to convert a color string to an RGB array
+        function colorToRgb(color) {
+            const tempDiv = document.createElement('div');
+            tempDiv.style.color = color;
+            document.body.appendChild(tempDiv);
+            const rgbColor = getComputedStyle(tempDiv).color;
+            document.body.removeChild(tempDiv);
+
+            // Extract RGB values from the computed color
+            const match = rgbColor.match(/\d+/g);
+            return match.map(Number);
+        }
+        // Get all elements with the class "ntbl-row"
+        const rows = document.querySelectorAll('.ntbl-row');
+
+        // Loop through each row and set the progress bar color based on the data-color attribute
+        colorBoxes.forEach(row => {
+            const dataColor = row.getAttribute('data-color');
+            const progress = row.querySelector('.progress');
+            const progressBar = row.querySelector('.progress-bar');
+            const progressValue = progressBar.getAttribute('aria-valuenow');
+            const totalpro = row.querySelector('.total-pro');
+
+            // Convert the dataColor to an RGB array
+            const rgbColor = colorToRgb(dataColor);
+            progressBar.style.backgroundColor = dataColor;
+            progress.style.backgroundColor = `rgba(${rgbColor[0]}, ${rgbColor[1]}, ${rgbColor[2]}, 0.1)`;
+            totalpro.style.backgroundColor = `rgba(${rgbColor[0]}, ${rgbColor[1]}, ${rgbColor[2]}, 0.1)`;
+            totalpro.style.borderColor = dataColor;
+            totalpro.style.color = dataColor;
+            // Set the opacity to 10%
+            // progress.style.opacity = '0.1';
+            if (progressValue == 100) {
+                row.style.backgroundColor = `rgba(${rgbColor[0]}, ${rgbColor[1]}, ${rgbColor[2]}, 0.1)`;
+            }
+
+        });
+    }
+}
+
+
+
+
 $(document).ready(function () {
     if (document.querySelector("#slider1")) {
         $("#slider1").owlCarousel({
@@ -721,7 +791,7 @@ $(document).ready(function () {
             margin: 10,
             responsiveClass: true,
             items: 3,
-            autoplay:true,
+            autoplay: true,
             dots: false,
             pagination: false,
             nav: false,

@@ -255,7 +255,7 @@ input {
     z-index: 1035;
     border-radius: 0px 14px 14px 0px;
     box-shadow: var(--shadow-neo);
-    overflow: hidden;
+    /* overflow: hidden; */
 
 }
 
@@ -275,6 +275,10 @@ input {
     border-top-left-radius: 28px;
     border-bottom-left-radius: 28px;
     transition: var(--tran-03);
+}
+
+.sidebar li a {
+    overflow: hidden;
 }
 
 .sidebar li:not(.active) {
@@ -326,14 +330,14 @@ body.dark .sidebar li:not(.active):hover {
     transition: var(--tran-03);
 }
 
-.sidebar .text {
+.sidebar.open .text {
     font-size: 12px;
     font-weight: 500;
     white-space: nowrap;
     opacity: 1;
     letter-spacing: 0.3px;
     display: block;
-    transition: opacity 0.3s linear 2s;
+    transition: opacity 3s linear 2s;
 
 }
 
@@ -535,10 +539,94 @@ body.dark .sidebar .toggle_icon .toggle {
     transform: translateY(-50%);
 }
 
+.sidebar li:has(.has-submenu) .tooltip {
+    opacity: 0;
+    display: none;
+}
+
 
 .sidebar.open li .tooltip {
     display: none;
 }
+
+/* Submenu List Design CSS  */
+.sidebar .menu-links li .sub-menu {
+    padding: 6px 6px 14px 80px;
+    margin-top: -10px;
+    background: var(--body-light-primary);
+    display: none;
+    border-radius: 0px 14px 14px 0px;
+    transform: translateY(20px);
+}
+
+.sidebar .menu-links li.showMenu .sub-menu {
+    display: block;
+}
+
+.sidebar .menu-links li .sub-menu a {
+    color: var(--primary-color);
+    font-size: 12px;
+    padding: 5px 0;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+.sidebar .menu-links li .sub-menu li.active a {
+    color: var(--text-white);
+}
+.sidebar .menu-links li .sub-menu li:hover a {
+    color: var(--text-white);
+}
+
+.sidebar .menu-links li .sub-menu a:hover {
+    opacity: 1;
+}
+
+.sidebar .menu-links li .sub-menu li {
+    border-radius: 7px;
+    width: 100%;
+    margin: 0px auto 8px auto;
+    padding: 0 15px;
+    cursor: pointer;
+}
+
+.sidebar .menu-links li .sub-menu {
+    position: absolute;
+    left: 226px;
+    top: 0;
+    margin-top: 0;
+    padding: 6px 6px;
+    /* border-radius: 0 6px 6px 0; */
+    opacity: 0;
+    display: block;
+    pointer-events: none;
+    transition: 0s;
+}
+.sidebar.close .menu-links li .sub-menu {
+    left: 64px;
+    top: 0;
+    z-index: 999;
+}
+
+.sidebar .menu-links li .sub-menu.blank {
+    height: auto;
+    width: auto;
+    border-radius: 0 6px 6px 0;
+}
+
+.sidebar .menu-links li:hover .sub-menu {
+    top: 0;
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.4s ease;
+    transform: translateY(0);
+}
+
+/* Submenu List Design CSS  END */
+
+
+
+
+
 
 body.dark .sidebar li a:hover .icon,
 body.dark .sidebar li a:hover .text {
@@ -2590,6 +2678,10 @@ ul.collection li {
     display: table-row;
 }
 
+.ntbl-row.rows {
+    border-radius: 7px;
+}
+
 .ntbl-row.ntbl-header {
     color: #96A5B8;
 }
@@ -2653,7 +2745,7 @@ ul.collection li {
 
 .ntbl-row .cell:nth-child(1) {
     width: 70px;
-    /* padding-left: 40px; */
+    padding-left: 10px;
 }
 
 .ntbl-row .cell:nth-child(2) {
@@ -2678,67 +2770,6 @@ ul.collection li {
 
 .ntbl-row .cell .progress {
     height: 4px;
-}
-
-
-/* progress bar color css  */
-.ntbl-row:nth-child(2) .cell .progress {
-    background-color: #CDE7FF;
-}
-
-.ntbl-row:nth-child(2) .cell .progress-bar {
-    background-color: #0095FF;
-}
-
-.ntbl-row:nth-child(3) .cell .progress {
-    background-color: #8CFAC7;
-}
-
-.ntbl-row:nth-child(3) .cell .progress-bar {
-    background-color: #00E096;
-}
-
-.ntbl-row:nth-child(4) .cell .progress {
-    background-color: #C5A8FF;
-}
-
-.ntbl-row:nth-child(4) .cell .progress-bar {
-    background-color: #884DFF;
-}
-
-.ntbl-row:nth-child(5) .cell .progress {
-    background-color: #FFD5A4;
-}
-
-.ntbl-row:nth-child(5) .cell .progress-bar {
-    background-color: #FF8F0D;
-}
-
-
-
-/* total button color css  */
-.ntbl-row:nth-child(2) .cell .total-pro {
-    border-color: #0095FF;
-    background: var(--colors-light-blue-50, #F0F9FF);
-    color: #0095FF;
-}
-
-.ntbl-row:nth-child(3) .cell .total-pro {
-    border-color: #00E58F;
-    background: var(--colors-green-50, #F0FDF4);
-    color: #00E58F;
-}
-
-.ntbl-row:nth-child(4) .cell .total-pro {
-    border-color: #884DFF;
-    background: var(--supporting-color-violet-shade, #FBF1FF);
-    color: #884DFF;
-}
-
-.ntbl-row:nth-child(5) .cell .total-pro {
-    border-color: #FF8900;
-    background: var(--supporting-color-yellow-shade, #FEF6E6);
-    color: #FF8900;
 }
 
 
@@ -2786,8 +2817,8 @@ ul.collection li {
     }
 }
 
-  /* Custom CSS to round top and bottom edges of bars */
-  .rounded-bars-chart {
+/* Custom CSS to round top and bottom edges of bars */
+.rounded-bars-chart {
     min-height: 300px;
 }
 
