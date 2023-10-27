@@ -79,7 +79,7 @@ chart1.render();
 var options2 = {
     series: [{
         name: "High - 2013",
-        data: [10, 15, 13, 18, 16, 28, 34]
+        data: [15, 19, 18, 21, 19, 25, 27]
     }],
     chart: {
         height: "100%",
