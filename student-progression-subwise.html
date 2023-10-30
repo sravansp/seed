@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - SEED</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="./assets/pluggins/bootstrap/css/bootstrap.min.css">
+
+    <!-- DATEPICKER CSS  -->
+    <link rel="stylesheet" href="./assets/pluggins/datetimepicker/css/gijgo.css">
+
+    <link rel="stylesheet" href="./assets/pluggins/apexchart/dist/apexcharts.css">
+    <!-- Icon Used: Remix Icon | https://remixicon.com/-->
+    <link rel="stylesheet" href="./assets/pluggins/remixicon/remixicon.css">
+
+    <link rel="stylesheet" href="./assets/pluggins/owlcarousel/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="./assets/css/pluggins.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/util.css">
+
+
+</head>
+
+<body class="light mode">
+    <div class="popup-toggle toggle-switch d-none">
+        <i class="ri-moon-fill fs-25 text-primary"></i>
+    </div>
+
+    <!-- Sidebar Start -->
+    <div class="app-sidebar__overlay active" data-bs-toggle="sidebar"></div>
+    <nav class="sidebar open">
+        <header>
+            <div class="image-text">
+                <div class="image">
+                    <img src="./assets/images/brand/logo.png" alt="logo">
+                </div>
+                <div class="text logo-text">
+                    <h1 class="fs-24">SEED</h1>
+                </div>
+            </div>
+        </header>
+        <div class="toggle_icon">
+            <span class="toggle">
+                <i class="ri-arrow-right-s-line"></i>
+            </span>
+        </div>
+        <div class="menu-bar">
+            <div class="menu h-full">
+                <ul class="menu-links flex gap-5 h-full flex-col ps-0 justify-content-evenly">
+                    <div class="top-menu-links">
+                        <p class="p-l-20 p-b-8 fs-12 title-menu">General</p>
+                        <li class="nav-link">
+                            <a href="dash-admin.html">
+                                <i class="ri-home-4-fill icon"></i>
+                                <span class="text nav-text">Dashboard</span>
+                                <span class="tooltip">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="dash-admin-student.html">
+                                <i class="ri-team-fill icon"></i>
+                                <span class="text nav-text">Student Management</span>
+                                <span class="tooltip">Student Management</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="dash-admin-user.html">
+                                <i class="ri-user-2-fill icon"></i>
+                                <span class="text nav-text">User Management</span>
+                                <span class="tooltip">User Management</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="dash-admin-appoinment.html">
+                                <i class="ri-calendar-fill icon"></i>
+                                <span class="text nav-text">Appointments</span>
+                                <span class="tooltip">Appointments</span>
+                            </a>
+                        </li>
+                    </div>
+                    <div class="bottom-menu-links">
+                        <p class="p-l-20 p-b-8 fs-12 title-menu">Others</p>
+                        <li class="nav-link">
+                            <a href="/form-files.html">
+                                <i class="ri-file-copy-2-fill icon"></i>
+                                <span class="text nav-text">Forms and Files</span>
+                                <span class="tooltip">Forms and Files</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="components.html">
+                                <i class="ri-settings-5-fill icon"></i>
+                                <span class="text nav-text">Account Settings</span>
+                                <span class="tooltip">Account Settings</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="help.html">
+                                <i class="ri-customer-service-2-fill icon"></i>
+                                <span class="text nav-text">Help and Supporrt</span>
+                                <span class="tooltip">Help and Supporrt</span>
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="bottom-content flex justify-content-center">
+                <!-- <li class="nav-link"> -->
+                <a href="./login.html" class="btn btn-light text-primary">
+                    <div class="p-1 rounded-circle bg-primary">
+                        <i class="ri-shut-down-line text-white fs-20"></i>
+                    </div>
+                    <span class="text nav-text text-primary">Logout</span>
+                    <!-- <span class="tooltip">Logout</span> -->
+                </a>
+                <!-- </li> -->
+            </div>
+        </div>
+    </nav>
+    <!-- Sidebar End  -->
+
+    <div class="overlay_section"></div>
+    <main class="home">
+
+
+        <!-- NAVBAR START  -->
+        <nav class="navbar py-4">
+            <div class="container-fluid px-md-4">
+                <div class="navbar_container navbar-menu-wrapper d-flex align-items-center">
+                    <a aria-label="hide-sidebar" class="d-lg-none app-sidebar__toggle" data-bs-toggle="sidebar"
+                        href="javascript:void(0);">
+                        <i class="ri-menu-2-line text-primary fs-25"></i>
+                    </a>
+                    <form class="d-flex d-none d-md-block" role="search">
+                        <div class="nav-search">
+                            <i class="ri-search-line fs-25"></i>
+                            <input class="" type="search" placeholder="Search" aria-label="Search">
+                        </div>
+                    </form>
+                    <ul class="navbar-nav mb-0 flex-row gap-4 flex-m">
+                        <li class="nav-item d-block d-md-none">
+
+                            <div class="dropdown d-block d-lg-none position-static">
+                                <a href="javascript:void(0);" class="nav-link icon" data-bs-toggle="dropdown">
+                                    <i class="ri-search-line fs-25 text-primary"></i>
+                                </a>
+                                <div class="dropdown-menu header-search dropdown-menu-start">
+                                    <div class="input-group w-100 p-2">
+                                        <input type="text" class="form-control" placeholder="Search....">
+                                        <div class="btn btn-primary">
+                                            <i class="ri-search-line fs-25"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- <li class="nav-item d-none d-lg-block">
+                            <div class="toggle-switch">
+                                <i class="ri-moon-fill fs-25 text-primary"></i>
+                            </div>
+                        </li> -->
+                        <li class="nav-item">
+                            <div class="pos-relative">
+                                <i class="ri-notification-4-fill fs-25 not text-primary"></i>
+                                <div class="nav-notification"></div>
+                            </div>
+                        </li>
+                        <li class="nav-item gap-2 flex-m dropdown user-drop">
+                            <a class="nav-link" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="pro-pic rounded-circle">
+                                    <img src="./assets/images/user.png" alt="">
+                                </div>
+                            </a>
+                            <div class="pro-data flex-col flex-c d-none d-md-flex">
+                                <p class="pro-name fs-14 fw-500">Harris M</p>
+                                <p class="pro-pos fs-12">Admin</p>
+                            </div>
+                            <div class="dropdown-menu">
+                                <a href="./profile.html" class="dropdown-item fs-14">Profile</a>
+                                <a href="#" class="dropdown-item fs-14">Sign Out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- Main Content Start  -->
+        <div class="content pb-4">
+            <div class="container-fluid px-md-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="wrapper-body admin-dash w-full">
+
+                            <div class="flex-col gap-4">
+                                <div class="row">
+                                    <div class="col-md-12 mb-4 mb-md-0">
+                                        <div class="bg-light bradius-14 shadow-neo p-3 flex-col gap-3 h-full">
+                                            <div class="normal-tbl flex-col gap-3">
+                                                <div class="ntbl-header flex-sb-m">
+                                                    <h1 class="text-primary fs-20 fw-semibold">Subjects</h1>
+                                                    <a href=""
+                                                        class="fs-13 text-primary bg-primary-light px-3 py-2 bradius-7 ">View
+                                                        all </a>
+                                                </div>
+                                                <div class="ntbl-table">
+                                                    <div class="ntbl-row ntbl-header">
+                                                        <div class="cell">
+                                                            #
+                                                        </div>
+                                                        <div class="cell">
+                                                            Name
+                                                        </div>
+                                                        <div class="cell">
+                                                            Progression
+                                                        </div>
+                                                        <div class="cell">
+                                                            Date
+                                                        </div>
+                                                        <div class="cell">
+                                                            Total
+                                                        </div>
+                                                    </div>
+                                                    <div class="ntbl-row rows">
+                                                        <div class="cell" data-title="ID">
+                                                            01
+                                                        </div>
+                                                        <div class="cell" data-title="Name">
+                                                            Mathematics
+                                                        </div>
+                                                        <div class="cell" data-title="Progression">
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                    aria-label="Success example" style="width: 92%"
+                                                                    aria-valuenow="92" aria-valuemin="0"
+                                                                    aria-valuemax="92"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cell" data-title="Date">
+                                                            20/12/22 <svg xmlns="http://www.w3.org/2000/svg" width="23"
+                                                                height="6" viewBox="0 0 23 6" fill="none">
+                                                                <path
+                                                                    d="M17.3333 3C17.3333 4.47276 18.5272 5.66667 20 5.66667C21.4728 5.66667 22.6667 4.47276 22.6667 3C22.6667 1.52724 21.4728 0.333333 20 0.333333C18.5272 0.333333 17.3333 1.52724 17.3333 3ZM0 3.5H20V2.5H0V3.5Z"
+                                                                    fill="#30D5C7" />
+                                                            </svg>
+                                                        </div>
+                                                        <div class="cell" data-title="Total">
+                                                            <div class="total-pro flex-c-m">
+                                                                <span class="fs-13" id="percentage-pro">92%</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ntbl-row rows">
+                                                        <div class="cell" data-title="ID">
+                                                            02
+                                                        </div>
+                                                        <div class="cell" data-title="Name">
+                                                            English
+                                                        </div>
+                                                        <div class="cell" data-title="Progression">
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                    aria-label="Success example" style="width: 85%"
+                                                                    aria-valuenow="85" aria-valuemin="0"
+                                                                    aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cell" data-title="Date">
+                                                            20/12/22 <svg xmlns="http://www.w3.org/2000/svg" width="23"
+                                                                height="6" viewBox="0 0 23 6" fill="none">
+                                                                <path
+                                                                    d="M17.3333 3C17.3333 4.47276 18.5272 5.66667 20 5.66667C21.4728 5.66667 22.6667 4.47276 22.6667 3C22.6667 1.52724 21.4728 0.333333 20 0.333333C18.5272 0.333333 17.3333 1.52724 17.3333 3ZM0 3.5H20V2.5H0V3.5Z"
+                                                                    fill="#30D5C7" />
+                                                            </svg>
+                                                        </div>
+                                                        <div class="cell" data-title="Total">
+                                                            <div class="total-pro flex-c-m">
+                                                                <span class="fs-13" id="percentage-pro">85%</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ntbl-row rows">
+                                                        <div class="cell" data-title="ID">
+                                                            03
+                                                        </div>
+                                                        <div class="cell" data-title="Name">
+                                                            Malayalam
+                                                        </div>
+                                                        <div class="cell" data-title="Progression">
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                    aria-label="Success example" style="width: 70%"
+                                                                    aria-valuenow="70" aria-valuemin="0"
+                                                                    aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cell" data-title="Date">
+                                                            20/12/22 <svg xmlns="http://www.w3.org/2000/svg" width="23"
+                                                                height="6" viewBox="0 0 23 6" fill="none">
+                                                                <path
+                                                                    d="M17.3333 3C17.3333 4.47276 18.5272 5.66667 20 5.66667C21.4728 5.66667 22.6667 4.47276 22.6667 3C22.6667 1.52724 21.4728 0.333333 20 0.333333C18.5272 0.333333 17.3333 1.52724 17.3333 3ZM0 3.5H20V2.5H0V3.5Z"
+                                                                    fill="#30D5C7" />
+                                                            </svg>
+                                                        </div>
+                                                        <div class="cell" data-title="Total">
+                                                            <div class="total-pro flex-c-m">
+                                                                <span class="fs-13" id="percentage-pro">70%</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ntbl-row rows">
+                                                        <div class="cell" data-title="ID">
+                                                            04
+                                                        </div>
+                                                        <div class="cell" data-title="Name">
+                                                            Social Science
+                                                        </div>
+                                                        <div class="cell" data-title="Progression">
+                                                            <div class="progress">
+                                                                <div class="progress-bar" role="progressbar"
+                                                                    aria-label="Success example" style="width: 65%"
+                                                                    aria-valuenow="65" aria-valuemin="0"
+                                                                    aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="cell" data-title="Date">
+                                                            20/12/22 <svg xmlns="http://www.w3.org/2000/svg" width="23"
+                                                                height="6" viewBox="0 0 23 6" fill="none">
+                                                                <path
+                                                                    d="M17.3333 3C17.3333 4.47276 18.5272 5.66667 20 5.66667C21.4728 5.66667 22.6667 4.47276 22.6667 3C22.6667 1.52724 21.4728 0.333333 20 0.333333C18.5272 0.333333 17.3333 1.52724 17.3333 3ZM0 3.5H20V2.5H0V3.5Z"
+                                                                    fill="#30D5C7" />
+                                                            </svg>
+                                                        </div>
+                                                        <div class="cell" data-title="Total">
+                                                            <div class="total-pro flex-c-m">
+                                                                <span class="fs-13" id="percentage-pro">65%</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="subjectWise">
+                                    <div class="row">
+                                        <div class="col-md-12 mb-4 mb-md-0">
+                                            <div class="bg-light bradius-14 shadow-neo p-3 flex-col gap-3 h-full">
+                                                <div class="normal-tbl flex-col gap-3">
+                                                    <div class="ntbl-header flex-sb-m">
+                                                        <h1 class="text-primary fs-20 fw-semibold">Chapters</h1>
+                                                        <a href=""
+                                                            class="fs-13 text-primary bg-primary-light px-3 py-2 bradius-7 ">View
+                                                            all </a>
+                                                    </div>
+                                                    <div class="ntbl-table">
+                                                        <div class="ntbl-row ntbl-header">
+                                                            <div class="cell">
+                                                                #
+                                                            </div>
+                                                            <div class="cell">
+                                                                Name
+                                                            </div>
+                                                            <div class="cell">
+                                                                Progression
+                                                            </div>
+                                                            <div class="cell">
+                                                                Actions
+                                                            </div>
+                                                            <div class="cell">
+                                                                Date
+                                                            </div>
+                                                            <div class="cell">
+                                                                Total
+                                                            </div>
+                                                        </div>
+                                                        <div class="ntbl-row rows">
+                                                            <div class="cell" data-title="ID">
+                                                                01
+                                                            </div>
+                                                            <div class="cell" data-title="Name">
+                                                                Mathematics
+                                                            </div>
+                                                            <div class="cell" data-title="Progression">
+                                                                <div class="progress">
+                                                                    <div class="progress-bar" role="progressbar"
+                                                                        aria-label="Success example" style="width: 92%"
+                                                                        aria-valuenow="92" aria-valuemin="0"
+                                                                        aria-valuemax="92"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cell" data-title="Actions">
+                                                                <div class="actions flex gap-2">
+                                                                    <div class="rangepicker">
+                                                                        <a data-bs-toggle="popover" data-bs-content=""
+                                                                            data-bs-html="true" data-bs-placement="top"
+                                                                            id="popoverButton"><i
+                                                                                class="ri-edit-box-line fs-20 op-0-5"></i></a>
+
+                                                                    </div>
+                                                                    <a href=""><i
+                                                                            class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
+                                                                    <a href=""><i
+                                                                            class="ri-eye-line fs-20 op-0-5"></i></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cell" data-title="Date">
+                                                                <span id="startDate-span"> 20/12/22 </span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="23"
+                                                                    height="6" viewBox="0 0 23 6" fill="none">
+                                                                    <path
+                                                                        d="M17.3333 3C17.3333 4.47276 18.5272 5.66667 20 5.66667C21.4728 5.66667 22.6667 4.47276 22.6667 3C22.6667 1.52724 21.4728 0.333333 20 0.333333C18.5272 0.333333 17.3333 1.52724 17.3333 3ZM0 3.5H20V2.5H0V3.5Z"
+                                                                        fill="#30D5C7" />
+                                                                </svg>
+                                                                <span id="endDate-span"></span>
+
+                                                            </div>
+                                                            <div class="cell" data-title="Total">
+                                                                <div class="total-pro flex-c-m">
+                                                                    <span class="fs-13" id="percentage-pro">92%</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ntbl-row rows">
+                                                            <div class="cell" data-title="ID">
+                                                                02
+                                                            </div>
+                                                            <div class="cell" data-title="Name">
+                                                                English
+                                                            </div>
+                                                            <div class="cell" data-title="Progression">
+                                                                <div class="progress">
+                                                                    <div class="progress-bar" role="progressbar"
+                                                                        aria-label="Success example" style="width: 85%"
+                                                                        aria-valuenow="85" aria-valuemin="0"
+                                                                        aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cell" data-title="Actions">
+                                                                <div class="actions flex gap-2">
+                                                                    <div class="rangepicker">
+                                                                        <a data-bs-toggle="popover" data-bs-content=""
+                                                                            data-bs-html="true" data-bs-placement="top"
+                                                                            id="popoverButton"><i
+                                                                                class="ri-edit-box-line fs-20 op-0-5"></i></a>
+
+                                                                    </div>
+                                                                    <a href=""><i
+                                                                            class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
+                                                                    <a href=""><i
+                                                                            class="ri-eye-line fs-20 op-0-5"></i></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cell" data-title="Date">
+                                                                <span id="startDate-span"> 20/12/22 </span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="23"
+                                                                    height="6" viewBox="0 0 23 6" fill="none">
+                                                                    <path
+                                                                        d="M17.3333 3C17.3333 4.47276 18.5272 5.66667 20 5.66667C21.4728 5.66667 22.6667 4.47276 22.6667 3C22.6667 1.52724 21.4728 0.333333 20 0.333333C18.5272 0.333333 17.3333 1.52724 17.3333 3ZM0 3.5H20V2.5H0V3.5Z"
+                                                                        fill="#30D5C7" />
+                                                                </svg>
+                                                                <span id="endDate-span"></span>
+
+                                                            </div>
+                                                            <div class="cell" data-title="Total">
+                                                                <div class="total-pro flex-c-m">
+                                                                    <span class="fs-13" id="percentage-pro">85%</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ntbl-row rows">
+                                                            <div class="cell" data-title="ID">
+                                                                03
+                                                            </div>
+                                                            <div class="cell" data-title="Name">
+                                                                Malayalam
+                                                            </div>
+                                                            <div class="cell" data-title="Progression">
+                                                                <div class="progress">
+                                                                    <div class="progress-bar" role="progressbar"
+                                                                        aria-label="Success example" style="width: 100%"
+                                                                        aria-valuenow="100" aria-valuemin="0"
+                                                                        aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cell" data-title="Actions">
+                                                                <div class="actions flex gap-2">
+                                                                    <div class="rangepicker">
+                                                                        <a data-bs-toggle="popover" data-bs-content=""
+                                                                            data-bs-html="true" data-bs-placement="top"
+                                                                            id="popoverButton"><i
+                                                                                class="ri-edit-box-line fs-20 op-0-5"></i></a>
+
+                                                                    </div>
+                                                                    <a href=""><i
+                                                                            class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
+                                                                    <a href=""><i
+                                                                            class="ri-eye-line fs-20 op-0-5"></i></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cell" data-title="Date">
+                                                                <span id="startDate-span"> 20/12/22 </span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="23"
+                                                                    height="6" viewBox="0 0 23 6" fill="none">
+                                                                    <path
+                                                                        d="M17.3333 3C17.3333 4.47276 18.5272 5.66667 20 5.66667C21.4728 5.66667 22.6667 4.47276 22.6667 3C22.6667 1.52724 21.4728 0.333333 20 0.333333C18.5272 0.333333 17.3333 1.52724 17.3333 3ZM0 3.5H20V2.5H0V3.5Z"
+                                                                        fill="#30D5C7" />
+                                                                </svg>
+                                                                <span id="endDate-span">21/12/2023</span>
+
+                                                            </div>
+                                                            <div class="cell" data-title="Total">
+                                                                <div class="total-pro flex-c-m">
+                                                                    <span class="fs-13" id="percentage-pro">100%</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="ntbl-row rows">
+                                                            <div class="cell" data-title="ID">
+                                                                04
+                                                            </div>
+                                                            <div class="cell" data-title="Name">
+                                                                Social Science
+                                                            </div>
+                                                            <div class="cell" data-title="Progression">
+                                                                <div class="progress">
+                                                                    <div class="progress-bar" role="progressbar"
+                                                                        aria-label="Success example" style="width: 65%"
+                                                                        aria-valuenow="65" aria-valuemin="0"
+                                                                        aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cell" data-title="Actions">
+                                                                <div class="actions flex gap-2">
+                                                                    <div class="rangepicker">
+                                                                        <a data-bs-toggle="popover" data-bs-content=""
+                                                                            data-bs-html="true" data-bs-placement="top"
+                                                                            id="popoverButton"><i
+                                                                                class="ri-edit-box-line fs-20 op-0-5"></i></a>
+
+                                                                    </div>
+                                                                    <a href=""><i
+                                                                            class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
+                                                                    <a href=""><i
+                                                                            class="ri-eye-line fs-20 op-0-5"></i></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cell" data-title="Date">
+                                                                <span id="startDate-span"> 20/12/22 </span>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="23"
+                                                                    height="6" viewBox="0 0 23 6" fill="none">
+                                                                    <path
+                                                                        d="M17.3333 3C17.3333 4.47276 18.5272 5.66667 20 5.66667C21.4728 5.66667 22.6667 4.47276 22.6667 3C22.6667 1.52724 21.4728 0.333333 20 0.333333C18.5272 0.333333 17.3333 1.52724 17.3333 3ZM0 3.5H20V2.5H0V3.5Z"
+                                                                        fill="#30D5C7" />
+                                                                </svg>
+                                                                <span id="endDate-span"></span>
+
+                                                            </div>
+                                                            <div class="cell" data-title="Total">
+                                                                <div class="total-pro flex-c-m">
+                                                                    <span class="fs-13" id="percentage-pro">65%</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- PopOver -->
+    <div class="" id="popover-content">
+        <div class="row flex-m">
+            <div class="col-9">
+                <input type="range" class="form-range" id="rangepicker">
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control fs-8 px-0 text-center" name="" id="inputRange" value="49">
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="mb-2">
+                    <span class="fs-8">Start
+                        Date</span>
+                    <input type="text" class="form-control fs-8" name="" id="startDate" aria-describedby=""
+                        placeholder="" value="24/02/2022" disabled>
+                </div>
+                <div class="mb-2">
+                    <span class="fs-8">End
+                        Date</span>
+                    <input type="text" class="form-control fs-8" name="" id="endDate" aria-describedby=""
+                        placeholder="">
+                </div>
+            </div>
+        </div>
+        <div class="flex-c gap-2">
+            <button type="button" class="btn btn-sm btn-light fs-7" data-bs-dismiss="modal">
+                Cancel
+            </button>
+            <button type="button" class="btn btn-sm btn-primary fs-7" id="updateRange">Update</button>
+        </div>
+    </div>
+
+    <div class="preloader">
+        <div class="loader">
+            <img src="./assets/images/brand/logo_org.png" alt="">
+            <span></span>
+        </div>
+    </div>
+
+
+
+
+    <script src="./assets/pluggins/jquery/jquery-3.6.3.min.js"></script>
+    <script src="./assets/pluggins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/tomik23/circular-progress-bar@latest/docs/circularProgressBar.min.js">
+    </script>
+    <script src="./assets/pluggins/select2/js/select2.full.min.js"></script>
+    <script src="./assets/pluggins/scrollreveal/scrollreveal.js"></script>
+    <script src="./assets/pluggins/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Include ApexCharts library -->
+    <script src="./assets/pluggins/apexchart/dist/apexcharts.min.js"></script>
+    <script src="./assets/js/charts-data.js"></script>
+
+    <!-- DATE PICKER  -->
+    <script src="./assets/pluggins/datetimepicker/js/gijgo.min.js"></script>
+
+    <script src="./assets/js/calender.js"></script>
+    <script src="./assets/js/index.js"></script>
+
+    <script>
+        var today, datepicker;
+        today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
+        datepicker = $('#endDate').datepicker({
+            minDate: today,
+            showOtherMonths: true, footer: true, modal: true, header: true
+        });
+
+
+
+        // Get references to the range input and text input
+        var rangeInput = document.getElementById("rangepicker");
+        var textInput = document.getElementById("inputRange");
+
+        // Update the text input value when the range input changes
+        rangeInput.addEventListener("input", function () {
+            textInput.value = rangeInput.value;
+        });
+
+        // Update the range input value when the text input changes
+        textInput.addEventListener("input", function () {
+            rangeInput.value = textInput.value;
+        });
+
+
+
+
+        var popoverButton = document.getElementById("popoverButton");
+
+        var popover = new bootstrap.Popover(popoverButton, {
+            content: document.getElementById("popover-content"),
+            trigger: "manual",
+        });
+
+        // Handle the button click to show the popover
+        popoverButton.addEventListener("click", function () {
+            popover.show();
+            // popover.style("display", "block");
+        });
+
+        // Handle the submit button click
+        document.getElementById("updateRange").addEventListener("click", function () {
+            popover.hide();
+        });
+    </script>
+    <style>
+        /* Remove the default styles for the range input */
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 10px;
+            background: #30D5C7;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input[type="range"]:focus {
+            border: none;
+            box-shadow: none;
+        }
+
+        /* Customize the track and thumb */
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            background: #D9D9D9;
+            border: 2px solid #D9D9D9;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        input[type="range"]:focus::-webkit-slider-thumb {
+            border: none;
+            box-shadow: none;
+            outline: none;
+        }
+
+        input[type="range"]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 10px;
+            background: #30D5C7;
+            border-radius: 5px;
+        }
+
+        /* Customize the range track and thumb for Firefox */
+        input[type="range"]::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            background: #D9D9D9;
+            border: 2px solid #D9D9D9;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        input[type="range"]::-moz-range-track {
+            width: 100%;
+            height: 10px;
+            background: #30D5C7;
+            border-radius: 5px;
+            box-shadow: none;
+        }
+
+
+        .popover {
+            border: none;
+            box-shadow: var(--bs-popover-box-shadow);
+            width: 200px;
+        }
+
+        /* #popover-content {
+            display:none ;
+        } */
+    </style>
+</body>
+
+</html>

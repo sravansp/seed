@@ -72,7 +72,7 @@ body.dark {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Poppins;
+    font-family: Poppins !important;
 }
 
 body {
@@ -98,6 +98,12 @@ a {
 
 a:hover {
     color: var(--primary-color);
+    opacity: 1 !important;
+}
+a:hover i {
+    color: var(--primary-color);
+    opacity: 1 !important;
+    transition: 0.3s;
 }
 
 input {
@@ -2673,7 +2679,9 @@ ul.collection li {
 
 
 /* Normal CSS Table  */
-
+.ntbl-table {
+    display: table;
+}
 .ntbl-row {
     display: table-row;
 }
@@ -2744,21 +2752,29 @@ ul.collection li {
 }
 
 .ntbl-row .cell:nth-child(1) {
-    width: 70px;
+    /* width: 70px; */
+    width: 10%;
     padding-left: 10px;
 }
 
 .ntbl-row .cell:nth-child(2) {
-    width: 250px;
+    /* width: 250px; */
+    /* width: 35%; */
 }
 
 .ntbl-row .cell:nth-child(3) {
-    width: 250px;
+    /* width: 250px; */
+    /* width: 42%; */
     padding-right: 35px;
 }
 
 .ntbl-row .cell:nth-child(4) {
-    width: 90px;
+    /* width: 90px; */
+    /* width: 10rem; */
+}
+.ntbl-row .cell:last-child {
+    /* width: 90px; */
+    /* width: 10rem; */
 }
 
 .ntbl-row .cell .total-pro {
@@ -2773,7 +2789,7 @@ ul.collection li {
 }
 
 
-.table,
+.normal-tbl,
 .ntbl-row {
     width: 100% !important
 }

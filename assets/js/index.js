@@ -719,7 +719,7 @@ tblRandomColor()
 
 function tblRandomColor() {
     if (document.querySelectorAll('.ntbl-row')) {
-        const colorNames = ["red", "orange", "#884DFF", "lime", "#00E096", "cyan", "#0095FF", "purple", "indigo", "magenta"];
+        const colorNames = ["#0095FF","#4437CC", "#FF8A00", "#00D3E0", "#B3E000", "#4BB79D", "#DFA510", "#E546D5", "#00E096", "#884DFF", "#FF4DB8"];
 
         function getRandomColor() {
             if (colorNames.length === 0) {
