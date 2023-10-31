@@ -233,7 +233,7 @@
                                                             Total
                                                         </div>
                                                     </div>
-                                                    <div class="ntbl-row rows">
+                                                    <div class="ntbl-row rows clickable">
                                                         <div class="cell" data-title="ID">
                                                             01
                                                         </div>
@@ -262,7 +262,9 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="ntbl-row rows">
+
+
+                                                    <div class="ntbl-row rows clickable">
                                                         <div class="cell" data-title="ID">
                                                             02
                                                         </div>
@@ -291,7 +293,9 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="ntbl-row rows">
+
+
+                                                    <div class="ntbl-row rows clickable">
                                                         <div class="cell" data-title="ID">
                                                             03
                                                         </div>
@@ -320,7 +324,9 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="ntbl-row rows">
+
+
+                                                    <div class="ntbl-row rows clickable">
                                                         <div class="cell" data-title="ID">
                                                             04
                                                         </div>
@@ -354,7 +360,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div id="subjectWise">
+                                <div id="subjectWise" style="display: none;">
                                     <div class="row">
                                         <div class="col-md-12 mb-4 mb-md-0">
                                             <div class="bg-light bradius-14 shadow-neo p-3 flex-col gap-3 h-full">
@@ -391,7 +397,7 @@
                                                                 01
                                                             </div>
                                                             <div class="cell" data-title="Name">
-                                                                Mathematics
+                                                                Arithmetic Operations
                                                             </div>
                                                             <div class="cell" data-title="Progression">
                                                                 <div class="progress">
@@ -404,9 +410,10 @@
                                                             <div class="cell" data-title="Actions">
                                                                 <div class="actions flex gap-2">
                                                                     <div class="rangepicker">
-                                                                        <a data-bs-toggle="popover" data-bs-content=""
-                                                                            data-bs-html="true" data-bs-placement="top"
-                                                                            id="popoverButton"><i
+                                                                        <a id="popoverButton" class="show-popover"
+                                                                            type="button" data-bs-toggle="popover"
+                                                                            data-bs-placement="top"
+                                                                            data-bs-content=""><i
                                                                                 class="ri-edit-box-line fs-20 op-0-5"></i></a>
 
                                                                     </div>
@@ -433,12 +440,14 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+
+
                                                         <div class="ntbl-row rows">
                                                             <div class="cell" data-title="ID">
                                                                 02
                                                             </div>
                                                             <div class="cell" data-title="Name">
-                                                                English
+                                                                Basic Mathematics
                                                             </div>
                                                             <div class="cell" data-title="Progression">
                                                                 <div class="progress">
@@ -453,7 +462,7 @@
                                                                     <div class="rangepicker">
                                                                         <a data-bs-toggle="popover" data-bs-content=""
                                                                             data-bs-html="true" data-bs-placement="top"
-                                                                            id="popoverButton"><i
+                                                                            id="popoverButton" class="show-popover"><i
                                                                                 class="ri-edit-box-line fs-20 op-0-5"></i></a>
 
                                                                     </div>
@@ -480,12 +489,14 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+
+
                                                         <div class="ntbl-row rows">
                                                             <div class="cell" data-title="ID">
                                                                 03
                                                             </div>
                                                             <div class="cell" data-title="Name">
-                                                                Malayalam
+                                                                Arithmetic Operations
                                                             </div>
                                                             <div class="cell" data-title="Progression">
                                                                 <div class="progress">
@@ -500,7 +511,7 @@
                                                                     <div class="rangepicker">
                                                                         <a data-bs-toggle="popover" data-bs-content=""
                                                                             data-bs-html="true" data-bs-placement="top"
-                                                                            id="popoverButton"><i
+                                                                            id="popoverButton" class="show-popover"><i
                                                                                 class="ri-edit-box-line fs-20 op-0-5"></i></a>
 
                                                                     </div>
@@ -527,18 +538,20 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="ntbl-row rows">
+
+
+                                                        <div class="ntbl-row rows abandoned">
                                                             <div class="cell" data-title="ID">
                                                                 04
                                                             </div>
                                                             <div class="cell" data-title="Name">
-                                                                Social Science
+                                                                Basic Mathematics
                                                             </div>
                                                             <div class="cell" data-title="Progression">
                                                                 <div class="progress">
                                                                     <div class="progress-bar" role="progressbar"
-                                                                        aria-label="Success example" style="width: 65%"
-                                                                        aria-valuenow="65" aria-valuemin="0"
+                                                                        aria-label="Success example" style="width: 0%"
+                                                                        aria-valuenow="0" aria-valuemin="0"
                                                                         aria-valuemax="100"></div>
                                                                 </div>
                                                             </div>
@@ -547,7 +560,7 @@
                                                                     <div class="rangepicker">
                                                                         <a data-bs-toggle="popover" data-bs-content=""
                                                                             data-bs-html="true" data-bs-placement="top"
-                                                                            id="popoverButton"><i
+                                                                            id="popoverButton" class="show-popover"><i
                                                                                 class="ri-edit-box-line fs-20 op-0-5"></i></a>
 
                                                                     </div>
@@ -558,19 +571,95 @@
                                                                 </div>
                                                             </div>
                                                             <div class="cell" data-title="Date">
-                                                                <span id="startDate-span"> 20/12/22 </span>
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="23"
-                                                                    height="6" viewBox="0 0 23 6" fill="none">
-                                                                    <path
-                                                                        d="M17.3333 3C17.3333 4.47276 18.5272 5.66667 20 5.66667C21.4728 5.66667 22.6667 4.47276 22.6667 3C22.6667 1.52724 21.4728 0.333333 20 0.333333C18.5272 0.333333 17.3333 1.52724 17.3333 3ZM0 3.5H20V2.5H0V3.5Z"
-                                                                        fill="#30D5C7" />
-                                                                </svg>
-                                                                <span id="endDate-span"></span>
+                                                                Goal Abandoned
+                                                            </div>
+                                                            <div class="cell" data-title="Total">
+                                                                <div class="total-pro flex-c-m d-none">
+                                                                    <span class="fs-13" id="percentage-pro">65%</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
 
+
+                                                        <div class="ntbl-row rows not-started">
+                                                            <div class="cell" data-title="ID">
+                                                                05
+                                                            </div>
+                                                            <div class="cell" data-title="Name">
+                                                                Basic Mathematics
+                                                            </div>
+                                                            <div class="cell" data-title="Progression">
+                                                                <div class="progress">
+                                                                    <div class="progress-bar" role="progressbar"
+                                                                        aria-label="Success example" style="width: 0%"
+                                                                        aria-valuenow="0" aria-valuemin="0"
+                                                                        aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cell" data-title="Actions">
+                                                                <div class="actions flex gap-2">
+                                                                    <div class="rangepicker">
+                                                                        <a data-bs-toggle="popover" data-bs-content=""
+                                                                            data-bs-html="true" data-bs-placement="top"
+                                                                            id="popoverButton" class="show-popover"><i
+                                                                                class="ri-edit-box-line fs-20 op-0-5"></i></a>
+
+                                                                    </div>
+                                                                    <a href=""><i
+                                                                            class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
+                                                                    <a href=""><i
+                                                                            class="ri-eye-line fs-20 op-0-5"></i></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cell" data-title="Date">
+                                                                <button
+                                                                    class="btn btn-main-primary shadow-neo fs-10 px-4 text-black bradius-4">Start</button>
                                                             </div>
                                                             <div class="cell" data-title="Total">
                                                                 <div class="total-pro flex-c-m">
-                                                                    <span class="fs-13" id="percentage-pro">65%</span>
+                                                                    <span class="fs-13" id="percentage-pro">0%</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="ntbl-row rows not-started">
+                                                            <div class="cell" data-title="ID">
+                                                                06
+                                                            </div>
+                                                            <div class="cell" data-title="Name">
+                                                                Basic Mathematics
+                                                            </div>
+                                                            <div class="cell" data-title="Progression">
+                                                                <div class="progress">
+                                                                    <div class="progress-bar" role="progressbar"
+                                                                        aria-label="Success example" style="width: 0%"
+                                                                        aria-valuenow="0" aria-valuemin="0"
+                                                                        aria-valuemax="100"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cell" data-title="Actions">
+                                                                <div class="actions flex gap-2">
+                                                                    <div class="rangepicker">
+                                                                        <a data-bs-toggle="popover" data-bs-content=""
+                                                                            data-bs-html="true" data-bs-placement="top"
+                                                                            id="popoverButton" class="show-popover"><i
+                                                                                class="ri-edit-box-line fs-20 op-0-5"></i></a>
+
+                                                                    </div>
+                                                                    <a href=""><i
+                                                                            class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
+                                                                    <a href=""><i
+                                                                            class="ri-eye-line fs-20 op-0-5"></i></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="cell" data-title="Date">
+                                                                <button
+                                                                    class="btn btn-main-primary shadow-neo fs-10 px-4 text-black bradius-4">Start</button>
+                                                            </div>
+                                                            <div class="cell" data-title="Total">
+                                                                <div class="total-pro flex-c-m">
+                                                                    <span class="fs-13" id="percentage-pro">0%</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -592,9 +681,42 @@
 
     </main>
 
+    <div id="popoverContent" style="display: none;">
+        <div class="row flex-m">
+            <div class="col-9">
+                <input type="range" class="form-range" id="rangepicker">
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control fs-8 px-0 text-center" name="" id="inputRange" value="49">
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="mb-2">
+                    <span class="fs-8">Start
+                        Date</span>
+                    <input type="text" class="form-control fs-8" name="" id="startDate" aria-describedby=""
+                        placeholder="" value="24/02/2022" disabled>
+                </div>
+                <div class="mb-2">
+                    <span class="fs-8">End
+                        Date</span>
+                    <input type="text" class="form-control fs-8" name="" id="endDate" aria-describedby=""
+                        placeholder="">
+                </div>
+            </div>
+        </div>
+        <div class="flex-c gap-2">
+            <button type="button" class="btn btn-sm btn-light fs-7" id="popoverDismiss">
+                Cancel
+            </button>
+            <button type="button" class="btn btn-sm btn-primary fs-7" id="popoverSubmit">Update</button>
+        </div>
+    </div>
 
     <!-- PopOver -->
-    <div class="" id="popover-content">
+    <!-- <div class="" id="popover-content">
         <div class="row flex-m">
             <div class="col-9">
                 <input type="range" class="form-range" id="rangepicker">
@@ -626,7 +748,7 @@
             </button>
             <button type="button" class="btn btn-sm btn-primary fs-7" id="updateRange">Update</button>
         </div>
-    </div>
+    </div> -->
 
     <div class="preloader">
         <div class="loader">
@@ -681,27 +803,48 @@
             rangeInput.value = textInput.value;
         });
 
-
-
-
-        var popoverButton = document.getElementById("popoverButton");
-
-        var popover = new bootstrap.Popover(popoverButton, {
-            content: document.getElementById("popover-content"),
-            trigger: "manual",
-        });
-
-        // Handle the button click to show the popover
-        popoverButton.addEventListener("click", function () {
-            popover.show();
-            // popover.style("display", "block");
-        });
-
-        // Handle the submit button click
-        document.getElementById("updateRange").addEventListener("click", function () {
-            popover.hide();
-        });
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var popoverButtons = document.querySelectorAll('.show-popover');
+            var popoverContent = document.getElementById("popoverContent");
+            var popover = new bootstrap.Popover(popoverButtons[0], {
+                content: popoverContent,
+                container: "body",
+                html: true,
+                placement: "top",
+            });
+
+            popoverButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    popover.show();
+                    popoverContent.style.display = "block";
+                });
+            });
+
+            var popoverSubmit = document.getElementById("popoverSubmit");
+            popoverSubmit.addEventListener("click", function () {
+                // Handle the submit button click here
+                var inputFieldValue = document.getElementById("endDate").value;
+                alert("Input value: " + inputFieldValue);
+                popover.hide();
+            });
+
+            var popoverDismiss = document.getElementById("popoverDismiss");
+            popoverDismiss.addEventListener("click", function () {
+                // Hide the popover when the dismiss button is clicked
+                popover.hide();
+            });
+        });
+
+        var showChapters = document.querySelector(".ntbl-row.clickable");
+        var subjectWise = document.querySelector("#subjectWise");
+        showChapters.addEventListener("click", function () {
+            subjectWise.style.display = "block";
+        })
+
+    </script>
+
     <style>
         /* Remove the default styles for the range input */
         input[type="range"] {
@@ -765,6 +908,10 @@
             border: none;
             box-shadow: var(--bs-popover-box-shadow);
             width: 200px;
+        }
+
+        .popover-body {
+            padding: 10px;
         }
 
         /* #popover-content {

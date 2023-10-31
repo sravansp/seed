@@ -23,6 +23,7 @@
     --card-gradient: linear-gradient(111deg, #30D5C7 -8.96%, rgba(94, 220, 210, 0.74) 10.94%, rgba(147, 229, 222, 0.44) 41.78%, rgba(189, 236, 232, 0.21) 76.6%, rgba(226, 242, 241, 0.00) 137.38%);
 
     /* ====== BORDER RADIUS ====== */
+    --bradius-4: 4px;
     --bradius-7: 7px;
     --bradius-14: 14px;
 
@@ -100,6 +101,7 @@ a:hover {
     color: var(--primary-color);
     opacity: 1 !important;
 }
+
 a:hover i {
     color: var(--primary-color);
     opacity: 1 !important;
@@ -207,6 +209,10 @@ input {
 
 .shadow-a {
     box-shadow: var(--shadow-a);
+}
+
+.bradius-4 {
+    border-radius: var(--bradius-4);
 }
 
 .bradius-7 {
@@ -576,9 +582,11 @@ body.dark .sidebar .toggle_icon .toggle {
     white-space: nowrap;
     transition: all 0.3s ease;
 }
+
 .sidebar .menu-links li .sub-menu li.active a {
     color: var(--text-white);
 }
+
 .sidebar .menu-links li .sub-menu li:hover a {
     color: var(--text-white);
 }
@@ -607,6 +615,7 @@ body.dark .sidebar .toggle_icon .toggle {
     pointer-events: none;
     transition: 0s;
 }
+
 .sidebar.close .menu-links li .sub-menu {
     left: 64px;
     top: 0;
@@ -2682,6 +2691,7 @@ ul.collection li {
 .ntbl-table {
     display: table;
 }
+
 .ntbl-row {
     display: table-row;
 }
@@ -2751,6 +2761,16 @@ ul.collection li {
     padding-bottom: 19px
 }
 
+.ntbl-row.abandoned {
+    background-color: rgba(255, 106, 106, 0.50);
+}
+
+.ntbl-row.clickable:hover {
+    cursor: pointer;
+    background-color: var(--body-light-primary);
+    transition: 0.2s;
+}
+
 .ntbl-row .cell:nth-child(1) {
     /* width: 70px; */
     width: 10%;
@@ -2772,6 +2792,7 @@ ul.collection li {
     /* width: 90px; */
     /* width: 10rem; */
 }
+
 .ntbl-row .cell:last-child {
     /* width: 90px; */
     /* width: 10rem; */
