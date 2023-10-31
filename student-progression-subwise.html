@@ -417,7 +417,9 @@
                                                                                 class="ri-edit-box-line fs-20 op-0-5"></i></a>
 
                                                                     </div>
-                                                                    <a href=""><i
+                                                                    <a data-bs-toggle="popover" data-bs-content=""
+                                                                        data-bs-html="true" data-bs-placement="bottom"
+                                                                        id="popoverButton2" class="show-popover2"><i
                                                                             class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
                                                                     <a href=""><i
                                                                             class="ri-eye-line fs-20 op-0-5"></i></a>
@@ -466,7 +468,9 @@
                                                                                 class="ri-edit-box-line fs-20 op-0-5"></i></a>
 
                                                                     </div>
-                                                                    <a href=""><i
+                                                                    <a data-bs-toggle="popover" data-bs-content=""
+                                                                        data-bs-html="true" data-bs-placement="bottom"
+                                                                        id="popoverButton2" class="show-popover2"><i
                                                                             class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
                                                                     <a href=""><i
                                                                             class="ri-eye-line fs-20 op-0-5"></i></a>
@@ -515,7 +519,9 @@
                                                                                 class="ri-edit-box-line fs-20 op-0-5"></i></a>
 
                                                                     </div>
-                                                                    <a href=""><i
+                                                                    <a data-bs-toggle="popover" data-bs-content=""
+                                                                        data-bs-html="true" data-bs-placement="bottom"
+                                                                        id="popoverButton2" class="show-popover2"><i
                                                                             class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
                                                                     <a href=""><i
                                                                             class="ri-eye-line fs-20 op-0-5"></i></a>
@@ -564,7 +570,9 @@
                                                                                 class="ri-edit-box-line fs-20 op-0-5"></i></a>
 
                                                                     </div>
-                                                                    <a href=""><i
+                                                                    <a data-bs-toggle="popover" data-bs-content=""
+                                                                        data-bs-html="true" data-bs-placement="bottom"
+                                                                        id="popoverButton2" class="show-popover2"><i
                                                                             class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
                                                                     <a href=""><i
                                                                             class="ri-eye-line fs-20 op-0-5"></i></a>
@@ -605,7 +613,9 @@
                                                                                 class="ri-edit-box-line fs-20 op-0-5"></i></a>
 
                                                                     </div>
-                                                                    <a href=""><i
+                                                                    <a data-bs-toggle="popover" data-bs-content=""
+                                                                        data-bs-html="true" data-bs-placement="bottom"
+                                                                        id="popoverButton2" class="show-popover2"><i
                                                                             class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
                                                                     <a href=""><i
                                                                             class="ri-eye-line fs-20 op-0-5"></i></a>
@@ -647,7 +657,9 @@
                                                                                 class="ri-edit-box-line fs-20 op-0-5"></i></a>
 
                                                                     </div>
-                                                                    <a href=""><i
+                                                                    <a data-bs-toggle="popover" data-bs-content=""
+                                                                        data-bs-html="true" data-bs-placement="bottom"
+                                                                        id="popoverButton2" class="show-popover2"><i
                                                                             class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
                                                                     <a href=""><i
                                                                             class="ri-eye-line fs-20 op-0-5"></i></a>
@@ -687,68 +699,43 @@
                 <input type="range" class="form-range" id="rangepicker">
             </div>
             <div class="col-3">
-                <input type="text" class="form-control fs-8 px-0 text-center" name="" id="inputRange" value="49">
+                <input type="text" class="form-control fs-10 px-0 text-center" name="" id="inputRange" value="49">
             </div>
 
         </div>
         <div class="row">
             <div class="col-12">
                 <div class="mb-2">
-                    <span class="fs-8">Start
+                    <span class="fs-10">Start
                         Date</span>
-                    <input type="text" class="form-control fs-8" name="" id="startDate" aria-describedby=""
+                    <input type="text" class="form-control fs-10" name="" id="startDate" aria-describedby=""
                         placeholder="" value="24/02/2022" disabled>
                 </div>
                 <div class="mb-2">
-                    <span class="fs-8">End
+                    <span class="fs-10">End
                         Date</span>
-                    <input type="text" class="form-control fs-8" name="" id="endDate" aria-describedby=""
+                    <input type="text" class="form-control fs-10" name="" id="endDate" aria-describedby=""
                         placeholder="">
                 </div>
             </div>
         </div>
         <div class="flex-c gap-2">
-            <button type="button" class="btn btn-sm btn-light fs-7" id="popoverDismiss">
+            <button type="button" class="btn btn-sm btn-light fs-10" id="popoverDismiss">
                 Cancel
             </button>
-            <button type="button" class="btn btn-sm btn-primary fs-7" id="popoverSubmit">Update</button>
+            <button type="button" class="btn btn-sm btn-primary fs-10" id="popoverSubmit">Update</button>
         </div>
     </div>
 
-    <!-- PopOver -->
-    <!-- <div class="" id="popover-content">
-        <div class="row flex-m">
-            <div class="col-9">
-                <input type="range" class="form-range" id="rangepicker">
-            </div>
-            <div class="col-3">
-                <input type="text" class="form-control fs-8 px-0 text-center" name="" id="inputRange" value="49">
-            </div>
+    <div id="popoverContent2" style="display: none;">
+      <div class="flex-col gap-2">
+        <a href="#" class="btn btn-popover1">Pause Goal</a>
+        <a href="#" class="btn btn-popover2">Abandon Goal</a>
 
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="mb-2">
-                    <span class="fs-8">Start
-                        Date</span>
-                    <input type="text" class="form-control fs-8" name="" id="startDate" aria-describedby=""
-                        placeholder="" value="24/02/2022" disabled>
-                </div>
-                <div class="mb-2">
-                    <span class="fs-8">End
-                        Date</span>
-                    <input type="text" class="form-control fs-8" name="" id="endDate" aria-describedby=""
-                        placeholder="">
-                </div>
-            </div>
-        </div>
-        <div class="flex-c gap-2">
-            <button type="button" class="btn btn-sm btn-light fs-7" data-bs-dismiss="modal">
-                Cancel
-            </button>
-            <button type="button" class="btn btn-sm btn-primary fs-7" id="updateRange">Update</button>
-        </div>
-    </div> -->
+      </div>
+    </div>
+
+
 
     <div class="preloader">
         <div class="loader">
@@ -805,43 +792,77 @@
 
     </script>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var popoverButtons = document.querySelectorAll('.show-popover');
-            var popoverContent = document.getElementById("popoverContent");
-            var popover = new bootstrap.Popover(popoverButtons[0], {
-                content: popoverContent,
-                container: "body",
-                html: true,
-                placement: "top",
-            });
+        popoverSPSubWise()
+        function popoverSPSubWise() {
+            if (document.querySelectorAll('.show-popover')) {
 
-            popoverButtons.forEach(function (button) {
-                button.addEventListener("click", function () {
-                    popover.show();
-                    popoverContent.style.display = "block";
+                document.addEventListener("DOMContentLoaded", function () {
+                    var popoverButtons1 = document.querySelectorAll('.show-popover');
+                    var popoverButtons2 = document.querySelectorAll('.show-popover2');
+
+                    var popover1 = new bootstrap.Popover(popoverButtons1[0], {
+                        content: document.getElementById("popoverContent"),
+                        container: "body",
+                        html: true,
+                        placement: "top",
+                    });
+
+                    var popover2 = new bootstrap.Popover(popoverButtons2[0], {
+                        content: document.getElementById("popoverContent2"),
+                        container: "body",
+                        html: true,
+                        placement: "bottom",
+                    });
+                    function closeAllPopovers() {
+                        popover1.hide();
+                        popover2.hide();
+                    }
+                    popoverButtons1.forEach(function (button) {
+                        button.addEventListener("click", function () {
+                            closeAllPopovers()
+                            popover1.show();
+                            var popoverContent = document.getElementById("popoverContent");
+                            popoverContent.style.display = "block";
+                        });
+                    });
+
+                    popoverButtons2.forEach(function (button) {
+                        button.addEventListener("click", function () {
+                            closeAllPopovers()
+                            popover2.show();
+                            var popoverContent = document.getElementById("popoverContent2");
+                            popoverContent.style.display = "block";
+                        });
+                    });
+
+                    var popoverSubmit1 = document.getElementById("popoverSubmit");
+                    popoverSubmit1.addEventListener("click", function () {
+                        var inputFieldValue = document.getElementById("endDate").value;
+                        alert("Input value for Popover 1: " + inputFieldValue);
+                        popover1.hide();
+                    });
+
+                    var popoverDismiss1 = document.getElementById("popoverDismiss");
+                    popoverDismiss1.addEventListener("click", function () {
+                        popover1.hide();
+                    });
                 });
-            });
+            }
+        }
 
-            var popoverSubmit = document.getElementById("popoverSubmit");
-            popoverSubmit.addEventListener("click", function () {
-                // Handle the submit button click here
-                var inputFieldValue = document.getElementById("endDate").value;
-                alert("Input value: " + inputFieldValue);
-                popover.hide();
-            });
+        if (document.querySelectorAll(".ntbl-row.clickable")) {
 
-            var popoverDismiss = document.getElementById("popoverDismiss");
-            popoverDismiss.addEventListener("click", function () {
-                // Hide the popover when the dismiss button is clicked
-                popover.hide();
-            });
-        });
+            var showChapters = document.querySelectorAll(".ntbl-row.clickable");
+            var subjectWise = document.querySelector("#subjectWise");
+            showChapters.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    subjectWise.style.display = "block";
+                    subjectWise.focus();
 
-        var showChapters = document.querySelector(".ntbl-row.clickable");
-        var subjectWise = document.querySelector("#subjectWise");
-        showChapters.addEventListener("click", function () {
-            subjectWise.style.display = "block";
-        })
+                })
+            });
+        }
+
 
     </script>
 
@@ -914,9 +935,32 @@
             padding: 10px;
         }
 
-        /* #popover-content {
-            display:none ;
-        } */
+        .btn-popover1,
+        .btn-popover2 {
+            padding: 3px 10px;
+            justify-content: center;
+            align-items: center;
+            gap: 1px;
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 600;
+            display: inline-flex;
+            border-radius: 4px;
+            width: 100%;
+            
+        }
+        .btn-popover1 {
+            background: #fbbc0580;
+        }
+        .btn-popover1:hover {
+            background: #fbbd0550;
+        }
+        .btn-popover2 {
+            background: #ff6a6a80;
+        }
+        .btn-popover2:hover {
+            background: #ff6a6a50;
+        }
     </style>
 </body>
 

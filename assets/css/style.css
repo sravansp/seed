@@ -169,7 +169,7 @@ input {
 }
 
 .bg-main-primary {
-    background: var(--bg-main-primary);
+    background: var(--bg-main-primary) !important;
 }
 
 .bg-light {
@@ -565,7 +565,8 @@ body.dark .sidebar .toggle_icon .toggle {
 .sidebar .menu-links li .sub-menu {
     padding: 6px 6px 14px 80px;
     margin-top: -10px;
-    background: var(--body-light-primary);
+    /* background: var(--body-light-primary); */
+    background: #fff;
     display: none;
     border-radius: 0px 14px 14px 0px;
     transform: translateY(20px);
@@ -603,6 +604,10 @@ body.dark .sidebar .toggle_icon .toggle {
     cursor: pointer;
 }
 
+.sidebar .menu-links li .sub-menu li:last-child {
+    margin-bottom: 0;
+}
+
 .sidebar .menu-links li .sub-menu {
     position: absolute;
     left: 226px;
@@ -634,6 +639,7 @@ body.dark .sidebar .toggle_icon .toggle {
     pointer-events: auto;
     transition: all 0.4s ease;
     transform: translateY(0);
+    box-shadow: var(--shadow-b);
 }
 
 /* Submenu List Design CSS  END */
@@ -2868,7 +2874,87 @@ ul.collection li {
 
 
 
-
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 104px;
+    height: 34px;
+   }
+   
+   .switch input {
+    display: none;
+   }
+   
+   .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(48, 213, 199, 0.10);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+    border:2px solid #30D5C7;
+    box-shadow: 2.17893px 2.17893px 6.5368px 0px rgba(174, 174, 192, 0.40), -2.17893px -2.17893px 6.5368px 0px #FFF;
+   }
+   
+   .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 5px;
+    bottom: 5px;
+    background-color: #30D5C7;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+    z-index: 1;
+   }
+   
+   input:checked + .slider {
+    border:2px solid #4A9F95;
+   }
+   
+   input:focus + .slider {
+    box-shadow: 0 0 1px #4A9F95;
+   }
+   
+   input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(70px);
+    background-color: #4A9F95;
+   }
+   
+   /*------ ADDED CSS ---------*/
+   .slider:after {
+    content: 'SEN Dept Goals';
+    color: #1a1a1a;
+    display: block;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 63%;
+    font-size: 8px;
+    white-space:nowrap;
+    transition: 0.3s;
+   }
+   
+   input:checked + .slider:after {
+    content: 'Subject Goals';
+     position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 40%;
+    font-size: 8px;
+    white-space:nowrap;
+    transition: 0.3s;
+   }
+   
+   /*--------- END --------*/
 
 
 

@@ -775,6 +775,8 @@ function tblRandomColor() {
             // progress.style.opacity = '0.1';
             if (progressValue == 100) {
                 row.style.backgroundColor = `rgba(${rgbColor[0]}, ${rgbColor[1]}, ${rgbColor[2]}, 0.1)`;
+                totalpro.style.backgroundColor = dataColor
+                totalpro.style.color = "#fff";
             }
 
         });
