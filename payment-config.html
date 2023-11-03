@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - SEED</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="./assets/pluggins/bootstrap/css/bootstrap.min.css">
+
+    <!-- DATEPICKER CSS  -->
+    <link rel="stylesheet" href="./assets/pluggins/datetimepicker/css/gijgo.css">
+
+    <!-- Icon Used: Remix Icon | https://remixicon.com/-->
+    <link rel="stylesheet" href="./assets/pluggins/remixicon/remixicon.css">
+
+    <link rel="stylesheet" href="./assets/css/pluggins.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/util.css">
+
+
+</head>
+
+<body class="light mode">
+    <div class="popup-toggle toggle-switch d-block d-lg-none">
+        <i class="ri-moon-fill fs-25 text-primary"></i>
+    </div>
+    <!-- Sidebar Start -->
+    <div class="app-sidebar__overlay active" data-bs-toggle="sidebar"></div>
+    <nav class="sidebar open">
+        <header>
+            <div class="image-text">
+                <div class="image">
+                    <img src="./assets/images/brand/logo.png" alt="logo">
+                </div>
+                <div class="text logo-text">
+                    <h1 class="fs-24">SEED</h1>
+                </div>
+            </div>
+        </header>
+        <div class="toggle_icon">
+            <span class="toggle">
+                <i class="ri-arrow-right-s-line"></i>
+            </span>
+        </div>
+        <div class="menu-bar">
+            <div class="menu h-full">
+                <ul class="menu-links flex gap-5 h-full flex-col ps-0 justify-content-evenly">
+                    <div class="top-menu-links">
+                        <p class="p-l-20 p-b-8 fs-12 title-menu">General</p>
+                        <li class="nav-link">
+                            <a href="dash-admin.html">
+                                <i class="ri-home-4-fill icon"></i>
+                                <span class="text nav-text">Dashboard</span>
+                                <span class="tooltip">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="dash-admin-student.html">
+                                <i class="ri-team-fill icon"></i>
+                                <span class="text nav-text">Student Management</span>
+                                <span class="tooltip">Student Management</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="dash-admin-user.html">
+                                <i class="ri-user-2-fill icon"></i>
+                                <span class="text nav-text">User Management</span>
+                                <span class="tooltip">User Management</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="dash-admin-appoinment.html">
+                                <i class="ri-calendar-fill icon"></i>
+                                <span class="text nav-text">Appointments</span>
+                                <span class="tooltip">Appointments</span>
+                            </a>
+                        </li>
+                    </div>
+                    <div class="bottom-menu-links">
+                        <p class="p-l-20 p-b-8 fs-12 title-menu">Others</p>
+                        <li class="nav-link">
+                            <a href="/form-files.html">
+                                <i class="ri-file-copy-2-fill icon"></i>
+                                <span class="text nav-text">Forms and Files</span>
+                                <span class="tooltip">Forms and Files</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="components.html">
+                                <i class="ri-settings-5-fill icon"></i>
+                                <span class="text nav-text">Account Settings</span>
+                                <span class="tooltip">Account Settings</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="help.html">
+                                <i class="ri-customer-service-2-fill icon"></i>
+                                <span class="text nav-text">Help and Supporrt</span>
+                                <span class="tooltip">Help and Supporrt</span>
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="bottom-content flex justify-content-center">
+                <!-- <li class="nav-link"> -->
+                <a href="./login.html" class="btn btn-light text-primary">
+                    <div class="p-1 rounded-circle bg-primary">
+                        <i class="ri-shut-down-line text-white fs-20"></i>
+                    </div>
+                    <span class="text nav-text text-primary">Logout</span>
+                    <!-- <span class="tooltip">Logout</span> -->
+                </a>
+                <!-- </li> -->
+            </div>
+        </div>
+    </nav>
+    <!-- Sidebar End  -->
+
+    <div class="overlay_section"></div>
+    <main class="home">
+
+
+        <!-- NAVBAR START  -->
+        <nav class="navbar py-4">
+            <div class="container-fluid px-md-4">
+                <div class="navbar_container navbar-menu-wrapper d-flex align-items-center">
+                    <a aria-label="hide-sidebar" class="d-lg-none app-sidebar__toggle" data-bs-toggle="sidebar"
+                        href="javascript:void(0);">
+                        <i class="ri-menu-2-line text-primary fs-25"></i>
+                    </a>
+                    <form class="d-flex d-none d-md-block" role="search">
+                        <div class="nav-search">
+                            <i class="ri-search-line fs-25"></i>
+                            <input class="" type="search" placeholder="Search" aria-label="Search">
+                        </div>
+                    </form>
+                    <ul class="navbar-nav mb-0 flex-row gap-4 flex-m">
+                        <li class="nav-item d-block d-md-none">
+
+                            <div class="dropdown d-block d-lg-none position-static">
+                                <a href="javascript:void(0);" class="nav-link icon" data-bs-toggle="dropdown">
+                                    <i class="ri-search-line fs-25 text-primary"></i>
+                                </a>
+                                <div class="dropdown-menu header-search dropdown-menu-start">
+                                    <div class="input-group w-100 p-2">
+                                        <input type="text" class="form-control" placeholder="Search....">
+                                        <div class="btn btn-primary">
+                                            <i class="ri-search-line fs-25"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- <li class="nav-item d-none d-lg-block">
+                            <div class="toggle-switch">
+                                <i class="ri-moon-fill fs-25 text-primary"></i>
+                            </div>
+                        </li> -->
+                        <li class="nav-item">
+                            <div class="pos-relative">
+                                <i class="ri-notification-4-fill fs-25 not text-primary"></i>
+                                <div class="nav-notification"></div>
+                            </div>
+                        </li>
+                        <li class="nav-item gap-2 flex-m dropdown user-drop">
+                            <a class="nav-link" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="pro-pic rounded-circle">
+                                    <img src="./assets/images/user.png" alt="">
+                                </div>
+                            </a>
+                            <div class="pro-data flex-col flex-c d-none d-md-flex">
+                                <p class="pro-name fs-14 fw-500">Harris M</p>
+                                <p class="pro-pos fs-12">Admin</p>
+                            </div>
+                            <div class="dropdown-menu">
+                                <a href="./profile.html" class="dropdown-item fs-14">Profile</a>
+                                <a href="#" class="dropdown-item fs-14">Sign Out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <!-- Main Content Start  -->
+        <div class="content pb-4">
+            <div class="container-fluid px-md-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="wrapper-body admin-dash-user w-full flex-col gap-4">
+
+                            <!-- BREADCRUMB  -->
+                            <div class="row flex-m">
+                                <div class="col-12">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb mb-0">
+                                            <li class="breadcrumb-item">
+                                                <i class="ri-home-4-fill fs-20 text-primary"></i>
+                                                <a href="./dash-admin.html">Home</a>
+                                            </li>
+                                            <li class="breadcrumb-item active" aria-current="page">
+                                                <i class="ri-refund-fill fs-20 text-primary"></i>
+                                                <span>Manage payment Configuration</span>
+                                            </li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                            <!-- BREADCRUMB END-->
+
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="header-small bradius-7 rounde bg-card p-3 w-full">
+                                        <h2 class="fs-20 text-black">
+                                            Manage payment Configuration</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="inner-wrapper seed-tabs p-3 flex-col gap-4 bg-light bradius-14">
+                                        <ul class="nav nav-pills flex-nowrap gap-3" id="pills-tab" role="tablist">
+                                            <li class="nav-item w-full" role="presentation">
+                                                <button class="nav-link w-full py-md-4 fs-20 shadow-neo active"
+                                                    id="pills-edit-pay-config-tab" data-bs-toggle="pill"
+                                                    data-bs-target="#pills-edit-pay-config" type="button" role="tab"
+                                                    aria-controls="pills-edit-pay-config" aria-selected="true">Edit
+                                                    payment Configuration </button>
+                                            </li>
+                                            <li class="nav-item w-full" role="presentation">
+                                                <button class="nav-link w-full py-md-4 fs-20 shadow-neo"
+                                                    id="pills-create-pay-config-tab" data-bs-toggle="pill"
+                                                    data-bs-target="#pills-create-pay-config" type="button" role="tab"
+                                                    aria-controls="pills-create-pay-config" aria-selected="false">Create
+                                                    payment Configuration</button>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="inner-wrapper p-3 flex-col gap-4 bg-light bradius-14">
+
+
+
+                                        <div class="tab-content" id="pills-tabContent">
+                                            <div class="tab-pane fade show active" id="pills-edit-pay-config"
+                                                role="tabpanel" aria-labelledby="pills-edit-pay-config-tab"
+                                                tabindex="0">
+
+                                                <div class="table-responsive">
+                                                    <table class="table align-middle fs-12">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">Services</th>
+                                                                <th scope="col">Role</th>
+                                                                <th scope="col">Fees of NIMS Students </th>
+                                                                <th scope="col">Fees of other Students </th>
+                                                                <th scope="col">Actions</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="">
+                                                                <td scope="row">Consultation</td>
+                                                                <td>Teacher</td>
+                                                                <td>300</td>
+                                                                <td>300</td>
+                                                                <td>
+                                                                    <div class="actions flex gap-2">
+                                                                        <a data-bs-toggle="modal"
+                                                                            data-bs-target="#modalId"><i
+                                                                                class="ri-edit-box-line fs-20 op-0-5"></i></a>
+
+                                                                        <a class="delete-btn" data-bs-toggle="modal"
+                                                                            data-bs-target="#deletePopup"><i
+                                                                                class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
+
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="">
+                                                                <td scope="row">Assessment</td>
+                                                                <td>Assessment</td>
+                                                                <td>500</td>
+                                                                <td>800</td>
+                                                                <td>
+                                                                    <div class="actions flex gap-2">
+                                                                        <a data-bs-toggle="modal"
+                                                                            data-bs-target="#modalId"><i
+                                                                                class="ri-edit-box-line fs-20 op-0-5"></i></a>
+
+                                                                        <a class="delete-btn" data-bs-toggle="modal"
+                                                                            data-bs-target="#deletePopup"><i
+                                                                                class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
+
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="">
+                                                                <td scope="row">Assessment</td>
+                                                                <td>Speech and language</td>
+                                                                <td>250</td>
+                                                                <td>350</td>
+                                                                <td>
+                                                                    <div class="actions flex gap-2">
+                                                                        <a data-bs-toggle="modal"
+                                                                            data-bs-target="#modalId"><i
+                                                                                class="ri-edit-box-line fs-20 op-0-5"></i></a>
+
+                                                                        <a class="delete-btn" data-bs-toggle="modal"
+                                                                            data-bs-target="#deletePopup"><i
+                                                                                class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
+
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="">
+                                                                <td scope="row">Consultation</td>
+                                                                <td>Teacher</td>
+                                                                <td>300</td>
+                                                                <td>300</td>
+                                                                <td>
+                                                                    <div class="actions flex gap-2">
+                                                                        <a data-bs-toggle="modal"
+                                                                            data-bs-target="#modalId"><i
+                                                                                class="ri-edit-box-line fs-20 op-0-5"></i></a>
+
+                                                                        <a class="delete-btn" data-bs-toggle="modal"
+                                                                            data-bs-target="#deletePopup"><i
+                                                                                class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
+
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="">
+                                                                <td scope="row">Assessment</td>
+                                                                <td>Assessment</td>
+                                                                <td>500</td>
+                                                                <td>800</td>
+                                                                <td>
+                                                                    <div class="actions flex gap-2">
+                                                                        <a data-bs-toggle="modal"
+                                                                            data-bs-target="#modalId"><i
+                                                                                class="ri-edit-box-line fs-20 op-0-5"></i></a>
+
+                                                                        <a class="delete-btn" data-bs-toggle="modal"
+                                                                            data-bs-target="#deletePopup"><i
+                                                                                class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
+
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="">
+                                                                <td scope="row">Assessment</td>
+                                                                <td>Speech and language</td>
+                                                                <td>250</td>
+                                                                <td>350</td>
+                                                                <td>
+                                                                    <div class="actions flex gap-2">
+                                                                        <a data-bs-toggle="modal"
+                                                                            data-bs-target="#modalId"><i
+                                                                                class="ri-edit-box-line fs-20 op-0-5"></i></a>
+
+                                                                        <a class="delete-btn" data-bs-toggle="modal"
+                                                                            data-bs-target="#deletePopup"><i
+                                                                                class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
+
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+
+
+                                                <!-- PAGINATION START -->
+                                                <nav class="Pager flex-sb-m flex-col-c-sm flex-c gap-3"
+                                                    aria-label="pagination example">
+                                                    <p class="text-muted fs-12">Showing 1-6 from 6 data</p>
+                                                    <ul class="pagination pagination-circle justify-content-end mb-0">
+
+                                                        <!--First-->
+                                                        <li class="page-item disabled"><a class="page-link">First</a>
+                                                        </li>
+
+                                                        <!--Arrow left-->
+                                                        <li class="page-item disabled">
+                                                            <a class="page-link" aria-label="Previous">
+                                                                <span aria-hidden="true">&laquo;</span>
+                                                                <span class="visually-hidden">Previous</span>
+                                                            </a>
+                                                        </li>
+
+                                                        <!--Numbers-->
+                                                        <li class="page-item active"><a class="page-link">1</a></li>
+                                                        <li class="page-item"><a class="page-link">2</a></li>
+                                                        <li class="page-item"><a class="page-link">3</a></li>
+                                                        <li class="page-item"><a class="page-link">4</a></li>
+                                                        <li class="page-item"><a class="page-link">5</a></li>
+
+                                                        <!--Arrow right-->
+                                                        <li class="page-item">
+                                                            <a class="page-link" aria-label="Next">
+                                                                <span aria-hidden="true">&raquo;</span>
+                                                                <span class="visually-hidden">Next</span>
+                                                            </a>
+                                                        </li>
+
+                                                        <!--Last-->
+                                                        <li class="page-item"><a class="page-link">Last</a></li>
+
+                                                    </ul>
+                                                </nav>
+
+
+
+
+                                            </div>
+                                            <div class="tab-pane fade" id="pills-create-pay-config" role="tabpanel"
+                                                aria-labelledby="pills-create-pay-config-tab" tabindex="0">
+                                                <div class="p-3 bradius-7">
+                                                    <form action="" class="flex-col gap-4">
+                                                        <div class="fs-14 row flex-c">
+                                                            <div class="col-12 col-md-6 flex-col gap-4">
+                                                                <div class="form-input">
+                                                                    <label for="" class="form-label">Select Role</label>
+                                                                    <select
+                                                                        class="form-control select2-select select2-show-search form-select"
+                                                                        data-placeholder="Select Role">
+                                                                        <option label="Select Role"></option>
+                                                                        <option value="AZ">User</option>
+                                                                        <option value="CO">Admin</option>
+                                                                        <option value="ID">Sen Dept</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form-input">
+                                                                    <label for="" class="form-label">Select Service
+                                                                        Type</label>
+                                                                    <select
+                                                                        class="form-control select2-select select2-show-search form-select"
+                                                                        data-placeholder="Select Service Type">
+                                                                        <option label="Select Service Type"></option>
+                                                                        <option value="AZ">Consultant</option>
+                                                                        <option value="CO">Admin</option>
+                                                                        <option value="ID">Sen Dept</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form-input">
+                                                                    <label for="" class="form-label">Fees for NIMS
+                                                                        Students</label>
+                                                                    <input type="text" class="form-control" name=""
+                                                                        id="" aria-describedby="Enter Fees."
+                                                                        placeholder="Enter Fees.">
+                                                                </div>
+                                                                <div class="form-input">
+                                                                    <label for="" class="form-label">Fees for Other
+                                                                        Students</label>
+                                                                    <input type="text" class="form-control" name=""
+                                                                        id="" aria-describedby="Enter Fees."
+                                                                        placeholder="Enter Fees.">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!--Form Submit Button  -->
+                                                        <div class="row flex-c gap-4 gap-md-0">
+                                                            <div class="col-12  col-md-2">
+                                                                <button
+                                                                    class="btn btn-light w-full text-nowrap shadow-neo">Cancel</button>
+                                                            </div>
+                                                            <div class="col-12  col-md-2">
+                                                                <button
+                                                                    class="btn btn-primary w-full text-nowrap submit-p-c"
+                                                                    type="submit">Save</button>
+                                                            </div>
+                                                        </div>
+
+                                                    </form>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalId" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered">
+            <div class="modal-content p-3">
+                <div class="modal-header border-bottom-0">
+                    <h1 class="modal-title fs-20 text-primary" id="exampleModalLabel">Edit Payment Configuration</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="fs-14 row">
+                        <div class="col-12 form-input mb-3">
+                            <label for="" class="form-label">Fees of NIMS Students</label>
+                            <input type="text" class="form-control" name="" id=""
+                                aria-describedby="Enter Fees of NIMS Students" value="300"
+                                placeholder="Enter Fees of NIMS Students">
+                        </div>
+                        <div class="col-12 form-input mb-3">
+                            <label for="" class="form-label">Fees of other Students </label>
+                            <input type="text" class="form-control" name="" id=""
+                                aria-describedby="Enter Fees of other Students " value="300"
+                                placeholder="Enter Fees of other Students ">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-top-0 flex-c">
+                    <button type="button" class="btn btn-light fs-16" data-bs-dismiss="modal">
+                        Cancel
+                    </button>
+                    <button type="button" class="btn btn-primary fs-16">Save Configuration</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <!-- <div class="modal fade" id="deletePopup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered">
+            <div class="modal-content p-3">
+                <div class="modal-body">
+                    <div class="fs-14 row">
+                        <iframe src="https://lottie.host/?file=6527fe19-cd69-48e8-85bc-ee1d9e3be5ff/G7pr75Qjyg.lottie"></iframe>
+                    </div>
+                    <h1 class="fs-24 fw-semibold">Do you want to Delete this Service ?</h1>
+                </div>
+                <div class="modal-footer border-top-0 flex-c">
+                    <button type="button" class="btn btn-light fs-16" data-bs-dismiss="modal">
+                        No
+                    </button>
+                    <button type="button" class="btn btn-primary fs-16">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+
+
+
+    <div class="preloader">
+        <div class="loader">
+            <img src="./assets/images/brand/logo_org.png" alt="">
+            <span></span>
+        </div>
+    </div>
+
+
+
+
+    <script src="./assets/pluggins/jquery/jquery-3.6.3.min.js"></script>
+    <script src="./assets/pluggins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- DATE PICKER  -->
+    <script src="./assets/pluggins/datetimepicker/js/gijgo.min.js"></script>
+    <script src="./assets/pluggins/select2/js/select2.full.min.js"></script>
+    <script src="./assets/pluggins/pagination/jquery.twbsPagination.min.js"></script>
+    <script src="./assets/pluggins/scrollreveal/scrollreveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/index.js"></script>
+
+    <script>
+        $(".delete-btn").click(function (e) {
+            e.preventDefault();
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                // confirmButtonColor: '#4A9F95',
+                // cancelButtonColor: '#FAFAFA',
+                confirmButtonText: 'Yes, delete it!',
+                showClass: {
+                    backdrop: 'swal2-noanimation', // disable backdrop animation
+                    popup: '',            // disable icon animation
+                },
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: 'Deleted!',
+                        text: "Your file has been deleted.",
+                        icon: 'success',
+                        showClass: {
+                            backdrop: 'swal2-noanimation', // disable backdrop animation
+                            popup: '',            // disable icon animation
+                        },
+                    })
+                }
+            })
+        });
+        $(".submit-p-c").click(function (e) {
+            e.preventDefault();
+            Swal.fire({
+                icon: 'success',
+                title: 'Created New payment Configuration',
+                showConfirmButton: false,
+                showClass: {
+                    backdrop: 'swal2-noanimation', // disable backdrop animation
+                    popup: '',            // disable icon animation
+                },
+                timer: 1500
+            })
+        });
+
+    </script>
+</body>
+
+</html>

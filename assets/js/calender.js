@@ -36,31 +36,37 @@ function initializeCalendar() {
 
     // Define an array of events with date information
     const events = [{
-            date: "2023-10-15",
-            title: "Meeting with Client",
+            date: "2023-10-25",
+            event: "Noufal Sainulabdeen-Assessment "
         },
         {
-            date: "2023-10-11",
-            title: "Meeting with friends",
+            date: "2023-10-26",
+            event: "Noufal Sainulabdeen-Package A"
         },
         {
-            date: "2023-10-16",
-            title: "Team Lunch",
+            date: "2023-10-27",
+            event: "Noufal Sainulabdeen-Consultation with Clinical Psychologist"
         },
         {
-            date: "2023-10-18",
-            title: "Presentation",
+            date: "2023-10-30",
+            event: "Noufal Sainulabdeen-Basic SLD"
         },
         {
-            date: "2023-10-15",
-            title: "Another Meeting",
+            date: "2023-11-01",
+            event: "Noufal Sainulabdeen-Basic SLD"
         },
         {
-            date: "2023-10-18",
-            title: "Presentation",
-        },
-        // Add more events as needed
+            date: "2023-11-02",
+            event: "Noufal Sainulabdeen-Package A"
+        }
     ];
+
+    // Remove leading zeros from date values
+    events.forEach(event => {
+        const dateParts = event.date.split('-');
+        event.date = dateParts.map(part => parseInt(part).toString()).join('-');
+    });
+
 
     const disabledDates = [{
             date: "2023-10-21",

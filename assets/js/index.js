@@ -457,11 +457,16 @@ window.addEventListener("DOMContentLoaded", () => {
 
 });
 
-jQuery(document).ready(function ($) {
-    $(".clickable-row").click(function () {
-        window.location = $(this).data("href");
+$(document).ready(function ($) {
+    // Use event delegation to handle clicks on .clickable-row elements
+    $(document).on('click', '.clickable-row', function (event) {
+      if (!$(event.target).is('.action-button')) {
+        var url = $(this).data('href');
+        window.location.href = url;
+      }
     });
-});
+  });
+  
 
 
 
