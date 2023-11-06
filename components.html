@@ -272,24 +272,30 @@
                                                 class="ri-arrow-left-line fs-20 pe-2"></i>Go Back to Forms</a>
                                         <button type="button" class="btn btn-primary" id="showToast">Show live
                                             toast</button>
+                                        <button type="button" class="btn btn-primary" id="hideToast">Hide live
+                                            toast</button>
 
 
                                         <div class="toast-container position-fixed p-3 top-0 right-0"
                                             id="toastPlacement">
                                             <div id="notificationToast"
-                                                class="toast align-items-center bg-main-primary border-0 bradius-4 w-full" role="alert"
-                                                aria-live="assertive" aria-atomic="true">
+                                                class="toast align-items-center bg-main-primary border-0 bradius-4 w-full"
+                                                role="alert" aria-live="assertive" aria-atomic="true">
                                                 <div class="d-flex">
                                                     <div class="toast-body text-white">
-                                                        <div class="spinner-border text-light" role="status">
+                                                        <div class="spinner-border text-light" role="status"
+                                                            id="loadingSpinner">
                                                             <span class="visually-hidden">Loading...</span>
-                                                          </div>
+                                                        </div>
+                                                        <div class="checkmark d-none fs-24" id="checkmarkSymbol">✓</div>
+                                                        <!-- Checkmark element (hidden by default) -->
                                                     </div>
-                                                    <!-- <button type="button" class="btn-close btn-close-white me-2 m-auto"
-                                                        data-bs-dismiss="toast" aria-label="Close"></button> -->
                                                 </div>
                                             </div>
                                         </div>
+
+
+
                                     </div>
                                 </div>
                             </div>
@@ -981,15 +987,39 @@
         // Function to show the toast notification with a custom auto-hide delay
         function showToastWithCustomDelay() {
             var toast = new bootstrap.Toast(document.getElementById('notificationToast'), {
-                delay: 1500, // Set the custom auto-hide delay in milliseconds (3 seconds in this example)
+                delay: 1500, // Set the custom auto-hide delay in milliseconds (1.5 seconds in this example)
                 autohide: false,
             });
+
+            // Show the checkmark before the toast hides
+            var checkmark = document.getElementById('checkmarkSymbol');
+            var loadingSpinner = document.getElementById('loadingSpinner');
+            checkmark.classList.add('d-none'); // Display the checkmark
+            loadingSpinner.classList.remove('d-none'); // Hide the loading spinner
+
             toast.show();
-            // toast.hide();
+        }
+        // Function to show the toast notification with a custom auto-hide delay
+        function hideToastWithCustomDelay() {
+            var toast = new bootstrap.Toast(document.getElementById('notificationToast'), {
+                delay: 1500, // Set the custom auto-hide delay in milliseconds (1.5 seconds in this example)
+                autohide: false,
+            });
+
+            // Show the checkmark before the toast hides
+            var checkmark = document.getElementById('checkmarkSymbol');
+            var loadingSpinner = document.getElementById('loadingSpinner');
+            checkmark.classList.remove('d-none'); // Display the checkmark
+            loadingSpinner.classList.add('d-none'); // Hide the loading spinner
+
+            // setTimeout(function () {
+            //     toast.hide();
+            // }, 1000);
         }
 
         // Show the toast when the button is clicked
         document.getElementById('showToast').addEventListener('click', showToastWithCustomDelay);
+        document.getElementById('hideToast').addEventListener('click', hideToastWithCustomDelay);
     </script>
 </body>
 
