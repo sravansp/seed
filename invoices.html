@@ -235,8 +235,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
-                                    <div
-                                        class="seed-tabs-2 p-2 flex-col gap-4 bg-primary-light shadow-neo bradius-14">
+                                    <div class="seed-tabs-2 p-2 flex-col gap-4 bg-primary-light shadow-neo bradius-14">
                                         <ul class="nav nav-pills flex-nowrap gap-3" id="pills-tab" role="tablist">
                                             <li class="nav-item w-full" role="presentation">
                                                 <button class="nav-link w-full py-md-3 fs-16 active"
@@ -261,7 +260,7 @@
                                             </li>
                                         </ul>
                                         <style>
-                                            
+
                                         </style>
                                     </div>
                                 </div>
@@ -274,180 +273,618 @@
 
                                         <div class="tab-content" id="pills-tabContent">
                                             <div class="tab-pane fade show active" id="pills-draft-invoice"
-                                                role="tabpanel" aria-labelledby="pills-draft-invoice-tab"
-                                                tabindex="0">
+                                                role="tabpanel" aria-labelledby="pills-draft-invoice-tab" tabindex="0">
+                                                <div class="p-3 bradius-7">
+                                                    <div class="row mb-3">
+                                                        <div class="col-md-3 mb-3">
+                                                            <!-- <label for="" class="form-label">Search number</label> -->
+                                                            <input type="text" class="form-control" name="Searchnumber"
+                                                                id="Searchnumber" aria-describedby="Searchnumber"
+                                                                placeholder="Search number">
+ 
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-responsive">
+                                                        <table class="table align-middle fs-12">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">Draft Number</th>
+                                                                    <th scope="col">Parent</th>
+                                                                    <th scope="col">Student </th>
+                                                                    <th scope="col">Invoice Amount</th>
+                                                                    <th scope="col">Status</th>
+                                                                    <th scope="col">Actions</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="">
+                                                                    <td scope="row">DR_0009</td>
+                                                                    <td>Sadheesh Kumar</td>
+                                                                    <td>Subin </td>
+                                                                    <td>AED 4357.50</td>
+                                                                    <td>
+                                                                        <div
+                                                                            class="status status-warning flex-c-m gap-2">
+                                                                            <div class="dot"></div>
+                                                                            <p>Draft</p>
+                                                                        </div>
 
-                                                <div class="table-responsive">
-                                                    <table class="table align-middle fs-12">
-                                                        <thead>
-                                                            <tr>
-                                                                <th scope="col">Draft Number</th>
-                                                                <th scope="col">Parent</th>
-                                                                <th scope="col">Student </th>
-                                                                <th scope="col">Invoice Amount</th>
-                                                                <th scope="col">Status</th>
-                                                                <th scope="col">Actions</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr class="">
-                                                                <td scope="row">DR_0009</td>
-                                                                <td>Sadheesh Kumar</td>
-                                                                <td>Subin </td>
-                                                                <td>AED 4357.50</td>
-                                                                <td>
-                                                                    <div class="rounded-full"></div>
-                                                                    
-                                                                </td>
-                                                            </tr>
-                                                            <tr class="">
-                                                                <td scope="row">Assessment</td>
-                                                                <td>Assessment</td>
-                                                                <td>500</td>
-                                                                <td>800</td>
-                                                                <td>
-                                                                    <div class="actions flex gap-2">
-                                                                        <a data-bs-toggle="modal"
-                                                                            data-bs-target="#modalId"><i
-                                                                                class="ri-edit-box-line fs-20 op-0-5"></i></a>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="actions flex gap-2">
+                                                                            <a title="Generate Invoice"
+                                                                                href="generate-invoice.html"
+                                                                                class="btn fs-12 text-primary flex-c-m gap-2 px-2 p-1 bradius-4 bg-primary-light">
+                                                                                <i class="ri-file-add-line"> </i>
+                                                                                Generate
+                                                                            </a>
+                                                                            <a class="delete-btn" data-bs-toggle="modal"
+                                                                                data-bs-target="#deletePopup"><i
+                                                                                    class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
 
-                                                                        <a class="delete-btn" data-bs-toggle="modal"
-                                                                            data-bs-target="#deletePopup"><i
-                                                                                class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="">
+                                                                    <td scope="row">DR_0009</td>
+                                                                    <td>Sadheesh Kumar</td>
+                                                                    <td>Subin </td>
+                                                                    <td>AED 4357.50</td>
+                                                                    <td>
+                                                                        <div
+                                                                            class="status status-warning flex-c-m gap-2">
+                                                                            <div class="dot"></div>
+                                                                            <p>Draft</p>
+                                                                        </div>
 
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr class="">
-                                                                <td scope="row">Assessment</td>
-                                                                <td>Speech and language</td>
-                                                                <td>250</td>
-                                                                <td>350</td>
-                                                                <td>
-                                                                    <div class="actions flex gap-2">
-                                                                        <a data-bs-toggle="modal"
-                                                                            data-bs-target="#modalId"><i
-                                                                                class="ri-edit-box-line fs-20 op-0-5"></i></a>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="actions flex gap-2">
+                                                                            <a title="Generate Invoice"
+                                                                                href="generate-invoice.html"
+                                                                                class="btn fs-12 text-primary flex-c-m gap-2 px-2 p-1 bradius-4 bg-primary-light">
+                                                                                <i class="ri-file-add-line"> </i>
+                                                                                Generate
+                                                                            </a>
+                                                                            <a class="delete-btn" data-bs-toggle="modal"
+                                                                                data-bs-target="#deletePopup"><i
+                                                                                    class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
 
-                                                                        <a class="delete-btn" data-bs-toggle="modal"
-                                                                            data-bs-target="#deletePopup"><i
-                                                                                class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="">
+                                                                    <td scope="row">DR_0009</td>
+                                                                    <td>Sadheesh Kumar</td>
+                                                                    <td>Subin </td>
+                                                                    <td>AED 4357.50</td>
+                                                                    <td>
+                                                                        <div
+                                                                            class="status status-warning flex-c-m gap-2">
+                                                                            <div class="dot"></div>
+                                                                            <p>Draft</p>
+                                                                        </div>
 
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr class="">
-                                                                <td scope="row">Consultation</td>
-                                                                <td>Teacher</td>
-                                                                <td>300</td>
-                                                                <td>300</td>
-                                                                <td>
-                                                                    <div class="actions flex gap-2">
-                                                                        <a data-bs-toggle="modal"
-                                                                            data-bs-target="#modalId"><i
-                                                                                class="ri-edit-box-line fs-20 op-0-5"></i></a>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="actions flex gap-2">
+                                                                            <a title="Generate Invoice"
+                                                                                href="generate-invoice.html"
+                                                                                class="btn fs-12 text-primary flex-c-m gap-2 px-2 p-1 bradius-4 bg-primary-light">
+                                                                                <i class="ri-file-add-line"> </i>
+                                                                                Generate
+                                                                            </a>
+                                                                            <a class="delete-btn" data-bs-toggle="modal"
+                                                                                data-bs-target="#deletePopup"><i
+                                                                                    class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
 
-                                                                        <a class="delete-btn" data-bs-toggle="modal"
-                                                                            data-bs-target="#deletePopup"><i
-                                                                                class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="">
+                                                                    <td scope="row">DR_0009</td>
+                                                                    <td>Sadheesh Kumar</td>
+                                                                    <td>Subin </td>
+                                                                    <td>AED 4357.50</td>
+                                                                    <td>
+                                                                        <div
+                                                                            class="status status-warning flex-c-m gap-2">
+                                                                            <div class="dot"></div>
+                                                                            <p>Draft</p>
+                                                                        </div>
 
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr class="">
-                                                                <td scope="row">Assessment</td>
-                                                                <td>Assessment</td>
-                                                                <td>500</td>
-                                                                <td>800</td>
-                                                                <td>
-                                                                    <div class="actions flex gap-2">
-                                                                        <a data-bs-toggle="modal"
-                                                                            data-bs-target="#modalId"><i
-                                                                                class="ri-edit-box-line fs-20 op-0-5"></i></a>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="actions flex gap-2">
+                                                                            <a title="Generate Invoice"
+                                                                                href="generate-invoice.html"
+                                                                                class="btn fs-12 text-primary flex-c-m gap-2 px-2 p-1 bradius-4 bg-primary-light">
+                                                                                <i class="ri-file-add-line"> </i>
+                                                                                Generate
+                                                                            </a>
+                                                                            <a class="delete-btn" data-bs-toggle="modal"
+                                                                                data-bs-target="#deletePopup"><i
+                                                                                    class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
 
-                                                                        <a class="delete-btn" data-bs-toggle="modal"
-                                                                            data-bs-target="#deletePopup"><i
-                                                                                class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="">
+                                                                    <td scope="row">DR_0009</td>
+                                                                    <td>Sadheesh Kumar</td>
+                                                                    <td>Subin </td>
+                                                                    <td>AED 4357.50</td>
+                                                                    <td>
+                                                                        <div
+                                                                            class="status status-warning flex-c-m gap-2">
+                                                                            <div class="dot"></div>
+                                                                            <p>Draft</p>
+                                                                        </div>
 
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                            <tr class="">
-                                                                <td scope="row">Assessment</td>
-                                                                <td>Speech and language</td>
-                                                                <td>250</td>
-                                                                <td>350</td>
-                                                                <td>
-                                                                    <div class="actions flex gap-2">
-                                                                        <a data-bs-toggle="modal"
-                                                                            data-bs-target="#modalId"><i
-                                                                                class="ri-edit-box-line fs-20 op-0-5"></i></a>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="actions flex gap-2">
+                                                                            <a title="Generate Invoice"
+                                                                                href="generate-invoice.html"
+                                                                                class="btn fs-12 text-primary flex-c-m gap-2 px-2 p-1 bradius-4 bg-primary-light">
+                                                                                <i class="ri-file-add-line"> </i>
+                                                                                Generate
+                                                                            </a>
+                                                                            <a class="delete-btn" data-bs-toggle="modal"
+                                                                                data-bs-target="#deletePopup"><i
+                                                                                    class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
 
-                                                                        <a class="delete-btn" data-bs-toggle="modal"
-                                                                            data-bs-target="#deletePopup"><i
-                                                                                class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
 
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
+
+                                                    <!-- PAGINATION START -->
+                                                    <nav class="Pager flex-sb-m flex-col-c-sm flex-c gap-3"
+                                                        aria-label="pagination example">
+                                                        <p class="text-muted fs-12">Showing 1-6 from 6 data</p>
+                                                        <ul
+                                                            class="pagination pagination-circle justify-content-end mb-0">
+
+                                                            <!--First-->
+                                                            <li class="page-item disabled"><a
+                                                                    class="page-link">First</a>
+                                                            </li>
+
+                                                            <!--Arrow left-->
+                                                            <li class="page-item disabled">
+                                                                <a class="page-link" aria-label="Previous">
+                                                                    <span aria-hidden="true">&laquo;</span>
+                                                                    <span class="visually-hidden">Previous</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <!--Numbers-->
+                                                            <li class="page-item active"><a class="page-link">1</a></li>
+                                                            <li class="page-item"><a class="page-link">2</a></li>
+                                                            <li class="page-item"><a class="page-link">3</a></li>
+                                                            <li class="page-item"><a class="page-link">4</a></li>
+                                                            <li class="page-item"><a class="page-link">5</a></li>
+
+                                                            <!--Arrow right-->
+                                                            <li class="page-item">
+                                                                <a class="page-link" aria-label="Next">
+                                                                    <span aria-hidden="true">&raquo;</span>
+                                                                    <span class="visually-hidden">Next</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <!--Last-->
+                                                            <li class="page-item"><a class="page-link">Last</a></li>
+
+                                                        </ul>
+                                                    </nav>
                                                 </div>
-
-
-                                                <!-- PAGINATION START -->
-                                                <nav class="Pager flex-sb-m flex-col-c-sm flex-c gap-3"
-                                                    aria-label="pagination example">
-                                                    <p class="text-muted fs-12">Showing 1-6 from 6 data</p>
-                                                    <ul class="pagination pagination-circle justify-content-end mb-0">
-
-                                                        <!--First-->
-                                                        <li class="page-item disabled"><a class="page-link">First</a>
-                                                        </li>
-
-                                                        <!--Arrow left-->
-                                                        <li class="page-item disabled">
-                                                            <a class="page-link" aria-label="Previous">
-                                                                <span aria-hidden="true">&laquo;</span>
-                                                                <span class="visually-hidden">Previous</span>
-                                                            </a>
-                                                        </li>
-
-                                                        <!--Numbers-->
-                                                        <li class="page-item active"><a class="page-link">1</a></li>
-                                                        <li class="page-item"><a class="page-link">2</a></li>
-                                                        <li class="page-item"><a class="page-link">3</a></li>
-                                                        <li class="page-item"><a class="page-link">4</a></li>
-                                                        <li class="page-item"><a class="page-link">5</a></li>
-
-                                                        <!--Arrow right-->
-                                                        <li class="page-item">
-                                                            <a class="page-link" aria-label="Next">
-                                                                <span aria-hidden="true">&raquo;</span>
-                                                                <span class="visually-hidden">Next</span>
-                                                            </a>
-                                                        </li>
-
-                                                        <!--Last-->
-                                                        <li class="page-item"><a class="page-link">Last</a></li>
-
-                                                    </ul>
-                                                </nav>
-
-
-
-
                                             </div>
+
+
                                             <div class="tab-pane fade" id="pills-confirmed-invoice" role="tabpanel"
                                                 aria-labelledby="pills-confirmed-invoice-tab" tabindex="0">
                                                 <div class="p-3 bradius-7">
-                                                  
+                                                    <div class="row mb-3">
+                                                        <div class="col-md-3 mb-3">
+                                                            <!-- <label for="" class="form-label">Search number</label> -->
+                                                            <input type="text" class="form-control" name="Searchnumber"
+                                                                id="Searchnumber" aria-describedby="Searchnumber"
+                                                                placeholder="Search number">
+
+                                                        </div>
+                                                        <div class="col-md-3 mb-3">
+                                                            <!-- <label for="" class="form-label">Search number</label> -->
+
+                                                            <select
+                                                                class="form-control select2-select select2-show-search form-select"
+                                                                data-placeholder="Select Status">
+                                                                <option label="Select Status"></option>
+                                                                <option value="1">Pending</option>
+                                                                <option value="2">Partially Paid</option>
+                                                                <option value="3">Paid</option>
+                                                                <option value="4">Draft</option>
+                                                            </select>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-responsive">
+                                                        <table class="table align-middle fs-12">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">Inv Number</th>
+                                                                    <th scope="col">Parent</th>
+                                                                    <th scope="col">Student </th>
+                                                                    <th scope="col">Invoice Amount</th>
+                                                                    <th scope="col">Paid Amount</th>
+                                                                    <th scope="col">Payment Status</th>
+                                                                    <th scope="col">Actions</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="">
+                                                                    <td scope="row">INV_00012</td>
+                                                                    <td>Sadheesh Kumar</td>
+                                                                    <td>Subin </td>
+                                                                    <td>AED 4357.50</td>
+                                                                    <td>AED 0.0</td>
+                                                                    <td>
+                                                                        <div
+                                                                            class="status status-warning flex-c-m gap-2">
+                                                                            <div class="dot"></div>
+                                                                            <p>Pending</p>
+                                                                        </div>
+
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="actions flex gap-2">
+                                                                            <a data-bs-toggle="modal"
+                                                                                data-bs-target="#modalId"><i
+                                                                                    class="ri-edit-box-line fs-20 op-0-5"></i></a>
+                                                                            <a class="delete-btn" data-bs-toggle="modal"
+                                                                                data-bs-target="#deletePopup"><i
+                                                                                    class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
+
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="">
+                                                                    <td scope="row">INV_00013 </td>
+                                                                    <td>Cameron Williamson</td>
+                                                                    <td>Mitchell</td>
+                                                                    <td>AED 4357.50</td>
+                                                                    <td>AED 2100</td>
+                                                                    <td>
+                                                                        <div
+                                                                            class="status status-par-success flex-c-m gap-2">
+                                                                            <div class="dot"></div>
+                                                                            <p>Partially Paid</p>
+                                                                        </div>
+
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="actions flex gap-2">
+                                                                            <a data-bs-toggle="modal"
+                                                                                data-bs-target="#modalId"><i
+                                                                                    class="ri-edit-box-line fs-20 op-0-5"></i></a>
+                                                                            <a class="delete-btn" data-bs-toggle="modal"
+                                                                                data-bs-target="#deletePopup"><i
+                                                                                    class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
+
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="">
+                                                                    <td scope="row">INV_00014 </td>
+                                                                    <td>Williamson</td>
+                                                                    <td>John</td>
+                                                                    <td>AED 4357.50</td>
+                                                                    <td>AED 1510</td>
+                                                                    <td>
+                                                                        <div
+                                                                            class="status status-par-success flex-c-m gap-2">
+                                                                            <div class="dot"></div>
+                                                                            <p>Partially Paid</p>
+                                                                        </div>
+
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="actions flex gap-2">
+                                                                            <a data-bs-toggle="modal"
+                                                                                data-bs-target="#modalId"><i
+                                                                                    class="ri-edit-box-line fs-20 op-0-5"></i></a>
+                                                                            <a class="delete-btn" data-bs-toggle="modal"
+                                                                                data-bs-target="#deletePopup"><i
+                                                                                    class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
+
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="">
+                                                                    <td scope="row">INV_00016 </td>
+                                                                    <td>Annette Black</td>
+                                                                    <td>Victoria</td>
+                                                                    <td>AED 4357.50</td>
+                                                                    <td>AED 0.0</td>
+                                                                    <td>
+                                                                        <div
+                                                                            class="status status-warning flex-c-m gap-2">
+                                                                            <div class="dot"></div>
+                                                                            <p>Pending</p>
+                                                                        </div>
+
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="actions flex gap-2">
+                                                                            <a data-bs-toggle="modal"
+                                                                                data-bs-target="#modalId"><i
+                                                                                    class="ri-edit-box-line fs-20 op-0-5"></i></a>
+                                                                            <a class="delete-btn" data-bs-toggle="modal"
+                                                                                data-bs-target="#deletePopup"><i
+                                                                                    class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
+
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="">
+                                                                    <td scope="row">INV_00019 </td>
+                                                                    <td>Eleanor Pena</td>
+                                                                    <td>Soham</td>
+                                                                    <td>AED 4357.50</td>
+                                                                    <td>AED 4357.50</td>
+                                                                    <td>
+                                                                        <div
+                                                                            class="status status-success flex-c-m gap-2">
+                                                                            <div class="dot"></div>
+                                                                            <p>Paid</p>
+                                                                        </div>
+
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="actions flex gap-2">
+                                                                            <a data-bs-toggle="modal"
+                                                                                data-bs-target="#modalId"><i
+                                                                                    class="ri-edit-box-line fs-20 op-0-5"></i></a>
+                                                                            <a class="delete-btn" data-bs-toggle="modal"
+                                                                                data-bs-target="#deletePopup"><i
+                                                                                    class="ri-delete-bin-3-line fs-20 op-0-5"></i></a>
+
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+
+                                                    <!-- PAGINATION START -->
+                                                    <nav class="Pager flex-sb-m flex-col-c-sm flex-c gap-3"
+                                                        aria-label="pagination example">
+                                                        <p class="text-muted fs-12">Showing 1-6 from 6 data</p>
+                                                        <ul
+                                                            class="pagination pagination-circle justify-content-end mb-0">
+
+                                                            <!--First-->
+                                                            <li class="page-item disabled"><a
+                                                                    class="page-link">First</a>
+                                                            </li>
+
+                                                            <!--Arrow left-->
+                                                            <li class="page-item disabled">
+                                                                <a class="page-link" aria-label="Previous">
+                                                                    <span aria-hidden="true">&laquo;</span>
+                                                                    <span class="visually-hidden">Previous</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <!--Numbers-->
+                                                            <li class="page-item active"><a class="page-link">1</a></li>
+                                                            <li class="page-item"><a class="page-link">2</a></li>
+                                                            <li class="page-item"><a class="page-link">3</a></li>
+                                                            <li class="page-item"><a class="page-link">4</a></li>
+                                                            <li class="page-item"><a class="page-link">5</a></li>
+
+                                                            <!--Arrow right-->
+                                                            <li class="page-item">
+                                                                <a class="page-link" aria-label="Next">
+                                                                    <span aria-hidden="true">&raquo;</span>
+                                                                    <span class="visually-hidden">Next</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <!--Last-->
+                                                            <li class="page-item"><a class="page-link">Last</a></li>
+
+                                                        </ul>
+                                                    </nav>
                                                 </div>
                                             </div>
+
+
                                             <div class="tab-pane fade" id="pills-cancelled-invoice" role="tabpanel"
                                                 aria-labelledby="pills-cancelled-invoice-tab" tabindex="0">
                                                 <div class="p-3 bradius-7">
-                                                   
+                                                    <div class="row mb-3">
+                                                        <div class="col-md-3 mb-3">
+                                                            <!-- <label for="" class="form-label">Search number</label> -->
+                                                            <input type="text" class="form-control" name="Searchnumber"
+                                                                id="Searchnumber" aria-describedby="Searchnumber"
+                                                                placeholder="Search number">
+
+                                                        </div>
+                                                        <div class="col-md-3 mb-3">
+                                                            <!-- <label for="" class="form-label">Search number</label> -->
+                                                      
+                                                                <select
+                                                                    class="form-control select2-select select2-show-search form-select"
+                                                                    data-placeholder="Select Status">
+                                                                    <option label="Select Status"></option>
+                                                                    <option value="1">Pending</option>
+                                                                    <option value="2">Partially Paid</option>
+                                                                    <option value="3">Paid</option>
+                                                                    <option value="4">Draft</option>
+                                                                </select>
+                                                        
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="table-responsive">
+                                                        <table class="table align-middle fs-12">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">Inv Number</th>
+                                                                    <th scope="col">Parent</th>
+                                                                    <th scope="col">Student </th>
+                                                                    <th scope="col">Invoice Amount</th>
+                                                                    <th scope="col">Paid Amount</th>
+                                                                    <th scope="col">Payment Status</th>
+                                                                    <th scope="col">Actions</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="">
+                                                                    <td scope="row">INV_00012</td>
+                                                                    <td>Sadheesh Kumar</td>
+                                                                    <td>Subin </td>
+                                                                    <td>AED 4357.50</td>
+                                                                    <td>AED 0.0</td>
+                                                                    <td>
+                                                                        <div
+                                                                            class="status status-warning flex-c-m gap-2">
+                                                                            <div class="dot"></div>
+                                                                            <p>Pending</p>
+                                                                        </div>
+
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="actions flex gap-2">
+                                                                            <div class="actions flex gap-2">
+                                                                                <a data-bs-toggle="modal"
+                                                                                    data-bs-target="#modalId"><i
+                                                                                        class="ri-eye-line fs-20 op-0-5"></i></a>
+                                                                            </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="">
+                                                                    <td scope="row">INV_00013 </td>
+                                                                    <td>Cameron Williamson</td>
+                                                                    <td>Mitchell</td>
+                                                                    <td>AED 4357.50</td>
+                                                                    <td>AED 0.0</td>
+                                                                    <td>
+                                                                        <div
+                                                                            class="status status-warning flex-c-m gap-2">
+                                                                            <div class="dot"></div>
+                                                                            <p>Pending</p>
+                                                                        </div>
+
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="actions flex gap-2">
+                                                                            <div class="actions flex gap-2">
+                                                                                <a data-bs-toggle="modal"
+                                                                                    data-bs-target="#modalId"><i
+                                                                                        class="ri-eye-line fs-20 op-0-5"></i></a>
+                                                                            </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="">
+                                                                    <td scope="row">INV_00014 </td>
+                                                                    <td>Williamson</td>
+                                                                    <td>John</td>
+                                                                    <td>AED 4357.50</td>
+                                                                    <td>AED 0.0</td>
+                                                                    <td>
+                                                                        <div
+                                                                            class="status status-warning flex-c-m gap-2">
+                                                                            <div class="dot"></div>
+                                                                            <p>Pending</p>
+                                                                        </div>
+
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="actions flex gap-2">
+                                                                            <div class="actions flex gap-2">
+                                                                                <a data-bs-toggle="modal"
+                                                                                    data-bs-target="#modalId"><i
+                                                                                        class="ri-eye-line fs-20 op-0-5"></i></a>
+                                                                            </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="">
+                                                                    <td scope="row">INV_00016 </td>
+                                                                    <td>Annette Black</td>
+                                                                    <td>Victoria</td>
+                                                                    <td>AED 4357.50</td>
+                                                                    <td>AED 0.0</td>
+                                                                    <td>
+                                                                        <div
+                                                                            class="status status-warning flex-c-m gap-2">
+                                                                            <div class="dot"></div>
+                                                                            <p>Pending</p>
+                                                                        </div>
+
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="actions flex gap-2">
+                                                                            <div class="actions flex gap-2">
+                                                                                <a data-bs-toggle="modal"
+                                                                                    data-bs-target="#modalId"><i
+                                                                                        class="ri-eye-line fs-20 op-0-5"></i></a>
+                                                                            </div>
+                                                                    </td>
+                                                                </tr>
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+
+                                                    <!-- PAGINATION START -->
+                                                    <nav class="Pager flex-sb-m flex-col-c-sm flex-c gap-3"
+                                                        aria-label="pagination example">
+                                                        <p class="text-muted fs-12">Showing 1-6 from 6 data</p>
+                                                        <ul
+                                                            class="pagination pagination-circle justify-content-end mb-0">
+
+                                                            <!--First-->
+                                                            <li class="page-item disabled"><a
+                                                                    class="page-link">First</a>
+                                                            </li>
+
+                                                            <!--Arrow left-->
+                                                            <li class="page-item disabled">
+                                                                <a class="page-link" aria-label="Previous">
+                                                                    <span aria-hidden="true">&laquo;</span>
+                                                                    <span class="visually-hidden">Previous</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <!--Numbers-->
+                                                            <li class="page-item active"><a class="page-link">1</a></li>
+                                                            <li class="page-item"><a class="page-link">2</a></li>
+                                                            <li class="page-item"><a class="page-link">3</a></li>
+                                                            <li class="page-item"><a class="page-link">4</a></li>
+                                                            <li class="page-item"><a class="page-link">5</a></li>
+
+                                                            <!--Arrow right-->
+                                                            <li class="page-item">
+                                                                <a class="page-link" aria-label="Next">
+                                                                    <span aria-hidden="true">&raquo;</span>
+                                                                    <span class="visually-hidden">Next</span>
+                                                                </a>
+                                                            </li>
+
+                                                            <!--Last-->
+                                                            <li class="page-item"><a class="page-link">Last</a></li>
+
+                                                        </ul>
+                                                    </nav>
                                                 </div>
                                             </div>
 
@@ -468,30 +905,17 @@
         <div class="modal-dialog  modal-dialog-centered">
             <div class="modal-content p-3">
                 <div class="modal-header border-bottom-0">
-                    <h1 class="modal-title fs-20 text-primary" id="exampleModalLabel">Edit Payment Configuration</h1>
+                    <h1 class="modal-title fs-20 text-primary" id="exampleModalLabel">Edit Invoice</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="fs-14 row">
-                        <div class="col-12 form-input mb-3">
-                            <label for="" class="form-label">Fees of NIMS Students</label>
-                            <input type="text" class="form-control" name="" id=""
-                                aria-describedby="Enter Fees of NIMS Students" value="300"
-                                placeholder="Enter Fees of NIMS Students">
-                        </div>
-                        <div class="col-12 form-input mb-3">
-                            <label for="" class="form-label">Fees of other Students </label>
-                            <input type="text" class="form-control" name="" id=""
-                                aria-describedby="Enter Fees of other Students " value="300"
-                                placeholder="Enter Fees of other Students ">
-                        </div>
-                    </div>
+                    ---
                 </div>
                 <div class="modal-footer border-top-0 flex-c">
                     <button type="button" class="btn btn-light fs-16" data-bs-dismiss="modal">
                         Cancel
                     </button>
-                    <button type="button" class="btn btn-primary fs-16">Save Configuration</button>
+                    <button type="button" class="btn btn-primary fs-16">Save Invoice</button>
                 </div>
             </div>
         </div>
@@ -571,20 +995,6 @@
                 }
             })
         });
-        $(".submit-p-c").click(function (e) {
-            e.preventDefault();
-            Swal.fire({
-                icon: 'success',
-                title: 'Created New payment Configuration',
-                showConfirmButton: false,
-                showClass: {
-                    backdrop: 'swal2-noanimation', // disable backdrop animation
-                    popup: '',            // disable icon animation
-                },
-                timer: 1500
-            })
-        });
-
     </script>
 </body>
 
