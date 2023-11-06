@@ -3129,7 +3129,17 @@ ul.collection li {
 /*--------- END --------*/
 
 
+.seed-tabs-2 .nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: var(--primary-color);
+    background-color: var(--body-light);
+}
 
+.seed-tabs-2 .nav-link:focus,
+.seed-tabs-2 .nav-link:hover,
+.seed-tabs-2 .nav-link {
+    color: var(--primary-color);
+}
 
 
 

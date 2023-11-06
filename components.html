@@ -61,7 +61,7 @@
                             </a>
                         </li>
                         <li class="nav-link">
-                           <a href="dash-admin-student.html">
+                            <a href="dash-admin-student.html">
                                 <i class="ri-team-fill icon"></i>
                                 <span class="text nav-text">Student Management</span>
                                 <span class="tooltip">Student Management</span>
@@ -159,7 +159,7 @@
                                 </div>
                             </div>
                         </li>
-                         <!-- <li class="nav-item d-none d-lg-block">
+                        <!-- <li class="nav-item d-none d-lg-block">
                             <div class="toggle-switch">
                                 <i class="ri-moon-fill fs-25 text-primary"></i>
                             </div>
@@ -266,9 +266,30 @@
                                     <div class="button-group flex-col flex-lg-row gap-3">
                                         <button type="button" class="btn btn-light">Button Light</button>
                                         <button type="button" class="btn btn-primary">Button Primary</button>
-                                        <button type="button" class="btn btn-main-primary">Add New <i class="ri-add-circle-line fs-16 ps-2 text-white"></i></button>
+                                        <button type="button" class="btn btn-main-primary">Add New <i
+                                                class="ri-add-circle-line fs-16 ps-2 text-white"></i></button>
                                         <a href="" type="button" class="btn btn-light"><i
                                                 class="ri-arrow-left-line fs-20 pe-2"></i>Go Back to Forms</a>
+                                        <button type="button" class="btn btn-primary" id="showToast">Show live
+                                            toast</button>
+
+
+                                        <div class="toast-container position-fixed p-3 top-0 right-0"
+                                            id="toastPlacement">
+                                            <div id="notificationToast"
+                                                class="toast align-items-center bg-main-primary border-0 bradius-4 w-full" role="alert"
+                                                aria-live="assertive" aria-atomic="true">
+                                                <div class="d-flex">
+                                                    <div class="toast-body text-white">
+                                                        <div class="spinner-border text-light" role="status">
+                                                            <span class="visually-hidden">Loading...</span>
+                                                          </div>
+                                                    </div>
+                                                    <!-- <button type="button" class="btn-close btn-close-white me-2 m-auto"
+                                                        data-bs-dismiss="toast" aria-label="Close"></button> -->
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -915,8 +936,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-12">
-                                        <div
-                                            class="header-small bradius-7 bg-secondary p-3 w-full">
+                                        <div class="header-small bradius-7 bg-secondary p-3 w-full">
                                             <h2 class="fs-16 text-primary text-center">
                                                 Assessment </h2>
                                         </div>
@@ -924,8 +944,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-12">
-                                        <div
-                                            class="header-small bradius-7 bg-light p-4 w-full">
+                                        <div class="header-small bradius-7 bg-light p-4 w-full">
                                             <h2 class="fs-16 text-primary text-center">
                                                 Assessment </h2>
                                         </div>
@@ -958,7 +977,20 @@
     <script src="./assets/pluggins/select2/js/select2.full.min.js"></script>
     <script src="./assets/pluggins/scrollreveal/scrollreveal.js"></script>
     <script src="./assets/js/index.js"></script>
+    <script>
+        // Function to show the toast notification with a custom auto-hide delay
+        function showToastWithCustomDelay() {
+            var toast = new bootstrap.Toast(document.getElementById('notificationToast'), {
+                delay: 1500, // Set the custom auto-hide delay in milliseconds (3 seconds in this example)
+                autohide: false,
+            });
+            toast.show();
+            // toast.hide();
+        }
 
+        // Show the toast when the button is clicked
+        document.getElementById('showToast').addEventListener('click', showToastWithCustomDelay);
+    </script>
 </body>
 
 </html>
