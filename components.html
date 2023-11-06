@@ -289,7 +289,7 @@
                                                         </div>
                                                         <div class="checkmark d-none fs-24 px-2" id="checkmarkSymbol">✓</div>
                                                         <!-- Checkmark element (hidden by default) -->
-                                                    </div>
+                                                    </div> 
                                                 </div>
                                             </div>
                                         </div>
@@ -1012,9 +1012,9 @@
             checkmark.classList.remove('d-none'); // Display the checkmark
             loadingSpinner.classList.add('d-none'); // Hide the loading spinner
 
-            // setTimeout(function () {
-            //     toast.hide();
-            // }, 1000);
+            setTimeout(function () {
+                toast.hide();
+            }, 1000);
         }
 
         // Show the toast when the button is clicked
