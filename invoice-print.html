@@ -261,23 +261,55 @@
 
                                                     <div class="details-invoice">
                                                         <div style="width: 50%;float: left; margin-bottom: 40px;">
-                                                            <p class="fs-16" style="margin-bottom: 10px;">For</p>
-                                                            <p class="fs-16 fw-semibold" style="margin-bottom: 10px;">
-                                                                Abu mohammed</p>
-                                                            <p class="fs-16 text-muted" style="margin-bottom: 10px;">
-                                                                Mohammedabu@gmail.com</p>
-                                                            <div
-                                                                class="bradius-4 bg-primary text-white p-2 flex-c-m gap-2 w-fit">
-                                                                <span class="fs-12 fw-semibold">ID</span>
-                                                                <span class="fs-12 fw-semibold">6238 63 23762</span>
-                                                            </div>
+                                                            <p class="fs-16" style="margin-bottom: 10px;">From</p>
+                                                            <p class="fs-16"> <b> SEED INDIVIDUALIZED SPECIAL EDUCATION
+                                                                    CENTER<br></b>
+                                                                <b> TRN - 100441064100003<br></b>
+                                                                #304 Red Crescent Building <br>
+                                                                Al Garhoud, Dubai<br>
+                                                                United Arab Emirates<br>
+                                                                PO Box 3100
+                                                            </p>
+
                                                         </div>
                                                         <div style="width: 50%; float: right; margin-bottom: 40px;">
-                                                            <div class="" style="text-align: right;">
-                                                                <p class="fs-16" style="margin-bottom: 10px;">From</p>
-                                                                <p class="fs-16 fw-semibold break-space no-wrap-md">SEED
-                                                                    Al Garhoud
-                                                                    Dubai,UAE</p>
+                                                            <div>
+                                                                <table border="1" class="table table-invoice"
+                                                                    style="width: 74%; margin-bottom: 20px;">
+
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th
+                                                                                style="width:50%;padding: 7px; font-weight: bold; text-align: center;">
+                                                                                Invoice no.</th>
+                                                                            <th
+                                                                                style="padding: 7px; font-weight: bold; text-align: center;">
+                                                                                Date</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td
+                                                                                style="padding: 7px;text-align: center;">
+                                                                                INV_00012</td>
+                                                                            <td
+                                                                                style="padding: 7px;text-align: center;">
+                                                                                2023-11-03</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+
+                                                                <div class="billto">
+                                                                    <b> BILL TO</b> <br>
+                                                                    zahad C/o Wahad<br>
+                                                                    wahd2dm@dl.cm<br>
+                                                                    980293000
+                                                                </div>
+                                                                <div class="bradius-4 bg-primary text-white p-2 flex-c-m gap-2 w-fit"
+                                                                    style="margin-top: 10px;">
+                                                                    <span class="fs-12 fw-semibold">ID</span>
+                                                                    <span class="fs-12 fw-semibold">6238 63 23762</span>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -292,14 +324,17 @@
                                                     </table>
                                                     <table class="table table-invoice"
                                                         style="margin-top: 10px;width: 100%;" id="box">
-                                                        <tbody>
-
-                                                            <tr style="background:#e7fbf8;">
-                                                                <th class="text-center " style="width:60px;">Sl no.</th>
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="text-center" style="width:60px;">Sl no.
+                                                                </th>
                                                                 <th class="text-center">Description</th>
                                                                 <th class="text-center">Quantity</th>
-                                                                <th class="text-center" style="width:152px;">Amount</th>
+                                                                <th class="text-center" style="width:152px;">Amount
+                                                                </th>
                                                             </tr>
+                                                        </thead>
+                                                        <tbody>
                                                             <tr>
                                                                 <td class="text-center">1</td>
                                                                 <td class="text-center">Consultation : Initial</td>
@@ -345,6 +380,7 @@
                                                                 </td>
 
                                                             </tr>
+                                                        </tbody>
                                                     </table>
 
                                                 </form>
@@ -360,7 +396,15 @@
         </div>
     </main>
     <style>
+        .table-invoice thead tr {
+            background: #c8edea;
+        }
+
         @media print {
+            .table-invoice thead tr {
+                background: #c8edea;
+            }
+
             .details-invoice {
                 background-color: #e7fbf8;
                 margin-bottom: 40px;
@@ -404,9 +448,7 @@
                 text-align: center;
             }
 
-            .table-invoice tr th {
-                background-color: #e7fbf8;
-            }
+
 
             .table-invoice td,
             .table-invoice th {
@@ -419,7 +461,7 @@
 
             table {
                 border-collapse: collapse;
-                width: 100%;
+                width: 100% !important;
             }
 
             .table-invoice th,
