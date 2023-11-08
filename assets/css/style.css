@@ -227,6 +227,13 @@ input {
     font-size: 12px;
 }
 
+.border-primary {
+    border-color: var(--primary-color) !important;
+}
+.border-main-primary {
+    border-color: var(--main-primary) !important;
+}
+
 .btn-add-small {
     height: 20px;
     width: 20px;
@@ -947,6 +954,7 @@ body.dark .navbar_container .nav-search {
     box-shadow: var(--shadow-neo);
     width: 100%;
     margin-bottom: 40px;
+    /* margin-bottom: 35px; */
     overflow: hidden;
 }
 

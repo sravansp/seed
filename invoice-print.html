@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - SEED</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="./assets/pluggins/bootstrap/css/bootstrap.min.css">
+
+    <!-- DATEPICKER CSS  -->
+    <link rel="stylesheet" href="./assets/pluggins/datetimepicker/css/gijgo.css">
+
+    <!-- Icon Used: Remix Icon | https://remixicon.com/-->
+    <link rel="stylesheet" href="./assets/pluggins/remixicon/remixicon.css">
+
+    <link rel="stylesheet" href="./assets/css/pluggins.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/util.css">
+
+
+</head>
+
+<body class="light mode">
+    <div class="popup-toggle toggle-switch d-block d-lg-none">
+        <i class="ri-moon-fill fs-25 text-primary"></i>
+    </div>
+    <!-- Sidebar Start -->
+    <div class="app-sidebar__overlay active" data-bs-toggle="sidebar"></div>
+    <nav class="sidebar open">
+        <header>
+            <div class="image-text">
+                <div class="image">
+                    <img src="./assets/images/brand/logo.png" alt="logo">
+                </div>
+                <div class="text logo-text">
+                    <h1 class="fs-24">SEED</h1>
+                </div>
+            </div>
+        </header>
+        <div class="toggle_icon">
+            <span class="toggle">
+                <i class="ri-arrow-right-s-line"></i>
+            </span>
+        </div>
+        <div class="menu-bar">
+            <div class="menu h-full">
+                <ul class="menu-links flex gap-5 h-full flex-col ps-0 justify-content-evenly">
+                    <div class="top-menu-links">
+                        <p class="p-l-20 p-b-8 fs-12 title-menu">General</p>
+                        <li class="nav-link">
+                            <a href="dash-admin.html">
+                                <i class="ri-home-4-fill icon"></i>
+                                <span class="text nav-text">Dashboard</span>
+                                <span class="tooltip">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="dash-admin-student.html">
+                                <i class="ri-team-fill icon"></i>
+                                <span class="text nav-text">Student Management</span>
+                                <span class="tooltip">Student Management</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="dash-admin-user.html">
+                                <i class="ri-user-2-fill icon"></i>
+                                <span class="text nav-text">User Management</span>
+                                <span class="tooltip">User Management</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="dash-admin-appoinment.html">
+                                <i class="ri-calendar-fill icon"></i>
+                                <span class="text nav-text">Appointments</span>
+                                <span class="tooltip">Appointments</span>
+                            </a>
+                        </li>
+                    </div>
+                    <div class="bottom-menu-links">
+                        <p class="p-l-20 p-b-8 fs-12 title-menu">Others</p>
+                        <li class="nav-link">
+                            <a href="/form-files.html">
+                                <i class="ri-file-copy-2-fill icon"></i>
+                                <span class="text nav-text">Forms and Files</span>
+                                <span class="tooltip">Forms and Files</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="components.html">
+                                <i class="ri-settings-5-fill icon"></i>
+                                <span class="text nav-text">Account Settings</span>
+                                <span class="tooltip">Account Settings</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="help.html">
+                                <i class="ri-customer-service-2-fill icon"></i>
+                                <span class="text nav-text">Help and Supporrt</span>
+                                <span class="tooltip">Help and Supporrt</span>
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="bottom-content flex justify-content-center">
+                <!-- <li class="nav-link"> -->
+                <a href="./login.html" class="btn btn-light text-primary">
+                    <div class="p-1 rounded-circle bg-primary">
+                        <i class="ri-shut-down-line text-white fs-20"></i>
+                    </div>
+                    <span class="text nav-text text-primary">Logout</span>
+                    <!-- <span class="tooltip">Logout</span> -->
+                </a>
+                <!-- </li> -->
+            </div>
+        </div>
+    </nav>
+    <!-- Sidebar End  -->
+
+    <div class="overlay_section"></div>
+    <main class="home">
+
+
+        <!-- NAVBAR START  -->
+        <nav class="navbar py-4">
+            <div class="container-fluid px-md-4">
+                <div class="navbar_container navbar-menu-wrapper d-flex align-items-center">
+                    <a aria-label="hide-sidebar" class="d-lg-none app-sidebar__toggle" data-bs-toggle="sidebar"
+                        href="javascript:void(0);">
+                        <i class="ri-menu-2-line text-primary fs-25"></i>
+                    </a>
+                    <form class="d-flex d-none d-md-block" role="search">
+                        <div class="nav-search">
+                            <i class="ri-search-line fs-25"></i>
+                            <input class="" type="search" placeholder="Search" aria-label="Search">
+                        </div>
+                    </form>
+                    <ul class="navbar-nav mb-0 flex-row gap-4 flex-m">
+                        <li class="nav-item d-block d-md-none">
+
+                            <div class="dropdown d-block d-lg-none position-static">
+                                <a href="javascript:void(0);" class="nav-link icon" data-bs-toggle="dropdown">
+                                    <i class="ri-search-line fs-25 text-primary"></i>
+                                </a>
+                                <div class="dropdown-menu header-search dropdown-menu-start">
+                                    <div class="input-group w-100 p-2">
+                                        <input type="text" class="form-control" placeholder="Search....">
+                                        <div class="btn btn-primary">
+                                            <i class="ri-search-line fs-25"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- <li class="nav-item d-none d-lg-block">
+                            <div class="toggle-switch">
+                                <i class="ri-moon-fill fs-25 text-primary"></i>
+                            </div>
+                        </li> -->
+                        <li class="nav-item">
+                            <div class="pos-relative">
+                                <i class="ri-notification-4-fill fs-25 not text-primary"></i>
+                                <div class="nav-notification"></div>
+                            </div>
+                        </li>
+                        <li class="nav-item gap-2 flex-m dropdown user-drop">
+                            <a class="nav-link" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="pro-pic rounded-circle">
+                                    <img src="./assets/images/user.png" alt="">
+                                </div>
+                            </a>
+                            <div class="pro-data flex-col flex-c d-none d-md-flex">
+                                <p class="pro-name fs-14 fw-500">Harris M</p>
+                                <p class="pro-pos fs-12">Admin</p>
+                            </div>
+                            <div class="dropdown-menu">
+                                <a href="./profile.html" class="dropdown-item fs-14">Profile</a>
+                                <a href="#" class="dropdown-item fs-14">Sign Out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <!-- Main Content Start  -->
+        <div class="content pb-4">
+            <div class="container-fluid px-md-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="wrapper-body admin-dash-user w-full flex-col gap-4">
+
+                            <!-- BREADCRUMB  -->
+                            <div class="row flex-m">
+                                <div class="col-12">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb mb-0">
+                                            <li class="breadcrumb-item">
+                                                <i class="ri-home-4-fill fs-20 text-primary"></i>
+                                                <a href="./dash-admin.html">Home</a>
+                                            </li>
+                                            <li class="breadcrumb-item">
+                                                <i class="ri-refund-fill fs-20 text-primary"></i>
+                                                <a href="">Payments</a>
+                                            </li>
+                                            <li class="breadcrumb-item active" aria-current="page">
+                                                <i class="ri-refund-fill fs-20 text-primary"></i>
+                                                <span>Generate Invoices</span>
+                                            </li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                            <!-- BREADCRUMB END-->
+
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="header-small bradius-7 rounde bg-card p-3 w-full">
+                                        <h2 class="fs-20 text-black">
+                                            Generate Invoices</h2>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="inner-table p-3 flex-col bg-light bradius-14 shadow-soft">
+
+
+                                        <div class="" style="padding:26px;">
+                                            <div class="invoices-view" id="Invoice-detail">
+                                                <form id="w0" action="/invoices/11" method="post">
+                                                    <div
+                                                        class="flex-sb-m dis-none-print border-bottom border-1 pb-3 mb-3">
+                                                        <p> Invoice no. : INV_00011</p>
+
+                                                        <div class="flex gap-3">
+                                                            <button type="button" onclick='printtag();'
+                                                                class="btn btn-main-primary shadow-neo px-4"
+                                                                style="float:right;">
+                                                                <i class="ri-printer-fill text-white"></i>
+                                                            </button>
+                                                            <button type="button" class="btn btn-light shadow-neo px-4"
+                                                                style="float:right;">
+                                                                <i class="ri-share-fill text-primary"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="details-invoice">
+                                                        <div style="width: 50%;float: left; margin-bottom: 40px;">
+                                                            <p class="fs-16" style="margin-bottom: 10px;">For</p>
+                                                            <p class="fs-16 fw-semibold" style="margin-bottom: 10px;">
+                                                                Abu mohammed</p>
+                                                            <p class="fs-16 text-muted" style="margin-bottom: 10px;">
+                                                                Mohammedabu@gmail.com</p>
+                                                            <div
+                                                                class="bradius-4 bg-primary text-white p-2 flex-c-m gap-2 w-fit">
+                                                                <span class="fs-12 fw-semibold">ID</span>
+                                                                <span class="fs-12 fw-semibold">6238 63 23762</span>
+                                                            </div>
+                                                        </div>
+                                                        <div style="width: 50%; float: right; margin-bottom: 40px;">
+                                                            <div class="" style="text-align: right;">
+                                                                <p class="fs-16" style="margin-bottom: 10px;">From</p>
+                                                                <p class="fs-16 fw-semibold break-space no-wrap-md">SEED
+                                                                    Al Garhoud
+                                                                    Dubai,UAE</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <table style="width: 100%;">
+                                                        <tr>
+                                                            <td style="width:50%;padding: 7px; text-align: left;">
+                                                                Invoice no: <span id="invoiceNo">INV_00011</span></td>
+                                                            <td style="padding: 7px; text-align: right;">
+                                                                Date: <span id="invoiceDate">2023-09-07</span></td>
+                                                        </tr>
+                                                    </table>
+                                                    <table class="table table-invoice"
+                                                        style="margin-top: 10px;width: 100%;" id="box">
+                                                        <tbody>
+
+                                                            <tr style="background:#e7fbf8;">
+                                                                <th class="text-center " style="width:60px;">Sl no.</th>
+                                                                <th class="text-center">Description</th>
+                                                                <th class="text-center">Quantity</th>
+                                                                <th class="text-center" style="width:152px;">Amount</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-center">1</td>
+                                                                <td class="text-center">Consultation : Initial</td>
+                                                                <td class="text-center">1</td>
+                                                                <td class="text-right" style="text-align: center;">
+                                                                    AED 450.00 </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-center">2</td>
+                                                                <td class="text-center">Assessment : Psycho-educational
+                                                                    Assessment </td>
+                                                                <td class="text-center">1</td>
+                                                                <td class="text-right" style="text-align: center;">
+                                                                    AED 800.00 </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-right" colspan="3"
+                                                                    style="text-align: right;"> Subtotal</td>
+                                                                <td class="text-right" style="text-align: right;">
+                                                                    AED 1250.00 </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-right" colspan="3"
+                                                                    style="text-align: right;"> Discount</td>
+                                                                <td class="text-right" style="text-align: right;">
+                                                                    10 %
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="text-right" colspan="3"
+                                                                    style="text-align: right;"> Tax (5%)</td>
+                                                                <td class="text-right"
+                                                                    style="width:250px;text-align: right;">
+                                                                    AED 56.25 </td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td class="text-right" colspan="3"
+                                                                    style="text-align: right;"><b> Total amount</b>
+                                                                </td>
+                                                                <td class="text-right" style="text-align: right;">
+                                                                    <b>AED 1181.25</b>
+                                                                </td>
+
+                                                            </tr>
+                                                    </table>
+
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <style>
+        @media print {
+            .details-invoice {
+                background-color: #e7fbf8;
+                margin-bottom: 40px;
+
+            }
+
+            .dis-none-print {
+                display: none;
+            }
+
+            .break-space {
+                white-space: break-spaces;
+            }
+
+            .fw-semibold {
+                font-weight: 600;
+            }
+
+            .fs-16 {
+                font-size: 16px;
+            }
+
+            .fs-12 {
+                font-size: 12px;
+            }
+
+            .text-right {
+                text-align: right !important;
+            }
+
+            .text-center {
+                text-align: center;
+            }
+
+
+            .text-right {
+                text-align: right;
+            }
+
+            .text-center {
+                text-align: center;
+            }
+
+            .table-invoice tr th {
+                background-color: #e7fbf8;
+            }
+
+            .table-invoice td,
+            .table-invoice th {
+                border: 1px solid #ddd;
+                font-size: 10px;
+                padding-top: 8px;
+                padding-bottom: 8px;
+                page-break-inside: avoid !important;
+            }
+
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            .table-invoice th,
+            .table-invoice td {
+                padding: 5px;
+                font-size: 10px;
+                page-break-inside: avoid !important;
+            }
+
+            .table-invoice th {
+                text-align: center;
+                page-break-inside: avoid !important;
+            }
+
+            .table-invoice tr {
+                page-break-inside: avoid !important;
+                page-break-after: auto !important;
+            }
+
+            table.stylized tbody td {
+                height: 1.5em;
+                /* Min row height */
+            }
+
+            .employee-report-pdf-no-border {
+                border: 0px white;
+                font-size: 10px;
+                padding: 1px;
+            }
+
+            .full-width {
+                padding: 1cm;
+            }
+
+            td {
+                position: static;
+                word-wrap: break-word;
+                page-break-inside: avoid !important;
+            }
+
+            table.report-container {
+                page-break-after: always;
+            }
+
+            thead.report-header {
+                display: table-header-group;
+            }
+
+            tfoot.report-footer {
+                display: table-footer-group;
+            }
+
+            .tran {
+                writing-mode: tb-rl;
+                transform: rotate(-180deg);
+
+                /* Safari */
+                -webkit-transform: rotate(-180deg);
+
+                /* Firefox */
+                -moz-transform: rotate(-180deg);
+
+                /* IE */
+                -ms-transform: rotate(-180deg);
+
+                /* Opera */
+                -o-transform: rotate(-180deg);
+
+            }
+
+            table.table-invoice th,
+            td {
+                font-size: 12px;
+                padding: 5px;
+                font-family: 'Cairo';
+                page-break-inside: avoid !important;
+                white-space: normal;
+            }
+
+        }
+    </style>
+
+
+    <div class="preloader">
+        <div class="loader">
+            <img src="./assets/images/brand/logo_org.png" alt="">
+            <span></span>
+        </div>
+    </div>
+
+
+
+
+    <script src="./assets/pluggins/jquery/jquery-3.6.3.min.js"></script>
+    <script src="./assets/pluggins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- DATE PICKER  -->
+    <script src="./assets/pluggins/datetimepicker/js/gijgo.min.js"></script>
+    <script src="./assets/pluggins/select2/js/select2.full.min.js"></script>
+    <script src="./assets/pluggins/pagination/jquery.twbsPagination.min.js"></script>
+    <script src="./assets/pluggins/scrollreveal/scrollreveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/printThis/1.15.0/printThis.min.js"
+        integrity="sha512-d5Jr3NflEZmFDdFHZtxeJtBzk0eB+kkRXWFQqEc1EKmolXjHm2IKCA7kTvXBNjIYzjXfD5XzIjaaErpkZHCkBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/index.js"></script>
+
+    <script>
+        function printtag() {
+            $("#Invoice-detail").printThis({
+                debug: false,               // show the iframe for debugging
+                importCSS: true,            // import parent page css
+                importStyle: true,         // import style tags
+                printContainer: true,       // print outer container/$.selector
+                loadCSS: "",                // path to additional css file - use an array [] for multiple
+                pageTitle: "",              // add title to print page
+                removeInline: false,        // remove inline styles from print elements
+                removeInlineSelector: "*",  // custom selectors to filter inline styles. removeInline must be true
+                printDelay: 333,            // variable print delay
+                header: null,               // prefix to html
+                footer: null,               // postfix to html
+                base: false,                // preserve the BASE tag or accept a string for the URL
+                formValues: true,           // preserve input/form values
+                canvas: false,              // copy canvas content
+                // doctypeString: '...',       // enter a different doctype for older markup
+                removeScripts: false,       // remove script tags from print content
+                copyTagClasses: false,      // copy classes from the html & body tag
+                beforePrintEvent: null,     // function for printEvent in iframe
+                beforePrint: null,          // function called before iframe is filled
+                afterPrint: null            // function called before iframe is removed
+            });
+        }
+    </script>
+</body>
+
+</html>
