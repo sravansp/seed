@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard - SEED</title>
+    <title>Invoice - SEED</title>
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png">
@@ -238,8 +238,7 @@
                                 <div class="col-md-12">
                                     <div class="inner-table p-3 flex-col bg-light bradius-14 shadow-soft">
 
-
-                                        <div class="" style="padding:26px;">
+                                        <div class="invoice_section">
                                             <div class="invoices-view" id="Invoice-detail">
                                                 <form id="w0" action="/invoices/11" method="post">
                                                     <div
@@ -260,7 +259,8 @@
                                                     </div>
 
                                                     <div class="details-invoice">
-                                                        <div style="width: 50%;float: left; margin-bottom: 40px;">
+                                                        <div class="dinvoice"
+                                                            style="width: 50%;float: left; margin-bottom: 40px;">
                                                             <p class="fs-16" style="margin-bottom: 10px;">From</p>
                                                             <p class="fs-16"> <b> SEED INDIVIDUALIZED SPECIAL EDUCATION
                                                                     CENTER<br></b>
@@ -272,7 +272,8 @@
                                                             </p>
 
                                                         </div>
-                                                        <div style="width: 50%; float: right; margin-bottom: 40px;">
+                                                        <div class="dinvoice"
+                                                            style="width: 50%; float: right; margin-bottom: 40px;">
                                                             <div>
                                                                 <table border="1" class="table table-invoice"
                                                                     style="width: 74%; margin-bottom: 20px;">
@@ -386,6 +387,7 @@
                                                 </form>
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -400,6 +402,20 @@
             background: #c8edea;
         }
 
+        .invoice_section {
+            padding: 26px;
+        }
+
+        @media screen and (max-width:564px) {
+            .dinvoice {
+                width: 100% !important;
+            }
+
+            .invoice_section {
+                padding: 0;
+            }
+        }
+
         @media print {
             .table-invoice thead tr {
                 background: #c8edea;
@@ -409,6 +425,10 @@
                 background-color: #e7fbf8;
                 margin-bottom: 40px;
 
+            }
+
+            .invoice_section {
+                padding: 26px;
             }
 
             .dis-none-print {
