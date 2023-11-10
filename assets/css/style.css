@@ -296,7 +296,7 @@ input {
     list-style: none;
     display: flex;
     align-items: center;
-    position: relative;
+    /* position: relative; */
     margin-bottom: 8px;
     border-top-left-radius: 28px;
     border-bottom-left-radius: 28px;
@@ -470,7 +470,7 @@ body.dark .sidebar .toggle_icon .toggle {
 
 .sidebar .menu {
     /* top: 6%; */
-    position: relative;
+    /* position: relative; */
     padding-left: 14px;
 }
 
@@ -624,7 +624,8 @@ body.dark .sidebar .toggle_icon .toggle {
 
 .sidebar .menu-links li .sub-menu {
     position: absolute;
-    left: 226px;
+    left: 240px;
+    height: 100vh;
     top: 0;
     margin-top: 0;
     padding: 6px 6px;
