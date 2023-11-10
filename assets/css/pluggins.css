@@ -76,6 +76,8 @@
     left: -100000px;
     width: 100%;
     z-index: 1055;
+    box-shadow: var(--shadow-b) !important;
+    overflow: hidden;
 }
 
 .select2-results {
@@ -663,6 +665,10 @@
     border: 1px solid var(--primary-color) !important;
 }
 
+
+/* .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow i {
+    transform: rotate(90%);
+} */
 /* .select2-dropdown {
     border: 1px solid var(--primary-color);
 } */
@@ -1110,7 +1116,11 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-cancel {
     box-shadow: var(--shadow-neo) !important;
 }
 
-
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 13px;
+}
 
 
 

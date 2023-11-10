@@ -58,7 +58,8 @@ $(function (e) {
         minimumResultsForSearch: '',
         width: '100%'
     });
-
+    // $('b[role="presentation"]').hide();
+    // $('.select2-selection__arrow').append('<i class="ri-arrow-down-s-line"></i>');
 });
 
 $(function () {

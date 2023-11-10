@@ -183,6 +183,11 @@ input {
 .bg-card {
     background: var(--card-gradient) !important;
 }
+.bg-button-lg {
+    background: linear-gradient(276deg, rgb(48 213 199 / 11%) -19.38%, rgb(48 213 199 / 22%) -8.96%, rgb(48 213 199 / 42%) 45.21%, rgba(48, 213, 199, 0.85) 113.96%) !important;
+
+
+}
 
 .wrapper-primary-light {
     border-radius: 14px;
