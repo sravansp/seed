@@ -2382,10 +2382,11 @@ ul.collection li {
 }
 
 .date-picker.selected a {
-    background: var(--bg-primary-color) !important;
+    background: var(--bg-primary-color);
     border-radius: 7px;
     color: var(--text-white);
     box-shadow: var(--shadow-neo);
+    border: 1px solid var(--primary-color);
 }
 
 

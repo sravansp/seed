@@ -73,7 +73,7 @@ function initializeCalendar() {
             title: "This date is disabled due to an event"
         },
         {
-            date: "2023-10-23",
+            date: "2023-11-17",
             title: "This date is also disabled"
         }
     ];
@@ -191,6 +191,11 @@ function initializeCalendar() {
                             month === today.getMonth()
                         ) {
                             cell.className = "date-picker selected";
+                        }
+                        if (isDateDisabled(dateString) &  date === today.getDate() &&
+                        year === today.getFullYear() &&
+                        month === today.getMonth()) {
+                            cell.className = "date-picker selected disabled";
                         }
 
 
