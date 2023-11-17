@@ -172,12 +172,13 @@ function initializeCalendar() {
 
 
                         if (isDateDisabled(dateString)) {
-                            cell.className = "date-picker disabled";
-                            cell.innerHTML = "<a href='#' class='disabled pos-relative'>" + date + "</a>";
-
                             // Add a title attribute to the disabled date for the tooltip
                             const disabledDate = disabledDates.find(disabledDate => disabledDate.date === dateString);
-                            cell.title = disabledDate.title;
+                            // cell.title = disabledDate.title;
+                            cell.className = "date-picker disabled";
+                            cell.innerHTML = "<a href='#' class=' pos-relative' title='" + disabledDate.title + "'>" + date + "</a>";
+
+                            
 
 
                         } else {
