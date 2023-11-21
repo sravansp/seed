@@ -36,15 +36,15 @@ function initializeCalendar() {
 
     // Define an array of events with date information
     const events = [{
-            date: "2023-10-25",
+            date: "2023-11-21",
             event: "Noufal Sainulabdeen-Assessment "
         },
         {
-            date: "2023-10-26",
+            date: "2023-11-22",
             event: "Noufal Sainulabdeen-Package A"
         },
         {
-            date: "2023-10-27",
+            date: "2023-12-01",
             event: "Noufal Sainulabdeen-Consultation with Clinical Psychologist"
         },
         {
@@ -69,7 +69,7 @@ function initializeCalendar() {
 
 
     const disabledDates = [{
-            date: "2023-10-21",
+            date: "2023-12-1",
             title: "This date is disabled due to an event"
         },
         {
@@ -78,6 +78,11 @@ function initializeCalendar() {
         }
     ];
 
+    // Remove leading zeros from date values for Leaves
+    disabledDates.forEach(disabledDate => {
+        const dateParts = disabledDate.date.split('-');
+        disabledDate.date = dateParts.map(part => parseInt(part).toString()).join('-');
+    });
 
     var monthDefault = [
         "January",
