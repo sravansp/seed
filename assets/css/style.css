@@ -2319,6 +2319,7 @@ ul.collection li {
     border-collapse: collapse;
     width: 100%;
     height: 276px;
+    /* height: 370px; */
 }
 
 .table-calendar td,
@@ -2342,6 +2343,8 @@ ul.collection li {
     justify-content: center;
     align-items: center;
     transition: 0.3s;
+    max-height: 34px;
+    min-height: 34px;
 }
 
 .table-calendar td a:hover {
@@ -2362,7 +2365,7 @@ ul.collection li {
     border-radius: 7px;
     box-shadow: var(--shadow-neo);
     color: var(--text-white);
-    cursor: not-allowed;
+    /* cursor: not-allowed; */
 }
 
 .table-calendar td.disabled a:hover {
@@ -2370,7 +2373,7 @@ ul.collection li {
     border-radius: 7px;
     box-shadow: var(--shadow-neo);
     color: var(--text-white);
-    cursor: not-allowed;
+    cursor:default;
 }
 
 .table-calendar th {
@@ -2379,10 +2382,11 @@ ul.collection li {
 }
 
 .date-picker.selected a {
-    background: var(--bg-primary-color) !important;
+    background: var(--bg-primary-color);
     border-radius: 7px;
     color: var(--text-white);
     box-shadow: var(--shadow-neo);
+    border: 1px solid var(--primary-color);
 }
 
 

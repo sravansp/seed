@@ -287,9 +287,10 @@
                                                             id="loadingSpinner">
                                                             <span class="visually-hidden">Loading...</span>
                                                         </div>
-                                                        <div class="checkmark d-none fs-24 px-2" id="checkmarkSymbol">✓</div>
+                                                        <div class="checkmark d-none fs-24 px-2" id="checkmarkSymbol">✓
+                                                        </div>
                                                         <!-- Checkmark element (hidden by default) -->
-                                                    </div> 
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -596,6 +597,95 @@
                             </div>
 
 
+
+                            <!--Q-NAME, CHECKBOX Text HOVER POPOVER -->
+                            <div class="inner-wrapper w-full h-full bg-light bradius-7 mb-3 p-4">
+                                <div class="row mb-3">
+                                    <div class="col-12 col-md-5">
+                                        <p class="fs-16 mb-4 hov-pointer text-with-popover" data-bs-toggle="popover"
+                                            data-bs-html="true" data-bs-trigger="manual" data-bs-placement="top"
+                                            data-bs-content="<i class='ri-edit-2-line edit-icon fs-25 text-primary hov-pointer'></i> <i class='ri-eye-line view-icon fs-25 text-primary hov-pointer'></i>">
+                                            Previous
+                                            Diagnosis <span class="text-muted sub-title-left">(Select the box if the
+                                                problem
+                                                occurs)</span></p>
+                                    </div>
+                                    <div class="col-12 col-md-7">
+                                        <div class="mb-3 fs-14 form-items-wrapper">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault1">
+                                                <label class="form-check-label p-l-10" for="flexCheckDefault1">
+                                                    Reading
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault2">
+                                                <label class="form-check-label p-l-10" for="flexCheckDefault2">
+                                                    Slow
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault3">
+                                                <label class="form-check-label p-l-10" for="flexCheckDefault3">
+                                                    Spelling
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault4">
+                                                <label class="form-check-label p-l-10" for="flexCheckDefault4">
+                                                    Give Up Easily
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault5">
+                                                <label class="form-check-label p-l-10" for="flexCheckDefault5">
+                                                    Handwriting
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault1">
+                                                <label class="form-check-label p-l-10" for="flexCheckDefault1">
+                                                    Poor Memory
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault2">
+                                                <label class="form-check-label p-l-10" for="flexCheckDefault2">
+                                                    Written Expression
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault3">
+                                                <label class="form-check-label p-l-10" for="flexCheckDefault3">
+                                                    Poor Motivation
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault4">
+                                                <label class="form-check-label p-l-10" for="flexCheckDefault4">
+                                                    Arithmetic
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault5">
+                                                <label class="form-check-label p-l-10" for="flexCheckDefault5">
+                                                    Grade Repetition
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
                             <!--Q-NAME, CHECKBOX -->
                             <div class="inner-wrapper w-full h-full bg-light bradius-7 mb-3 p-4">
@@ -1021,6 +1111,45 @@
         document.getElementById('showToast').addEventListener('click', showToastWithCustomDelay);
         document.getElementById('hideToast').addEventListener('click', hideToastWithCustomDelay);
     </script>
+
+    <script>
+        var popoverTrigger = document.querySelector('[data-bs-toggle="popover"]');
+        var popover = new bootstrap.Popover(popoverTrigger, {
+            trigger: 'manual',
+            placement: 'top',
+        });
+
+        var hidePopoverTimeout;
+
+        popoverTrigger.addEventListener('mouseenter', function () {
+            popover.show();
+            clearTimeout(hidePopoverTimeout);
+        });
+
+        // Hide popover on mouse leave (including popover)
+        popoverTrigger.addEventListener('mouseleave', function () {
+            hidePopoverTimeout = setTimeout(function () {
+                popover.hide();
+            }, 1000);
+        });
+
+
+        document.querySelector('.popover').addEventListener('mouseenter', function () {
+            clearTimeout(hidePopoverTimeout);
+        });
+
+
+        document.addEventListener('mouseleave', function (event) {
+            if (!popoverTrigger.contains(event.relatedTarget) && !document.querySelector('.popover').contains(event.relatedTarget)) {
+                hidePopoverTimeout = setTimeout(function () {
+                    popover.hide();
+                }, 1000); 
+            }
+        });
+
+
+    </script>
+
 </body>
 
 </html>
