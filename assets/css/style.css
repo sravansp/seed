@@ -2358,6 +2358,7 @@ ul.collection li {
     background: var(--body-light-primary);
     border-radius: 7px;
     box-shadow: var(--shadow-neo);
+    color: #000;
 }
 
 .table-calendar td.disabled a {
