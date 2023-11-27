@@ -3211,6 +3211,12 @@ ul.collection li {
 }
 
 
+.assesment-tab .nav-pills .nav-link.active,
+.assesment-tab .nav-pills .show>.nav-link {
+    color: #007A6B;
+    box-shadow: var(--shadow-neo);
+}
+
 
 
 
