@@ -3216,8 +3216,29 @@ ul.collection li {
     color: #007A6B;
     box-shadow: var(--shadow-neo);
 }
+.assesment-tab-c .nav-pills {
+    justify-content: space-between;
+}
 
+.assesment-tab-c .nav-pills .nav-link,
+.assesment-tab-c .nav-pills .show>.nav-link {
+    background-color: #e2f2f1 !important;
+    color: #007A6B;
+    font-size: 20px;
+    font-style: normal;
+    font-family: poppins;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: left;
+    padding: 20px 25px !important;
 
+}
+
+.assesment-tab-c .nav-pills .nav-link.active,
+.assesment-tab-c .nav-pills .show>.nav-link {
+    color: #007A6B;
+    background-color: white !important;
+}
 
 
 
