@@ -543,7 +543,7 @@ body.dark .sidebar .toggle_icon .toggle {
     opacity: 1;
 }
 
-.sidebar li .tooltip {
+.sidebar.close li .tooltip {
     position: absolute;
     top: -20px;
     left: calc(100% + 30px);
@@ -560,11 +560,8 @@ body.dark .sidebar .toggle_icon .toggle {
     pointer-events: none;
     transition: 0s;
 }
-.sidebar.open li .tooltip {
-    display: none;
-}
 
-.sidebar li:hover .tooltip {
+.sidebar.close li:hover .tooltip {
     opacity: 1;
     pointer-events: auto;
     transition: all 0.4s ease;
@@ -572,7 +569,7 @@ body.dark .sidebar .toggle_icon .toggle {
     transform: translateY(-50%);
 }
 
-.sidebar li:has(.has-submenu) .tooltip {
+.sidebar.close li:has(.has-submenu) .tooltip {
     opacity: 0;
     display: none;
 }
