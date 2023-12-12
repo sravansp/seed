@@ -703,7 +703,14 @@
 
 .form-label {
     font-size: var(--text-size2) !important;
-    /* margin-bottom: 1.5rem; */
+ 
+}
+.form-label1 {
+    font-size: var(--text-size2) !important;
+    display: flex;
+  text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .form-check-label {
