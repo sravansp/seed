@@ -350,7 +350,7 @@
                                     aria-expanded="false"
                                     aria-controls="panelsStayOpen-collapseTwo"
                                   >
-                                    STUDENT PROFILE<span></span>
+                                    STUDENT PROFILE
                                   </button>
                                 </h2>
                                 <div
@@ -362,10 +362,10 @@
                                     <div class="row mt-3">
                                       <div class="col-md-12">
                                         <div
-                                          class="input-group flex-nowrap flex gap-4 mb-3"
+                                          class="input-group  flex-nowrap flex gap-4 mb-3"
                                         >
                                           <span
-                                            class="fs-16 mt-2 col-6 col-md-3"
+                                            class="fs-16 span-text  mt-2 col-6 span-text col-md-3"
                                             id="addon-wrapping"
                                             >Student Name</span
                                           >
@@ -379,10 +379,10 @@
                                         </div>
 
                                         <div
-                                          class="input-group flex-nowrap flex gap-4 mb-3"
+                                          class="input-group  flex-nowrap flex gap-4 mb-3"
                                         >
                                           <span
-                                            class="fs-16 mt-2 col-6 col-md-3"
+                                            class="fs-16 mt-2 col-6 span-text col-md-3"
                                             id="addon-wrapping"
                                             >Date Of Birth</span
                                           >
@@ -398,7 +398,7 @@
                                           class="input-group flex-nowrap flex gap-4 mb-3"
                                         >
                                           <span
-                                            class="fs-16 mt-2 col-6 col-md-3"
+                                            class="fs-16 mt-2 col-6 span-text col-md-3"
                                             id="addon-wrapping"
                                             >Age</span
                                           >
@@ -414,13 +414,13 @@
                                           class="input-group flex-nowrap flex gap-4 mb-3"
                                         >
                                           <span
-                                            class="fs-16 mt-2 col-3 col-md-3"
+                                            class="fs-16 span-text mt-2 col-3 col-md-3"
                                             id="addon-wrapping"
                                             >Class and Division</span
                                           >
                                           <input
                                             type="text"
-                                            class="form-control rounded-3 col-3 col-md-3"
+                                            class="form-control class-ph rounded-3 col-3 col-md-3"
                                             placeholder="Enter Class"
                                             aria-label="Username"
                                             aria-describedby="addon-wrapping"
@@ -428,7 +428,7 @@
                                           <input
                                             type="text"
                                             class="form-control rounded-3 col-6 col-md-3"
-                                            placeholder="Enter Division"
+                                            placeholder="Enter Div"
                                             aria-label="Username"
                                             aria-describedby="addon-wrapping"
                                           />
@@ -438,7 +438,7 @@
                                           class="input-group flex-nowrap flex gap-4 mb-3"
                                         >
                                           <span
-                                            class="fs-16 mt-2 col-6 col-md-3"
+                                            class="fs-16 mt-2 col-6 span-text col-md-3"
                                             id="addon-wrapping"
                                             >School</span
                                           >
@@ -455,7 +455,7 @@
                                           class="flex input-group gap-4 mb-3"
                                         >
                                           <span
-                                            class="fs-16 mt-2 col-6 col-md-3"
+                                            class="fs-16 mt-2 col-6 span-text col-md-3"
                                             id="addon-wrapping"
                                             >Academic year</span
                                           >
@@ -478,8 +478,8 @@
 
                                         <div class="row mt-3">
                                           <div class="col-2 col-md-4">
-                                            <p class="fs-16 mb-4">
-                                              Barriers to Learning <br />
+                                            <p class="fs-16 barriers mb-4">
+                                              Barriers to Learning 
                                               Identified
                                             </p>
                                           </div>
@@ -551,7 +551,7 @@
                                           class="input-group flex-nowrap flex gap-4 mb-3"
                                         >
                                           <span
-                                            class="fs-16 mt-2 col-6 col-md-3"
+                                            class="fs-16 mt-2 col-6 span-text col-md-3"
                                             id="addon-wrapping"
                                             >Exceptionality Identified</span
                                           >
@@ -568,7 +568,7 @@
                                           class="input-group flex-nowrap flex gap-4 mb-3"
                                         >
                                           <span
-                                            class="fs-16 mt-2 col-6 col-md-3"
+                                            class="fs-16 mt-2 col-6 span-text col-md-3"
                                             id="addon-wrapping"
                                             >Placement</span
                                           >
@@ -584,7 +584,7 @@
                                           class="input-group flex-nowrap flex gap-4 mb-3"
                                         >
                                           <span
-                                            class="fs-16 mt-2 col-6 col-md-3"
+                                            class="fs-16 mt-2 span-text  col-6 col-md-3"
                                             id="addon-wrapping"
                                             >IEP Time Line
                                           </span>
@@ -2821,6 +2821,40 @@
         font-size: 14px !important;
         width: auto !important;
       }
+      @media (max-width: 576px) {
+        .FAR {
+        margin: 10px;
+        margin-top: 35px;
+        width: 100%;
+        height: 80px;
+        background-color: var(--main-primary);
+        border-radius: 7px;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        color: var(--text-white);
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 35px;
+      }
+      .span-text{
+        font-size: small;
+      }
+      .form-control::placeholder{
+        font-size: 11px;
+      }
+      .form-control1 ::placeholder
+      {
+        font-size: 10px;
+      }
+      .barriers{
+        font-size: small;
+      }
+    
+      }
+
+   
     </style>
 
     <script
