@@ -1,0 +1,2740 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - SEED</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="./assets/images/favicon/site.webmanifest" />
+    <link rel="mask-icon" href="./assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <link rel="stylesheet" href="./assets/pluggins/bootstrap/css/bootstrap.min.css" />
+
+    <!-- DATEPICKER CSS  -->
+    <link rel="stylesheet" href="./assets/pluggins/datetimepicker/css/gijgo.css" />
+
+    <!-- Icon Used: Remix Icon | https://remixicon.com/-->
+    <link rel="stylesheet" href="./assets/pluggins/remixicon/remixicon.css" />
+
+    <link rel="stylesheet" href="./assets/css/pluggins.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/util.css" />
+
+    <style>
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 20px;
+        }
+
+        .td1 {
+            background-color: #99e7e7;
+        }
+
+        .td2 {
+            width: 70%;
+        }
+
+        .td3 {
+            padding: 15px 2px 15px 2px;
+            text-align: center;
+        }
+
+        .two-column {
+            -webkit-column-count: 2;
+            -moz-column-count: 2;
+            column-count: 2;
+        }
+
+        @media print {
+            #td1 {
+                background-color: #99e7e7 !important;
+                -webkit-print-adjust-color: exact;
+            }
+
+            button {
+                visibility: hidden;
+            }
+
+            .two-column {
+                -webkit-column-count: 2;
+                -moz-column-count: 2;
+                column-count: 2;
+            }
+        }
+    </style>
+</head>
+
+<body class="light mode">
+    <div class="popup-toggle toggle-switch d-block d-lg-none">
+        <i class="ri-moon-fill fs-25 text-primary"></i>
+    </div>
+    <!-- Sidebar Start -->
+    <div class="app-sidebar__overlay active" data-bs-toggle="sidebar"></div>
+    <nav class="sidebar open">
+        <header>
+            <div class="image-text">
+                <div class="image">
+                    <img src="./assets/images/brand/logo.png" alt="logo" />
+                </div>
+                <div class="text logo-text">
+                    <h1 class="fs-24">SEED</h1>
+                </div>
+            </div>
+        </header>
+        <div class="toggle_icon">
+            <span class="toggle">
+                <i class="ri-arrow-right-s-line"></i>
+            </span>
+        </div>
+        <div class="menu-bar">
+            <div class="menu h-full">
+                <ul class="menu-links flex gap-5 h-full flex-col ps-0 justify-content-evenly">
+                    <div class="top-menu-links">
+                        <p class="p-l-20 p-b-8 fs-12 title-menu">General</p>
+                        <li class="nav-link">
+                            <a href="dash-admin.html">
+                                <i class="ri-home-4-fill icon"></i>
+                                <span class="text nav-text">Dashboard</span>
+                                <span class="tooltip">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="dash-admin-student.html">
+                                <i class="ri-team-fill icon"></i>
+                                <span class="text nav-text">Student Management</span>
+                                <span class="tooltip">Student Management</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="dash-admin-user.html">
+                                <i class="ri-user-2-fill icon"></i>
+                                <span class="text nav-text">User Management</span>
+                                <span class="tooltip">User Management</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="dash-admin-appoinment.html">
+                                <i class="ri-calendar-fill icon"></i>
+                                <span class="text nav-text">Appointments</span>
+                                <span class="tooltip">Appointments</span>
+                            </a>
+                        </li>
+                    </div>
+                    <div class="bottom-menu-links">
+                        <p class="p-l-20 p-b-8 fs-12 title-menu">Others</p>
+                        <li class="nav-link">
+                            <a href="/form-files.html">
+                                <i class="ri-file-copy-2-fill icon"></i>
+                                <span class="text nav-text">Forms and Files</span>
+                                <span class="tooltip">Forms and Files</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="components.html">
+                                <i class="ri-settings-5-fill icon"></i>
+                                <span class="text nav-text">Account Settings</span>
+                                <span class="tooltip">Account Settings</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="help.html">
+                                <i class="ri-customer-service-2-fill icon"></i>
+                                <span class="text nav-text">Help and Supporrt</span>
+                                <span class="tooltip">Help and Supporrt</span>
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="bottom-content flex justify-content-center">
+                <!-- <li class="nav-link"> -->
+                <a href="./login.html" class="btn btn-light text-primary">
+                    <div class="p-1 rounded-circle bg-primary">
+                        <i class="ri-shut-down-line text-white fs-20"></i>
+                    </div>
+                    <span class="text nav-text text-primary">Logout</span>
+                    <!-- <span class="tooltip">Logout</span> -->
+                </a>
+                <!-- </li> -->
+            </div>
+        </div>
+    </nav>
+    <!-- Sidebar End  -->
+
+    <div class="overlay_section"></div>
+    <main class="home">
+        <!-- NAVBAR START  -->
+        <nav class="navbar py-4">
+            <div class="container-fluid px-md-4">
+                <div class="navbar_container navbar-menu-wrapper d-flex align-items-center">
+                    <a aria-label="hide-sidebar" class="d-lg-none app-sidebar__toggle" data-bs-toggle="sidebar"
+                        href="javascript:void(0);">
+                        <i class="ri-menu-2-line text-primary fs-25"></i>
+                    </a>
+                    <form class="d-flex d-none d-md-block" role="search">
+                        <div class="nav-search">
+                            <i class="ri-search-line fs-25"></i>
+                            <input class="" type="search" placeholder="Search" aria-label="Search" />
+                        </div>
+                    </form>
+                    <ul class="navbar-nav mb-0 flex-row gap-4 flex-m">
+                        <li class="nav-item d-block d-md-none">
+                            <div class="dropdown d-block d-lg-none position-static">
+                                <a href="javascript:void(0);" class="nav-link icon" data-bs-toggle="dropdown">
+                                    <i class="ri-search-line fs-25 text-primary"></i>
+                                </a>
+                                <div class="dropdown-menu header-search dropdown-menu-start">
+                                    <div class="input-group w-100 p-2">
+                                        <input type="text" class="form-control" placeholder="Search...." />
+                                        <div class="btn btn-primary">
+                                            <i class="ri-search-line fs-25"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- <li class="nav-item d-none d-lg-block">
+                            <div class="toggle-switch">
+                                <i class="ri-moon-fill fs-25 text-primary"></i>
+                            </div>
+                        </li> -->
+                        <li class="nav-item">
+                            <div class="pos-relative">
+                                <i class="ri-notification-4-fill fs-25 not text-primary"></i>
+                                <div class="nav-notification"></div>
+                            </div>
+                        </li>
+                        <li class="nav-item gap-2 flex-m dropdown user-drop">
+                            <a class="nav-link" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="pro-pic rounded-circle">
+                                    <img src="./assets/images/user.png" alt="" />
+                                </div>
+                            </a>
+                            <div class="pro-data flex-col flex-c d-none d-md-flex">
+                                <p class="pro-name fs-14 fw-500">Harris M</p>
+                                <p class="pro-pos fs-12">Admin</p>
+                            </div>
+                            <div class="dropdown-menu">
+                                <a href="./profile.html" class="dropdown-item fs-14">Profile</a>
+                                <a href="#" class="dropdown-item fs-14">Sign Out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content Start  -->
+        <div class="content pb-4">
+            <div class="container-fluid px-md-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="wrapper-body admin-dash-user w-full flex-col gap-4">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="wrapper-primary-light bg-primary-light w-full">
+
+                                        <!-- PART A -->
+                                        <div id="printableArea">
+                                            <div>
+                                                <button onclick="printDiv('printableArea')" style="
+                              border: none;
+                              outline: none;
+                              background-color: #84f8f8;
+                              padding: 5px;
+                              border-radius: 8px;
+                              color: white;
+                            ">
+                                                    Print
+                                                </button>
+                                            </div>
+                                            <div style="text-align: center">
+                                                the SPECIAL EDUCATIONAL PRACTICE
+                                            </div>
+                                            <div style="
+                            text-align: center;
+                            margin-top: 30px;
+                            text-decoration: underline;
+                          ">
+                                                PSYCHOEDUCATIONAL ASSESSMENT
+                                            </div>
+                                            <div style="text-align: center">Report</div>
+                                            <div style="text-align: center; margin-top: 10px">
+                                                Part A
+                                            </div>
+                                            <table style="
+                            margin-top: 10px;
+                            margin-left: auto;
+                            margin-right: auto;
+                            border-collapse: collapse;
+                            text-align: center;
+                            width: 100%;
+                          ">
+                                                <tr>
+                                                    <td class="td1">Student Name</td>
+                                                    <td id="name" class="td2"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="td1">Date of Birth</td>
+                                                    <td id="birth"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="td1">Age</td>
+                                                    <td id="age" class="td2"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="td1">Gender</td>
+                                                    <td id="gender" class="td2"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="td1">Class</td>
+                                                    <td id="class" class="td2"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="td1">School</td>
+                                                    <td id="school" class="td2"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="td1">Month and Year of Assessment</td>
+                                                    <td id="assessment" class="td2"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="td1">Date of Report</td>
+                                                    <td id="dateofreport" class="td2"></td>
+                                                </tr>
+                                            </table>
+                                            <p style="
+                            text-align: justify;
+                            margin-top: 40px;
+                            margin-left: auto;
+                            margin-right: auto;
+                          ">
+                                                This report is CONFIDENTIAL and should be restricted
+                                                to the family, teachers, and other persons with a
+                                                professional interest in helping this child. It
+                                                relates to the condition and needs of the child as
+                                                seen at the time of assessment. Due to the changing
+                                                and developing nature of children the information and
+                                                recommendations contained in this report are meant for
+                                                cureent use. Reference to or use of the informations
+                                                in this report in future years should be made with
+                                                considerable caution.
+                                            </p>
+                                            <p style="text-align: center; margin-top: 50px">
+                                                www.seedse.ae
+                                            </p>
+                                        </div>
+                                        <!-- PART -B -->
+                                        <div style="margin-top: 50px" id="printableArea2">
+                                            <div>
+                                                <button onclick="printDiv2('printableArea2')" style="
+                              border: none;
+                              outline: none;
+                              background-color: #84f8f8;
+                              padding: 5px;
+                              border-radius: 8px;
+                              color: white;
+                            ">
+                                                    Print
+                                                </button>
+                                            </div>
+                                            <div style="background-color: #99e7e7; margin-top: 10px">
+                                                <div style="font-weight: 900; text-align: center">
+                                                    ASSESSMENT REPORT
+                                                </div>
+                                                <div style="text-align: center">
+                                                    (For educators / service providers)
+                                                </div>
+                                                <div style="font-weight: 900; text-align: center">
+                                                    PART-B:Basic Information
+                                                </div>
+                                                <div style="padding-left: 10px; font-weight: 900">
+                                                    Name of the Child:
+                                                </div>
+                                            </div>
+                                            <div style="
+                            margin-top: 30px;
+                            font-weight: 900;
+                            background-color: #99e7e7;
+                            padding-left: 10px;
+                          ">
+                                                PURPOSE OF ASSESSMENT
+                                            </div>
+                                            <div style="overflow: auto">
+                                                <table style="
+                              margin-top: 30px;
+                              width: 100%;
+                              font-size: x-small;
+                            ">
+                                                    <tr>
+                                                        <td class="td3">
+                                                            Assessment for Identification/Diagnosis
+                                                        </td>
+                                                        <td class="td3">Admission to School</td>
+                                                        <td class="td3">Program Planning/Intervention</td>
+                                                        <td class="td3">Progress Monitoring</td>
+                                                        <td class="td3">Re-Assessment</td>
+                                                        <td class="td3">Certification</td>
+                                                        <td class="td3">Other</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div style="margin-top: 15px">
+                                                <p>Parents reported difficulties in:</p>
+                                                <div style="margin-top: 15px">
+                                                    <h6 style="
+                                font-weight: 900;
+                                text-decoration: underline;
+                              ">
+                                                        Academic Difficulties
+                                                    </h6>
+                                                    <p>Reading</p>
+                                                    <p>Reading</p>
+                                                    <p>Reading</p>
+                                                    <p>Reading</p>
+                                                    <p>Reading</p>
+                                                    <p>Reading</p>
+                                                    <p>Reading</p>
+                                                    <p>Reading</p>
+                                                    <p>Reading</p>
+                                                    <p>Reading</p>
+                                                    <p>Reading</p>
+                                                    <p>Reading</p>
+                                                    <p>Reading</p>
+                                                    <p>Reading</p>
+                                                </div>
+                                                <div style="margin-top: 15px">
+                                                    <h6 style="
+                                font-weight: 900;
+                                text-decoration: underline;
+                              ">
+                                                        Attention Difficulties
+                                                    </h6>
+                                                    <p>Reading</p>
+                                                    <p>Reading</p>
+                                                    <p>Reading</p>
+                                                    <p>Reading</p>
+                                                </div>
+                                                <div style="margin-top: 15px">
+                                                    <h6 style="
+                                font-weight: 900;
+                                text-decoration: underline;
+                              ">
+                                                        Communication Difficulties
+                                                    </h6>
+                                                    <p>Reading</p>
+                                                    <p>Reading</p>
+                                                    <p>Reading</p>
+                                                    <p>Reading</p>
+                                                    <p>Reading</p>
+                                                    <p>Reading</p>
+                                                    <p>Reading</p>
+                                                    <p>Reading</p>
+                                                </div>
+                                            </div>
+                                            <div style="
+                            margin-top: 30px;
+                            position: relative;
+                            width: 100%;
+                          ">
+                                                <p style="left: 0%; position: absolute">
+                                                    <a href="https://www.seed.ae/">www.seed.ae</a>
+                                                </p>
+                                                <p style="right: 0%; position: absolute">
+                                                    the Special Educational
+                                                </p>
+                                            </div>
+                                            <div style="
+                            margin-top: 100px;
+                            font-weight: 900;
+                            background-color: #99e7e7;
+                            padding-left: 10px;
+                          ">
+                                                CURRENT EDUCATIONAL PLACEMENT
+                                            </div>
+                                            <table style="
+                            margin-top: 20px;
+                            width: 100%;
+                            font-size: x-small;
+                          ">
+                                                <tr>
+                                                    <td class="td3">Regular School</td>
+                                                    <td class="td3">Special School</td>
+                                                    <td class="td3">Home School</td>
+                                                    <td class="td3">Other</td>
+                                                </tr>
+                                            </table>
+                                            <div style="
+                            margin-top: 30px;
+                            font-weight: 900;
+                            background-color: #99e7e7;
+                            padding-left: 10px;
+                          ">
+                                                EDUCATIONAL HISTORY
+                                            </div>
+                                            <div class="two-column" style="margin-top: 10px">
+                                                <div>
+                                                    <p>Entered the current school in class</p>
+                                                    <p>Type of School</p>
+                                                    <p>Board</p>
+                                                    <p>Classroom Strength</p>
+                                                    <p>Grades Repeated</p>
+                                                    <p>Attendance</p>
+                                                    <p>Academic Performance</p>
+                                                    <p>Peer group Adjustment</p>
+                                                    <p>Special Education Services</p>
+                                                    <p>Has Received Related Services</p>
+                                                </div>
+                                                <div>
+                                                    <p>:</p>
+                                                    <p>:</p>
+                                                    <p>:</p>
+                                                    <p>:</p>
+                                                    <p>:</p>
+                                                    <p>:</p>
+                                                    <p>:</p>
+                                                    <p>:</p>
+                                                    <p>:</p>
+                                                    <p>:</p>
+                                                </div>
+                                            </div>
+
+                                            <div style="margin-top: 15px">
+                                                <h6 style="font-weight: 900; text-decoration: underline">
+                                                    Hearing and Vision Impairments
+                                                </h6>
+                                                <p>Vision</p>
+                                                <p>Hearing</p>
+                                                <p>Speech</p>
+                                            </div>
+                                            <div style="margin-top: 15px">
+                                                <h6 style="font-weight: 900; text-decoration: underline">
+                                                    Sensory & Social Behaviour Difficulties
+                                                </h6>
+                                                <p>Hypersensitive / Hyposensitive to Light</p>
+                                                <p>Hypersensitive / Hyposensitive to Smell</p>
+                                                <p>Hypersensitive / Hyposensitive to Touch</p>
+                                                <p>Hypersensitive / Hyposensitive to Sound</p>
+                                                <p>Hypersensitive / Hyposensitive to Taste</p>
+                                                <p>Sensory Seeking</p>
+                                                <p>Cover Eyes / Ears</p>
+                                                <p>Easily Overstimulated</p>
+                                                <p>Preference for Hard Toys</p>
+                                                <p>High pain Threshold</p>
+                                                <p>Infatuation with Fan or Light Switches</p>
+                                            </div>
+
+                                            <div style="
+                            margin-top: 30px;
+                            font-weight: 900;
+                            background-color: #99e7e7;
+                            padding-left: 10px;
+                          ">
+                                                CURRENT EDUCATIONAL PLACEMENT
+                                            </div>
+                                            <table style="margin-top: 20px; width: 100%">
+                                                <tr>
+                                                    <td>Birth & Developmental History :</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        Previous Consultations, Assessments, and Diagnosis
+                                                        :
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Current Treatments :</td>
+                                                </tr>
+                                            </table>
+                                            <div style="
+                            margin-top: 30px;
+                            position: relative;
+                            width: 100%;
+                          ">
+                                                <p style="left: 0%; position: absolute">
+                                                    <a href="https://www.seed.ae/">www.seed.ae</a>
+                                                </p>
+                                                <p style="right: 0%; position: absolute">
+                                                    the Special Educational
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <!-- PART-C -->
+                                        <div id="printableArea3">
+                                            <div style="margin-top: 100px;">
+                                                <button onclick="printDiv('printableArea3')" style="
+                                border: none;
+                                outline: none;
+                                background-color: #84f8f8;
+                                padding: 5px;
+                                border-radius: 8px;
+                                color: white;
+                              ">
+                                                    Print
+                                                </button>
+                                            </div>
+                                            <div style="margin-top: 20px;">
+                                                <div style="background-color: #99e7e7; margin-top: 10px">
+                                                    <div style="font-weight: 900; text-align: center">
+                                                        ASSESSMENT REPORT
+                                                    </div>
+                                                    <div style="text-align: center">
+                                                        (For educators / service providers)
+                                                    </div>
+                                                    <div style="font-weight: 900; text-align: center">
+                                                        PART-C: Psychological Assessment
+                                                    </div>
+                                                    <div style="padding-left: 10px; font-weight: 900">
+                                                        Name of the Child:
+                                                    </div>
+                                                </div>
+                                                <div style="
+                            margin-top: 30px;
+                            font-weight: 900;
+                            background-color: #99e7e7;
+                            padding-left: 10px;
+                          ">
+                                                    SOCIAL MATURITY / ADAPTIVE BEHAVIOUR
+                                                </div>
+                                                <div style="margin-top: 15px">
+                                                    <h6 style="font-weight: 900; text-decoration: underline">
+                                                        Vineland Social Maturity Scale
+                                                    </h6>
+                                                    <p>VSMS is a wisely-used psychometric assessment instrument designed
+                                                        to measure social competence and adaptive behaviour of Indian
+                                                        children</p>
+
+                                                </div>
+                                                <div class="two-column" style="margin-top: 10px">
+                                                    <div>
+                                                        <p>Social Age</p>
+                                                        <p>Social Quotient</p>
+                                                        <p>Interpretation</p>
+                                                    </div>
+                                                    <div>
+                                                        <p>:</p>
+                                                        <p>:</p>
+                                                        <p>:</p>
+                                                    </div>
+                                                </div>
+                                                <p style="text-align: center; margin-top: 30px;">Norms</p>
+                                                <table style="width: 100%; text-align: center;">
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3; font-weight: bold;">VSMS
+                                                            Score</td>
+                                                        <td style="background-color: #c7f3f3; font-weight: bold;">
+                                                            Interpretation</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Less than 70</td>
+                                                        <td>Below Average</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>70 - 89</td>
+                                                        <td>Near Average</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>90 - 109</td>
+                                                        <td>Average</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>110 - 129</td>
+                                                        <td>Above Average</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Above 130</td>
+                                                        <td>Superior</td>
+                                                    </tr>
+                                                </table>
+                                                <div style="margin-top: 15px">
+                                                    <h6 style="font-weight: 900; text-decoration: underline">
+                                                        Vineland Social Maturity Scale-3
+                                                    </h6>
+                                                    <p>VSMS is a wisely-used psychometric assessment instrument designed
+                                                        to measure social competence and adaptive behaviour of Indian
+                                                        children VSMS is a wisely-used psychometric assessment
+                                                        instrument designed
+                                                        to measure social competence and adaptive behaviour of Indian
+                                                        children VSMS is a wisely-used psychometric assessment
+                                                        instrument designed
+                                                        to measure social competence and adaptive behaviour of Indian
+                                                        children</p>
+                                                </div>
+                                                <table
+                                                    style="width: 100%; text-align: center; font-size: x-small; margin-top: 20px;">
+                                                    <tr style="background-color: #c7f3f3; font-weight: bold;">
+                                                        <td>Adaptive Level</td>
+                                                        <td colspan="3" style="">COMMUNICATION</td>
+                                                        <td colspan="3">DAILY LIVING</td>
+                                                        <td colspan="3">SOCIALIZATION</td>
+                                                        <td colspan="2">MOTOR SKILLS</td>
+                                                    </tr>
+                                                    <tr style="font-weight: bold;">
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                        <td>R*</td>
+                                                        <td>E</td>
+                                                        <td>W</td>
+                                                        <td>P</td>
+                                                        <td>C</td>
+                                                        <td>D</td>
+                                                        <td>IP</td>
+                                                        <td>PLT</td>
+                                                        <td>CS</td>
+                                                        <td>G</td>
+                                                        <td>F</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">High</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Moderate High</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Adequate</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Moderate Low</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Low</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </table>
+                                                <p style="font-size: x-small;">*Respective,
+                                                    Expressive,Written,Personal,Domestic,Community,Interpersonal,Play &
+                                                    Leisure Time,Coping skills,Gross and Fine</p>
+                                                <div class="two-column" style="margin-top: 10px; ">
+                                                    <div>
+                                                        <p>Adaptive Level:</p>
+                                                    </div>
+                                                    <div style="display: inline-grid;">
+                                                        <span>High</span>
+                                                        <span>Moderately High</span>
+                                                        <span>Adequate</span>
+                                                        <span>Moderately Low</span>
+                                                        <span>Low</span>
+                                                    </div>
+                                                </div>
+                                                <div style="margin-top: 15px">
+                                                    <h6 style="font-weight: 900; text-decoration: underline">
+                                                        Adaptive Behaviour Assessment-3
+                                                    </h6>
+                                                    <p>VSMS is a wisely-used psychometric assessment instrument designed
+                                                        to measure social competence and adaptive behaviour of Indian
+                                                        children VSMS is a wisely-used psychometric assessment
+                                                        instrument designed
+                                                        to measure social competence and adaptive behaviour of Indian
+                                                        children VSMS is a wisely-used psychometric assessment
+                                                        instrument designed
+                                                        to measure social competence and adaptive behaviour of Indian
+                                                        children</p>
+                                                </div>
+                                                <p style="margin-top: 20px;">Parent Form (0 to 5 years)</p>
+                                                <table style="width: 100%;">
+                                                    <tr style="background-color: #c7f3f3;">
+                                                        <td style="text-align: center;">Adaptive Skill Area</td>
+                                                        <td style="text-align: center;">Raw Score</td>
+                                                        <td colspan="4" style="text-align: center;">Scaled Scores</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Communication</td>
+                                                        <td></td>
+                                                        <td style="text-align: right;">1</td>
+                                                        <td></td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Community Use</td>
+                                                        <td></td>
+                                                        <td style="text-align: right;">2</td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Functional Pre-Academics
+                                                        </td>
+                                                        <td></td>
+                                                        <td style="text-align: right;">3</td>
+                                                        <td></td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Home Living</td>
+                                                        <td></td>
+                                                        <td style="text-align: right;">4</td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Health and Safety</td>
+                                                        <td></td>
+                                                        <td style="text-align: right;">5</td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Leisure</td>
+                                                        <td></td>
+                                                        <td style="text-align: right;">6</td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                        <td></td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Self-Care</td>
+                                                        <td></td>
+                                                        <td style="text-align: right;">7</td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Self-Direction</td>
+                                                        <td></td>
+                                                        <td style="text-align: right;">8</td>
+                                                        <td></td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Social</td>
+                                                        <td></td>
+                                                        <td style="text-align: right;">9</td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                        <td></td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Motor</td>
+                                                        <td></td>
+                                                        <td style="text-align: right;">10</td>
+                                                        <td colspan="3">Note:Motor is included in the GAC but not
+                                                            adaptive domains</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Sum of Scaled Scores</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr style="background-color: #c7f3f3; text-align: center;">
+                                                        <td colspan="2"></td>
+                                                        <td>GAC</td>
+                                                        <td>Conceptual</td>
+                                                        <td>Social</td>
+                                                        <td>Practical</td>
+                                                    </tr>
+                                                </table>
+                                                <p style="margin-top: 20px;">Parent Form (5 to 21 years)</p>
+                                                <table style="width: 100%;">
+                                                    <tr style="background-color: #c7f3f3;">
+                                                        <td style="text-align: center;">Adaptive Skill Area</td>
+                                                        <td style="text-align: center;">Raw Score</td>
+                                                        <td colspan="4" style="text-align: center;">Scaled Scores</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Communication</td>
+                                                        <td></td>
+                                                        <td style="text-align: right;">1</td>
+                                                        <td></td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Community Use</td>
+                                                        <td></td>
+                                                        <td style="text-align: right;">2</td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Functional Pre-Academics
+                                                        </td>
+                                                        <td></td>
+                                                        <td style="text-align: right;">3</td>
+                                                        <td></td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Home Living</td>
+                                                        <td></td>
+                                                        <td style="text-align: right;">4</td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Health and Safety</td>
+                                                        <td></td>
+                                                        <td style="text-align: right;">5</td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Leisure</td>
+                                                        <td></td>
+                                                        <td style="text-align: right;">6</td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                        <td></td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Self-Care</td>
+                                                        <td></td>
+                                                        <td style="text-align: right;">7</td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Self-Direction</td>
+                                                        <td></td>
+                                                        <td style="text-align: right;">8</td>
+                                                        <td></td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Social</td>
+                                                        <td></td>
+                                                        <td style="text-align: right;">9</td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                        <td></td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">(Work)</td>
+                                                        <td></td>
+                                                        <td style="text-align: right;">10</td>
+                                                        <td colspan="3">Note:Work is not included in the GAC but not
+                                                            adaptive domains</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Sum of Scaled Scores</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr style="background-color: #c7f3f3; text-align: center;">
+                                                        <td colspan="2"></td>
+                                                        <td>GAC</td>
+                                                        <td>Conceptual</td>
+                                                        <td>Social</td>
+                                                        <td>Practical</td>
+                                                    </tr>
+                                                </table>
+                                                <div>
+                                                    <p>Interpretation:</p>
+                                                </div>
+                                                <div class="two-column" style="margin-top: 10px">
+                                                    <div>
+                                                        <p>Conceptual Deficit</p>
+                                                        <p>Social Deficit</p>
+                                                        <p>Practical Deficit</p>
+                                                    </div>
+                                                    <div>
+                                                        <p>: &nbsp; &nbsp; &nbsp; Present &nbsp; &nbsp; &nbsp; &nbsp;
+                                                            &nbsp; Absent &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Deferred
+                                                        </p>
+                                                        <p>: &nbsp; &nbsp; &nbsp; Present &nbsp; &nbsp; &nbsp; &nbsp;
+                                                            &nbsp; Absent &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Deferred
+                                                        </p>
+                                                        <p>: &nbsp; &nbsp; &nbsp; Present &nbsp; &nbsp; &nbsp; &nbsp;
+                                                            &nbsp; Absent &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Deferred
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div style="
+                                                margin-top: 30px;
+                                                font-weight: 900;
+                                                background-color: #99e7e7;
+                                                padding-left: 10px;
+                                              ">
+                                                    DEVELOPMENTAL PROFILE
+                                                </div>
+                                                <div style="margin-top: 15px">
+                                                    <h6 style="font-weight: 900; text-decoration: underline">
+                                                        Developmental Profiles-3
+                                                    </h6>
+                                                    <p>VSMS is a wisely-used psychometric assessment instrument designed
+                                                        to measure social competence and adaptive behaviour of Indian
+                                                        children VSMS is a wisely-used psychometric assessment
+                                                        instrument designed
+                                                        to measure social competence and adaptive behaviour of Indian
+                                                        children VSMS is a wisely-used psychometric assessment
+                                                        instrument designed
+                                                        to measure social competence and adaptive behaviour of Indian
+                                                        children</p>
+                                                </div>
+                                                <table style="width: 100%; margin-top: 30px;">
+                                                    <tr
+                                                        style="background-color: #c7f3f3; text-align: center; font-weight: bold;">
+                                                        <td>SCALE</td>
+                                                        <td>Raw Score</td>
+                                                        <td>S Score</td>
+                                                        <td>Descriptive Category</td>
+                                                        <td>% Rank</td>
+                                                        <td>Age Equivalent</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Physical</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Adaptive Behaviour</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Social-Emotional</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Cognitive</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Comminication</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">GENERAL DEVELOPMENT SCORE
+                                                        </td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </table>
+                                                <div style="
+                                                margin-top: 30px;
+                                                font-weight: 900;
+                                                background-color: #99e7e7;
+                                                padding-left: 10px;
+                                              ">
+                                                    INTELLECTUAL ABILITY / FUNCTIONING
+                                                </div>
+                                                <div style="margin-top: 15px">
+                                                    <h6 style="font-weight: 900; text-decoration: underline">
+                                                        Wechsler Intelligence Scale for Children
+                                                    </h6>
+                                                    <p>VSMS is a wisely-used psychometric assessment instrument designed
+                                                        to measure social competence and adaptive behaviour of Indian
+                                                        children VSMS is a wisely-used psychometric assessment
+                                                        instrument designed
+                                                        to measure social competence and adaptive behaviour of Indian
+                                                        children VSMS is a wisely-used psychometric assessment
+                                                        instrument designed
+                                                        to measure social competence and adaptive behaviour of Indian
+                                                        children</p>
+                                                </div>
+                                                <table style="width: 100%; margin-top: 30px;">
+                                                    <tr
+                                                        style="background-color: #c7f3f3; text-align: center; font-weight: bold;">
+                                                        <td>SCALE</td>
+                                                        <td>Sum of Scaled Scores</td>
+                                                        <td>Composite Score</td>
+                                                        <td>Qualilative Description</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Verbal Comprehension</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Visual Spatial</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Fluid Reasoning</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Working Memory</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Processing Speed</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Full Scale</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+
+                                                    </tr>
+                                                </table>
+                                                <div class="two-column" style="margin-top: 10px">
+                                                    <div>
+                                                        <p>FSIQ</p>
+                                                        <p>Level of intellectual functioning</p>
+
+                                                    </div>
+                                                    <div>
+                                                        <p>:</p>
+                                                        <p>:</p>
+
+                                                    </div>
+                                                </div>
+                                                <div style="margin-top: 15px">
+                                                    <h6 style="font-weight: 900; text-decoration: underline">
+                                                        Standard Progressive Matrices
+                                                    </h6>
+                                                    <p>VSMS is a wisely-used psychometric assessment instrument designed
+                                                        to measure social competence and adaptive behaviour of Indian
+                                                        children VSMS is a wisely-used psychometric assessment
+                                                        instrument designed
+                                                        to measure social competence and adaptive behaviour of Indian
+                                                    </p>
+                                                </div>
+                                                <div class="two-column" style="margin-top: 10px; ">
+                                                    <div>
+                                                        <p>Score Summary:</p>
+                                                        <p>Interpretation:</p>
+                                                    </div>
+                                                    <div style="display: inline-grid;">
+                                                        <span>Grade</span>
+                                                        <span>Intellectually Superior</span>
+                                                        <span>Definitely Above the Average in Intellectual
+                                                            Capacity</span>
+                                                        <span>Intellectually Average</span>
+                                                        <span>Definitely Below Average in Intellectual Capacity</span>
+                                                        <span>Intellectually Impaired</span>
+                                                    </div>
+                                                </div>
+                                                <div style="
+                                                margin-top: 30px;
+                                                font-weight: 900;
+                                                background-color: #99e7e7;
+                                                padding-left: 10px;
+                                              ">
+                                                    ATTENTION DEFICIT AND HYPERACTIVITY
+                                                </div>
+                                                <div style="margin-top: 15px">
+                                                    <h6 style="font-weight: 900; text-decoration: underline">
+                                                        Attention Deficit Hyperactivity Disorder Test-2
+                                                    </h6>
+                                                    <p>VSMS is a wisely-used psychometric assessment instrument designed
+                                                        to measure social competence and adaptive behaviour of Indian
+                                                        children VSMS is a wisely-used psychometric assessment
+                                                        instrument designed
+                                                        to measure social competence and adaptive behaviour of Indian
+                                                        children VSMS is a wisely-used psychometric assessment
+                                                    </p>
+                                                </div>
+                                                <table style="width: 100%; margin-top: 20px; text-align: center;"">
+                                                    <tr >
+                                                        <td colspan=" 2" style="background-color: #c7f3f3;">Subscales
+                                                    </td>
+                                                    <td>Raw Scores</td>
+                                                    <td>Percentile Ranks</td>
+                                                    <td colspan="2">Scaled Scores</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2" style="background-color: #c7f3f3;">Inattention
+                                                        </td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2" style="background-color: #c7f3f3;">
+                                                            Hyperactivity/Impulsivity</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="4"
+                                                            style="text-align: center; background-color: #c7f3f3;">Sum
+                                                            of Scaled Scores</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="3"
+                                                            style="text-align: center; background-color: #c7f3f3;">ADHD
+                                                            Index</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr style="background-color: #c7f3f3;">
+                                                        <td>ADHD Index</td>
+                                                        <td>54</td>
+                                                        <td>55-70</td>
+                                                        <td>71-79</td>
+                                                        <td>80-89</td>
+                                                        <td>90</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Probability of ADHD</td>
+                                                        <td>Very Unlikely</td>
+                                                        <td>Unlikely</td>
+                                                        <td>Possible</td>
+                                                        <td>Likely</td>
+                                                        <td>Very Likely</td>
+                                                    </tr>
+                                                </table>
+                                                <div class="two-column" style="margin-top: 10px; ">
+                                                    <div>
+                                                        <p>Probability of ADHD:</p>
+
+                                                    </div>
+                                                    <div style="display: inline-grid;">
+                                                        <span>Very Likely</span>
+                                                        <span>Likely</span>
+                                                        <span>Possible</span>
+                                                        <span>Unlikely</span>
+                                                        <span>Very Unlikely</span>
+                                                    </div>
+                                                </div>
+                                                <div style="margin-top: 15px">
+                                                    <h6 style="font-weight: 900; text-decoration: underline">
+                                                        Vanderbilt ADHD Diagnostic Parent Rating Scale
+                                                    </h6>
+                                                    <p>VSMS is a wisely-used psychometric assessment instrument designed
+                                                        to measure social competence and adaptive behaviour of Indian
+                                                        children VSMS is a wisely-used psychometric assessment
+                                                        instrument designed
+
+                                                    </p>
+                                                </div>
+                                                <table style="width: 100%; margin-top: 20px;">
+                                                    <tr>
+                                                        <td></td>
+                                                        <td style="background-color: #c7f3f3;">Score</td>
+                                                        <td style="background-color: #c7f3f3;">Present/Absent</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Inattention Subtype</td>
+                                                        <td></td>
+                                                        <td></td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Hyperactive/Impulsive
+                                                            Subtype</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Combined Subtype</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Oppositional Defiant
+                                                            Disorder</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Conduct Disorder</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Anxiety/Depression</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </table>
+                                                <div style="margin-top: 15px">
+                                                    <h6 style="font-weight: 900; text-decoration: underline">
+                                                        The Swanson, Nolan and Pelham Teacher and Parent Rating Scale
+                                                    </h6>
+                                                    <p>VSMS is a wisely-used psychometric assessment instrument designed
+                                                        to measure social competence and adaptive behaviour of Indian
+                                                        children VSMS is a wisely-used psychometric assessment
+                                                        instrument designed
+
+                                                    </p>
+                                                </div>
+                                                <table style="width: 100%; margin-top: 20px;">
+                                                    <tr>
+                                                        <td></td>
+                                                        <td style="background-color: #c7f3f3;">Score</td>
+                                                        <td style="background-color: #c7f3f3;">Average</td>
+                                                        <td style="background-color: #c7f3f3;">Parent Cut-Off</td>
+                                                        <td style="background-color: #c7f3f3;">Interpretation</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Average score for ADHD
+                                                            (inattention)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Average score for ADHD
+                                                            (inattention)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Average score for ADHD
+                                                            (inattention)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Average score for ADHD
+                                                            (inattention)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Average score for ADHD
+                                                            (inattention)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Average score for ADHD
+                                                            (inattention)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Average score for ADHD
+                                                            (inattention)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Average score for ADHD
+                                                            (inattention)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Average score for ADHD
+                                                            (inattention)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Average score for ADHD
+                                                            (inattention)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Average score for ADHD
+                                                            (inattention)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Average score for ADHD
+                                                            (inattention)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Average score for ADHD
+                                                            (inattention)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Average score for ADHD
+                                                            (inattention)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Average score for ADHD
+                                                            (inattention)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Average score for ADHD
+                                                            (inattention)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </table>
+                                                <table
+                                                    style="text-align: center; margin-top: 40px; margin-left: auto; margin-right: auto;">
+                                                    <tr style="background-color: #c7f3f3;">
+                                                        <td>Academic</td>
+                                                        <td>Average</td>
+                                                        <td>Deportment</td>
+                                                        <td>Average</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </table>
+                                                <table
+                                                    style="text-align: center; margin-top: 50px; margin-left: auto; margin-right: auto;">
+                                                    <tr style="background-color: #c7f3f3;">
+                                                        <td></td>
+                                                        <td>Score</td>
+                                                        <td>Average</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Orienting</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                       
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Attention to Other</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                      
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Maintaining</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Attention to Rules</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Directing</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </table>
+                                                <div style="
+                                                margin-top: 100px;
+                                                font-weight: 900;
+                                                background-color: #99e7e7;
+                                                padding-left: 10px;
+                                              ">
+                                                SPECIFIC LEARNING DISORDER
+                                                </div>
+                                                <div style="margin-top: 15px">
+                                                    <h6 style="font-weight: 900; text-decoration: underline">
+                                                        NIMHANS Index for Specific Learning Disabilities
+                                                    </h6>
+                                                    <p>VSMS is a wisely-used psychometric assessment instrument designed
+                                                        to measure social competence and adaptive behaviour of Indian
+                                                        children VSMS is a wisely-used psychometric assessment
+                                                        instrument designed
+
+                                                    </p>
+                                                </div>
+                                                <table style="width: 100%; margin-top: 30px;">
+                                                    <tr style="background-color: #c7f3f3;">
+                                                        <td>Domain</td>
+                                                        <td>Disability absent 0</td>
+                                                        <td>Disability Present:Level 1</td>
+                                                        <td>Disability Present:Level 2</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Reading</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Reading Comprehension</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Listening Comprehension</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Spelling</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Written-Copying</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td style="background-color: #c7f3f3;">Not Applicable</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Written Expression</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td style="background-color: #c7f3f3;">Not Applicable</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Mathematics</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </table>
+                                                <div class="two-column" style="margin-top: 30px">
+                                                    <div>
+                                                       
+                                                        <p>Percentage of disability</p>
+
+                                                    </div>
+                                                    <div>
+                                                        <p>: 50</p>
+                                                    </div>
+                                                </div>
+                                                <div class="two-column" style="margin-top: 30px; border: 1px solid black; padding: 20px;" >
+                                                    <div>
+                                                       
+                                                        <p>Note:</p>
+                                                        <p>Disability Absent 0</p>
+                                                        <p>Disability Absent 1</p>
+                                                        <p>Disability Absent 2</p>
+
+                                                    </div>
+                                                    <div style="display: inline-grid;">
+                                                        <p></p>
+                                                        <p>- No Disability</p>
+                                                        <p>- Disability present, Severity Level 1 (Functioning at 3 standards below the current class of the child)</p>
+                                                        <p>- Disability present, Severity Level 2 (Functioning at 4 standards below the current class of the child)</p>
+                                                    </div>
+                                                </div>
+                                                <div style="
+                                                margin-top: 30px;
+                                                font-weight: 900;
+                                                background-color: #99e7e7;
+                                                padding-left: 10px;
+                                              ">
+                                                AUTISM SPECTRUM DISORDER
+                                                </div>
+                                                <div style="margin-top: 15px">
+                                                    <h6 style="font-weight: 900; text-decoration: underline">
+                                                        Indian Scale for Assessment of Autism
+                                                    </h6>
+                                                    <p>VSMS is a wisely-used psychometric assessment instrument designed
+                                                        to measure social competence and adaptive behaviour of Indian
+                                                        children VSMS is a wisely-used psychometric assessment
+                                                        instrument designed
+
+                                                    </p>
+                                                </div>
+                                                <table style="width: 100%; margin-top: 20px; text-align: center;">
+                                                    <tr>
+                                                        <td>No Autism <br/> 70</td>
+                                                        <td>Mild Autism <br/>70-106</td>
+                                                        <td>Moderate Autism <br/>107-153</td>
+                                                        <td>Severe Autism <br/>153</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </table>
+                                                <p>Percentage of disablity as per the score on ISAA:</p>
+                                                <table style="width: 100%; margin-top: 20px;">
+                                                    <tr style="background-color: #c7f3f3;">
+                                                        <td >Score Obtained on ISAA</td>
+                                                        <td>Range of Score</td>
+                                                        <td>Percentage</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>70</td>
+                                                        <td>40</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>71-88</td>
+                                                        <td>50</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>89-105</td>
+                                                        <td>60</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>106-123</td>
+                                                        <td>70</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>124-140</td>
+                                                        <td>80</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>141-158</td>
+                                                        <td>90</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>Above 158</td>
+                                                        <td>100</td>
+                                                    </tr>
+                                                </table>
+                                                <div style="margin-top: 15px">
+                                                    <h6 style="font-weight: 900; text-decoration: underline">
+                                                        Gillian Autism Rating Scale-3
+                                                    </h6>
+                                                    <p>VSMS is a wisely-used psychometric assessment instrument designed
+                                                        to measure social competence and adaptive behaviour of Indian
+                                                        children VSMS is a wisely-used psychometric assessment
+                                                        instrument designed
+
+                                                    </p>
+                                                </div>
+                                                <table style="width: 100%;">
+                                                    <tr style="background-color: #c7f3f3;">
+                                                        <td>Subscales</td>
+                                                        <td>Raw Score</td>
+                                                        <td>Percentile Rank</td>
+                                                        <td>Scaled Scores</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Restricted / Repetitive Behaviours (RB)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Social Interaction (SI)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                       
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Social Communication (SC)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                      
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Emotional Responses (ER)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                       
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Cognitive Style (CS)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                       
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Maladaptive Speech (MS)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </table>
+                                                <p style="margin-top: 20px;">Composite Score:</p>
+                                                <table>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                        <td colspan="6" >Subscale Scaled Scores</td>
+                                                        <td colspan="3" style="background-color: #c7f3f3;"></td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                        <td style="background-color: #c7f3f3;"></td>
+                                                    </tr>
+                                                    <tr style="background-color: #c7f3f3;"> 
+                                                        <td>Composites</td>
+                                                        <td>RB</td>
+                                                        <td>SI</td>
+                                                        <td>SC</td>
+                                                        <td>ER</td>
+                                                        <td>CS</td>
+                                                        <td>MS</td>
+                                                        <td>Sum of Scaled Scores</td>
+                                                        <td>Percentile Ranks</td>
+                                                        <td>Autism Index</td>
+                                                        <td>Probability of ASD</td>
+                                                        <td>Severity Level</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Autism Index(4 scores)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="background-color: #c7f3f3;">Autism Index(4 scores)</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </table>
+                                                <p style="margin-top: 30px;">Interpretation Guide:</p>
+                                                <table style="width: 100%; text-align: center;">
+                                                    <tr style="background-color: #c7f3f3;">
+                                                        <td>Autism Index</td>
+                                                        <td>54</td>
+                                                        <td>55-70</td>
+                                                        <td>71-100</td>
+                                                        <td>101</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Probability of ASD</td>
+                                                        <td>Unlikely</td>
+                                                        <td>Probale</td>
+                                                        <td colspan="2">Very Likely</td>
+                                                        
+                                                    </tr>
+                                                    <tr>
+                                                        <td>DSM-5 Severity Level for ASD</td>
+                                                        <td>-</td>
+                                                        <td>Level 1</td>
+                                                        <td>Level 2</td>
+                                                        <td>Level 3</td>
+                                                       
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Descriptor</td>
+                                                        <td>Not ASD</td>
+                                                        <td>Minimal Support Required</td>
+                                                        <td>Requiring Substantial Support</td>
+                                                        <td>Requiring Very Substantial Support</td>
+                                                      
+                                                    </tr>
+                                                  
+                                                </table>
+                                                <div style="margin-top: 15px">
+                                                    <h6 style="font-weight: 900; text-decoration: underline">
+                                                        Childhood Autism Rating Scale Second Edition
+                                                    </h6>
+                                                    <p>VSMS is a wisely-used psychometric assessment instrument designed
+                                                        to measure social competence and adaptive behaviour of Indian
+                                                        children VSMS is a wisely-used psychometric assessment
+                                                        instrument designed
+                                                    </p>
+                                                </div>
+                                                <p style="font-size: large; font-weight: bold;">CARS 2 - ST</p>
+                                                <table style="text-align: center; width: 100%;">
+                                                    <tr style="background-color: #c7f3f3;">
+                                                        <td>S.No.</td>
+                                                        <td>DOMAIN</td>
+                                                        <td>SCORE</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Relating to People</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Limitation</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>Emotional Response</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>Body Use</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>Object Use</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td>Adaptation to Change</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td>Visual Response</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8</td>
+                                                        <td>Listening Response</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>9</td>
+                                                        <td>Taste,Smell,and Touch Response and Use</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td>Fear or Nervousness</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>11</td>
+                                                        <td>Verbal Communication</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>12</td>
+                                                        <td>Non Verbal Communication</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>13</td>
+                                                        <td>Activity Level</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>14</td>
+                                                        <td>Level and Consistency of intellectual Response</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>15</td>
+                                                        <td>General Impressions</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td style="font-weight: bold;">TOTAl SCORE</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    
+                                                </table>
+                                                <table style="width: 100%; text-align: center;">
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>AGE BELOW 13 YEARS</td>
+                                                        <td>AGE ABOVE 13 YEARS</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Minimal-to-No Symptoms of ASD</td>
+                                                        <td>15 to 29.5</td>
+                                                        <td>15 to 27.5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mild-to-Moderate Symptoms of ASD</td>
+                                                        <td>30 to 36.5</td>
+                                                        <td>28 to 34.5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Severe Symptoms of ASD</td>
+                                                        <td>37+</td>
+                                                        <td>35+</td>
+                                                    </tr>
+                                                </table>
+                                                <p style="font-size: large; font-weight: bold; margin-top: 20px;">CARS 2 - ST</p>
+                                                <table style="text-align: center; width: 100%;">
+                                                    <tr style="background-color: #c7f3f3;">
+                                                        <td>S.No.</td>
+                                                        <td>DOMAIN</td>
+                                                        <td>SCORE</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Social-Emotional Understanding</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Emotional Expressions & Regulations of Emotions</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>Relating to People</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>Body Use</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>Object Use</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td>Adaptation to Change</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td>Visual Response</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8</td>
+                                                        <td>Listening Response</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>9</td>
+                                                        <td>Taste,Smell,and Touch Response and Use</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td>Fear or Nervousness</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>11</td>
+                                                        <td>Verbal Communication</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>12</td>
+                                                        <td>Non Verbal Communication</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>13</td>
+                                                        <td>Activity Level</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>14</td>
+                                                        <td>Level and Consistency of intellectual Response</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>15</td>
+                                                        <td>General Impressions</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td style="font-weight: bold;">TOTAl SCORE</td>
+                                                        <td></td>
+                                                    </tr>
+
+                                                </table>
+                                                <table style="width: 100%; text-align: center;">
+                                                    <tr>
+                                                        <td></td>
+                                                        <td>AGE BELOW 13 YEARS</td>
+                                                        <td>AGE ABOVE 13 YEARS</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Minimal-to-No Symptoms of ASD</td>
+                                                        <td>15 to 29.5</td>
+                                                        <td>15 to 27.5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mild-to-Moderate Symptoms of ASD</td>
+                                                        <td>30 to 36.5</td>
+                                                        <td>28 to 34.5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Severe Symptoms of ASD</td>
+                                                        <td>37+</td>
+                                                        <td>35+</td>
+                                                    </tr>
+                                                </table>
+                                                <div style="
+                                                margin-top: 30px;
+                                                font-weight: 900;
+                                                background-color: #99e7e7;
+                                                padding-left: 10px;
+                                              ">
+                                                EMOTIONAL / BEHAVIOURAL DISORDER
+                                                </div>
+                                                <div style="margin-top: 15px">
+                                                    <h6 style="font-weight: 900; text-decoration: underline">
+                                                        Strength and Difficulties Questionarie
+                                                    </h6>
+                                                    <p>VSMS is a wisely-used psychometric assessment instrument designed
+                                                        to measure social competence and adaptive behaviour of Indian
+                                                        children VSMS is a wisely-used psychometric assessment
+                                                        instrument designed
+
+                                                    </p>
+                                                </div>
+                                                <table style="width: 100%; margin-top: 20px;">
+                                                    <tr>
+                                                        <td colspan="4" style="background-color: #c7f3f3;">Emotional and Peer Problem Scale:</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Range</td>
+                                                        <td>Emotional Problems Score</td>
+                                                        <td>Peer Problems Score</td>
+                                                        <td>Internalizing Score</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>0-20</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td style="background-color: #99e7e7;"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="4">The externalizing score (range 0-20) is the sum of the emotional and peer problems scales.</td>
+                                                    </tr>
+                                                </table>
+                                                <table style="width: 100%; margin-top: 20px;">
+                                                    <tr>
+                                                        <td colspan="4" style="background-color: #c7f3f3;">Conduct and Hyperactivity Scale:</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Range</td>
+                                                        <td>Conduct Score</td>
+                                                        <td>Hyperactivity Score</td>
+                                                        <td>Externalizing Score</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>0-20</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td style="background-color: #99e7e7;"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="4">The externalizing score (range 0-20) is the sum of the conduct and hyperactivity scales.</td>
+                                                    </tr>
+                                                </table>
+                                                <table style="width: 100%; margin-top: 20px;">
+                                                    <tr>
+                                                        <td colspan="6" style="background-color: #c7f3f3;">Total Difficulties Score:</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Range</td>
+                                                        <td>Conduct </td>
+                                                        <td>Hyperactivity</td>
+                                                        <td>Emotional</td>
+                                                        <td>Peer</td>
+                                                        <td>Total SDQ Score</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>0-20</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td style="background-color: #99e7e7;"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="6">The externalizing score (range 0-20) is the sum of the conduct and hyperactivity scales.</td>
+                                                    </tr>
+                                                </table>
+                                                <p style="margin-top: 20px; font-weight: bold;">Categorization bands for - Parent Completed SDQ Scores</p>
+                                                <table style="width: 100%; margin-top: 20px; text-align: center;">
+                                                    <tr  style="background-color: #c7f3f3;">
+                                                        <td>SDQ Scale</td>
+                                                        <td>Close to Average (80% of Population)</td>
+                                                        <td>Slightly Raised / Lowered (10% of Population)</td>
+                                                        <td>High/Low (5% of Population)</td>
+                                                        <td>Very High/Very Low (5% of Population)</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Emotional Problems Score</td>
+                                                        <td>0-3</td>
+                                                        <td>4</td>
+                                                        <td>5-6</td>
+                                                        <td>7-10</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Conduct Problems Score</td>
+                                                        <td>0-2</td>
+                                                        <td>3</td>
+                                                        <td>4-5</td>
+                                                        <td>6-10</td>
+
+                                                    </tr>
+                                                
+                                                    <tr>
+                                                        <td>Hyperactivity Score</td>
+                                                        <td>0-5</td>
+                                                        <td>6-7</td>
+                                                        <td>8</td>
+                                                        <td>9-10</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Peer Problems Score</td>
+                                                        <td>0-22</td>
+                                                        <td>3</td>
+                                                        <td>4</td>
+                                                        <td>5-10</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Prosocial Score</td>
+                                                        <td>8-10</td>
+                                                        <td>7</td>
+                                                        <td>6</td>
+                                                        <td>0-5</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Externalizing Score</td>
+                                                        <td>0-7</td>
+                                                        <td>8-10</td>
+                                                        <td>11-13</td>
+                                                        <td>14-20</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Internalizing Score</td>
+                                                        <td>0-3</td>
+                                                        <td>4-7</td>
+                                                        <td>8-10</td>
+                                                        <td>11-20</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Total Difficulties Score</td>
+                                                        <td>0-13</td>
+                                                        <td>14-16</td>
+                                                        <td>17-19</td>
+                                                        <td>20-40</td>
+
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </table>
+                                                <table style="margin-top: 30px; width: 100%;">
+                                                    <tr>
+                                                        <td colspan="2">Interpretation:</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Close to Average</td>
+                                                        <td> clinically sifnificant problems in this area are unlikely</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Slightly Raised</td>
+                                                        <td>Score may reflect clinically sifnificant problems</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>High-Very High</td>
+                                                        <td>This score indicate there is a substantial risk of clinically significant problems in this area</td>
+                                                    </tr>
+                                                </table>
+                                                <div style="margin-top: 15px">
+                                                    <h6 style="font-weight: 900; text-decoration: underline">
+                                                        Behavioral and Emotional Screening System (BASCTM-3 BESS)
+                                                    </h6>
+                                                    <p>VSMS is a wisely-used psychometric assessment instrument designed
+                                                        to measure social competence and adaptive behaviour of Indian
+                                                        children VSMS is a wisely-used psychometric assessment
+                                                        instrument designed
+
+                                                    </p>
+                                                </div>
+                                                <p style="margin-top: 30px;">Summary of Scores</p>
+                                                <table style="width: 100%;">
+                                                    <tr style="font-weight: bold;">
+                                                        <td>Scale</td>
+                                                        <td>Raw Score</td>
+                                                        <td>T Scores</td>
+                                                        <td>Percentile Rank</td>
+                                                        <td>Classification</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Behavioural and Emotional Risk Index
+                                                        </td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Externalizing Risk Index
+                                                        </td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Internalizing Risk Index                                                        </td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Adaptive Skills Risk Index                                                        </td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </table>
+                                                <div style="margin-top: 15px">
+                                                    <h6 style="font-weight: 900; text-decoration: underline">
+                                                        Behavioral Assessment System for Children (BASCTM-3 BESS)
+                                                    </h6>
+                                                    <p>VSMS is a wisely-used psychometric assessment instrument designed
+                                                        to measure social competence and adaptive behaviour of Indian
+                                                        children VSMS is a wisely-used psychometric assessment
+                                                        instrument designed
+
+                                                    </p>
+                                                </div>
+                                                <p style="margin-top: 30px;">Summary of Scores:</p>
+                                                <table style="width: 100%;">
+                                                    <tr style="background-color: #c7f3f3;">
+                                                        <td>Scale</td>
+                                                        <td>Raw Score</td>
+                                                        <td>T Scores</td>
+                                                        <td>Percentile Rank</td>
+                                                        <td>90% Confidence Interval</td>
+                                                        <td>Classification</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Hyperactivity</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Aggression</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Conduct Problems</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Externalizing Problems Composite</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Anxiety</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Depression</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Somatization</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Internalizing Problems Composite</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Attention Problems</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Atypicality</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Withdrawal</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Behavioural Symptoms Index</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Adaptability</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Social Skills</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>ADL</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Functional Communication</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Adaptive Skills Composite</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Hyperactivity</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </table>
+                                                <p style="margin-top: 20px;">Composite Score Summary:</p>
+                                                <table style="width: 100%;">
+                                                    <tr style="font-weight: bold;">
+                                                        <td>Composite Comparisons</td>
+                                                        <td>External Problems</td>
+                                                        <td>Internal Problems</td>
+                                                        <td>Difference</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+
+                                                </table>
+                                                <div style="
+                                                margin-top: 30px;
+                                                font-weight: 900;
+                                                background-color: #99e7e7;
+                                                padding-left: 10px;
+                                              ">
+                                                SUGGESTED EDUCATIONAL INTERVENTIONS / THERAPY
+                                                </div>
+                                                <table style="margin-top: 30px; width: 100%; text-align: center;">
+                                                    <tr style="font-weight: bold;">
+                                                        <td>Type</td>
+                                                        <td>Number of Sessions per week</td>
+                                                        <td>Number of Sessions per Month</td>
+                                                        <td>Duration of Each Session</td>
+                                                        <td>Location</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Parental Guidance</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Counseling</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mentoring</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Behaviour Therapy</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Cognitive Behaviour Therapy</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Solution Focused Brief Therapy</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>KidsSkills</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Mindfulness</td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Positive Activity Intervention
+
+                                                        </td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <!-- PART_D -->
+                                            <div id="printableArea4">
+                                                <div>
+                                                    <div>
+                                                        <button onclick="printDiv4('printableArea4')" style="
+                                      border: none;
+                                      outline: none;
+                                      background-color: #84f8f8;
+                                      padding: 5px;
+                                      border-radius: 8px;
+                                      color: white;
+                                    ">
+                                                            Print
+                                                        </button>
+                                                    </div>
+                                                    <div style="background-color: #99e7e7; margin-top: 10px">
+                                                        <div style="font-weight: 900; text-align: center">
+                                                           DETAILED ASSESSMENT REPORT
+                                                        </div>
+                                                        <div style="text-align: center">
+                                                            (For educators / service providers)
+                                                        </div>
+                                                        <div style="font-weight: 900; text-align: center">
+                                                            PART-D:SPECIAL EDUCATION ASSESSMENT
+                                                        </div>
+                                                        <div style="padding-left: 10px; font-weight: 900">
+                                                            Name of the Child:
+                                                        </div>
+                                                    </div>
+                                                    <div style="
+                                    margin-top: 30px;
+                                    font-weight: 900;
+                                    background-color: #99e7e7;
+                                    padding-left: 10px;
+                                  ">
+                                                        DAILY LIVING SKILLS
+                                                    </div>
+                                                    <div style="margin-top: 15px">
+                                                        <h6 style="font-weight: 900; text-decoration: underline">
+                                                            Test of Daily Living Skills (TDLS)
+                                                        </h6>
+                                                        <p>VSMS is a wisely-used psychometric assessment instrument designed
+                                                            to measure social competence and adaptive behaviour of Indian
+                                                            children VSMS is a wisely-used psychometric assessment
+                                                            instrument designed
+                                                        </p>
+                                                    </div>
+                                                    <div>
+                                                        
+                                                    </div>
+
+
+                                                    <div style="
+                                                    margin-top: 30px;
+                                                    font-weight: 900;
+                                                    background-color: #99e7e7;
+                                                    padding-left: 10px;
+                                                  ">
+                                                        BASIC CONCEPTUAL SKILLS
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="preloader">
+        <div class="loader">
+            <img src="./assets/images/brand/logo_org.png" alt="" />
+            <span></span>
+        </div>
+    </div>
+
+    <script src="./assets/pluggins/jquery/jquery-3.6.3.min.js"></script>
+    <script src="./assets/pluggins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- DATE PICKER  -->
+    <script src="./assets/pluggins/datetimepicker/js/gijgo.min.js"></script>
+    <script src="./assets/pluggins/select2/js/select2.full.min.js"></script>
+    <script src="./assets/pluggins/pagination/jquery.twbsPagination.min.js"></script>
+    <script src="./assets/pluggins/scrollreveal/scrollreveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./assets/js/index.js"></script>
+
+    <script>
+        function printDiv(divId) {
+            var printContents = document.getElementById(divId).innerHTML;
+            var originalContents = document.body.innerHTML;
+
+            document.body.innerHTML = printContents;
+
+            window.print();
+
+            document.body.innerHTML = originalContents;
+        }
+
+        function printDiv2(divId) {
+            var printContents = document.getElementById(divId).innerHTML;
+            var originalContents = document.body.innerHTML;
+
+            document.body.innerHTML = printContents;
+
+            window.print();
+
+            document.body.innerHTML = originalContents;
+        }
+        function printDiv3(divId) {
+            var printContents = document.getElementById(divId).innerHTML;
+            var originalContents = document.body.innerHTML;
+
+            document.body.innerHTML = printContents;
+
+            window.print();
+
+            document.body.innerHTML = originalContents;
+        }
+    </script>
+</body>
+
+</html>
