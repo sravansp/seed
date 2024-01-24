@@ -11751,6 +11751,17 @@ SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE SHAPE
 
 }
 
+.size40{
+	max-height: 500px;
+}
+
+.size41{
+	max-height: 600px;
+}
+.size42{
+	max-height: 650px;
+}
+
 
 
 .size38 {
@@ -12214,6 +12225,9 @@ EFFECT   EFFECT   EFFECT   EFFECT   EFFECT   EFFECT  EFFECT
 .h-25px {
 	height: 25px;
 }
+.h-10{
+	height: 10px;
+}
 
 .h-80p {
 	height: 80%;
@@ -12417,10 +12431,15 @@ RESPONSIVE  RESPONSIVE  RESPONSIVE  RESPONSIVE   RESPONSIVE
 	.no-wrap-md {
 		white-space: nowrap !important;
 	}
+	
 }
 
 
-
+@media (min-width: 576px) {
+	.w-auto-min-sm {
+		width: auto;
+	}
+}
 
 
 /*[ SM ]
@@ -12491,6 +12510,10 @@ RESPONSIVE  RESPONSIVE  RESPONSIVE  RESPONSIVE   RESPONSIVE
 
 	.no-wrap-sm {
 		white-space: nowrap !important;
+	}
+
+	.w-sm-full{
+		width: 100% !important;
 	}
 
 
