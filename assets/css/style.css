@@ -3320,6 +3320,12 @@ ul.collection li {
       background-position: -200% 0;
     }
   }
+
+  .bg-hover:hover{
+    border-color: var(--bg-main-primary) !important;
+    background-color: #a9fff8 !important;
+    transition-duration: 300ms !important;
+  }
   
  
  
