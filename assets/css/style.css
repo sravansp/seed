@@ -3323,7 +3323,7 @@ ul.collection li {
 
   .bg-hover:hover{
     border-color: var(--bg-main-primary) !important;
-    background-color: #a9fff8 !important;
+    background-color:#ECF8F8 !important;
     transition-duration: 300ms !important;
   }
   
