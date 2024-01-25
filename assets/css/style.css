@@ -3270,7 +3270,9 @@ ul.collection li {
     left: 0;
     text-align: center;
     transform: translateX(calc(-50% - 5px));
-    width: 85px;
+    width: auto;
+    white-space: nowrap;
+    padding: 10px;
   }
   .progress-tooltip .progress-tooltip-info::before, .progress-tooltip .progress-tooltip-info::after {
     content: "";
@@ -3311,6 +3313,80 @@ ul.collection li {
     background-color: var(--bg-main-primary);
     background-size: 10px 10px;
   }
+
+  /*PROGRESS BAR 2  */
+
+  .progress2{
+    border-radius:0;
+    overflow:visible;
+    border-radius: 5px;
+  }
+
+  .progress2-tooltip {
+    position: relative;
+    padding-top: 10px;
+  }
+  .progress2-tooltip .progress2-tooltip-info {
+    align-items: center;
+    background: #eee;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 0 2px #ccc;
+    color: gray;
+    display: inline-flex;
+    font-family: sans-serif;
+    font-weight: bold;
+    justify-content: center;
+    height: 25px;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    text-align: center;
+    transform: translateX(calc(-50% - 5px));
+    width: auto;
+    white-space: nowrap;
+    padding: 10px;
+  }
+  .progress2-tooltip .progress2-tooltip-info::before, .progress2-tooltip .progress2-tooltip-info::after {
+    content: "";
+    display: inline-block;
+    border: 7px solid transparent;
+    border-top-color: #eee;
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .progress2-tooltip .progress2-tooltip-info::before {
+    border-width: 8px;
+    border-top-color: #ccc;
+    bottom: -16px;
+    left: 50%;
+  }
+
+  
+  .progress2 {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    font-family: sans-serif;
+    height: 5px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%;
+  }
+
+  .progress2::-webkit-progress-bar {
+    background-color: #f3bbbb;
+  }
+  .progress2::-webkit-progress-value {
+    border-radius: 5px;
+    background-color: red;
+    background-size: 10px 10px;
+  }
   
   @keyframes moveIndeterminate {
     from {
@@ -3325,6 +3401,12 @@ ul.collection li {
     border-color: var(--bg-main-primary) !important;
     background-color:#ECF8F8 !important;
     transition-duration: 300ms !important;
+  }
+
+  .btn-update{
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
   }
   
  
