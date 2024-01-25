@@ -3380,11 +3380,11 @@ ul.collection li {
   }
 
   .progress2::-webkit-progress-bar {
-    background-color: #f3bbbb;
+    background-color: #FFEBEB;
   }
   .progress2::-webkit-progress-value {
     border-radius: 5px;
-    background-color: red;
+    background-color: #FF725E;
     background-size: 10px 10px;
   }
   
@@ -3403,11 +3403,14 @@ ul.collection li {
     transition-duration: 300ms !important;
   }
 
-  .btn-update{
-    color: white;
-    font-size: 14px;
-    font-weight: 500;
-  }
+
+.text-red{
+    color: #FF725E;
+}
+
+.text-green{
+    color: var(--bg-main-primary);
+}
   
  
  
