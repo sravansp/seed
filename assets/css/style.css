@@ -3520,6 +3520,24 @@ ul.collection li {
   .btn:hover{
     color: #747474 !important;
   }
+
+  .form-select{
+    font-size: 12px !important;
+    width: 100% !important;
+  }
+.btn-blue{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    background-color:#0095FF;
+    color: white;
+   
+}
   
   
   
