@@ -794,61 +794,48 @@
     <script>
         popoverSPSubWise()
         function popoverSPSubWise() {
-            if (document.querySelectorAll('.show-popover')) {
+    document.addEventListener("DOMContentLoaded", function () {
+        var popoverButtons = document.querySelectorAll('.show-popover');
 
-                document.addEventListener("DOMContentLoaded", function () {
-                    var popoverButtons1 = document.querySelectorAll('.show-popover');
-                    var popoverButtons2 = document.querySelectorAll('.show-popover2');
+        popoverButtons.forEach(function (button) {
+            var popover = new bootstrap.Popover(button, {
+                content: document.getElementById("popoverContent"),
+                container: "body",
+                html: true,
+                placement: "top",
+            });
 
-                    var popover1 = new bootstrap.Popover(popoverButtons1[0], {
-                        content: document.getElementById("popoverContent"),
-                        container: "body",
-                        html: true,
-                        placement: "top",
-                    });
+            button.addEventListener("click", function () {
+                closeAllPopovers();
+                popover.show();
+                var popoverContent = document.getElementById("popoverContent");
+                popoverContent.style.display = "block";
+            });
+        });
 
-                    var popover2 = new bootstrap.Popover(popoverButtons2[0], {
-                        content: document.getElementById("popoverContent2"),
-                        container: "body",
-                        html: true,
-                        placement: "bottom",
-                    });
-                    function closeAllPopovers() {
-                        popover1.hide();
-                        popover2.hide();
-                    }
-                    popoverButtons1.forEach(function (button) {
-                        button.addEventListener("click", function () {
-                            closeAllPopovers()
-                            popover1.show();
-                            var popoverContent = document.getElementById("popoverContent");
-                            popoverContent.style.display = "block";
-                        });
-                    });
+        var popoverSubmit = document.getElementById("popoverSubmit");
+        popoverSubmit.addEventListener("click", function () {
+            var inputFieldValue = document.getElementById("endDate").value;
+            alert("Input value for Popover: " + inputFieldValue);
+            closeAllPopovers();
+        });
 
-                    popoverButtons2.forEach(function (button) {
-                        button.addEventListener("click", function () {
-                            closeAllPopovers()
-                            popover2.show();
-                            var popoverContent = document.getElementById("popoverContent2");
-                            popoverContent.style.display = "block";
-                        });
-                    });
+        var popoverDismiss = document.getElementById("popoverDismiss");
+        popoverDismiss.addEventListener("click", function () {
+            closeAllPopovers();
+        });
 
-                    var popoverSubmit1 = document.getElementById("popoverSubmit");
-                    popoverSubmit1.addEventListener("click", function () {
-                        var inputFieldValue = document.getElementById("endDate").value;
-                        alert("Input value for Popover 1: " + inputFieldValue);
-                        popover1.hide();
-                    });
-
-                    var popoverDismiss1 = document.getElementById("popoverDismiss");
-                    popoverDismiss1.addEventListener("click", function () {
-                        popover1.hide();
-                    });
-                });
-            }
+        function closeAllPopovers() {
+            popoverButtons.forEach(function (button) {
+                var popover = bootstrap.Popover.getInstance(button);
+                if (popover) {
+                    popover.hide();
+                }
+            });
         }
+    });
+}
+
 
         if (document.querySelectorAll(".ntbl-row.clickable")) {
 
