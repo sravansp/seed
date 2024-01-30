@@ -1173,6 +1173,39 @@
             <button type="button" class="btn btn-sm btn-primary fs-10" id="popoverSubmit">Update</button>
         </div>
     </div>
+    <div id="popoverContent2" style="display: none;">
+        <div class="row flex-m">
+            <div class="col-9">
+                <input type="range" class="form-range" id="rangepicker">
+            </div>
+            <div class="col-3">
+                <input type="text" class="form-control fs-10 px-0 text-center" name="" id="inputRange" value="49">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="mb-2">
+                    <span class="fs-10">Start
+                        Date</span>
+                    <input type="text" class="form-control fs-10" name="" id="startDate" aria-describedby=""
+                        placeholder="" value="24/02/2022" disabled>
+                </div>
+                <div class="mb-2">
+                    <span class="fs-10">End
+                        Date</span>
+                    <input type="text" class="form-control fs-10" name="" id="endDate2" aria-describedby=""
+                        placeholder="">
+                </div>
+            </div>
+        </div>
+        <div class="flex-c gap-2">
+            <button type="button" class="btn btn-sm btn-light fs-10" id="popoverDismiss2">
+                Cancel
+            </button>
+            <button type="button" class="btn btn-sm btn-primary fs-10" id="popoverSubmit2">Update</button>
+        </div>
+    </div>
+
 
     <!-- <div id="popoverContent2" style="display: none;">
         <div class="flex-col gap-2">
@@ -1209,7 +1242,7 @@
     <script>
         var today, datepicker;
         today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
-        datepicker = $('#endDate').datepicker({
+        datepicker = $('#endDate2').datepicker({
             minDate: today,
             showOtherMonths: true, footer: true, modal: true, header: true
         });
@@ -1238,7 +1271,8 @@
 
                 document.addEventListener("DOMContentLoaded", function () {
                     var popoverButtons1 = document.querySelectorAll('.show-popover');
-                    
+                    var popoverButtons2 = document.querySelectorAll('.show-popover');
+
 
                     var popover1 = new bootstrap.Popover(popoverButtons1[0], {
                         content: document.getElementById("popoverContent"),
@@ -1246,11 +1280,18 @@
                         html: true,
                         placement: "top",
                     });
+                    var popover2 = new bootstrap.Popover(popoverButtons1[0], {
+                        content: document.getElementById("popoverContent2"),
+                        container: "body",
+                        html: true,
+                        placement: "top",
+                    });
 
-                  
+
                     function closeAllPopovers() {
                         popover1.hide();
-                        
+                        popover2.hide();
+
                     }
                     popoverButtons1.forEach(function (button) {
                         button.addEventListener("click", function () {
@@ -1260,8 +1301,17 @@
                             popoverContent.style.display = "block";
                         });
                     });
+                    popoverButtons2.forEach(function (button) {
+                        button.addEventListener("click", function () {
+                            closeAllPopovers()
+                            popover2.show();
+                            var popoverContent = document.getElementById("popoverContent2");
+                            popoverContent2.style.display = "block";
+                        });
+                    });
 
-                  
+
+
 
                     var popoverSubmit1 = document.getElementById("popoverSubmit");
                     popoverSubmit1.addEventListener("click", function () {
@@ -1269,10 +1319,21 @@
                         alert("Input value for Popover 1: " + inputFieldValue);
                         popover1.hide();
                     });
+                    var popoverSubmit2 = document.getElementById("popoverSubmit2");
+                    popoverSubmit2.addEventListener("click", function () {
+                        var inputFieldValue = document.getElementById("endDate2").value;
+                        alert("Input value for Popover 1: " + inputFieldValue);
+                        popover2.hide();
+                    });
+
 
                     var popoverDismiss1 = document.getElementById("popoverDismiss");
                     popoverDismiss1.addEventListener("click", function () {
                         popover1.hide();
+                    });
+                    var popoverDismiss2 = document.getElementById("popoverDismiss2");
+                    popoverDismiss2.addEventListener("click", function () {
+                        popover2.hide();
                     });
                 });
             }
