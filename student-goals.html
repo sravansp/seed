@@ -1232,99 +1232,51 @@
         </div>
     </main>
     <!-- Modal -->
-    <div class="modal fade" 
-    id="exampleModal"
-    tabindex="-1"
-    aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div
-        class="modal-dialog modal-dialog-centered">
-        <div
-            class="modal-content">
-           
-            <div
-                class="modal-body">
-                <div class="wrapper-calendar">
-                    <div class="container-calendar flex-col gap-3">
-                       <div class="row flex-m">
-                           <div class="col-9">
-                               <input type="range" class="form-range" id="rangepicker">
-                           </div>
-                           <div class="col-3">
-                               <input type="text" class="form-control fs-10 px-0 text-center" name="" id="inputRange" value="49">
-                           </div>
-               
-                       </div>
-                        <div class="py-2 bg-main-primary bradius-7" style="display: none;">
-                            <h3 class="fs-16 text-white" id="monthAndYear"></h3>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-6">
-                                <select id="month" onchange="jump()"
-                                    class="form-control select2-select select2-show-search form-select">
-                                    <option value=0>Jan</option>
-                                    <option value=1>Feb</option>
-                                    <option value=2>Mar</option>
-                                    <option value=3>Apr</option>
-                                    <option value=4>May</option>
-                                    <option value=5>Jun</option>
-                                    <option value=6>Jul</option>
-                                    <option value=7>Aug</option>
-                                    <option value=8>Sep</option>
-                                    <option value=9>Oct</option>
-                                    <option value=10>Nov</option>
-                                    <option value=11>Dec</option>
-                                </select>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="display: flex; justify-content: center;">
+            <div class="modal-content" style="width: 60%;">
+                <div class="modal-header">
+                    <h5 class="modal-title fs-14 fw-semibold">Update Progression</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div class="row flex-m">
+                            <p class="fs-10 fw-500">Mark Progression</p>
+                            <div class="col-9">
+                                
+                                <input type="range" class="form-range" id="rangepicker">
                             </div>
-                            <div class="col-6">
-                                <select id="year" onchange="jump()"
-                                    class="form-control select2-select select2-show-search form-select"></select>
+                            <div class="col-3">
+                                <input type="text" class="form-control fs-10 px-0 text-center" name="" id="inputRange"
+                                    value="49">
                             </div>
-                        </div>
 
+                        </div>
                         <div class="row">
                             <div class="col-12">
-                                <table class="table-calendar" id="calendar"
-                                    data-lang="en">
-                                    <thead id="thead-month"></thead>
-                                    <tbody id="calendar-body"></tbody>
-                                </table>
+                               
+                                <div class="mb-2">
+                                    <span class="fs-10 fw-500">Select
+                                        Date</span>
+                                    <input type="text" class="form-control fs-10" name="" id="endDate"
+                                        aria-describedby="" placeholder="">
+                                </div>
                             </div>
                         </div>
-
-
-                        <div class="row">
-                            <div class="col-6">
-                                <button id="previous" onclick="previous()"
-                                    class="btn btn-light w-full fs-14 h-52">Previous
-                                    Month</button>
-                            </div>
-                            <div class="col-6">
-                                <button id="next" onclick="next()"
-                                    class="btn btn-primary w-full fs-14 h-52">Next
-                                    Month</button>
-                            </div>
-
+                        <div class="flex-sb gap-2">
+                            <button type="button"  class="btn btn-sm btn-primary fs-10">Update</button>
+                            <button type="button" data-bs-dismiss="modal" class="btn btn-sm btn-light fs-10">
+                                Cancel
+                            </button>
+                            
                         </div>
                     </div>
-
                 </div>
-            </div>
-            <div
-                class="modal-footer">
-                <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal">Close</button>
-                <button
-                    type="button"
-                    data-bs-dismiss="modal"
-                    class="btn btn-primary">Update</button>
+              
             </div>
         </div>
     </div>
-</div>
     <!-- <div id="popoverContent" style="display: none;">
         <div class="row flex-m">
             <div class="col-9">
@@ -1426,16 +1378,22 @@
     <script>
         var today, datepicker;
         today = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate());
-        datepicker = $('#endDate2').datepicker({
+        datepicker = $('#endDate').datepicker({
             minDate: today,
             showOtherMonths: true, footer: true, modal: true, header: true
         });
 
-
-
         // Get references to the range input and text input
         var rangeInput = document.getElementById("rangepicker");
         var textInput = document.getElementById("inputRange");
+
+        // Set a dynamic value for the range input
+        var dynamicValue = 0;
+        rangeInput.value = dynamicValue;
+        textInput.value = dynamicValue;
+
+        // Set the minimum value for the range input
+        rangeInput.min = dynamicValue;
 
         // Update the text input value when the range input changes
         rangeInput.addEventListener("input", function () {
@@ -1444,84 +1402,95 @@
 
         // Update the range input value when the text input changes
         textInput.addEventListener("input", function () {
-            rangeInput.value = textInput.value;
+            // Ensure that the text input value is within the range limits
+            var inputValue = parseInt(textInput.value, 10);
+            if (inputValue < parseInt(rangeInput.min, 10)) {
+                inputValue = parseInt(rangeInput.min, 10);
+            } else if (inputValue > parseInt(rangeInput.max, 10)) {
+                inputValue = parseInt(rangeInput.max, 10);
+            }
+
+            // Set the updated value to the text input
+            textInput.value = inputValue;
+            // Set the updated value to the range input
+            rangeInput.value = inputValue;
         });
 
     </script>
     <script>
-        popoverSPSubWise()
-        function popoverSPSubWise() {
-            if (document.querySelectorAll('.show-popover')) {
+        // popoverSPSubWise()
+        // function popoverSPSubWise() {
+        //     if (document.querySelectorAll('.show-popover')) {
 
-                document.addEventListener("DOMContentLoaded", function () {
-                    var popoverButtons1 = document.querySelectorAll('.show-popover');
-                    var popoverButtons2 = document.querySelectorAll('.show-popover');
-
-
-                    var popover1 = new bootstrap.Popover(popoverButtons1[0], {
-                        content: document.getElementById("popoverContent"),
-                        container: "body",
-                        html: true,
-                        placement: "top",
-                    });
-                    var popover2 = new bootstrap.Popover(popoverButtons1[0], {
-                        content: document.getElementById("popoverContent2"),
-                        container: "body",
-                        html: true,
-                        placement: "top",
-                    });
+        //         document.addEventListener("DOMContentLoaded", function () {
+        //             var popoverButtons1 = document.querySelectorAll('.show-popover');
+        //             var popoverButtons2 = document.querySelectorAll('.show-popover');
 
 
-                    function closeAllPopovers() {
-                        popover1.hide();
-                        popover2.hide();
-
-                    }
-                    popoverButtons1.forEach(function (button) {
-                        button.addEventListener("click", function () {
-                            closeAllPopovers()
-                            popover1.show();
-                            var popoverContent = document.getElementById("popoverContent");
-                            popoverContent.style.display = "block";
-                        });
-                    });
-                    popoverButtons2.forEach(function (button) {
-                        button.addEventListener("click", function () {
-                            closeAllPopovers()
-                            popover2.show();
-                            var popoverContent = document.getElementById("popoverContent2");
-                            popoverContent2.style.display = "block";
-                        });
-                    });
+        //             var popover1 = new bootstrap.Popover(popoverButtons1[0], {
+        //                 content: document.getElementById("popoverContent"),
+        //                 container: "body",
+        //                 html: true,
+        //                 placement: "top",
+        //             });
+        //             var popover2 = new bootstrap.Popover(popoverButtons1[0], {
+        //                 content: document.getElementById("popoverContent2"),
+        //                 container: "body",
+        //                 html: true,
+        //                 placement: "top",
+        //             });
 
 
+        //             function closeAllPopovers() {
+        //                 popover1.hide();
+        //                 popover2.hide();
+
+        //             }
+        //             popoverButtons1.forEach(function (button) {
+        //                 button.addEventListener("click", function () {
+        //                     closeAllPopovers()
+        //                     popover1.show();
+        //                     var popoverContent = document.getElementById("popoverContent");
+        //                     popoverContent.style.display = "block";
+        //                 });
+        //             });
+        //             popoverButtons2.forEach(function (button) {
+        //                 button.addEventListener("click", function () {
+        //                     closeAllPopovers()
+        //                     popover2.show();
+        //                     var popoverContent = document.getElementById("popoverContent2");
+        //                     popoverContent2.style.display = "block";
+        //                 });
+        //             });
 
 
-                    var popoverSubmit1 = document.getElementById("popoverSubmit");
-                    popoverSubmit1.addEventListener("click", function () {
-                        var inputFieldValue = document.getElementById("endDate").value;
-                        alert("Input value for Popover 1: " + inputFieldValue);
-                        popover1.hide();
-                    });
-                    var popoverSubmit2 = document.getElementById("popoverSubmit2");
-                    popoverSubmit2.addEventListener("click", function () {
-                        var inputFieldValue = document.getElementById("endDate2").value;
-                        alert("Input value for Popover 1: " + inputFieldValue);
-                        popover2.hide();
-                    });
 
 
-                    var popoverDismiss1 = document.getElementById("popoverDismiss");
-                    popoverDismiss1.addEventListener("click", function () {
-                        popover1.hide();
-                    });
-                    var popoverDismiss2 = document.getElementById("popoverDismiss2");
-                    popoverDismiss2.addEventListener("click", function () {
-                        popover2.hide();
-                    });
-                });
-            }
-        }
+        //             var popoverSubmit1 = document.getElementById("popoverSubmit");
+        //             popoverSubmit1.addEventListener("click", function () {
+        //                 var inputFieldValue = document.getElementById("endDate").value;
+        //                 alert("Input value for Popover 1: " + inputFieldValue);
+        //                 popover1.hide();
+        //             });
+        //             var popoverSubmit2 = document.getElementById("popoverSubmit2");
+        //             popoverSubmit2.addEventListener("click", function () {
+        //                 var inputFieldValue = document.getElementById("endDate2").value;
+        //                 alert("Input value for Popover 1: " + inputFieldValue);
+        //                 popover2.hide();
+        //             });
+
+
+        //             var popoverDismiss1 = document.getElementById("popoverDismiss");
+        //             popoverDismiss1.addEventListener("click", function () {
+        //                 popover1.hide();
+        //             });
+        //             var popoverDismiss2 = document.getElementById("popoverDismiss2");
+        //             popoverDismiss2.addEventListener("click", function () {
+        //                 popover2.hide();
+        //             });
+        //         });
+        //     }
+        // }
 
         if (document.querySelectorAll(".ntbl-row.clickable")) {
 
