@@ -3538,6 +3538,14 @@ ul.collection li {
     color: white;
    
 }
+
+.view-btn{
+    border-radius: 7px;
+background: rgba(255, 255, 255, 0.60);
+padding: 4px 6px;
+border: none;
+outline: none;
+}
   
   
   
