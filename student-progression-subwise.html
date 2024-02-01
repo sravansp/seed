@@ -774,25 +774,44 @@
             showOtherMonths: true, footer: true, modal: true, header: true
         });
 
-
-
+        
         // Get references to the range input and text input
-        var rangeInput = document.getElementById("rangepicker");
-        var textInput = document.getElementById("inputRange");
+var rangeInput = document.getElementById("rangepicker");
+var textInput = document.getElementById("inputRange");
 
-        // Update the text input value when the range input changes
-        rangeInput.addEventListener("input", function () {
-            textInput.value = rangeInput.value;
-        });
+// Set a dynamic value for the range input
+var dynamicValue = 0;
+rangeInput.value = dynamicValue;
+textInput.value = dynamicValue;
 
-        // Update the range input value when the text input changes
-        textInput.addEventListener("input", function () {
-            rangeInput.value = textInput.value;
-        });
+// Set the minimum value for the range input
+rangeInput.min = dynamicValue;
+
+// Update the text input value when the range input changes
+rangeInput.addEventListener("input", function () {
+    textInput.value = rangeInput.value;
+});
+
+// Update the range input value when the text input changes
+textInput.addEventListener("input", function () {
+    // Ensure that the text input value is within the range limits
+    var inputValue = parseInt(textInput.value, 10);
+    if (inputValue < parseInt(rangeInput.min, 10)) {
+        inputValue = parseInt(rangeInput.min, 10);
+    } else if (inputValue > parseInt(rangeInput.max, 10)) {
+        inputValue = parseInt(rangeInput.max, 10);
+    }
+
+    // Set the updated value to the text input
+    textInput.value = inputValue;
+    // Set the updated value to the range input
+    rangeInput.value = inputValue;
+});
+
 
     </script>
     <script>
-        popoverSPSubWise()
+        // popoverSPSubWise()
         function popoverSPSubWise() {
     document.addEventListener("DOMContentLoaded", function () {
         var popoverButtons = document.querySelectorAll('.show-popover');
