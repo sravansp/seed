@@ -185,3 +185,92 @@ if (document.querySelector("#chart-line")) {
     var chart2 = new ApexCharts(document.querySelector("#chart-line"), options2);
     chart2.render();
 }
+
+
+if (document.querySelector("#bar-chart2")) {
+    var options = {
+        chart: {
+            type: 'bar',
+            height: '100%',
+            minHeight: '247px',
+            toolbar: {
+                show: false
+            }
+        },
+        plotOptions: {
+            bar: {
+                columnWidth: '20%',
+                barHeight: '100%',
+                borderRadius: 5,
+                dataLabels: {
+                    position: 'top'
+                }
+            }
+        },
+        grid: {
+            show: true,      // you can either change hear to disable all grids
+            xaxis: {
+              lines: {
+                show: false  //or just here to disable only x axis grids
+               }
+             },  
+            yaxis: {
+              lines: { 
+                show: true  //or just here to disable only y axis
+               }
+             },   
+          },
+        series: [{
+            name: 'Student Count',
+            data: [4, 3, 2, 5, 8, 11, 4, 13, 2, 10],
+            
+        }],
+        xaxis: {
+            categories: ['class 1', 'class 2', 'class 3', 'class 4', 'class 5', 'class 6', 'class 7', 'class 8', 'class 9', 'class 10'],
+            width: '100%', // Set the width of the x-axis to 100%
+            labels: {
+                style: {
+                    fontSize: '10px',
+                    fontWeight:"600", // You can adjust the font size
+                },
+
+            },
+            // title: {
+            //     text: "Students count by standard",
+            //     style: {
+            //         fontSize: '11px', // You can adjust the font size
+            //         fontWeight: 400,
+            //     }
+            // }
+
+        },
+
+        dataLabels: {
+            enabled: true,
+            offsetY: -25,
+            style: {
+                colors: ['#ccc']
+            },
+            formatter: function (val) {
+                return val; // Display the data value on top of each bar
+            }
+        },
+        stroke: {
+            curve: "straight"
+        },
+        yaxis: {
+            show: false, // Disable y-axis levels
+            lines: {
+                show: false // Hide y-axis lines
+            },
+            ticks: {
+                show: false // Hide y-axis ticks
+            }
+        },
+        colors: ['#30D5C7'] // Specify custom colors for bars
+    }
+
+    var chart1 = new ApexCharts(document.querySelector("#bar-chart2"), options);
+
+    chart1.render();
+}

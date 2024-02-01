@@ -3509,10 +3509,10 @@ ul.collection li {
     left: 10px;
   }
 
-  .form-select{
+  /* .form-select{
     padding: 5px !important;
     border-radius: 7px;
-  }
+  } */
   .btn-secondary{
     background-color: #fff !important;
     color: black;
@@ -3521,10 +3521,10 @@ ul.collection li {
     color: #747474 !important;
   }
 
-  .form-select{
+  /* .form-select{
     font-size: 12px !important;
     width: 100% !important;
-  }
+  } */
 .btn-blue{
     width: 100%;
     justify-content: center;
@@ -3546,7 +3546,33 @@ padding: 4px 6px;
 border: none;
 outline: none;
 }
+
+.view-all{
+    border-radius: 6px;
+    background: rgba(74, 159, 149, 0.10);
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    color: var(--bg-main-primary);
+}
   
+.admin-card1 .card-dash1 {
+    /* background: var(--card-gradient); */
+    border-radius: 14px;
+    box-shadow: var(--shadow-neo);
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card-dash1 {
+    background: var(--card-gradient);
+    border-radius: 14px;
+    box-shadow: var(--shadow-neo);
+    width: 100%;
+    overflow: hidden;
+}
   
   
   
