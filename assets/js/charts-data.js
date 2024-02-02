@@ -188,6 +188,7 @@ if (document.querySelector("#chart-line")) {
 
 
 if (document.querySelector("#bar-chart2")) {
+    
     var options = {
         chart: {
             type: 'bar',
@@ -220,11 +221,16 @@ if (document.querySelector("#bar-chart2")) {
                }
              },   
           },
-        series: [{
-            name: 'Student Count',
-            data: [4, 3, 2, 5, 8, 11, 4, 13, 2, 10],
-            
-        }],
+          series: [
+            {
+                name: 'All Students',
+                data: [4, 3, 2, 5, 8, 11, 4, 13, 2, 10]
+            },
+           
+        ],
+
+        
+
         xaxis: {
             categories: ['class 1', 'class 2', 'class 3', 'class 4', 'class 5', 'class 6', 'class 7', 'class 8', 'class 9', 'class 10'],
             width: '100%', // Set the width of the x-axis to 100%
@@ -267,7 +273,7 @@ if (document.querySelector("#bar-chart2")) {
                 show: false // Hide y-axis ticks
             }
         },
-        colors: ['#30D5C7'] // Specify custom colors for bars
+        colors: ['#4A9F95'] // Specify custom colors for bars
     }
 
     var chart1 = new ApexCharts(document.querySelector("#bar-chart2"), options);
