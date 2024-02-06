@@ -280,3 +280,117 @@ if (document.querySelector("#bar-chart2")) {
 
     chart1.render();
 }
+
+if (document.querySelector("#bar-chart3")) {
+    
+    var options = {
+        chart: {
+            type: 'bar',
+            height: '100%',
+            minHeight: '247px',
+            toolbar: {
+                show: false
+            }
+        },
+        plotOptions: {
+            bar: {
+                columnWidth: '20%',
+                barHeight: '100%',
+                borderRadius: 5,
+                dataLabels: {
+                    position: 'top'
+                }
+            }
+        },
+        grid: {
+            show: true,      // you can either change hear to disable all grids
+            xaxis: {
+              lines: {
+                show: false  //or just here to disable only x axis grids
+               }
+             },  
+            yaxis: {
+              lines: { 
+                show: true  //or just here to disable only y axis
+               }
+             },   
+          },
+          series: [
+            {
+                name: 'All Students',
+                data: [4, 3, 2, 5, 8, 11, 4, 13, 2, 10]
+            },
+           
+        ],
+
+        xaxis: {
+            categories: [
+                {
+                 image: 'http://127.0.0.1:5502/assets/images/avatar1.png' // Add the path to the image for class 1
+                },
+                {
+                    name: 'class 2',
+                    image: '/assets/images/avatar1.png' // Add the path to the image for class 2
+                },
+                // ... (repeat for other categories)
+            ],
+            labels: {
+                style: {
+                    fontSize: '10px',
+                    fontWeight: "600",
+                },
+            },
+            // ... (other x-axis properties)
+        },
+
+        dataLabels: {
+            enabled: true,
+            offsetY: -25,
+            style: {
+                colors: ['#ccc']
+            },
+            formatter: function (val, opts) {
+                var category = opts.w.globals.labels[opts.dataPointIndex];
+                var imageUrl = category.image; 
+                
+                // Create an HTML element with both text and image
+                var labelHtml = '<div style="text-align: center;">';
+                labelHtml += '<div>' + val + '</div>'; // Display the value
+                labelHtml += '<img src="' + imageUrl + '" width="10" height="20" style="margin-top: 5px;" />'; // Display the image
+                labelHtml += '</div>';
+        
+                return {
+                    html: labelHtml,
+                };
+            }
+        },
+
+        dataLabels: {
+            enabled: true,
+            offsetY: -25,
+            style: {
+                colors: ['#ccc']
+            },
+            formatter: function (val) {
+                return val; // Display the data value on top of each bar
+            }
+        },
+        stroke: {
+            curve: "straight"
+        },
+        yaxis: {
+            show: false, // Disable y-axis levels
+            lines: {
+                show: false // Hide y-axis lines
+            },
+            ticks: {
+                show: false // Hide y-axis ticks
+            }
+        },
+        colors: ['#4A9F95'] // Specify custom colors for bars
+    }
+
+    var chart1 = new ApexCharts(document.querySelector("#bar-chart3"), options);
+
+    chart1.render();
+}

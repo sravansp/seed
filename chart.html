@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Getting Started with Chart JS with www.chartjs3.com</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        /* .chartMenu {
+      width: 100vw;
+      height: 40px;
+      background: #1A1A1A;
+      color: rgba(54, 162, 235, 1);
+    } */
+
+        /* .chartMenu p {
+      padding: 10px;
+      font-size: 20px;
+    } */
+
+        .chartCard {
+            width: 100vw;
+            height: calc(100vh - 40px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chartBox {
+            width: 700px;
+            padding: 20px;
+            border-radius: 20px;
+            border: solid 3px rgba(54, 162, 235, 1);
+            background: white;
+        }
+    </style>
+</head>
+
+<body>
+   
+    <div class="chartCard">
+        <div class="chartBox">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+    <script>
+        // setup 
+        const data = {
+            labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            datasets: [{
+                data: [18, 12, 6, 9, 12, 3, 9],
+                backgroundColor: [
+                    '#4A9F95',
+                ],
+                borderRadius: 5,
+                images: ['http://127.0.0.1:5502/assets/images/avatar1.png', 'http://127.0.0.1:5502/assets/images/avatar1.png', 'http://127.0.0.1:5502/assets/images/avatar1.png', 'http://127.0.0.1:5502/assets/images/avatar1.png', 'http://127.0.0.1:5502/assets/images/avatar1.png', 'http://127.0.0.1:5502/assets/images/avatar1.png', 'http://127.0.0.1:5502/assets/images/avatar1.png'],
+                barThickness: 10, // Adjust this value to change the width of the bars
+                categoryPercentage: 0.7, // Adjust this value to reduce padding between bars
+                barPercentage: 0.9
+            }]
+        };
+        // xScaleIrraqe plugin block
+        const xScaleImage = {
+            id: 'xScaleImage',
+            afterDatasetsDraw(chart, args, plugins) {
+                const { ctx, data, chartArea: { bottom }, scales: { x }
+                } = chart;
+                ctx.save();
+                console.log(data.datasets[0].images)
+                data.datasets[0].images.forEach((image, index) => {
+                    const label = new Image();
+                    label.src = image;
+                    const width = 30;
+                    ctx.drawImage(label, x.getPixelForValue(index) - (width / 2), x.top, width, width);
+                })
+            }
+        }
+        // config 
+        const config = {
+            type: 'bar',
+            data,
+            options: {
+                scales: {
+                    x: {
+                        ticks: {
+                            callback: ((value, index, values) => {
+                                return ''
+                            })
+                        }
+                    },
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                // plugins: {
+                //     datalabels: {
+                //         position:'top'
+                //     }
+                // }
+            },
+            plugins: [xScaleImage]
+        };
+        // render init block
+        const myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+        );
+        // Instantly assign Chart.js version
+        const chartVersion = document.getElementById('chartVersion');
+        chartVersion.innerText = Chart.version;
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+</body>
+
+</html>

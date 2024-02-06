@@ -825,6 +825,23 @@ body.dark .home .text {
 
 }
 
+.table-search{
+    background: var(--body-light);
+    display: flex;
+    width: auto;
+    padding: 0px 8px 0px 16px;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    border-radius: 8px;
+}
+.table-search input{
+    width: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
 .navbar_container .nav-search {
     background: var(--body-light);
     display: flex;
@@ -3387,6 +3404,29 @@ ul.collection li {
     background-color: #FF725E;
     background-size: 10px 10px;
   }
+
+  .progress3 {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    font-family: sans-serif;
+    height: 5px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%;
+  }
+
+  .progress3::-webkit-progress-bar {
+    background-color: #ccc;
+  }
+  .progress3::-webkit-progress-value {
+    border-radius: 5px;
+    background-color: var(--bg-primary-color);
+    background-size: 10px 10px;
+  }
   
   @keyframes moveIndeterminate {
     from {
@@ -3573,6 +3613,46 @@ outline: none;
     width: 100%;
     overflow: hidden;
 }
+
+.select2-selection__rendered{
+    font-size: 12px !important;
+}
+
+.btn-group button {
+    border: 1px solid #D0D5DD;
+    color: #344054; /* White text */
+    padding: 10px 20px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+  }
+  
+  /* Clear floats (clearfix hack) */
+  .btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .btn-group button:first-child {
+    border-radius: 6px 0 0 6px;
+}
+.btn-group button:last-child {
+    border-radius: 0 6px 6px 0;
+    margin-left: -1px;
+}
+  .btn-group button:only-child {
+    border-radius: 6px;
+    margin-left: 0;
+}
+  
+  .btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+  }
+  
+  /* Add a background color on hover */
+  .btn-group button:hover {
+    background-color: var(--bg-main-primary);
+    color: white;
+  }
   
   
   
