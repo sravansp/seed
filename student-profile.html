@@ -264,30 +264,79 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="inner-wrapper table-dash p-4 flex-col gap-4 bg-light">
-                                        <div class="flex-col gap-2">
-                                            <h1 class="fs-24 fs-sm-16 fw-semibold">Student List ( <span id="usercount">326</span> )
-                                            </h1>
-                                            <p class="fs-14 fs-sm-12 fw-normal">These Students are are registered in our programme</p>
+                                        <div>
+                                            <p class="fs-20 fw-semibold"><i class="ri-graduation-cap-line fs-30"></i>
+                                                Student Profile</p>
+                                            <div class="row justify-content-between gap-5 gap-md-3 gap-lg-2 pt-5">
+                                                <div class="col-12 col-md-4 col-xl-3 flex-c-m gap-2">
+                                                    <div class="" style="width: 120px;">
+                                                        <img src="./assets/images/mohammed.png" alt="" class="w-100">
+                                                    </div>
+                                                    <div>
+                                                        <p class="fs-20 fs-sm-14 fw-semibold"
+                                                            style="white-space: nowrap;">Nihal Ahammed</p>
+                                                        <div class="flex gap-1">
+                                                            <img src="./assets/images/NIMS_Dubai_Logo 1.png" alt="" class="">
+                                                            <p>NIMS, Dubai</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-3 col-xl-2 bradius-7 border-green py-3 px-4">
+                                                    <i class="ri-lightbulb-flash-line text-primary fs-20"></i>
+                                                    <div>
+                                                        <p class="fs-14 fw-500">Skill Progression</p>
+                                                        <p class="fs-14 fw-semibold">68%</p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="fs-12 fw-500 text-gray600 flex-m">View Details <i
+                                                                class="ri-arrow-right-s-line fs-16"></i></p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-3 col-xl-2 bradius-7 border-green py-3 px-4">
+                                                    <i class="ri-lightbulb-flash-line text-primary fs-20"></i>
+                                                    <div>
+                                                        <p class="fs-14 fw-500">Skill Progression</p>
+                                                        <p class="fs-14 fw-semibold">68%</p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="fs-12 fw-500 text-gray600 flex-m">View Details <i
+                                                                class="ri-arrow-right-s-line fs-16"></i></p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-4 col-xl-4 flex-col gap-2">
+                                                    <div class="flex gap-5">
+                                                        <p class="fs-14 text-gray600">Guardian Name</p>
+                                                        <p class="fs-14 fw-semibold">Nazeer Jamal</p>
+                                                    </div>
+                                                    <div class="flex gap-5">
+                                                        <p class="fs-14 text-gray600">Address</p>
+                                                        <p class="p-l-50 p-l-0-md p-l-0-xl fs-14 fw-semibold">Jamal
+                                                            House,
+                                                            Bougain Villa,
+                                                            West Dubai, UAE</p>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="flex-col-c-m flex-lg-row justify-content-between gap-3 gap-md-1 gap-lg-0">
-                                            <div class="btn-group d-none d-md-block d-lg-block">
-                                                <button class="fs-14 fw-semibold">All</button>
-                                                <button class="fs-14 fw-semibold">NIMS Schools</button>
-                                                <button class="fs-14 fw-semibold">Partner Schools</button>
-                                                <button class="fs-14 fw-semibold">Other schools</button>
+                                        <div class="row">
+                                            <div class="col-12 col-lg-8">
+                                                <div class="tab-box">
+                                                    <button class="tab-btn fs-sm-10 fs-16">Student Intake
+                                                        Details</button>
+                                                    <button class="tab-btn fs-sm-10 fs-16">Assessment History</button>
+                                                    <button class="tab-btn fs-sm-10 fs-16">Consultation History</button>
+                                                    <div class="line"></div>
+                                                </div>
                                             </div>
-                                            <div class="d-block d-md-none d-lg-none col-8">
-                                                <select
-                                                class="form-control select2-select select2-show-search form-select fs-12"
-                                                data-placeholder="Choose one">
-                                                <option label="Choose one">All</option>
-                                                <option value="AZ">NIMS Schools</option>
-                                                <option value="CO">Partner Schools</option>
-                                                <option value="ID">Other schools</option>
-                                                </select>
-                                            </div>
+                                        </div>
+                                        <div class="flex-col gap-2 pt-5">
+                                            <h1 class="fs-24 fs-sm-16 fw-semibold">Consultation History ( <span id="usercount">326</span> )
+                                            </h1>
+                                            <p class="fs-14 fs-sm-12 fw-normal">These Students are registered in our programme</p>
+                                        </div>
+                                        <div class="flex">
                                             <div class="flex flex-col-c-sm gap-3 ">
-                                                <div class="table-search shadow-neo">
+                                                <div class="table-search shadow-neo w-100">
                                                     <i class="ri-search-line fs-25"></i>
                                                     <input class="" type="search" placeholder="Search" aria-label="Search">
                                                 </div>
@@ -299,12 +348,12 @@
                                         <div class="table-responsive bg-light bradius-7">
                                             <table class="table table-hover align-middle fs-12">
                                                 <thead class="table-light fw-semibold">
-                                                    <th scope="col">Student Name</th>
-                                                    <th scope="col">Standard</th>
-                                                    <th scope="col">School</th>
-                                                    <th scope="col">Subject Progress</th>
-                                                    <th scope="col">IEP Progression</th>
-                                                    <th scope="col">Reports</th>
+                                                    <th scope="col">Assessment Type</th>
+                                                    <th scope="col">Date & Time</th>
+                                                    <th scope="col">Consultant</th>
+                                                    <th scope="col">Notes</th>
+                                                    <th scope="col">Documents</th>
+
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -318,64 +367,51 @@
                                                         </td> -->
                                                         <td>
                                                             <div class="flex-m gap-2">
-                                                                <div
-                                                                    class="img-table w-40 h-40 rounded-circle overflow-hidden">
-                                                                    <img class="w-full h-full object-center object-cover"
-                                                                        src="./assets/images/user.webp" alt="">
-                                                                </div>
+
                                                                 <div class="flex-col gap-1">
-                                                                    <p class="fs-16 fw-semibold">Mohammed Nihal</p>
-                                                                    <p class="text-decoration-underline text-primary">View Student Profile</p>
+                                                                    <p class="fs-14 fw-500">Physical Therapy</p>
                                                                 </div>
                                                             </div>
                                                         </td>
-                                                        <td>10</td>
+
                                                         <td>
-                                                            <p class="fw-500">NIMS</p>
-                                                            <p class="text-dark-gray">Dubai</p>
+                                                            <p class="fw-500">10 Aug 2023</p>
+                                                            <p class="text-gray600">9:30 AM</p>
                                                         </td>
                                                         <td>
                                                             <div class=" flex-col gap-1">
-                                                                <div class="flex-m gap-3">
-                                                                    <progress class="progress w-50" value="50"
-                                                                        max="100"></progress>
-                                                                        <p>60%</p>
-                                                                </div>
-                                                                <div class="flex-sb">
-                                                                    <a class="fs-12 fs-sm-10 text-decoration-underline">
-                                                                        View Details
-                                                                    </a>
-                                                                </div>
+                                                                <p class="fw-500">Dr Ahmmed Jamal</p>
+                                                                <p class="text-gray600">Senior Physical Therapist</p>
                                                             </div>
                                                         </td>
                                                         <td>
                                                             <div class=" flex-col gap-1">
-                                                                <div class="flex-m gap-3">
-                                                                    <progress class="progress3 w-50" value="50"
-                                                                        max="100"></progress>
-                                                                        <p>60%</p>
-                                                                </div>
-                                                                <div class="flex-sb">
-                                                                    <a class="fs-12 fs-sm-10 text-decoration-underline">
-                                                                        View Details
-                                                                    </a>
-                                                                </div>
+                                                                <p class="fw-500">About Physical Excercise</p>
+                                                                <p class="text-gray600">Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip
+                                                                    ex ea ..</p>
                                                             </div>
 
                                                         </td>
                                                         <td>
-                                                            <button class="btn p-0 px-2" type="button"
-                                                                data-bs-toggle="dropdown" aria-expanded="false"><i
-                                                                    class="ri-more-2-fill"></i></button>
+                                                            <div class=" flex-col gap-1">
+                                                                <p class="fs-12 fw-500 text-primary">Lorem Ipsum Report
+                                                                </p>
+                                                                <p class="fs-12 fw-500 text-purple700">Lorem Ipsum
+                                                                    Report</p>
+                                                            </div>
+                                                            <button class="btn fs-12 fw-500 text-orange700"
+                                                                type="button" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">+3 More</button>
                                                             <ul class="dropdown-menu">
-                                                                <li><button class="dropdown-item" type="button"><i
-                                                                            class="ri-edit-2-line fs-14 pe-2"></i>Modify</button>
+                                                                <li><button class="dropdown-item" type="button">Lorem
+                                                                        Ipsum Report</button>
                                                                 </li>
-                                                                <li><button class="dropdown-item" type="button"><i
-                                                                            class="ri-key-fill fs-14 pe-2"></i>Reset</button>
+                                                                <li><button class="dropdown-item" type="button">Lorem
+                                                                        Ipsum Report</button>
                                                                 </li>
-                                                                <li><button class="dropdown-item" type="button"><i
-                                                                            class="ri-eye-line fs-14 pe-2"></i>View</button>
+                                                                <li><button class="dropdown-item" type="button">Lorem
+                                                                        Ipsum Report</button>
                                                                 </li>
                                                             </ul>
                                                         </td>
@@ -390,63 +426,50 @@
                                                         </td> -->
                                                         <td>
                                                             <div class="flex-m gap-2">
-                                                                <div
-                                                                    class="img-table w-40 h-40 rounded-circle overflow-hidden">
-                                                                    <img class="w-full h-full object-center object-cover"
-                                                                        src="./assets/images/user.webp" alt="">
-                                                                </div>
+
                                                                 <div class="flex-col gap-1">
-                                                                    <p class="fs-16 fw-semibold">Mohammed Nihal</p>
-                                                                    <p class="text-decoration-underline text-primary">View Student Profile</p>
+                                                                    <p class="fs-14 fw-500">Physical Therapy</p>
                                                                 </div>
                                                             </div>
                                                         </td>
-                                                        <td>10</td>
+
                                                         <td>
-                                                            <p class="fw-500">NIMS</p>
-                                                            <p class="text-dark-gray">Dubai</p>
+                                                            <p class="fw-500">10 Aug 2023</p>
+                                                            <p class="text-gray600">9:30 AM</p>
                                                         </td>
                                                         <td>
                                                             <div class=" flex-col gap-1">
-                                                                <div class="flex-m gap-3">
-                                                                    <progress class="progress w-50" value="50"
-                                                                        max="100"></progress>
-                                                                        <p>60%</p>
-                                                                </div>
-                                                                <div class="flex-sb">
-                                                                    <a class="fs-12 fs-sm-10 text-decoration-underline">
-                                                                        View Details
-                                                                    </a>
-                                                                </div>
+                                                                <p class="fw-500">Dr Ahmmed Jamal</p>
+                                                                <p class="text-gray600">Senior Physical Therapist</p>
                                                             </div>
                                                         </td>
                                                         <td>
                                                             <div class=" flex-col gap-1">
-                                                                <div class="flex-m gap-3">
-                                                                    <progress class="progress3 w-50" value="50"
-                                                                        max="100"></progress>
-                                                                        <p>60%</p>
-                                                                </div>
-                                                                <div class="flex-sb">
-                                                                    <a class="fs-12 fs-sm-10 text-decoration-underline">
-                                                                        View Details
-                                                                    </a>
-                                                                </div>
+                                                                <p class="fw-500">About Physical Excercise</p>
+                                                                <p class="text-gray600">Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip
+                                                                    ex ea ..</p>
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <button class="btn p-0 px-2" type="button"
-                                                                data-bs-toggle="dropdown" aria-expanded="false"><i
-                                                                    class="ri-more-2-fill"></i></button>
+                                                            <div class=" flex-col gap-1">
+                                                                <p class="fs-12 fw-500 text-primary">Lorem Ipsum Report
+                                                                </p>
+                                                                <p class="fs-12 fw-500 text-purple700">Lorem Ipsum
+                                                                    Report</p>
+                                                            </div>
+                                                            <button class="btn fs-12 fw-500 text-orange700"
+                                                                type="button" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">+3 More</button>
                                                             <ul class="dropdown-menu">
-                                                                <li><button class="dropdown-item" type="button"><i
-                                                                            class="ri-edit-2-line fs-14 pe-2"></i>Modify</button>
+                                                                <li><button class="dropdown-item" type="button">Lorem
+                                                                        Ipsum Report</button>
                                                                 </li>
-                                                                <li><button class="dropdown-item" type="button"><i
-                                                                            class="ri-key-fill fs-14 pe-2"></i>Reset</button>
+                                                                <li><button class="dropdown-item" type="button">Lorem
+                                                                        Ipsum Report</button>
                                                                 </li>
-                                                                <li><button class="dropdown-item" type="button"><i
-                                                                            class="ri-eye-line fs-14 pe-2"></i>View</button>
+                                                                <li><button class="dropdown-item" type="button">Lorem
+                                                                        Ipsum Report</button>
                                                                 </li>
                                                             </ul>
                                                         </td>
@@ -461,64 +484,51 @@
                                                         </td> -->
                                                         <td>
                                                             <div class="flex-m gap-2">
-                                                                <div
-                                                                    class="img-table w-40 h-40 rounded-circle overflow-hidden">
-                                                                    <img class="w-full h-full object-center object-cover"
-                                                                        src="./assets/images/user.webp" alt="">
-                                                                </div>
+
                                                                 <div class="flex-col gap-1">
-                                                                    <p class="fs-16 fw-semibold">Mohammed Nihal</p>
-                                                                    <p class="text-decoration-underline text-primary">View Student Profile</p>
+                                                                    <p class="fs-14 fw-500">Physical Therapy</p>
                                                                 </div>
                                                             </div>
                                                         </td>
-                                                        <td>10</td>
+
                                                         <td>
-                                                            <p class="fw-500">NIMS</p>
-                                                            <p class="text-dark-gray">Dubai</p>
+                                                            <p class="fw-500">10 Aug 2023</p>
+                                                            <p class="text-gray600">9:30 AM</p>
                                                         </td>
                                                         <td>
                                                             <div class=" flex-col gap-1">
-                                                                <div class="flex-m gap-3">
-                                                                    <progress class="progress w-50" value="50"
-                                                                        max="100"></progress>
-                                                                        <p>60%</p>
-                                                                </div>
-                                                                <div class="flex-sb">
-                                                                    <a class="fs-12 fs-sm-10 text-decoration-underline">
-                                                                        View Details
-                                                                    </a>
-                                                                </div>
+                                                                <p class="fw-500">Dr Ahmmed Jamal</p>
+                                                                <p class="text-gray600">Senior Physical Therapist</p>
                                                             </div>
                                                         </td>
                                                         <td>
                                                             <div class=" flex-col gap-1">
-                                                                <div class="flex-m gap-3">
-                                                                    <progress class="progress3 w-50" value="50"
-                                                                        max="100"></progress>
-                                                                        <p>60%</p>
-                                                                </div>
-                                                                <div class="flex-sb">
-                                                                    <a class="fs-12 fs-sm-10 text-decoration-underline">
-                                                                        View Details
-                                                                    </a>
-                                                                </div>
+                                                                <p class="fw-500">About Physical Excercise</p>
+                                                                <p class="text-gray600">Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip
+                                                                    ex ea ..</p>
                                                             </div>
 
                                                         </td>
                                                         <td>
-                                                            <button class="btn p-0 px-2" type="button"
-                                                                data-bs-toggle="dropdown" aria-expanded="false"><i
-                                                                    class="ri-more-2-fill"></i></button>
+                                                            <div class=" flex-col gap-1">
+                                                                <p class="fs-12 fw-500 text-primary">Lorem Ipsum Report
+                                                                </p>
+                                                                <p class="fs-12 fw-500 text-purple700">Lorem Ipsum
+                                                                    Report</p>
+                                                            </div>
+                                                            <button class="btn fs-12 fw-500 text-orange700"
+                                                                type="button" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">+3 More</button>
                                                             <ul class="dropdown-menu">
-                                                                <li><button class="dropdown-item" type="button"><i
-                                                                            class="ri-edit-2-line fs-14 pe-2"></i>Modify</button>
+                                                                <li><button class="dropdown-item" type="button">Lorem
+                                                                        Ipsum Report</button>
                                                                 </li>
-                                                                <li><button class="dropdown-item" type="button"><i
-                                                                            class="ri-key-fill fs-14 pe-2"></i>Reset</button>
+                                                                <li><button class="dropdown-item" type="button">Lorem
+                                                                        Ipsum Report</button>
                                                                 </li>
-                                                                <li><button class="dropdown-item" type="button"><i
-                                                                            class="ri-eye-line fs-14 pe-2"></i>View</button>
+                                                                <li><button class="dropdown-item" type="button">Lorem
+                                                                        Ipsum Report</button>
                                                                 </li>
                                                             </ul>
                                                         </td>
@@ -533,63 +543,50 @@
                                                         </td> -->
                                                         <td>
                                                             <div class="flex-m gap-2">
-                                                                <div
-                                                                    class="img-table w-40 h-40 rounded-circle overflow-hidden">
-                                                                    <img class="w-full h-full object-center object-cover"
-                                                                        src="./assets/images/user.webp" alt="">
-                                                                </div>
+
                                                                 <div class="flex-col gap-1">
-                                                                    <p class="fs-16 fw-semibold">Mohammed Nihal</p>
-                                                                    <p class="text-decoration-underline text-primary">View Student Profile</p>
+                                                                    <p class="fs-14 fw-500">Physical Therapy</p>
                                                                 </div>
                                                             </div>
                                                         </td>
-                                                        <td>10</td>
+
                                                         <td>
-                                                            <p class="fw-500">NIMS</p>
-                                                            <p class="text-dark-gray">Dubai</p>
+                                                            <p class="fw-500">10 Aug 2023</p>
+                                                            <p class="text-gray600">9:30 AM</p>
                                                         </td>
                                                         <td>
                                                             <div class=" flex-col gap-1">
-                                                                <div class="flex-m gap-3">
-                                                                    <progress class="progress w-50" value="50"
-                                                                        max="100"></progress>
-                                                                        <p>60%</p>
-                                                                </div>
-                                                                <div class="flex-sb">
-                                                                    <a class="fs-12 fs-sm-10 text-decoration-underline">
-                                                                        View Details
-                                                                    </a>
-                                                                </div>
+                                                                <p class="fw-500">Dr Ahmmed Jamal</p>
+                                                                <p class="text-gray600">Senior Physical Therapist</p>
                                                             </div>
                                                         </td>
                                                         <td>
                                                             <div class=" flex-col gap-1">
-                                                                <div class="flex-m gap-3">
-                                                                    <progress class="progress3 w-50" value="50"
-                                                                        max="100"></progress>
-                                                                        <p>60%</p>
-                                                                </div>
-                                                                <div class="flex-sb">
-                                                                    <a class="fs-12 fs-sm-10 text-decoration-underline">
-                                                                        View Details
-                                                                    </a>
-                                                                </div>
+                                                                <p class="fw-500">About Physical Excercise</p>
+                                                                <p class="text-gray600">Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip
+                                                                    ex ea ..</p>
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <button class="btn p-0 px-2" type="button"
-                                                                data-bs-toggle="dropdown" aria-expanded="false"><i
-                                                                    class="ri-more-2-fill"></i></button>
+                                                            <div class=" flex-col gap-1">
+                                                                <p class="fs-12 fw-500 text-primary">Lorem Ipsum Report
+                                                                </p>
+                                                                <p class="fs-12 fw-500 text-purple700">Lorem Ipsum
+                                                                    Report</p>
+                                                            </div>
+                                                            <button class="btn fs-12 fw-500 text-orange700"
+                                                                type="button" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">+3 More</button>
                                                             <ul class="dropdown-menu">
-                                                                <li><button class="dropdown-item" type="button"><i
-                                                                            class="ri-edit-2-line fs-14 pe-2"></i>Modify</button>
+                                                                <li><button class="dropdown-item" type="button">Lorem
+                                                                        Ipsum Report</button>
                                                                 </li>
-                                                                <li><button class="dropdown-item" type="button"><i
-                                                                            class="ri-key-fill fs-14 pe-2"></i>Reset</button>
+                                                                <li><button class="dropdown-item" type="button">Lorem
+                                                                        Ipsum Report</button>
                                                                 </li>
-                                                                <li><button class="dropdown-item" type="button"><i
-                                                                            class="ri-eye-line fs-14 pe-2"></i>View</button>
+                                                                <li><button class="dropdown-item" type="button">Lorem
+                                                                        Ipsum Report</button>
                                                                 </li>
                                                             </ul>
                                                         </td>
@@ -604,64 +601,51 @@
                                                         </td> -->
                                                         <td>
                                                             <div class="flex-m gap-2">
-                                                                <div
-                                                                    class="img-table w-40 h-40 rounded-circle overflow-hidden">
-                                                                    <img class="w-full h-full object-center object-cover"
-                                                                        src="./assets/images/user.webp" alt="">
-                                                                </div>
+
                                                                 <div class="flex-col gap-1">
-                                                                    <p class="fs-16 fw-semibold">Mohammed Nihal</p>
-                                                                    <p class="text-decoration-underline text-primary">View Student Profile</p>
+                                                                    <p class="fs-14 fw-500">Physical Therapy</p>
                                                                 </div>
                                                             </div>
                                                         </td>
-                                                        <td>10</td>
+
                                                         <td>
-                                                            <p class="fw-500">NIMS</p>
-                                                            <p class="text-dark-gray">Dubai</p>
+                                                            <p class="fw-500">10 Aug 2023</p>
+                                                            <p class="text-gray600">9:30 AM</p>
                                                         </td>
                                                         <td>
                                                             <div class=" flex-col gap-1">
-                                                                <div class="flex-m gap-3">
-                                                                    <progress class="progress w-50" value="50"
-                                                                        max="100"></progress>
-                                                                        <p>60%</p>
-                                                                </div>
-                                                                <div class="flex-sb">
-                                                                    <a class="fs-12 fs-sm-10 text-decoration-underline">
-                                                                        View Details
-                                                                    </a>
-                                                                </div>
+                                                                <p class="fw-500">Dr Ahmmed Jamal</p>
+                                                                <p class="text-gray600">Senior Physical Therapist</p>
                                                             </div>
                                                         </td>
                                                         <td>
                                                             <div class=" flex-col gap-1">
-                                                                <div class="flex-m gap-3">
-                                                                    <progress class="progress3 w-50" value="50"
-                                                                        max="100"></progress>
-                                                                        <p>60%</p>
-                                                                </div>
-                                                                <div class="flex-sb">
-                                                                    <a class="fs-12 fs-sm-10 text-decoration-underline">
-                                                                        View Details
-                                                                    </a>
-                                                                </div>
+                                                                <p class="fw-500">About Physical Excercise</p>
+                                                                <p class="text-gray600">Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip
+                                                                    ex ea ..</p>
                                                             </div>
 
                                                         </td>
                                                         <td>
-                                                            <button class="btn p-0 px-2" type="button"
-                                                                data-bs-toggle="dropdown" aria-expanded="false"><i
-                                                                    class="ri-more-2-fill"></i></button>
+                                                            <div class=" flex-col gap-1">
+                                                                <p class="fs-12 fw-500 text-primary">Lorem Ipsum Report
+                                                                </p>
+                                                                <p class="fs-12 fw-500 text-purple700">Lorem Ipsum
+                                                                    Report</p>
+                                                            </div>
+                                                            <button class="btn fs-12 fw-500 text-orange700"
+                                                                type="button" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">+3 More</button>
                                                             <ul class="dropdown-menu">
-                                                                <li><button class="dropdown-item" type="button"><i
-                                                                            class="ri-edit-2-line fs-14 pe-2"></i>Modify</button>
+                                                                <li><button class="dropdown-item" type="button">Lorem
+                                                                        Ipsum Report</button>
                                                                 </li>
-                                                                <li><button class="dropdown-item" type="button"><i
-                                                                            class="ri-key-fill fs-14 pe-2"></i>Reset</button>
+                                                                <li><button class="dropdown-item" type="button">Lorem
+                                                                        Ipsum Report</button>
                                                                 </li>
-                                                                <li><button class="dropdown-item" type="button"><i
-                                                                            class="ri-eye-line fs-14 pe-2"></i>View</button>
+                                                                <li><button class="dropdown-item" type="button">Lorem
+                                                                        Ipsum Report</button>
                                                                 </li>
                                                             </ul>
                                                         </td>
@@ -676,61 +660,51 @@
                                                         </td> -->
                                                         <td>
                                                             <div class="flex-m gap-2">
-                                                                <div
-                                                                    class="img-table w-40 h-40 rounded-circle overflow-hidden">
-                                                                    <img class="w-full h-full object-center object-cover"
-                                                                        src="./assets/images/user.webp" alt="">
-                                                                </div>
+
                                                                 <div class="flex-col gap-1">
-                                                                    <p class="fs-16 fw-semibold">Mohammed Nihal</p>
-                                                                    <p class="text-decoration-underline text-primary">View Student Profile</p>
+                                                                    <p class="fs-14 fw-500">Physical Therapy</p>
                                                                 </div>
                                                             </div>
                                                         </td>
-                                                        <td>10</td>
+
                                                         <td>
-                                                            <p class="fw-500">NIMS</p>
-                                                            <p class="text-dark-gray">Dubai</p>
+                                                            <p class="fw-500">10 Aug 2023</p>
+                                                            <p class="text-gray600">9:30 AM</p>
                                                         </td>
                                                         <td>
                                                             <div class=" flex-col gap-1">
-                                                                <div class="flex-m gap-3">
-                                                                    <progress class="progress w-50" value="50"
-                                                                        max="100"></progress>
-                                                                        <p>60%</p>
-                                                                </div>
-                                                                <div class="flex-sb">
-                                                                    <a class="fs-12 fs-sm-10 text-decoration-underline">
-                                                                        View Details
-                                                                    </a>
-                                                                </div>
+                                                                <p class="fw-500">Dr Ahmmed Jamal</p>
+                                                                <p class="text-gray600">Senior Physical Therapist</p>
                                                             </div>
                                                         </td>
                                                         <td>
                                                             <div class=" flex-col gap-1">
-                                                                <div class="flex-m gap-3">
-                                                                    <progress class="progress3 w-50" value="50"
-                                                                        max="100"></progress>
-                                                                        <p>60%</p>
-                                                                </div>
-                                                                <div class="flex-sb">
-                                                                    <a class="fs-12 fs-sm-10 text-decoration-underline">
-                                                                        View Details
-                                                                    </a>
-                                                                </div>
+                                                                <p class="fw-500">About Physical Excercise</p>
+                                                                <p class="text-gray600">Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip
+                                                                    ex ea ..</p>
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <button class="btn p-0 px-2" type="button"
-                                                                data-bs-toggle="dropdown" aria-expanded="false"><i
-                                                                    class="ri-more-2-fill"></i></button>
+                                                            <div class=" flex-col gap-1">
+                                                                <p class="fs-12 fw-500 text-primary">Lorem Ipsum Report
+                                                                </p>
+                                                                <p class="fs-12 fw-500 text-purple700">Lorem Ipsum
+                                                                    Report</p>
+                                                            </div>
+                                                            <button class="btn fs-12 fw-500 text-orange700"
+                                                                type="button" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">+3 More</button>
                                                             <ul class="dropdown-menu">
-                                                                <li><button class="dropdown-item"
-                                                                        type="button">Action</button></li>
-                                                                <li><button class="dropdown-item" type="button">Another
-                                                                        ac tion</button></li>
-                                                                <li><button class="dropdown-item"
-                                                                        type="button">Something else here</button></li>
+                                                                <li><button class="dropdown-item" type="button">Lorem
+                                                                        Ipsum Report</button>
+                                                                </li>
+                                                                <li><button class="dropdown-item" type="button">Lorem
+                                                                        Ipsum Report</button>
+                                                                </li>
+                                                                <li><button class="dropdown-item" type="button">Lorem
+                                                                        Ipsum Report</button>
+                                                                </li>
                                                             </ul>
                                                         </td>
                                                     </tr>
@@ -744,64 +718,51 @@
                                                         </td> -->
                                                         <td>
                                                             <div class="flex-m gap-2">
-                                                                <div
-                                                                    class="img-table w-40 h-40 rounded-circle overflow-hidden">
-                                                                    <img class="w-full h-full object-center object-cover"
-                                                                        src="./assets/images/user.webp" alt="">
-                                                                </div>
+
                                                                 <div class="flex-col gap-1">
-                                                                    <p class="fs-16 fw-semibold">Mohammed Nihal</p>
-                                                                    <p class="text-decoration-underline text-primary">View Student Profile</p>
+                                                                    <p class="fs-14 fw-500">Physical Therapy</p>
                                                                 </div>
                                                             </div>
                                                         </td>
-                                                        <td>10</td>
+
                                                         <td>
-                                                            <p class="fw-500">NIMS</p>
-                                                            <p class="text-dark-gray">Dubai</p>
+                                                            <p class="fw-500">10 Aug 2023</p>
+                                                            <p class="text-gray600">9:30 AM</p>
                                                         </td>
                                                         <td>
                                                             <div class=" flex-col gap-1">
-                                                                <div class="flex-m gap-3">
-                                                                    <progress class="progress w-50" value="50"
-                                                                        max="100"></progress>
-                                                                        <p>60%</p>
-                                                                </div>
-                                                                <div class="flex-sb">
-                                                                    <a class="fs-12 fs-sm-10 text-decoration-underline">
-                                                                        View Details
-                                                                    </a>
-                                                                </div>
+                                                                <p class="fw-500">Dr Ahmmed Jamal</p>
+                                                                <p class="text-gray600">Senior Physical Therapist</p>
                                                             </div>
                                                         </td>
                                                         <td>
                                                             <div class=" flex-col gap-1">
-                                                                <div class="flex-m gap-3">
-                                                                    <progress class="progress3 w-50" value="50"
-                                                                        max="100"></progress>
-                                                                        <p>60%</p>
-                                                                </div>
-                                                                <div class="flex-sb">
-                                                                    <a class="fs-12 fs-sm-10 text-decoration-underline">
-                                                                        View Details
-                                                                    </a>
-                                                                </div>
+                                                                <p class="fw-500">About Physical Excercise</p>
+                                                                <p class="text-gray600">Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip
+                                                                    ex ea ..</p>
                                                             </div>
 
                                                         </td>
                                                         <td>
-                                                            <button class="btn p-0 px-2" type="button"
-                                                                data-bs-toggle="dropdown" aria-expanded="false"><i
-                                                                    class="ri-more-2-fill"></i></button>
+                                                            <div class=" flex-col gap-1">
+                                                                <p class="fs-12 fw-500 text-primary">Lorem Ipsum Report
+                                                                </p>
+                                                                <p class="fs-12 fw-500 text-purple700">Lorem Ipsum
+                                                                    Report</p>
+                                                            </div>
+                                                            <button class="btn fs-12 fw-500 text-orange700"
+                                                                type="button" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">+3 More</button>
                                                             <ul class="dropdown-menu">
-                                                                <li><button class="dropdown-item" type="button"><i
-                                                                            class="ri-edit-2-line fs-14 pe-2"></i>Modify</button>
+                                                                <li><button class="dropdown-item" type="button">Lorem
+                                                                        Ipsum Report</button>
                                                                 </li>
-                                                                <li><button class="dropdown-item" type="button"><i
-                                                                            class="ri-key-fill fs-14 pe-2"></i>Reset</button>
+                                                                <li><button class="dropdown-item" type="button">Lorem
+                                                                        Ipsum Report</button>
                                                                 </li>
-                                                                <li><button class="dropdown-item" type="button"><i
-                                                                            class="ri-eye-line fs-14 pe-2"></i>View</button>
+                                                                <li><button class="dropdown-item" type="button">Lorem
+                                                                        Ipsum Report</button>
                                                                 </li>
                                                             </ul>
                                                         </td>
@@ -816,63 +777,50 @@
                                                         </td> -->
                                                         <td>
                                                             <div class="flex-m gap-2">
-                                                                <div
-                                                                    class="img-table w-40 h-40 rounded-circle overflow-hidden">
-                                                                    <img class="w-full h-full object-center object-cover"
-                                                                        src="./assets/images/user.webp" alt="">
-                                                                </div>
+
                                                                 <div class="flex-col gap-1">
-                                                                    <p class="fs-16 fw-semibold">Mohammed Nihal</p>
-                                                                    <p class="text-decoration-underline text-primary">View Student Profile</p>
+                                                                    <p class="fs-14 fw-500">Physical Therapy</p>
                                                                 </div>
                                                             </div>
                                                         </td>
-                                                        <td>10</td>
+
                                                         <td>
-                                                            <p class="fw-500">NIMS</p>
-                                                            <p class="text-dark-gray">Dubai</p>
+                                                            <p class="fw-500">10 Aug 2023</p>
+                                                            <p class="text-gray600">9:30 AM</p>
                                                         </td>
                                                         <td>
                                                             <div class=" flex-col gap-1">
-                                                                <div class="flex-m gap-3">
-                                                                    <progress class="progress w-50" value="50"
-                                                                        max="100"></progress>
-                                                                        <p>60%</p>
-                                                                </div>
-                                                                <div class="flex-sb">
-                                                                    <a class="fs-12 fs-sm-10 text-decoration-underline">
-                                                                        View Details
-                                                                    </a>
-                                                                </div>
+                                                                <p class="fw-500">Dr Ahmmed Jamal</p>
+                                                                <p class="text-gray600">Senior Physical Therapist</p>
                                                             </div>
                                                         </td>
                                                         <td>
                                                             <div class=" flex-col gap-1">
-                                                                <div class="flex-m gap-3">
-                                                                    <progress class="progress3 w-50" value="50"
-                                                                        max="100"></progress>
-                                                                        <p>60%</p>
-                                                                </div>
-                                                                <div class="flex-sb">
-                                                                    <a class="fs-12 fs-sm-10 text-decoration-underline">
-                                                                        View Details
-                                                                    </a>
-                                                                </div>
+                                                                <p class="fw-500">About Physical Excercise</p>
+                                                                <p class="text-gray600">Ut enim ad minim veniam, quis
+                                                                    nostrud exercitation ullamco laboris nisi ut aliquip
+                                                                    ex ea ..</p>
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <button class="btn p-0 px-2" type="button"
-                                                                data-bs-toggle="dropdown" aria-expanded="false"><i
-                                                                    class="ri-more-2-fill"></i></button>
+                                                            <div class=" flex-col gap-1">
+                                                                <p class="fs-12 fw-500 text-primary">Lorem Ipsum Report
+                                                                </p>
+                                                                <p class="fs-12 fw-500 text-purple700">Lorem Ipsum
+                                                                    Report</p>
+                                                            </div>
+                                                            <button class="btn fs-12 fw-500 text-orange700"
+                                                                type="button" data-bs-toggle="dropdown"
+                                                                aria-expanded="false">+3 More</button>
                                                             <ul class="dropdown-menu">
-                                                                <li><button class="dropdown-item" type="button"><i
-                                                                            class="ri-edit-2-line fs-14 pe-2"></i>Modify</button>
+                                                                <li><button class="dropdown-item" type="button">Lorem
+                                                                        Ipsum Report</button>
                                                                 </li>
-                                                                <li><button class="dropdown-item" type="button"><i
-                                                                            class="ri-key-fill fs-14 pe-2"></i>Reset</button>
+                                                                <li><button class="dropdown-item" type="button">Lorem
+                                                                        Ipsum Report</button>
                                                                 </li>
-                                                                <li><button class="dropdown-item" type="button"><i
-                                                                            class="ri-eye-line fs-14 pe-2"></i>View</button>
+                                                                <li><button class="dropdown-item" type="button">Lorem
+                                                                        Ipsum Report</button>
                                                                 </li>
                                                             </ul>
                                                         </td>
@@ -880,49 +828,9 @@
                                                 </tbody>
                                             </table>
                                         </div>
-
-
-                                        <!-- PAGINATION START -->
-                                        <nav class="Pager" aria-label="pagination example">
-                                            <ul class="pagination pagination-circle justify-content-end mb-0">
-
-                                                <!--First-->
-                                                <li class="page-item disabled"><a class="page-link">First</a></li>
-
-                                                <!--Arrow left-->
-                                                <li class="page-item disabled">
-                                                    <a class="page-link" aria-label="Previous">
-                                                        <span aria-hidden="true">&laquo;</span>
-                                                        <span class="visually-hidden">Previous</span>
-                                                    </a>
-                                                </li>
-
-                                                <!--Numbers-->
-                                                <li class="page-item active"><a class="page-link">1</a></li>
-                                                <li class="page-item"><a class="page-link">2</a></li>
-                                                <li class="page-item"><a class="page-link">3</a></li>
-                                                <li class="page-item"><a class="page-link">4</a></li>
-                                                <li class="page-item"><a class="page-link">5</a></li>
-
-                                                <!--Arrow right-->
-                                                <li class="page-item">
-                                                    <a class="page-link" aria-label="Next">
-                                                        <span aria-hidden="true">&raquo;</span>
-                                                        <span class="visually-hidden">Next</span>
-                                                    </a>
-                                                </li>
-
-                                                <!--Last-->
-                                                <li class="page-item"><a class="page-link">Last</a></li>
-
-                                            </ul>
-                                        </nav>
-
-
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -1006,6 +914,21 @@
     <script src="./assets/pluggins/pagination/jquery.twbsPagination.min.js"></script>
     <script src="./assets/pluggins/scrollreveal/scrollreveal.js"></script>
     <script src="./assets/js/index.js"></script>
+    <script>
+        const tabs = document.querySelectorAll('.tab-btn');
+        const all_content = document.querySelectorAll('.content');
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', (e) => {
+                tabs.forEach(tab => { tab.classList.remove('active') })
+                tab.classList.add('active');
+
+                var line = document.querySelector('.line');
+                line.style.width = e.target.offsetWidth + "px";
+                line.style.left = e.target.offsetLeft + "px";
+            })
+        })
+    </script>
 
 </body>
 
