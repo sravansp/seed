@@ -3755,6 +3755,9 @@ ul.collection li {
     overflow-x: auto;
 }
 
+.nav-pills .nav-link.active{
+    background-color: transparent !important;
+}
 
 
 
