@@ -323,46 +323,26 @@ if (document.querySelector("#bar-chart3")) {
            
         ],
 
+        
+
         xaxis: {
-            categories: [
-                {
-                 image: 'http://127.0.0.1:5502/assets/images/avatar1.png' // Add the path to the image for class 1
-                },
-                {
-                    name: 'class 2',
-                    image: '/assets/images/avatar1.png' // Add the path to the image for class 2
-                },
-                // ... (repeat for other categories)
-            ],
+            categories: ['class 1', 'class 2', 'class 3', 'class 4', 'class 5', 'class 6', 'class 7', 'class 8', 'class 9', 'class 10'],
+            width: '100%', // Set the width of the x-axis to 100%
             labels: {
                 style: {
                     fontSize: '10px',
-                    fontWeight: "600",
+                    fontWeight:"600", // You can adjust the font size
                 },
-            },
-            // ... (other x-axis properties)
-        },
 
-        dataLabels: {
-            enabled: true,
-            offsetY: -25,
-            style: {
-                colors: ['#ccc']
             },
-            formatter: function (val, opts) {
-                var category = opts.w.globals.labels[opts.dataPointIndex];
-                var imageUrl = category.image; 
-                
-                // Create an HTML element with both text and image
-                var labelHtml = '<div style="text-align: center;">';
-                labelHtml += '<div>' + val + '</div>'; // Display the value
-                labelHtml += '<img src="' + imageUrl + '" width="10" height="20" style="margin-top: 5px;" />'; // Display the image
-                labelHtml += '</div>';
-        
-                return {
-                    html: labelHtml,
-                };
-            }
+            // title: {
+            //     text: "Students count by standard",
+            //     style: {
+            //         fontSize: '11px', // You can adjust the font size
+            //         fontWeight: 400,
+            //     }
+            // }
+
         },
 
         dataLabels: {
