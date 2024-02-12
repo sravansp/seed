@@ -326,7 +326,7 @@ if (document.querySelector("#bar-chart3")) {
         
 
         xaxis: {
-            categories: ['class 1', 'class 2', 'class 3', 'class 4', 'class 5', 'class 6', 'class 7', 'class 8', 'class 9', 'class 10'],
+            categories: ['', '', ' ', ' ', ' ', ' ', ' ', '', '', ''],
             width: '100%', // Set the width of the x-axis to 100%
             labels: {
                 style: {
