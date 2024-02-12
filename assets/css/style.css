@@ -3748,7 +3748,7 @@ ul.collection li {
     border-radius: 4px;
     background: rgba(48, 213, 199, 0.10);
     display: flex;
-    padding: 2px 6px;
+    padding: 6px 8px;
     gap: 10px;
 }
 .table-responsive1{
