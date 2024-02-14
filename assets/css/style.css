@@ -116,18 +116,18 @@ input {
 
 
 ::-webkit-scrollbar-track {
-    /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
-    background-color: #F5F5F5;
+    background-color: transparent;
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar {
     width: 4px;
-    background-color: #F5F5F5;
+    background-color: transparent;
+    border-radius: 10px;
 }
-
 ::-webkit-scrollbar-thumb {
-    background-color: var(--bg-main-primary);
-    /* border: 2px solid #555555; */
+    background-color: var(--bg-primary-color);
+    border-radius: 10px;
 }
 
 
@@ -477,10 +477,12 @@ body.dark .sidebar .toggle_icon .toggle {
 
 .sidebar .menu {
     /* top: 6%; */
-    /* position: relative; */
     padding-left: 14px;
-    /* overflow: auto; */
+    overflow: auto;
+    overflow-x: hidden;
 }
+
+
 
 .sidebar.close .menu {
     /* top: 6%; */
@@ -680,6 +682,8 @@ body.dark .sidebar li a:hover .text {
     gap: 20px;
     flex-direction: column;
     justify-content: space-between;
+
+    /* overflow-y: scroll; */
 }
 
 .menu-bar::-webkit-scrollbar {
@@ -1397,7 +1401,8 @@ body.dark .navbar_container .nav-search {
 
 .form-items-wrapper {
     display: grid;
-    grid-template-columns: repeat(1, auto);
+    /* grid-template-columns: repeat(1, auto); */
+    grid-template-columns: repeat(1, 1fr);
     gap: 20px;
 }
 
@@ -3514,7 +3519,7 @@ ul.collection li {
     text-align: center;
     transition: all 0.3s ease;
     box-shadow: 0px 0px 6px -2px #111;
-    padding: 3px 0px;
+    padding: 5px 0px;
     color: #fff;
 }
 
@@ -3853,6 +3858,7 @@ ul.collection li {
 
 
 
+
 /* ================ RESPONSIVE =====================  */
 
 
@@ -3885,7 +3891,8 @@ ul.collection li {
 
     .form-items-wrapper {
         display: grid;
-        grid-template-columns: repeat(2, 48%);
+        /* grid-template-columns: repeat(2, 48%); */
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .form-wizard .wizard-buttons-group {
@@ -4037,7 +4044,8 @@ ul.collection li {
 
     .form-items-wrapper {
         display: grid;
-        grid-template-columns: repeat(3, 33.33333%);
+        /* grid-template-columns: repeat(3, 33.33333%); */
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .wrapper-login .image4 {
