@@ -3795,7 +3795,7 @@ ul.collection li {
     overflow-x: scroll;
   }
   .box{
-    width: calc(1000px - 35px);
+    width: calc(600px - 35px);
     height: 100%;
   }
 @media only screen and (max-width:700px){
@@ -3828,6 +3828,10 @@ ul.collection li {
         height: 345px;
     }
 }
+
+/* canvas{
+    width: 600px !important;
+} */
 
 
 
