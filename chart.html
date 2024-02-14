@@ -1,4 +1,4 @@
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
 
 <head>
@@ -36,7 +36,7 @@
             width: 700px;
             padding: 20px;
             border-radius: 20px;
-            border: solid 3px rgba(54, 162, 235, 1);
+            border: solid 3px rgb(252, 252, 252);
             background: white;
         }
     </style>
@@ -54,9 +54,9 @@
     <script>
         // setup 
         const data = {
-            labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun',],
             datasets: [{
-                data: [18, 12, 6, 9, 12, 3, 9],
+                data: [18, 12, 6, 18, 12, 6, 18, 12, 6, 18, 12, 6,],
                 backgroundColor: [
                     '#4A9F95',
                 ],
@@ -82,7 +82,8 @@
                     ctx.drawImage(label, x.getPixelForValue(index) - (width / 2), x.top, width, width);
                 })
             }
-        }
+        };
+
         // config 
         const config = {
             type: 'bar',
@@ -121,4 +122,212 @@
 
 </body>
 
+</html> -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Getting Started with Chart JS with www.chartjs3.com</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+      .chartMenu {
+        width: 100vw;
+        height: 40px;
+        background: #1A1A1A;
+        color: rgba(54, 162, 235, 1);
+      }
+      .chartMenu p {
+        padding: 10px;
+        font-size: 20px;
+      }
+      .chartCard {
+        width: 100vw;
+        height: calc(100vh - 40px);
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .chartBox {
+        width: 700px;
+        padding: 20px;
+        border-radius: 20px;
+        border: solid 3px rgb(228, 228, 228);
+        background: white;
+        display: flex;
+      }
+      .colSmall{
+        width: 35px;
+      }
+      .colLarge{
+        max-width: 700px;
+        overflow-x: scroll;
+      }
+      .box{
+        width: calc(1000px - 35px);
+        height: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chartCard">
+      <div class="chartBox">
+        <div class="colSmall">
+            <canvas id="myChart2"></canvas>
+        </div>
+        <div class="colLarge">
+            <div class="box">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+    <script>
+        // Chart 1=====================================================================
+    // setup 
+    const data = {
+      labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+      datasets: [{
+        label: 'All Students',
+        data: [20, 12, 6, 9, 12, 3, 9],
+        images: ['http://127.0.0.1:5502/assets/images/avatar1.png', 'http://127.0.0.1:5502/assets/images/avatar1.png', 'http://127.0.0.1:5502/assets/images/avatar1.png', 'http://127.0.0.1:5502/assets/images/avatar1.png', 'http://127.0.0.1:5502/assets/images/avatar1.png', 'http://127.0.0.1:5502/assets/images/avatar1.png', 'http://127.0.0.1:5502/assets/images/avatar1.png'],
+        backgroundColor: [
+                    '#4A9F95',
+                ],
+                borderRadius: 5,
+                barThickness: 10, // Adjust this value to change the width of the bars
+                categoryPercentage: 0.7, // Adjust this value to reduce padding between bars
+                barPercentage: 0.9
+     
+      },
+      {
+      label: 'Completed Students',
+      data: [15, 10, 5, 8, 10, 2, 8], // Add the completed students data here
+      backgroundColor: '#F44336', // Change the background color for completed students
+      borderRadius: 5,
+      barThickness: 10,
+      categoryPercentage: 0.7,
+      barPercentage: 0.9
+    }]
+    };
+    const xScaleImage = {
+            id: 'xScaleImage',
+            afterDatasetsDraw(chart, args, plugins) {
+                const { ctx, data, chartArea: { bottom }, scales: { x }
+                } = chart;
+                ctx.save();
+                console.log(data.datasets[0].images)
+                data.datasets[0].images.forEach((image, index) => {
+                    const label = new Image();
+                    label.src = image;
+                    const width = 30;
+                    ctx.drawImage(label, x.getPixelForValue(index) - (width / 2), x.top, width, width);
+                })
+            }
+    };
+
+    // config 
+    const config = {
+      type: 'bar',
+      data,
+      options: {
+        maintainAspectRatio:false,
+        layout:{
+            padding:{
+                top:10,
+                bottom:10
+            }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks:{
+                display:false
+            },
+            grid:{
+                drawTicks:false
+            }
+          }
+        },
+        plugins:{
+            legend:{
+                display:false
+            }
+        }
+      },
+      plugins: [xScaleImage]
+    };
+
+    // render init block
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+        // Chart 2=====================================================================
+
+     // setup 
+     const data2 = {
+      labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+      datasets: [{
+        label: 'Weekly Sales',
+        data: myChart.data.datasets[0].data,
+     
+      }]
+    };
+
+    // config 
+    const config2 = {
+      type: 'bar',
+      data: data2,
+      options: {
+        maintainAspectRatio:false,
+        layout:{
+            padding:{
+                bottom:45
+            }
+        },
+        scales: {
+            x:{
+                ticks:{
+                display:false
+            },
+            grid:{
+                drawTicks:false
+            }
+            },
+          y: {
+            beginAtZero: true,
+            afterFit: (ctx) => {
+                console.log (ctx);
+                ctx.width = 35;
+            }
+          }
+        },
+        plugins:{
+            legend:{
+                display:false
+            }
+        }
+      }
+    };
+
+    // render init block
+    const myChart2 = new Chart(
+      document.getElementById('myChart2'),
+      config2
+    );
+
+    // Instantly assign Chart.js version
+    const chartVersion = document.getElementById('chartVersion');
+    chartVersion.innerText = Chart.version;
+    </script>
+
+  </body>
 </html>

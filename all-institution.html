@@ -205,16 +205,17 @@
                                         <div class="flex-col gap-3">
                                             <div class="row gap-3 gap-lg-0 gap-md-0">
                                                 <h1
-                                                    class="fs-20 fw-semibold fs-sm-10 col-12 col-md-6 col-lg-6 col-xl-4">
+                                                    class="fs-20 fw-semibold fs-sm-10 col-12 col-md-6 col-lg-6 col-xl-7">
                                                     All Institutions
                                                 </h1>
-                                                <div class="btn-container col-12 col-md-6 col-lg-6 col-xl-5">
-                                                    <label class="switch btn-color-mode-switch">
-                                                        <input value="1" id="color_mode" name="color_mode"
-                                                            type="checkbox">
-                                                        <label class="btn-color-mode-switch-inner" data-off="Skill Wise"
-                                                            data-on="Subject Wise" for="color_mode"></label>
-                                                    </label>
+                                                <div class="flex-c-m gap-2 col-8 col-md-6 col-lg-6 col-xl-2">
+                                                    <!-- <div class="fs-12 fs-sm-8" style="white-space: nowrap;"></div> -->
+                                                    <select
+                                                        class="form-control select2-select select2-show-search form-select fs-12"
+                                                        data-placeholder="Choose one">
+                                                        <option label="Choose one">Single-Institution</option>
+                                                        <option value="AZ">All-Institution</option>
+                                                    </select>
                                                 </div>
                                                 <div class="flex-c-m gap-2 col-8 col-md-6 col-lg-6 col-xl-3">
                                                     <div class="fs-12 fs-sm-8" style="white-space: nowrap;">Academic
@@ -227,26 +228,6 @@
                                                         <option value="CO">Colorado</option>
                                                         <option value="ID">Idaho</option>
                                                         <option value="MT">Montana</option>
-                                                        <option value="NE">Nebraska</option>
-                                                        <option value="NM">New Mexico</option>
-                                                        <option value="ND">North Dakota</option>
-                                                        <option value="UT">Utah</option>
-                                                        <option value="WY">Wyoming</option>
-                                                        <option value="AL">Alabama</option>
-                                                        <option value="AR">Arkansas</option>
-                                                        <option value="IL">Illinois</option>
-                                                        <option value="IA">Iowa</option>
-                                                        <option value="KS">Kansas</option>
-                                                        <option value="KY">Kentucky</option>
-                                                        <option value="LA">Louisiana</option>
-                                                        <option value="MN">Minnesota</option>
-                                                        <option value="MS">Mississippi</option>
-                                                        <option value="MO">Missouri</option>
-                                                        <option value="OK">Oklahoma</option>
-                                                        <option value="SD">South Dakota</option>
-                                                        <option value="TX">Texas</option>
-                                                        <option value="TN">Tennessee</option>
-                                                        <option value="WI">Wisconsin</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -474,76 +455,68 @@
                                                     </div>
                                                 </div>
                                                 <div class="bg-light shadow-neo bradius-14 p-4">
-                                                    <div class="row gap-3 gap-lg-0 gap-md-0">
+                                                    <div class="row gap-3 gap-lg-0 gap-md-0 pb-4">
                                                         <h1
                                                             class="fs-20 fw-semibold fs-sm-10 col-6 col-md-6 col-lg-8 col-xl-8">
-                                                            Institutions Progression Overview
+                                                            IEP Progression
                                                         </h1>
                                                         <div class="flex-c-m gap-2 col-6 col-md-6 col-lg-4 col-xl-4">
                                                             <select
                                                                 class="form-control select2-select select2-show-search form-select fs-12"
                                                                 data-placeholder="Choose one">
-                                                                <option label="Choose one">Select skills</option>
+                                                                <option label="Choose one">School Wise</option>
                                                                 <option value="AZ">Arizona</option>
                                                                 <option value="CO">Colorado</option>
                                                                 <option value="ID">Idaho</option>
                                                                 <option value="MT">Montana</option>
-                                                                <option value="NE">Nebraska</option>
-                                                                <option value="NM">New Mexico</option>
-                                                                <option value="ND">North Dakota</option>
-                                                                <option value="UT">Utah</option>
-                                                                <option value="WY">Wyoming</option>
-                                                                <option value="AL">Alabama</option>
-                                                                <option value="AR">Arkansas</option>
-                                                                <option value="IL">Illinois</option>
-                                                                <option value="IA">Iowa</option>
-                                                                <option value="KS">Kansas</option>
-                                                                <option value="KY">Kentucky</option>
-                                                                <option value="LA">Louisiana</option>
-                                                                <option value="MN">Minnesota</option>
-                                                                <option value="MS">Mississippi</option>
-                                                                <option value="MO">Missouri</option>
-                                                                <option value="OK">Oklahoma</option>
-                                                                <option value="SD">South Dakota</option>
-                                                                <option value="TX">Texas</option>
-                                                                <option value="TN">Tennessee</option>
-                                                                <option value="WI">Wisconsin</option>
                                                             </select>
                                                         </div>
                                                     </div>
-                                                    <div class="bar-chart h-full bradius-14 bg-light p-4">
+                                                    <!-- <div class="bar-chart h-full bradius-14 bg-light p-4 position-relative">
                                                         <div id="bar-chart3" class="rounded-bars-chart h-full"></div>
-                                                        <div class="flex-sb-m px-3">
-                                                            <div class="overflow-hidden" style="border-radius: 50%; width: 25px; background-color: red;">
+                                                        <div class="flex-sb-m px-3 position-absolute">
+                                                            <div class="overflow-hidden" style="border-radius: 50%; width: 25px;">
                                                                 <img class="w-100 object-center object-cover" src="/assets//images/user.png" alt="">
                                                             </div>
-                                                            <div class="overflow-hidden" style="border-radius: 50%; width: 25px; background-color: red;">
+                                                            <div class="overflow-hidden" style="border-radius: 50%; width: 25px;">
                                                                 <img class="w-100 object-center object-cover" src="/assets//images/user.png" alt="">
                                                             </div>
-                                                            <div class="overflow-hidden" style="border-radius: 50%; width: 25px; background-color: red;">
+                                                            <div class="overflow-hidden" style="border-radius: 50%; width: 25px;">
                                                                 <img class="w-100 object-center object-cover" src="/assets//images/user.png" alt="">
                                                             </div>
-                                                            <div class="overflow-hidden" style="border-radius: 50%; width: 25px; background-color: red;">
+                                                            <div class="overflow-hidden" style="border-radius: 50%; width: 25px;">
                                                                 <img class="w-100 object-center object-cover" src="/assets//images/user.png" alt="">
                                                             </div>
-                                                            <div class="overflow-hidden" style="border-radius: 50%; width: 25px; background-color: red;">
+                                                            <div class="overflow-hidden" style="border-radius: 50%; width: 25px;">
                                                                 <img class="w-100 object-center object-cover" src="/assets//images/user.png" alt="">
                                                             </div>
-                                                            <div class="overflow-hidden" style="border-radius: 50%; width: 25px; background-color: red;">
+                                                            <div class="overflow-hidden" style="border-radius: 50%; width: 25px;">
                                                                 <img class="w-100 object-center object-cover" src="/assets//images/user.png" alt="">
                                                             </div>
-                                                            <div class="overflow-hidden" style="border-radius: 50%; width: 25px; background-color: red;">
+                                                            <div class="overflow-hidden" style="border-radius: 50%; width: 25px;">
                                                                 <img class="w-100 object-center object-cover" src="/assets//images/user.png" alt="">
                                                             </div>
-                                                            <div class="overflow-hidden" style="border-radius: 50%; width: 25px; background-color: red;">
+                                                            <div class="overflow-hidden" style="border-radius: 50%; width: 25px;">
                                                                 <img class="w-100 object-center object-cover" src="/assets//images/user.png" alt="">
                                                             </div>
-                                                            <div class="overflow-hidden" style="border-radius: 50%; width: 25px; background-color: red;">
+                                                            <div class="overflow-hidden" style="border-radius: 50%; width: 25px;">
                                                                 <img class="w-100 object-center object-cover" src="/assets//images/user.png" alt="">
                                                             </div>
-                                                            <div class="overflow-hidden" style="border-radius: 50%; width: 25px; background-color: red;">
+                                                            <div class="overflow-hidden" style="border-radius: 50%; width: 25px;">
                                                                 <img class="w-100 object-center object-cover" src="/assets//images/user.png" alt="">
                                                             </div>
+                                                        </div>
+                                                    </div> -->
+                                                    <div class="chartCard">
+                                                        <div class="chartBox">
+                                                          <div class="colSmall">
+                                                              <canvas id="myChart2"></canvas>
+                                                          </div>
+                                                          <div class="colLarge">
+                                                              <div class="box">
+                                                                  <canvas id="myChart"></canvas>
+                                                              </div>
+                                                          </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -576,6 +549,7 @@
     <!-- Include ApexCharts library -->
     <script src="./assets/pluggins/apexchart/dist/apexcharts.min.js"></script>
     <script src="./assets/js/charts-data.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
     
 
 
@@ -584,6 +558,145 @@
 
     <script src="./assets/js/calender.js"></script>
     <script src="./assets/js/index.js"></script>
+    <script>
+        // Chart 1=====================================================================
+    // setup 
+    const data = {
+      labels: ['', '', '', '', '', '', ''],
+      datasets: [{
+        label: 'All Students',
+        data: [20, 12, 6, 9, 12, 3, 9],
+        images: ['http://127.0.0.1:5502/assets/images/avatar1.png', 'http://127.0.0.1:5502/assets/images/avatar1.png', 'http://127.0.0.1:5502/assets/images/avatar1.png', 'http://127.0.0.1:5502/assets/images/avatar1.png', 'http://127.0.0.1:5502/assets/images/avatar1.png', 'http://127.0.0.1:5502/assets/images/avatar1.png', 'http://127.0.0.1:5502/assets/images/avatar1.png'],
+        backgroundColor: [
+                    '#4A9F95',
+                ],
+                borderRadius: 5,
+                barThickness: 10, // Adjust this value to change the width of the bars
+                // categoryPercentage: 0.1, // Adjust this value to reduce padding between bars
+                // barPercentage: 0.9
+     
+      },
+      {
+      label: 'Completed Students',
+      data: [15, 10, 5, 8, 10, 2, 8], // Add the completed students data here
+      backgroundColor: '#3bd5c8', // Change the background color for completed students
+      borderRadius: 5,
+      barThickness: 10,
+    //   categoryPercentage: 0.1,
+    //   barPercentage: 0.9
+    }]
+    };
+    const xScaleImage = {
+            id: 'xScaleImage',
+            afterDatasetsDraw(chart, args, plugins) {
+                const { ctx, data, chartArea: { bottom }, scales: { x }
+                } = chart;
+                ctx.save();
+                console.log(data.datasets[0].images)
+                data.datasets[0].images.forEach((image, index) => {
+                    const label = new Image();
+                    label.src = image;
+                    const width = 30;
+                    ctx.drawImage(label, x.getPixelForValue(index) - (width / 2), x.top, width, width);
+                })
+            }
+    };
+
+    // config 
+    const config = {
+      type: 'bar',
+      data,
+      options: {
+        maintainAspectRatio:false,
+        layout:{
+            padding:{
+                top:10,
+                bottom:10
+            }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks:{
+                display:false
+            },
+            grid:{
+                drawTicks:false
+            }
+          }
+        },
+        plugins:{
+            legend:{
+                display:false
+            }
+        }
+      },
+      plugins: [xScaleImage]
+    };
+
+    // render init block
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+        // Chart 2=====================================================================
+
+     // setup 
+     const data2 = {
+      labels: ['', '', '', '', '', '', ''],
+      datasets: [{
+        label: 'Weekly Sales',
+        data: myChart.data.datasets[0].data,
+     
+      }]
+    };
+
+    // config 
+    const config2 = {
+      type: 'bar',
+      data: data2,
+      options: {
+        maintainAspectRatio:false,
+        layout:{
+            padding:{
+                bottom:45
+            }
+        },
+        scales: {
+            x:{
+                ticks:{
+                display:false
+            },
+            grid:{
+                drawTicks:false
+            }
+            },
+          y: {
+            beginAtZero: true,
+            afterFit: (ctx) => {
+                console.log (ctx);
+                ctx.width = 35;
+            }
+          }
+        },
+        plugins:{
+            legend:{
+                display:false
+            }
+        }
+      }
+    };
+
+    // render init block
+    const myChart2 = new Chart(
+      document.getElementById('myChart2'),
+      config2
+    );
+
+    // Instantly assign Chart.js version
+    const chartVersion = document.getElementById('chartVersion');
+    chartVersion.innerText = Chart.version;
+    </script>
 
 
 

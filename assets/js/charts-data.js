@@ -294,13 +294,15 @@ if (document.querySelector("#bar-chart3")) {
         },
         plotOptions: {
             bar: {
-                columnWidth: '20%',
+                columnWidth: '35%',
                 barHeight: '100%',
-                borderRadius: 5,
+                borderRadius: 3,
                 dataLabels: {
                     position: 'top'
                 }
-            }
+               
+            },
+          
         },
         grid: {
             show: true,      // you can either change hear to disable all grids
@@ -318,8 +320,14 @@ if (document.querySelector("#bar-chart3")) {
           series: [
             {
                 name: 'All Students',
-                data: [4, 3, 2, 5, 8, 11, 4, 13, 2, 10]
+                data: [4, 3, 2, 5, 8, 11, 4, 13, 2, 10,],
             },
+            {
+                name: 'Completed Students',
+                data: [2, 4, 5, 3, 6, 8, 3, 6, 4, 5],
+                color:'#3bd5c8' // completed students data
+            }
+           
            
         ],
 
@@ -367,10 +375,13 @@ if (document.querySelector("#bar-chart3")) {
                 show: false // Hide y-axis ticks
             }
         },
-        colors: ['#4A9F95'] // Specify custom colors for bars
+        colors: ['#4A9F95']
     }
 
     var chart1 = new ApexCharts(document.querySelector("#bar-chart3"), options);
 
     chart1.render();
 }
+
+
+
