@@ -205,20 +205,27 @@
                                         <div class="flex-col gap-3">
                                             <div class="row gap-3 gap-lg-0 gap-md-0">
                                                 <h1
-                                                    class="fs-20 fw-semibold fs-sm-10 col-12 col-md-6 col-lg-6 col-xl-7">
+                                                    class="fs-20 fw-semibold fs-sm-10 col-12 col-md-6 col-lg-6 col-xl-6">
                                                     All Institutions
                                                 </h1>
-                                                <div class="flex-c-m gap-2 col-8 col-md-6 col-lg-6 col-xl-2">
+                                                <div class="flex-c-m gap-2 col-8 col-md-6 col-lg-6 col-xl-3">
                                                     <!-- <div class="fs-12 fs-sm-8" style="white-space: nowrap;"></div> -->
-                                                    <select
+                                                    <!-- <select
                                                         class="form-control select2-select select2-show-search form-select fs-12"
                                                         data-placeholder="Choose one">
                                                         <option label="Choose one">Single-Institution</option>
                                                         <option value="AZ">All-Institution</option>
-                                                    </select>
+                                                    </select> -->
+                                                  
+                                                      <div class="f-group">
+                                                        <select class="f-control f-dropdown" placeholder="Please choose">
+                                                          <option value="1" data-image="./assets/images/NIMS_Dubai_Logo 1.png">New India Model School</option>
+                                                          <option value="2" data-image="./assets/images/image 20.png">TCS Sharjha</option>
+                                                        </select>
+                                                      </div>
                                                 </div>
                                                 <div class="flex-c-m gap-2 col-8 col-md-6 col-lg-6 col-xl-3">
-                                                    <div class="fs-12 fs-sm-8" style="white-space: nowrap;">Academic
+                                                    <div class="fs-12" style="white-space: nowrap;">Academic
                                                         Year</div>
                                                     <select
                                                         class="form-control select2-select select2-show-search form-select fs-12"
@@ -252,9 +259,10 @@
                                             <div class="col-12 col-md-5 col-lg-3 col-xl-2">
                                                 <div class="bradius-14 bg-light shadow-neo h-full">
                                                     <div class="flex-col p-3 gap-3">
-                                                        <div class="bradius-7">
+                                                        <div class="bradius-7 w-fit"
+                                                            style="background: rgba(48, 213, 199, 0.10); padding: 10px;">
                                                             <i
-                                                            class="ri-bar-chart-box-line fs-32 fs-sm-22 text-primary"></i>
+                                                                class="ri-bar-chart-box-line fs-32 fs-sm-22 text-main-primary" style="line-height: normal;"></i>
                                                         </div>
                                                         <p class="fs-32 fs-sm-22 fw-semibold">60/120</p>
                                                         <p class="fs-14 fw-500" style="color: #747474;">
@@ -267,7 +275,11 @@
                                             <div class="col-12 col-md-5 col-lg-3 col-xl-2">
                                                 <div class="bradius-14 bg-light shadow-neo h-full">
                                                     <div class="flex-col p-3 gap-3">
-                                                        <i class="ri-group-line fs-32 fs-sm-22 text-primary"></i>
+                                                        <div class="bradius-7 w-fit"
+                                                            style="background: rgba(48, 213, 199, 0.10); padding: 10px;">
+                                                            <i
+                                                                class="ri-group-line fs-32 fs-sm-22 text-main-primary" style="line-height: normal;"></i>
+                                                        </div>
                                                         <p class="fs-32 fs-sm-22 fw-semibold">70/120</p>
                                                         <p class="fs-14 fw-500" style="color: #747474;">IEP
                                                             Generated Students</p>
@@ -278,8 +290,11 @@
                                             <div class="col-12 col-md-5 col-lg-3 col-xl-2">
                                                 <div class="bradius-14 bg-light shadow-neo h-full">
                                                     <div class="flex-col p-3 gap-3">
-                                                        <i
-                                                            class="ri-lightbulb-flash-line fs-32 fs-sm-22 text-primary"></i>
+                                                        <div class="bradius-7 w-fit"
+                                                            style="background: rgba(48, 213, 199, 0.10); padding: 10px;">
+                                                            <i
+                                                                class="ri-lightbulb-flash-line fs-32 fs-sm-22 text-main-primary" style="line-height: normal;"></i>
+                                                        </div>
                                                         <p class="fs-32 fs-sm-22 fw-semibold">50%</p>
                                                         <p class="fs-14 fw-500" style="color: #747474;">IEP
                                                             Skill
@@ -291,7 +306,11 @@
                                             <div class="col-12 col-md-5 col-lg-3 col-xl-2">
                                                 <div class="bradius-14 bg-light shadow-neo h-full">
                                                     <div class="flex-col p-3 gap-3">
-                                                        <i class="ri-book-3-line fs-32 fs-sm-22 text-primary"></i>
+                                                        <div class="bradius-7 w-fit"
+                                                            style="background: rgba(48, 213, 199, 0.10); padding: 10px;">
+                                                            <i
+                                                                class="ri-book-3-line fs-32 fs-sm-22 text-main-primary" style="line-height: normal;"></i>
+                                                        </div>
                                                         <p class="fs-32 fs-sm-22 fw-semibold">65%</p>
                                                         <p class="fs-14 fw-500" style="color: #747474;">IEP
                                                             Subject
@@ -305,7 +324,18 @@
                                         <div class="col-12 col-md-5">
                                             <div class="bg-light shadow-neo bradius-14 p-4">
                                                 <div class="flex-col gap-5">
-                                                    <p class="fs-20 fw-500">Institution Progress</p>
+                                                    <div class="flex-col gap-2">
+                                                        <p class="fs-20 fw-500">Institution Progress</p>
+                                                        <div>
+                                                             <label class="switch btn-color-mode-switch">
+                                                                <input value="1" id="color_mode" name="color_mode"
+                                                                    type="checkbox">
+                                                                <label class="btn-color-mode-switch-inner" data-off="Skill"
+                                                                    data-on="Subject" for="color_mode"></label>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
                                                     <div class="flex-col gap-3">
                                                         <div class="flex-sb">
                                                             <p class="fs-14 fw-normal">Institution In High Progress</p>
@@ -318,8 +348,10 @@
                                                                 <div
                                                                     class="bg-light bradius-7 border p-3 flex-col gap-2">
                                                                     <div class="flex-sb">
-                                                                        <div class="overflow-hidden rounded-5" style="width: 40px;">
-                                                                            <img class="w-100 object-center object-cover" src="./assets/images/image 20.png"
+                                                                        <div class="overflow-hidden rounded-5"
+                                                                            style="width: 40px;">
+                                                                            <img class="w-100 object-center object-cover"
+                                                                                src="./assets/images/image 20.png"
                                                                                 alt="">
                                                                         </div>
                                                                         <div class="border p-1 h-25px bradius-7">
@@ -328,9 +360,9 @@
                                                                         </div>
                                                                     </div>
                                                                     <div>
-                                                                        <p class="fs-12 fw-500">Aleesha Jain
+                                                                        <p class="fs-14 fw-500">NIMS
                                                                         </p>
-                                                                        <p class="fs-12 fw-500">Class:8</p>
+                                                                        <p class="fs-12 fw-500">Dubai</p>
                                                                     </div>
                                                                     <a href="" class="fs-12 fw-500 text-primary">View
                                                                         Details <i
@@ -341,8 +373,10 @@
                                                                 <div
                                                                     class="bg-light bradius-7 border p-3 flex-col gap-2">
                                                                     <div class="flex-sb">
-                                                                        <div class="overflow-hidden rounded-5" style="width: 40px;">
-                                                                            <img class="w-100 object-center object-cover" src="./assets/images/image 20.png"
+                                                                        <div class="overflow-hidden rounded-5"
+                                                                            style="width: 40px;">
+                                                                            <img class="w-100 object-center object-cover"
+                                                                                src="./assets/images/image 20.png"
                                                                                 alt="">
                                                                         </div>
                                                                         <div class="border p-1 h-25px bradius-7">
@@ -351,9 +385,9 @@
                                                                         </div>
                                                                     </div>
                                                                     <div>
-                                                                        <p class="fs-12 fw-500">Aleesha Jain
+                                                                        <p class="fs-14 fw-500">NIMS
                                                                         </p>
-                                                                        <p class="fs-12 fw-500">Class:8</p>
+                                                                        <p class="fs-12 fw-500">Dubai</p>
                                                                     </div>
                                                                     <a href="" class="fs-12 fw-500 text-primary">View
                                                                         Details <i
@@ -375,8 +409,10 @@
                                                                 <div
                                                                     class="bg-light bradius-7 border p-3 flex-col gap-2">
                                                                     <div class="flex-sb">
-                                                                        <div class="overflow-hidden rounded-5" style="width: 40px;">
-                                                                            <img class="w-100 object-center object-cover" src="./assets/images/image 20.png"
+                                                                        <div class="overflow-hidden rounded-5"
+                                                                            style="width: 40px;">
+                                                                            <img class="w-100 object-center object-cover"
+                                                                                src="./assets/images/image 20.png"
                                                                                 alt="">
                                                                         </div>
                                                                         <div class="border p-1 h-25px bradius-7">
@@ -385,8 +421,8 @@
                                                                         </div>
                                                                     </div>
                                                                     <div>
-                                                                        <p>Aleesha Jain</p>
-                                                                        <p>Class:8</p>
+                                                                        <p class="fs-14 fw-500">NIMS</p>
+                                                                        <p class="fs-12 fw-500">Dubai</p>
                                                                     </div>
                                                                     <a href="" class="fs-12 fw-500 text-primary">View
                                                                         Details <i
@@ -397,8 +433,10 @@
                                                                 <div
                                                                     class="bg-light bradius-7 border p-3 flex-col gap-2">
                                                                     <div class="flex-sb">
-                                                                        <div class="overflow-hidden rounded-5" style="width: 40px;">
-                                                                            <img class="w-100 object-center object-cover" src="./assets/images/image 20.png"
+                                                                        <div class="overflow-hidden rounded-5"
+                                                                            style="width: 40px;">
+                                                                            <img class="w-100 object-center object-cover"
+                                                                                src="./assets/images/image 20.png"
                                                                                 alt="">
                                                                         </div>
                                                                         <div class="border p-1 h-25px bradius-7">
@@ -407,8 +445,8 @@
                                                                         </div>
                                                                     </div>
                                                                     <div>
-                                                                        <p>Aleesha Jain</p>
-                                                                        <p>Class:8</p>
+                                                                        <p class="fs-14 fw-500">NIMS</p>
+                                                                        <p class="fs-12 fw-500">Dubai</p>
                                                                     </div>
                                                                     <a href="" class="fs-12 fw-500 text-primary">View
                                                                         Details <i
@@ -457,12 +495,29 @@
                                                     </div>
                                                 </div>
                                                 <div class="bg-light shadow-neo bradius-14 p-4">
-                                                    <div class="row gap-3 gap-lg-0 gap-md-0 pb-4">
+                                                    <div class="row gap-3 gap-lg-0 gap-md-0">
                                                         <h1
-                                                            class="fs-20 fw-semibold fs-sm-10 col-6 col-md-6 col-lg-8 col-xl-8">
+                                                            class="fs-20 fw-semibold fs-sm-10 col-6 col-md-6 col-lg-8 col-xl-4">
                                                             IEP Progression
                                                         </h1>
-                                                        <div class="flex-c-m gap-2 col-6 col-md-6 col-lg-4 col-xl-4">
+                                                        <div class="btn-container col-12 col-md-6 col-lg-6 col-xl-5">
+                                                            <!-- <label class="switch btn-color-mode-switch">
+                                                                <input value="1" id="color_mode" name="color_mode"
+                                                                    type="checkbox">
+                                                                <label class="btn-color-mode-switch-inner" data-off="IEP Progress"
+                                                                    data-on="Student Registration" for="color_mode"></label>
+                                                            </label> -->
+                                                            <input id="checkbox_toggle" type="checkbox" class="check" style="display: none;">
+                                                        <div class="checkbox">
+                                                          <label class="slide" for="checkbox_toggle">
+                                                            <label class="toggle" for="checkbox_toggle"></label>
+                                                            <label class="text1" for="checkbox_toggle">IEP progress</label>
+                                                            <label class="text2" for="checkbox_toggle">Student registration</label>
+                                                          </label>
+                                                        </div>
+                                                        </div>
+                                                        
+                                                        <div class="flex-c-m gap-2 col-6 col-md-6 col-lg-4 col-xl-3">
                                                             <select
                                                                 class="form-control select2-select select2-show-search form-select fs-12"
                                                                 data-placeholder="Choose one">
@@ -474,6 +529,7 @@
                                                             </select>
                                                         </div>
                                                     </div>
+                                                    <hr>
                                                     <!-- <div class="bar-chart h-full bradius-14 bg-light p-4 position-relative">
                                                         <div id="bar-chart3" class="rounded-bars-chart h-full"></div>
                                                         <div class="flex-sb-m px-3 position-absolute">
@@ -511,14 +567,14 @@
                                                     </div> -->
                                                     <div class="chartCard">
                                                         <div class="chartBox">
-                                                          <div class="colSmall">
-                                                              <canvas id="myChart2"></canvas>
-                                                          </div>
-                                                          <div class="colLarge">
-                                                              <div class="box">
-                                                                  <canvas id="myChart"></canvas>
-                                                              </div>
-                                                          </div>
+                                                            <div class="colSmall">
+                                                                <canvas id="myChart2"></canvas>
+                                                            </div>
+                                                            <div class="colLarge">
+                                                                <div class="box">
+                                                                    <canvas id="myChart"></canvas>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -552,7 +608,7 @@
     <script src="./assets/pluggins/apexchart/dist/apexcharts.min.js"></script>
     <script src="./assets/js/charts-data.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
-    
+
 
 
     <!-- DATE PICKER  -->
@@ -562,33 +618,33 @@
     <script src="./assets/js/index.js"></script>
     <script>
         // Chart 1=====================================================================
-    // setup 
-    const data = {
-      labels: ['', '', '', '', '', '', ''],
-      datasets: [{
-        label: 'All Students',
-        data: [20, 12, 6, 9, 12, 3, 9],
-        images: ['/assets/images/image 20.png', '/assets/images/image 20.png', '/assets/images/image 20.png', '/assets/images/image 20.png', '/assets/images/image 20.png', '/assets/images/image 20.png', '/assets/images/image 20.png'],
-        backgroundColor: [
+        // setup 
+        const data = {
+            labels: ['Nims, Dubai', 'TCS', 'Nims, Dubai', 'TCS', 'TCS', 'TCS', 'TCS', 'TCS', 'TCS', 'TCS', 'TCS', 'TCS', 'TCS', 'TCS', , 'TCS', 'TCS', 'TCS', 'TCS', 'TCS'],
+            datasets: [{
+                label: 'IEP Skill Progress',
+                data: [100, 20, 40, 90, 10, 30, 90, 20, 20, 60, 90, 20, 30, 90, 20, 10, 60, 90, 10,],
+                images: ['/assets/images/image 20.png', '/assets/images/image 20.png', '/assets/images/image 20.png', '/assets/images/image 20.png', '/assets/images/image 20.png', '/assets/images/image 20.png', '/assets/images/image 20.png', '/assets/images/image 20.png', '/assets/images/image 20.png', '/assets/images/image 20.png', '/assets/images/image 20.png', '/assets/images/image 20.png', '/assets/images/image 20.png', '/assets/images/image 20.png', '/assets/images/image 20.png', '/assets/images/image 20.png', '/assets/images/image 20.png', '/assets/images/image 20.png', '/assets/images/image 20.png',],
+                backgroundColor: [
                     '#4A9F95',
                 ],
-                borderRadius: 3,
-                barThickness:8, // Adjust this value to change the width of the bars
+                borderRadius: 10,
+                barThickness: 8, // Adjust this value to change the width of the bars
                 // categoryPercentage: 0.1, // Adjust this value to reduce padding between bars
                 // barPercentage: 0.9
-     
-      },
-      {
-      label: 'Completed Students',
-      data: [15, 10, 5, 8, 10, 2, 8], // Add the completed students data here
-      backgroundColor: '#3bd5c8', // Change the background color for completed students
-      borderRadius: 3,
-      barThickness: 8,
-    //   categoryPercentage: 0.1,
-    //   barPercentage: 0.9
-    }]
-    };
-    const xScaleImage = {
+
+            },
+            {
+                label: 'IEP Subject Progress',
+                data: [50, 10, 30, 80, 10, 20, 80, 15, 10, 50, 80, 10, 20, 80, 15, 10, 50, 80, 10,], // Add the completed students data here
+                backgroundColor: '#3bd5c8', // Change the background color for completed students
+                borderRadius: 10,
+                barThickness: 8,
+                //   categoryPercentage: 0.1,
+                //   barPercentage: 0.9
+            }]
+        };
+        const xScaleImage = {
             id: 'xScaleImage',
             afterDatasetsDraw(chart, args, plugins) {
                 const { ctx, data, chartArea: { bottom }, scales: { x }
@@ -602,104 +658,232 @@
                     ctx.drawImage(label, x.getPixelForValue(index) - (width / 2), x.top, width, width);
                 })
             }
-    };
+        };
 
-    // config 
-    const config = {
-      type: 'bar',
-      data,
-      options: {
-        maintainAspectRatio:false,
-        layout:{
-            padding:{
-                top:10,
-                bottom:10
-            }
-        },
-        scales: {
-          y: {
-            beginAtZero: true,
-            ticks:{
-                display:false
+        // config 
+        const config = {
+            type: 'bar',
+            data,
+            options: {
+                maintainAspectRatio: false,
+                layout: {
+                    padding: {
+                        top: 10,
+                        bottom: 10
+                    }
+                },
+                scales: {
+                    x:{
+                        ticks:{
+                            callback:((value, index, values)=>{
+                                return ''
+                            })
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            display: false
+                        },
+                        grid: {
+                            drawTicks: false
+                        }
+                    }
+                },
+                interaction:{
+                    mode:'index'
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip:{
+                        callbacks:{
+                            // beforeTitle:function(context){
+                            //     return 'Nims, Dubai'
+                            // },
+                            // afterTitle: function(context){
+                            //     return 'hello'
+                            // },
+                            labelsTextColor: (context)=> {
+                            return '#fff';
+                        },
+                        },
+                        backgroundColor: '#000',
+                    }
+                }
             },
-            grid:{
-                drawTicks:false
-            }
-          }
-        },
-        plugins:{
-            legend:{
-                display:false
-            }
-        }
-      },
-      plugins: [xScaleImage]
-    };
+            plugins: [xScaleImage]
+        };
 
-    // render init block
-    const myChart = new Chart(
-      document.getElementById('myChart'),
-      config
-    );
+        // render init block
+        const myChart = new Chart(
+            document.getElementById('myChart'),
+            config
+        );
         // Chart 2=====================================================================
 
-     // setup 
-     const data2 = {
-      labels: ['', '', '', '', '', '', ''],
-      datasets: [{
-        label: 'Weekly Sales',
-        data: myChart.data.datasets[0].data,
-     
-      }]
-    };
+        // setup 
+        const data2 = {
+            labels: ['', '', '', '', '', '', ''],
+            datasets: [{
+                label: '',
+                data: myChart.data.datasets[0].data,
 
-    // config 
-    const config2 = {
-      type: 'bar',
-      data: data2,
-      options: {
-        maintainAspectRatio:false,
-        layout:{
-            padding:{
-                bottom:45
+            }]
+        };
+
+        // config 
+        const config2 = {
+            type: 'bar',
+            data: data2,
+            options: {
+                maintainAspectRatio: false,
+                layout: {
+                    padding: {
+                        bottom: 45
+                    }
+                },
+                scales: {
+                    x: {
+                        ticks: {
+                            display: false
+                        },
+                        grid: {
+                            drawTicks: false
+                        },
+                        
+                    },
+                    y: {
+                        beginAtZero: true,
+                        afterFit: (ctx) => {
+                            console.log(ctx);
+                            ctx.width = 35;
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
             }
-        },
-        scales: {
-            x:{
-                ticks:{
-                display:false
-            },
-            grid:{
-                drawTicks:false
-            }
-            },
-          y: {
-            beginAtZero: true,
-            afterFit: (ctx) => {
-                console.log (ctx);
-                ctx.width = 35;
-            }
-          }
-        },
-        plugins:{
-            legend:{
-                display:false
-            }
+        };
+        
+
+        // render init block
+        const myChart2 = new Chart(
+            document.getElementById('myChart2'),
+            config2
+        );
+
+        const box = document.querySelector('.box');
+        const barLength = myChart.data.labels.length;
+        console.log(barLength)
+
+        if (barLength > 7) {
+            const chartWidth = 700 + ((barLength - 7) * 30)
+            box.style.Width = `${chartWidth}`;
         }
-      }
-    };
 
-    // render init block
-    const myChart2 = new Chart(
-      document.getElementById('myChart2'),
-      config2
-    );
-
-    // Instantly assign Chart.js version
-    const chartVersion = document.getElementById('chartVersion');
-    chartVersion.innerText = Chart.version;
+        // Instantly assign Chart.js version
+        const chartVersion = document.getElementById('chartVersion');
+        chartVersion.innerText = Chart.version;
     </script>
 
+    <!-- SELECT BOX -->
+    <script>
+        (function( $ ){
+  $.fn.mySelectDropdown = function(options) {    
+    return this.each(function() {  
+      var $this = $(this);
+      
+      $this.each(function () {
+        var dropdown = $("<div />").addClass("f-dropdown selectDropdown");
+        
+        if($(this).is(':disabled')) 
+          dropdown.addClass('disabled');
+
+        $(this).wrap(dropdown);
+
+        var label = $("<span />").append($("<span />")
+          .text($(this).attr("placeholder"))).insertAfter($(this));
+        var list = $("<ul />");
+
+        $(this)
+          .find("option")
+          .each(function () {
+            var image = $(this).data('image');
+            if(image) {
+              list.append($("<li />").append(
+                $("<a />").attr('data-val',$(this).val())
+                .html(
+                  $("<span />").append($(this).text())
+                ).prepend('<img src="'+image+'">')
+              ));
+            } else if($(this).val() != '') {
+              list.append($("<li />").append(
+                $("<a />").attr('data-val',$(this).val())
+                .html(
+                  $("<span />").append($(this).text())
+                )
+              ));
+            }
+          });
+
+        list.insertAfter($(this));
+
+        if ($(this).find("option:selected").length > 0 && $(this).find("option:selected").val() != '') {
+          list.find('li a[data-val="' + $(this).find("option:selected").val() + '"]').parent().addClass("active");
+          $(this).parent().addClass("filled");
+          label.html(list.find("li.active a").html());
+        }
+      });
+
+      if(!$(this).is(':disabled')) {
+        $(this).parent().on("click", "ul li a", function (e) {
+          e.preventDefault();
+          var dropdown = $(this).parent().parent().parent();
+          var active = $(this).parent().hasClass("active");
+          var label = active
+            ? $('<span />').text(dropdown.find("select").attr("placeholder"))
+            : $(this).html();
+
+          dropdown.find("option").prop("selected", false);
+          dropdown.find("ul li").removeClass("active");
+
+          dropdown.toggleClass("filled", !active);
+          dropdown.children("span").html(label);
+
+          if (!active) {
+            dropdown
+              .find('option[value="' + $(this).attr('data-val') + '"]')
+              .prop("selected", true);
+            $(this).parent().addClass("active");
+          }
+
+          dropdown.removeClass("open");
+        });
+
+        $this.parent().on("click", "> span", function (e) {
+          var self = $(this).parent();
+          self.toggleClass("open");
+        });
+
+        $(document).on("click touchstart", function (e) {
+          var dropdown = $this.parent();
+          if (dropdown !== e.target && !dropdown.has(e.target).length) {
+            dropdown.removeClass("open");
+          }
+        });
+      }
+    });
+  };
+})( jQuery );
+
+$('select.f-dropdown').mySelectDropdown();
+
+    </script>
 
 
 

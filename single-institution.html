@@ -218,7 +218,7 @@
                                                     </select>
                                                 </div>
                                                 <div class="flex-c-m gap-2 col-8 col-md-6 col-lg-6 col-xl-3">
-                                                    <div class="fs-12 fs-sm-8" style="white-space: nowrap;">Academic
+                                                    <div class="fs-12" style="white-space: nowrap;">Academic
                                                         Year</div>
                                                     <select
                                                         class="form-control select2-select select2-show-search form-select fs-12"
@@ -253,32 +253,36 @@
                                             <div class="col-12 col-md-5 col-lg-3 col-xl-2">
                                                 <div class="bradius-14 bg-light shadow-neo h-full">
                                                     <div class="flex-col p-3 gap-3">
-                                                        <i
-                                                            class="ri-bar-chart-box-line fs-32 fs-sm-22 text-primary"></i>
+                                                        <div class="bradius-7 w-fit" style="background: rgba(48, 213, 199, 0.10); padding: 10px;">
+                                                            <i
+                                                            class="ri-bar-chart-box-line fs-32 fs-sm-22 text-main-primary" style="line-height: normal;"></i>
+                                                        </div>
                                                         <p class="fs-32 fs-sm-22 fw-semibold">60/120</p>
                                                         <p class="fs-14 fw-500" style="color: #747474;">
                                                             Assessment
                                                             Completed</p>
-
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-5 col-lg-3 col-xl-2">
                                                 <div class="bradius-14 bg-light shadow-neo h-full">
                                                     <div class="flex-col p-3 gap-3">
-                                                        <i class="ri-group-line fs-32 fs-sm-22 text-primary"></i>
+                                                        <div class="bradius-7 w-fit" style="background: rgba(48, 213, 199, 0.10); padding: 10px;">
+                                                            <i class="ri-group-line fs-32 fs-sm-22 text-main-primary" style="line-height: normal;"></i>
+                                                        </div> 
                                                         <p class="fs-32 fs-sm-22 fw-semibold">70/120</p>
                                                         <p class="fs-14 fw-500" style="color: #747474;">IEP
                                                             Generated Students</p>
-
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-12 col-md-5 col-lg-3 col-xl-2">
                                                 <div class="bradius-14 bg-light shadow-neo h-full">
                                                     <div class="flex-col p-3 gap-3">
-                                                        <i
-                                                            class="ri-lightbulb-flash-line fs-32 fs-sm-22 text-primary"></i>
+                                                        <div class="bradius-7 w-fit" style="background: rgba(48, 213, 199, 0.10); padding: 10px;">
+                                                            <i
+                                                            class="ri-lightbulb-flash-line fs-32 fs-sm-22 text-main-primary" style="line-height: normal;"></i>
+                                                        </div>
                                                         <p class="fs-32 fs-sm-22 fw-semibold">50%</p>
                                                         <p class="fs-14 fw-500" style="color: #747474;">IEP
                                                             Skill
@@ -290,7 +294,9 @@
                                             <div class="col-12 col-md-5 col-lg-3 col-xl-2">
                                                 <div class="bradius-14 bg-light shadow-neo h-full">
                                                     <div class="flex-col p-3 gap-3">
-                                                        <i class="ri-book-3-line fs-32 fs-sm-22 text-primary"></i>
+                                                        <div class="bradius-7 w-fit" style="background: rgba(48, 213, 199, 0.10); padding: 10px;">
+                                                            <i class="ri-book-3-line fs-32 fs-sm-22 text-main-primary" style="line-height: normal;"></i>
+                                                        </div>
                                                         <p class="fs-32 fs-sm-22 fw-semibold">65%</p>
                                                         <p class="fs-14 fw-500" style="color: #747474;">IEP
                                                             Subject
@@ -304,7 +310,10 @@
                                         <div class="col-12 col-md-5">
                                             <div class="bg-light shadow-neo bradius-14 p-4">
                                                 <div class="flex-col gap-5">
-                                                    <p class="fs-20 fw-500">Student Progress</p>
+                                                    <div>
+                                                        <p class="fs-20 fw-500">Institution Progress</p>
+                                                        <hr>
+                                                    </div>
                                                     <div class="flex-col gap-3">
                                                         <div class="flex-sb">
                                                             <p class="fs-14 fw-normal">High progressed
@@ -459,7 +468,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="bg-light shadow-neo bradius-14 p-4">
-                                                    <div class="row gap-3 gap-lg-0 gap-md-0 pb-4">
+                                                    <div class="row gap-3 gap-lg-0 gap-md-0">
                                                         <h1
                                                             class="fs-20 fw-semibold fs-sm-10 col-6 col-md-6 col-lg-8 col-xl-8">
                                                             Registered Students
@@ -476,6 +485,7 @@
                                                             </select>
                                                         </div>
                                                     </div>
+                                                    <hr>
                                                     <div class="chartCard">
                                                         <div class="chartBox">
                                                           <div class="colSmall">
@@ -530,25 +540,25 @@
         // Chart 1=====================================================================
     // setup 
     const data = {
-      labels: ['class1', 'class2', 'class3', 'class4', 'classs5',],
+      labels: ['class1', 'class2', 'class3', 'class4', 'classs5', 'class1', 'class2', 'class3', 'class4', 'classs5', 'class1', 'class2', 'class3', 'class4', 'classs5', 'class1', 'class2', 'class3', 'class4',],
       datasets: [{
         label: 'All Students',
-        data: [20, 12, 6, 9, 12, 3, 9],
+        data: [100, 20, 40, 90, 10, 30, 90, 20, 20, 60, 90, 20, 30, 90, 20, 10, 60, 90, 10,],
         backgroundColor: [
                     '#4A9F95',
                 ],
-                borderRadius: 5,
-                barThickness: 10, // Adjust this value to change the width of the bars
+                borderRadius: 10,
+                barThickness: 8, // Adjust this value to change the width of the bars
                 // categoryPercentage: 0.1, // Adjust this value to reduce padding between bars
                 // barPercentage: 0.9
      
       },
       {
       label: 'Completed Students',
-      data: [15, 10, 5, 8, 10, 2, 8], // Add the completed students data here
+      data: [50, 10, 30, 80, 10, 20, 80, 15, 10, 50, 80, 10, 20, 80, 15, 10, 50, 80, 10,], // Add the completed students data here
       backgroundColor: '#3bd5c8', // Change the background color for completed students
-      borderRadius: 5,
-      barThickness: 10,
+      borderRadius: 10,
+      barThickness: 8,
     //   categoryPercentage: 0.1,
     //   barPercentage: 0.9
     }]
@@ -658,6 +668,15 @@
       document.getElementById('myChart2'),
       config2
     );
+
+    const box = document.querySelector('.box');
+    const barLength = myChart.data.labels.length;
+    console.log(barLength)
+
+    if(barLength > 7){
+        const chartWidth = 700 + ((barLength - 7) * 30)
+        box.style.Width = `${chartWidth}`;
+    }
 
     // Instantly assign Chart.js version
     const chartVersion = document.getElementById('chartVersion');
