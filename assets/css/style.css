@@ -3478,6 +3478,7 @@ ul.collection li {
     font-weight: 600;
   }
    */
+   /* button-1 */
 .btn-color-mode-switch {
     display: inline-block;
     margin: 0px;
@@ -3549,6 +3550,83 @@ ul.collection li {
 }
 
 .btn-color-mode-switch input[type="checkbox"]:checked+label.btn-color-mode-switch-inner:before {
+    content: attr(data-off);
+    right: auto;
+    left: 18px;
+}
+
+   /* button-2 */
+   .btn-color-mode-switch2 {
+    display: inline-block;
+    margin: 0px;
+    position: relative;
+}
+
+.btn-color-mode-switch2>label.btn-color-mode-switch-inner2 {
+    margin: 0px;
+    width: 285px;
+    height: 32px;
+    background: #fff;
+    border-radius: 26px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+    /*box-shadow: 0px 0px 8px 0px rgba(17, 17, 17, 0.34) inset;*/
+    display: block;
+    border: 1px solid var(--bg-main-primary);
+
+}
+
+.btn-color-mode-switch2>label.btn-color-mode-switch-inner2:before {
+    content: attr(data-on);
+    position: absolute;
+    font-size: 12px;
+    font-weight: 500;
+    top: 7px;
+    right: 8px;
+}
+
+.btn-color-mode-switch2>label.btn-color-mode-switch-inner2:after {
+    content: attr(data-off);
+    width: 150px;
+    height: 26px;
+    background: var(--bg-main-primary);
+    border-radius: 26px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 6px -2px #111;
+    padding: 3px 0px;
+    color: #fff;
+}
+
+/* .btn-color-mode-switch>.alert {
+    display: none;
+    background: #FF9800;
+    border: none;
+    color: #fff;
+} */
+
+.btn-color-mode-switch2 input[type="checkbox"] {
+    cursor: pointer;
+    width: 100px;
+    height: 25px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    margin: 0px;
+}
+
+
+.btn-color-mode-switch2 input[type="checkbox"]:checked+label.btn-color-mode-switch-inner2:after {
+    content: attr(data-on);
+    left: 130px;
+    background: var(--bg-main-primary);
+}
+
+.btn-color-mode-switch2 input[type="checkbox"]:checked+label.btn-color-mode-switch-inner2:before {
     content: attr(data-off);
     right: auto;
     left: 18px;
@@ -3828,7 +3906,7 @@ ul.collection li {
 
 .checkbox {
     width: 250px;
-    height: 40px;
+    height: 43px;
     background-color: #fff;
     border: 1px solid var(--bg-main-primary);
     border-radius: 30px;
