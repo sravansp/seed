@@ -4011,7 +4011,7 @@ ul.collection li {
     height: 2px;
     border-radius: 1px;
     top: 50%;
-    right: 12px;
+    right: 5px;
     background: #000;
     transition: all 0.3s ease;
   }
@@ -4060,7 +4060,7 @@ ul.collection li {
     align-items: center;
   }
   .f-dropdown ul li a img {
-    width: 30px;
+    width: 20px;
     margin-right: 10px;
   }
   .f-dropdown ul li a:hover {
@@ -4132,7 +4132,7 @@ ul.collection li {
   
   /* --------------------------- */
   .f-group {
-    max-width: 250px;
+    width: 100%;
     margin: 0 auto;
     text-align: left;
   }
