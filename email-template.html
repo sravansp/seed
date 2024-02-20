@@ -22,261 +22,151 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/util.css">
 
-<style>
-    .bg-img{
-        background-image: url(/assets/images/seedbg.png);
-        padding: 30px;
-        height: auto;
-        width: auto;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-    .white-div{
-        background-color: white;
-        height: 400px;
-        border-radius: 14px;
-
-    }
-    .para-div{
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-    }
-    .white-div2{
-        background-color: white;
-        height: auto;
-        width: auto;
-        padding: 10px;
-        border-radius: 14px;
-        display: flex;
-        justify-content: space-between;
-    }
-    .icon-div{
-        border-radius: 30px;
-background: #FFDE5C;
-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
-padding: 5px;
-    }
-    .allicon{
-        display: flex;
-        gap: 10px;
-    }
-    .para-1{
-        color: #000;
-        font-size: 12px;
-        font-weight: 400;
-    }
-    .para-2{
-        padding-top: 10px;
-        color:#676767;
-        font-size: 12px;
-        font-weight: 300;
-        text-align: right;
-    }
-    .img-div{
-        padding: 10px;
-    }
-
-    @media (min-width: 576px){
-        .white-div2{
+    <style>
+        .bg-img {
+            background-image: url(/assets/images/seedbg.png);
+            padding: 30px;
+            height: auto;
+            width: auto;
+            display: flex;
             flex-direction: column;
+            gap: 20px;
         }
-        .para-div{
-            justify-content: center;
-    }
-    }
-    @media (max-width: 576px){
-        .white-div2{
+
+        .white-div {
+            background-color: white;
+            height: 400px;
+            border-radius: 14px;
+
+        }
+
+        .para-div {
+            display: flex;
             flex-direction: column;
+            gap: 5px;
+        }
+
+        .white-div2 {
+            background-color: white;
+            height: auto;
+            width: auto;
+            padding: 10px;
+            border-radius: 14px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .icon-div {
+            border-radius: 30px;
+            background: #FFDE5C;
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
+            padding: 5px;
+        }
+
+        .allicon {
+            display: flex;
             gap: 10px;
         }
-        .para-div{
-        justify-content: center;
-}
-    }
-    @media (min-width: 768px){
-        .white-div2{
-            flex-direction: row;
-       
+
+        .para-1 {
+            color: #000;
+            font-size: 12px;
+            font-weight: 400;
         }
-    }
-</style>
+
+        .para-2 {
+            padding-top: 10px;
+            color: #676767;
+            font-size: 12px;
+            font-weight: 300;
+            text-align: right;
+        }
+
+        .img-div {
+            padding: 10px;
+        }
+
+        @media (min-width: 576px) {
+            .white-div2 {
+                flex-direction: column;
+            }
+
+            .para-div {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .white-div2 {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .para-div {
+                justify-content: center;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .white-div2 {
+                flex-direction: row;
+
+            }
+        }
+    </style>
 </head>
 
-<body class="light mode">
-    <div class="popup-toggle toggle-switch d-none">
-        <i class="ri-moon-fill fs-25 text-primary"></i>
-    </div>
-    <!-- Sidebar Start -->
-    <div class="app-sidebar__overlay active" data-bs-toggle="sidebar"></div>
-    <nav class="sidebar open">
-        <header>
-            <div class="image-text">
-                <div class="image">
-                    <img src="./assets/images/brand/logo.png" alt="logo">
-                </div>
-                <div class="text logo-text">
-                    <h1 class="fs-24">SEED</h1>
+<body>
+    <!-- Main Content Start  -->
+    <div>
+        <div class="bg-img">
+            <!-- <img src="/assets/images/seedbg.png" alt=""> -->
+            <div class="white-div">
+                <div class="img-div">
+                    <img src="/assets/images/seedemaillogo.png" alt="">
                 </div>
             </div>
-        </header>
-        <div class="toggle_icon">
-            <span class="toggle">
-                <i class="ri-arrow-right-s-line"></i>
-            </span>
-        </div>
-        <div class="menu-bar">
-            <div class="menu h-full">
-                <ul class="menu-links flex gap-5 h-full flex-col ps-0 justify-content-evenly">
-                    <div class="top-menu-links">
-                        <p class="p-l-20 p-b-8 fs-12 title-menu">General</p>
-                        <li class="nav-link">
-                            <a href="dash-admin.html">
-                                <i class="ri-home-4-fill icon"></i>
-                                <span class="text nav-text">Dashboard</span>
-                                <span class="tooltip">Dashboard</span>
-                            </a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="dash-admin-student.html">
-                                <i class="ri-team-fill icon"></i>
-                                <span class="text nav-text">Student Management</span>
-                                <span class="tooltip">Student Management</span>
-                            </a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="dash-admin-user.html">
-                                <i class="ri-user-2-fill icon"></i>
-                                <span class="text nav-text">User Management</span>
-                                <span class="tooltip">User Management</span>
-                            </a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="dash-admin-appoinment.html">
-                                <i class="ri-calendar-fill icon"></i>
-                                <span class="text nav-text">Appointments</span>
-                                <span class="tooltip">Appointments</span>
-                            </a>
-                        </li>
-                    </div>
-                    <div class="bottom-menu-links">
-                        <p class="p-l-20 p-b-8 fs-12 title-menu">Others</p>
-                        <li class="nav-link">
-                            <a href="/form-files.html">
-                                <i class="ri-file-copy-2-fill icon"></i>
-                                <span class="text nav-text">Forms and Files</span>
-                                <span class="tooltip">Forms and Files</span>
-                            </a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="components.html">
-                                <i class="ri-settings-5-fill icon"></i>
-                                <span class="text nav-text">Account Settings</span>
-                                <span class="tooltip">Account Settings</span>
-                            </a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="help.html">
-                                <i class="ri-customer-service-2-fill icon"></i>
-                                <span class="text nav-text">Help and Supporrt</span>
-                                <span class="tooltip">Help and Supporrt</span>
-                            </a>
-                        </li>
-                    </div>
-                </ul>
-            </div>
-
-            <div class="bottom-content flex justify-content-center">
-                <!-- <li class="nav-link"> -->
-                <a href="./login.html" class="btn btn-light text-primary">
-                    <div class="p-1 rounded-circle bg-primary">
-                        <i class="ri-shut-down-line text-white fs-20"></i>
-                    </div>
-                    <span class="text nav-text text-primary">Logout</span>
-                    <!-- <span class="tooltip">Logout</span> -->
-                </a>
-                <!-- </li> -->
-            </div>
-        </div>
-    </nav>
-    <!-- Sidebar End  -->
-
-    <div class="overlay_section"></div>
-    <main class="home">
-
-        <!-- Main Content Start  -->
-        <div class="content pb-4">
-            <div class="container-fluid px-md-4">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="wrapper-body admin-dash w-full">
-                           <div>
-                            <div class="bg-img">
-                                <!-- <img src="/assets/images/seedbg.png" alt=""> -->
-                                <div class="white-div">
-                                    <div class="img-div">
-                                        <img src="/assets/images/seedemaillogo.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="white-div2">
-                                    <div class="para-div">
-                                        <p><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                            <path d="M7.80463 8.90175C8.585 10.274 9.726 11.415 11.0982 12.1953L11.8353 11.1634C12.0804 10.8204 12.543 10.7144 12.913 10.9165C14.0853 11.5569 15.3809 11.9461 16.7324 12.0531C17.1658 12.0874 17.5 12.4491 17.5 12.8838V16.6028C17.5 17.0301 17.1768 17.3881 16.7518 17.4318C16.3102 17.4772 15.8647 17.5 15.4167 17.5C8.28299 17.5 2.5 11.717 2.5 4.58333C2.5 4.13522 2.52285 3.68976 2.56824 3.24813C2.61192 2.82312 2.96995 2.5 3.39721 2.5H7.11618C7.55092 2.5 7.91261 2.8342 7.94692 3.26757C8.05389 4.61907 8.44308 5.9147 9.0835 7.08703C9.28558 7.457 9.17958 7.91962 8.83658 8.16464L7.80463 8.90175ZM5.70354 8.35433L7.28683 7.22341C6.83789 6.25428 6.53023 5.22652 6.37273 4.16667H4.17422C4.16919 4.30527 4.16667 4.44417 4.16667 4.58333C4.16667 10.7965 9.2035 15.8333 15.4167 15.8333C15.5558 15.8333 15.6947 15.8308 15.8333 15.8257V13.6272C14.7735 13.4697 13.7457 13.1621 12.7766 12.7132L11.6457 14.2965C11.1882 14.1187 10.7463 13.9096 10.3228 13.6717L10.2744 13.6442C8.64142 12.7156 7.28445 11.3586 6.35583 9.72558L6.32828 9.67717C6.09041 9.25367 5.88128 8.81183 5.70354 8.35433Z" fill="#F9CD22"/>
-                                          </svg>+91 9372 2424 23</p>
-                                        <div class="allicon">
-                                            <div class="icon-div">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                                    <path d="M10.8347 16.6144C14.1232 16.2043 16.668 13.399 16.668 9.99935C16.668 6.31745 13.6832 3.33268 10.0013 3.33268C6.3194 3.33268 3.33464 6.31745 3.33464 9.99935C3.33464 13.399 5.87938 16.2043 9.16799 16.6144V11.666H7.5013V9.99935H9.16799V8.62085C9.16799 7.50647 9.28399 7.10237 9.5019 6.69496C9.71974 6.28755 10.0395 5.96782 10.4469 5.74993C10.7658 5.57938 11.1614 5.47645 11.8527 5.4323C12.1271 5.41477 12.4822 5.43712 12.918 5.49935V7.08268H12.5013C11.7369 7.08268 11.4215 7.11878 11.2329 7.21962C11.116 7.28217 11.0342 7.364 10.9716 7.48096C10.8707 7.6695 10.8347 7.85646 10.8347 8.62085V9.99935H12.918L12.5013 11.666H10.8347V16.6144ZM10.0013 18.3327C5.39893 18.3327 1.66797 14.6017 1.66797 9.99935C1.66797 5.39697 5.39893 1.66602 10.0013 1.66602C14.6037 1.66602 18.3347 5.39697 18.3347 9.99935C18.3347 14.6017 14.6037 18.3327 10.0013 18.3327Z" fill="black"/>
-                                                  </svg>
-                                            </div>
-                                            <div class="icon-div">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                                    <path d="M10.8347 16.6144C14.1232 16.2043 16.668 13.399 16.668 9.99935C16.668 6.31745 13.6832 3.33268 10.0013 3.33268C6.3194 3.33268 3.33464 6.31745 3.33464 9.99935C3.33464 13.399 5.87938 16.2043 9.16799 16.6144V11.666H7.5013V9.99935H9.16799V8.62085C9.16799 7.50647 9.28399 7.10237 9.5019 6.69496C9.71974 6.28755 10.0395 5.96782 10.4469 5.74993C10.7658 5.57938 11.1614 5.47645 11.8527 5.4323C12.1271 5.41477 12.4822 5.43712 12.918 5.49935V7.08268H12.5013C11.7369 7.08268 11.4215 7.11878 11.2329 7.21962C11.116 7.28217 11.0342 7.364 10.9716 7.48096C10.8707 7.6695 10.8347 7.85646 10.8347 8.62085V9.99935H12.918L12.5013 11.666H10.8347V16.6144ZM10.0013 18.3327C5.39893 18.3327 1.66797 14.6017 1.66797 9.99935C1.66797 5.39697 5.39893 1.66602 10.0013 1.66602C14.6037 1.66602 18.3347 5.39697 18.3347 9.99935C18.3347 14.6017 14.6037 18.3327 10.0013 18.3327Z" fill="black"/>
-                                                  </svg>
-                                            </div>
-                                            <div class="icon-div">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                                    <path d="M10.8347 16.6144C14.1232 16.2043 16.668 13.399 16.668 9.99935C16.668 6.31745 13.6832 3.33268 10.0013 3.33268C6.3194 3.33268 3.33464 6.31745 3.33464 9.99935C3.33464 13.399 5.87938 16.2043 9.16799 16.6144V11.666H7.5013V9.99935H9.16799V8.62085C9.16799 7.50647 9.28399 7.10237 9.5019 6.69496C9.71974 6.28755 10.0395 5.96782 10.4469 5.74993C10.7658 5.57938 11.1614 5.47645 11.8527 5.4323C12.1271 5.41477 12.4822 5.43712 12.918 5.49935V7.08268H12.5013C11.7369 7.08268 11.4215 7.11878 11.2329 7.21962C11.116 7.28217 11.0342 7.364 10.9716 7.48096C10.8707 7.6695 10.8347 7.85646 10.8347 8.62085V9.99935H12.918L12.5013 11.666H10.8347V16.6144ZM10.0013 18.3327C5.39893 18.3327 1.66797 14.6017 1.66797 9.99935C1.66797 5.39697 5.39893 1.66602 10.0013 1.66602C14.6037 1.66602 18.3347 5.39697 18.3347 9.99935C18.3347 14.6017 14.6037 18.3327 10.0013 18.3327Z" fill="black"/>
-                                                  </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="para-div2">
-                                        <p class="para-1">SEED (Social Educational Emotional  Development) Special Educational center</p>
-                                        <p class="para-2">304, Emirates Red Crescent Building garhoud, Dubai, UAE</p>
-                                    </div>
-                                </div>
-                            </div>
-                           </div>
+            <div class="white-div2">
+                <div class="para-div">
+                    <p><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path
+                                d="M7.80463 8.90175C8.585 10.274 9.726 11.415 11.0982 12.1953L11.8353 11.1634C12.0804 10.8204 12.543 10.7144 12.913 10.9165C14.0853 11.5569 15.3809 11.9461 16.7324 12.0531C17.1658 12.0874 17.5 12.4491 17.5 12.8838V16.6028C17.5 17.0301 17.1768 17.3881 16.7518 17.4318C16.3102 17.4772 15.8647 17.5 15.4167 17.5C8.28299 17.5 2.5 11.717 2.5 4.58333C2.5 4.13522 2.52285 3.68976 2.56824 3.24813C2.61192 2.82312 2.96995 2.5 3.39721 2.5H7.11618C7.55092 2.5 7.91261 2.8342 7.94692 3.26757C8.05389 4.61907 8.44308 5.9147 9.0835 7.08703C9.28558 7.457 9.17958 7.91962 8.83658 8.16464L7.80463 8.90175ZM5.70354 8.35433L7.28683 7.22341C6.83789 6.25428 6.53023 5.22652 6.37273 4.16667H4.17422C4.16919 4.30527 4.16667 4.44417 4.16667 4.58333C4.16667 10.7965 9.2035 15.8333 15.4167 15.8333C15.5558 15.8333 15.6947 15.8308 15.8333 15.8257V13.6272C14.7735 13.4697 13.7457 13.1621 12.7766 12.7132L11.6457 14.2965C11.1882 14.1187 10.7463 13.9096 10.3228 13.6717L10.2744 13.6442C8.64142 12.7156 7.28445 11.3586 6.35583 9.72558L6.32828 9.67717C6.09041 9.25367 5.88128 8.81183 5.70354 8.35433Z"
+                                fill="#F9CD22" />
+                        </svg>+91 9372 2424 23</p>
+                    <div class="allicon">
+                        <div class="icon-div">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="none">
+                                <path
+                                    d="M10.8347 16.6144C14.1232 16.2043 16.668 13.399 16.668 9.99935C16.668 6.31745 13.6832 3.33268 10.0013 3.33268C6.3194 3.33268 3.33464 6.31745 3.33464 9.99935C3.33464 13.399 5.87938 16.2043 9.16799 16.6144V11.666H7.5013V9.99935H9.16799V8.62085C9.16799 7.50647 9.28399 7.10237 9.5019 6.69496C9.71974 6.28755 10.0395 5.96782 10.4469 5.74993C10.7658 5.57938 11.1614 5.47645 11.8527 5.4323C12.1271 5.41477 12.4822 5.43712 12.918 5.49935V7.08268H12.5013C11.7369 7.08268 11.4215 7.11878 11.2329 7.21962C11.116 7.28217 11.0342 7.364 10.9716 7.48096C10.8707 7.6695 10.8347 7.85646 10.8347 8.62085V9.99935H12.918L12.5013 11.666H10.8347V16.6144ZM10.0013 18.3327C5.39893 18.3327 1.66797 14.6017 1.66797 9.99935C1.66797 5.39697 5.39893 1.66602 10.0013 1.66602C14.6037 1.66602 18.3347 5.39697 18.3347 9.99935C18.3347 14.6017 14.6037 18.3327 10.0013 18.3327Z"
+                                    fill="black" />
+                            </svg>
+                        </div>
+                        <div class="icon-div">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="none">
+                                <path
+                                    d="M10.8347 16.6144C14.1232 16.2043 16.668 13.399 16.668 9.99935C16.668 6.31745 13.6832 3.33268 10.0013 3.33268C6.3194 3.33268 3.33464 6.31745 3.33464 9.99935C3.33464 13.399 5.87938 16.2043 9.16799 16.6144V11.666H7.5013V9.99935H9.16799V8.62085C9.16799 7.50647 9.28399 7.10237 9.5019 6.69496C9.71974 6.28755 10.0395 5.96782 10.4469 5.74993C10.7658 5.57938 11.1614 5.47645 11.8527 5.4323C12.1271 5.41477 12.4822 5.43712 12.918 5.49935V7.08268H12.5013C11.7369 7.08268 11.4215 7.11878 11.2329 7.21962C11.116 7.28217 11.0342 7.364 10.9716 7.48096C10.8707 7.6695 10.8347 7.85646 10.8347 8.62085V9.99935H12.918L12.5013 11.666H10.8347V16.6144ZM10.0013 18.3327C5.39893 18.3327 1.66797 14.6017 1.66797 9.99935C1.66797 5.39697 5.39893 1.66602 10.0013 1.66602C14.6037 1.66602 18.3347 5.39697 18.3347 9.99935C18.3347 14.6017 14.6037 18.3327 10.0013 18.3327Z"
+                                    fill="black" />
+                            </svg>
+                        </div>
+                        <div class="icon-div">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                fill="none">
+                                <path
+                                    d="M10.8347 16.6144C14.1232 16.2043 16.668 13.399 16.668 9.99935C16.668 6.31745 13.6832 3.33268 10.0013 3.33268C6.3194 3.33268 3.33464 6.31745 3.33464 9.99935C3.33464 13.399 5.87938 16.2043 9.16799 16.6144V11.666H7.5013V9.99935H9.16799V8.62085C9.16799 7.50647 9.28399 7.10237 9.5019 6.69496C9.71974 6.28755 10.0395 5.96782 10.4469 5.74993C10.7658 5.57938 11.1614 5.47645 11.8527 5.4323C12.1271 5.41477 12.4822 5.43712 12.918 5.49935V7.08268H12.5013C11.7369 7.08268 11.4215 7.11878 11.2329 7.21962C11.116 7.28217 11.0342 7.364 10.9716 7.48096C10.8707 7.6695 10.8347 7.85646 10.8347 8.62085V9.99935H12.918L12.5013 11.666H10.8347V16.6144ZM10.0013 18.3327C5.39893 18.3327 1.66797 14.6017 1.66797 9.99935C1.66797 5.39697 5.39893 1.66602 10.0013 1.66602C14.6037 1.66602 18.3347 5.39697 18.3347 9.99935C18.3347 14.6017 14.6037 18.3327 10.0013 18.3327Z"
+                                    fill="black" />
+                            </svg>
                         </div>
                     </div>
                 </div>
+                <div class="para-div2">
+                    <p class="para-1">SEED (Social Educational Emotional Development) Special Educational center</p>
+                    <p class="para-2">304, Emirates Red Crescent Building garhoud, Dubai, UAE</p>
+                </div>
             </div>
         </div>
-
-    </main>
-
-
-    <div class="preloader">
-        <div class="loader">
-            <img src="./assets/images/brand/logo_org.png" alt="">
-            <span></span>
-        </div>
     </div>
-
-
-
-
-    <script src="./assets/pluggins/jquery/jquery-3.6.3.min.js"></script>
-    <script src="./assets/pluggins/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/gh/tomik23/circular-progress-bar@latest/docs/circularProgressBar.min.js">
-    </script>
-    <script src="./assets/pluggins/select2/js/select2.full.min.js"></script>
-    <script src="./assets/pluggins/scrollreveal/scrollreveal.js"></script>
-    <script src="./assets/js/calender.js"></script>
-    <script src="./assets/js/index.js"></script>
 </body>
 
 </html>
