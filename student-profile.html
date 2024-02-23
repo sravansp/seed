@@ -314,6 +314,12 @@
                                                             role="tab" aria-controls="contact"
                                                             aria-selected="false">Consultation History</button>
                                                     </li>
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="tab-btn nav-link fs-sm-10 fs-16" id="student-tab"
+                                                            data-bs-toggle="tab" data-bs-target="#student" type="button"
+                                                            role="tab" aria-controls="student"
+                                                            aria-selected="false">Student Progression</button>
+                                                    </li>
                                                 </ul>
                                                 <div class="line"></div>
                                             </div>
@@ -2165,6 +2171,806 @@
                                                     </table>
                                                 </div>
                                             </div>
+
+                                            <div class="tab-pane fade" id="student" role="tabpanel"
+                                                aria-labelledby="student-tab" tabindex="0">
+                                                <div class="row pt-3">
+                                                    <div class="col-12 col-md-4">
+                                                        <div class="bg-light shadow-neo bradius-14 p-4">
+                                                            <div class="flex-col gap-5">
+                                                                <div class="flex-col gap-2">
+                                                                    <p class="fs-20 fw-500">Student Progress</p>
+                                                                    <div>
+                                                                        <label class="switch btn-color-mode-switch">
+                                                                            <input value="1" id="color_mode" name="color_mode"
+                                                                                type="checkbox">
+                                                                            <label class="btn-color-mode-switch-inner"
+                                                                                data-off="Skill" data-on="Subject"
+                                                                                for="color_mode"></label>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flex-col gap-3">
+                                                                    <div class="flex-sb">
+                                                                        <p class="fs-14 fw-normal">High progressed
+                                                                            students</p>
+                                                                        <button class="view-all">
+                                                                            View all
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="row gap-2 gap-md-0 gap-lg-0">
+                                                                        <div class="col-12 col-md-12 col-lg-12">
+                                                                            <div
+                                                                                class="bg-light bradius-7 border p-3 flex-col gap-2">
+                                                                                <div class="flex-sb">
+                                                                                    <div class="overflow-hidden rounded-5"
+                                                                                        style="width: 40px;">
+                                                                                        <img class="w-100 object-center object-cover"
+                                                                                            src="./assets/images/avatar1.png"
+                                                                                            alt="">
+                                                                                    </div>
+                                                                                    <div class="border p-1 h-25px bradius-7">
+                                                                                        <p class="text-primary fs-12 fw-semibold">
+                                                                                            95%</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div>
+                                                                                    <p class="fs-12 fw-500">Aleesha Jain
+                                                                                    </p>
+                                                                                    <p class="fs-12 fw-500">Class:8</p>
+                                                                                </div>
+                                                                                <a href="" class="fs-12 fw-500 text-primary">View
+                                                                                    Details <i
+                                                                                        class="ri-arrow-right-s-line"></i></a>
+                                                                            </div>
+                                                                        </div>
+                                                                       
+                                                                    </div>
+                                                                </div> 
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-md-8">
+                                                        <div class="flex-col gap-3 pt-2 pt-md-0 pt-lg-0">
+                                                            <div class="bg-light shadow-neo bradius-14 p-4">
+                                                                <div class="row gap-3 gap-lg-0 gap-md-0 justify-content-between align-center">
+                                                                    <h1
+                                                                        class="fs-20 fw-semibold fs-sm-10 col-6 col-md-12 col-xl-5 col-xxl-3 pb-2 pb-md-2 pb-lg-0">
+                                                                        Students Overview
+                                                                    </h1>
+                                                                    <div class="flex-c-m gap-2 col-6 col-md-6 col-xl-3 col-xxl-3 pb-2 pb-md-2 pb-lg-0">
+                                                                        <select
+                                                                            class="form-control select2-select select2-show-search form-select fs-12"
+                                                                            data-placeholder="Choose one">
+                                                                            <option label="Choose one">School Wise</option>
+                                                                            <option value="AZ">Class Wise</option>
+                                                                            
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <hr>
+                                                                    <div class="bar-chart h-full bradius-14 bg-light p-3 flex-col">
+                                                                        <div id="chart-line" class="rounded-bars-chart h-full"></div>
+                                                                    </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row pt-5">
+                                                    <div class="col-md-12">
+                                                        <div class="accordion flex-col gap-4" id="accordionPanelsStayOpenExample">
+                                                            <div class="accordion-item">
+                                                                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                                                                    
+                                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                                                        aria-controls="panelsStayOpen-collapseOne">
+                                                                        Communication Difficulties
+                                                                    </button>
+                                                                </h2>
+                                                                <div id="panelsStayOpen-collapseOne"
+                                                                    class="accordion-collapse collapse show"
+                                                                    aria-labelledby="panelsStayOpen-headingOne">
+                                                                    <div class="accordion-body">
+                                                                        <div class="table-responsive1 bg-light bradius-7">
+                                                                            <table class="table table-hover align-middle fs-12">
+                                                                                <thead class="fw-semibold bg-gray600">
+                                                                                    <th scope="col">Sl No</th>
+                                                                                    <th scope="col">Progress Date</th>
+                                                                                    <th scope="col">Progress Increased</th>
+                                                                                    <th scope="col">Overall Progress after</th>
+                                                                                    
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <!-- <td scope="row">
+                                                                                        <div
+                                                                                            class="img-table w-25px h-25px rounded-circle overflow-hidden">
+                                                                                            <img class="w-full h-full object-center object-cover"
+                                                                                                src="./assets/images/user.jpg" alt="">
+                                                                                        </div>
+                                                                                    </td> -->
+                                                                                        <td>
+                                                                                            <div class="flex-m gap-2">
+                        
+                                                                                                <div class="flex-col gap-1">
+                                                                                                    <p class="fs-14 fw-500">1
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </td>
+                        
+                                                                                        <td>
+                                                                                            <p class="fw-500 fs-14">10 Mar 2023</p>
+                                                                                            
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class=" flex-col gap-1">
+                                                                                                <p class="fw-500 fs-14">10%</p>
+                                                                                                
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class=" flex-col gap-1">
+                                                                                                <p class="fw-500 fs-14">10%
+                                                                                                </p>
+                                                                                               
+                                                                                            </div>
+                        
+                                                                                        </td>
+                                                                                       
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <!-- <td scope="row">
+                                                                                        <div
+                                                                                            class="img-table w-25px h-25px rounded-circle overflow-hidden">
+                                                                                            <img class="w-full h-full object-center object-cover"
+                                                                                                src="./assets/images/user.webp" alt="">
+                                                                                        </div>
+                                                                                    </td> -->
+                                                                                        <td>
+                                                                                            <div class="flex-m gap-2">
+                        
+                                                                                                <div class="flex-col gap-1">
+                                                                                                    <p class="fs-14 fw-500">2
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </td>
+                        
+                                                                                        <td>
+                                                                                            <p class="fw-500 fs-14">10 Mar 2023</p>
+                                                                                            
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class=" flex-col gap-1">
+                                                                                                <p class="fw-500 fs-14">10%</p>
+                                                                                                
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class=" flex-col gap-1">
+                                                                                                <p class="fw-500 fs-14">10%
+                                                                                                </p>
+                                                                                               
+                                                                                            </div>
+                        
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <!-- <td scope="row">
+                                                                                        <div
+                                                                                            class="img-table w-25px h-25px rounded-circle overflow-hidden">
+                                                                                            <img class="w-full h-full object-center object-cover"
+                                                                                                src="./assets/images/user.jpg" alt="">
+                                                                                        </div>
+                                                                                    </td> -->
+                                                                                        <td>
+                                                                                            <div class="flex-m gap-2">
+                        
+                                                                                                <div class="flex-col gap-1">
+                                                                                                    <p class="fs-14 fw-500">3
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </td>
+                        
+                                                                                        <td>
+                                                                                            <p class="fw-500 fs-14">10 Mar 2023</p>
+                                                                                            
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class=" flex-col gap-1">
+                                                                                                <p class="fw-500 fs-14">10%</p>
+                                                                                                
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class=" flex-col gap-1">
+                                                                                                <p class="fw-500 fs-14">10%
+                                                                                                </p>
+                                                                                               
+                                                                                            </div>
+                        
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <!-- <td scope="row">
+                                                                                        <div
+                                                                                            class="img-table w-25px h-25px rounded-circle overflow-hidden">
+                                                                                            <img class="w-full h-full object-center object-cover"
+                                                                                                src="./assets/images/user.webp" alt="">
+                                                                                        </div>
+                                                                                    </td> -->
+                                                                                        <td>
+                                                                                            <div class="flex-m gap-2">
+                        
+                                                                                                <div class="flex-col gap-1">
+                                                                                                    <p class="fs-14 fw-500">4
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </td>
+                        
+                                                                                        <td>
+                                                                                            <p class="fw-500 fs-14">10 Mar 2023</p>
+                                                                                            
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class=" flex-col gap-1">
+                                                                                                <p class="fw-500 fs-14">10%</p>
+                                                                                                
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class=" flex-col gap-1">
+                                                                                                <p class="fw-500 fs-14">10%
+                                                                                                </p>
+                                                                                               
+                                                                                            </div>
+                        
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <!-- <td scope="row">
+                                                                                        <div
+                                                                                            class="img-table w-25px h-25px rounded-circle overflow-hidden">
+                                                                                            <img class="w-full h-full object-center object-cover"
+                                                                                                src="./assets/images/user.jpg" alt="">
+                                                                                        </div>
+                                                                                    </td> -->
+                                                                                        <td>
+                                                                                            <div class="flex-m gap-2">
+                        
+                                                                                                <div class="flex-col gap-1">
+                                                                                                    <p class="fs-14 fw-500">5
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </td>
+                        
+                                                                                        <td>
+                                                                                            <p class="fw-500 fs-14">10 Mar 2023</p>
+                                                                                            
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class=" flex-col gap-1">
+                                                                                                <p class="fw-500 fs-14">10%</p>
+                                                                                                
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class=" flex-col gap-1">
+                                                                                                <p class="fw-500 fs-14">10%
+                                                                                                </p>
+                                                                                               
+                                                                                            </div>
+                        
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <!-- <td scope="row">
+                                                                                        <div
+                                                                                            class="img-table w-25px h-25px rounded-circle overflow-hidden">
+                                                                                            <img class="w-full h-full object-center object-cover"
+                                                                                                src="./assets/images/user.webp" alt="">
+                                                                                        </div>
+                                                                                    </td> -->
+                                                                                        <td>
+                                                                                            <div class="flex-m gap-2">
+                        
+                                                                                                <div class="flex-col gap-1">
+                                                                                                    <p class="fs-14 fw-500">6
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </td>
+                        
+                                                                                        <td>
+                                                                                            <p class="fw-500 fs-14">10 Mar 2023</p>
+                                                                                            
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class=" flex-col gap-1">
+                                                                                                <p class="fw-500 fs-14">10%</p>
+                                                                                                
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class=" flex-col gap-1">
+                                                                                                <p class="fw-500 fs-14">10%
+                                                                                                </p>
+                                                                                               
+                                                                                            </div>
+                        
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <!-- <td scope="row">
+                                                                                        <div
+                                                                                            class="img-table w-25px h-25px rounded-circle overflow-hidden">
+                                                                                            <img class="w-full h-full object-center object-cover"
+                                                                                                src="./assets/images/user.jpg" alt="">
+                                                                                        </div>
+                                                                                    </td> -->
+                                                                                        <td>
+                                                                                            <div class="flex-m gap-2">
+                        
+                                                                                                <div class="flex-col gap-1">
+                                                                                                    <p class="fs-14 fw-500">7
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </td>
+                        
+                                                                                        <td>
+                                                                                            <p class="fw-500 fs-14">10 Mar 2023</p>
+                                                                                            
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class=" flex-col gap-1">
+                                                                                                <p class="fw-500 fs-14">10%</p>
+                                                                                                
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class=" flex-col gap-1">
+                                                                                                <p class="fw-500 fs-14">10%
+                                                                                                </p>
+                                                                                               
+                                                                                            </div>
+                        
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <!-- <td scope="row">
+                                                                                        <div
+                                                                                            class="img-table w-25px h-25px rounded-circle overflow-hidden">
+                                                                                            <img class="w-full h-full object-center object-cover"
+                                                                                                src="./assets/images/user.webp" alt="">
+                                                                                        </div>
+                                                                                    </td> -->
+                                                                                        <td>
+                                                                                            <div class="flex-m gap-2">
+                        
+                                                                                                <div class="flex-col gap-1">
+                                                                                                    <p class="fs-14 fw-500">8
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </td>
+                        
+                                                                                        <td>
+                                                                                            <p class="fw-500 fs-14">10 Mar 2023</p>
+                                                                                            
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class=" flex-col gap-1">
+                                                                                                <p class="fw-500 fs-14">10%</p>
+                                                                                                
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <div class=" flex-col gap-1">
+                                                                                                <p class="fw-500 fs-14">10%
+                                                                                                </p>
+                                                                                               
+                                                                                            </div>
+                        
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <h2 class="accordion-header" id="headingOne">
+                                                                    <div>
+                                                                        <div
+                                                                            class="bg-light bg-hover bradius-7 flex-col-c-m p-4 border gap-2 position-relative">
+                                                                            <div
+                                                                                class="flex-sb-m w-full flex-col-c-sm gap-2 gap-md-3 gap-lg-5">
+                                                                                <div class="px-3 py-1 flex-c-m bradius-4 fs-16"
+                                                                                    style="background-color: #E9F1F1;">
+                                                                                    1
+                                                                                </div>
+                                                                                <div>
+                                                                                    <div class="flex-col gap-2">
+                                                                                        <p
+                                                                                            class="fs-16 fw-semibold fs-sm-10">
+                                                                                            Jumping</p>
+                                                                                        <p class="fs-12 fs-sm-10">
+                                                                                            1.37%
+                                                                                            Progression per
+                                                                                            day</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div
+                                                                                    class="w-50 w-sm-full pt-md-0 pt-4 pt-lg-0 flex-col gap-2">
+                                                                                    <div class="progress-tooltip">
+                                                                                        <span
+                                                                                            class="progress-tooltip-info fs-12 fs-sm-8"
+                                                                                            style="left: 50%;">in
+                                                                                            27 days</span>
+                                                                                        <progress class="progress"
+                                                                                            value="100"
+                                                                                            max="100"></progress>
+                                                                                    </div>
+                                                                                    <div class="flex-sb">
+                                                                                        <p class="fs-12 fs-sm-10">
+                                                                                            1.37% per day
+                                                                                        </p>
+                                                                                        <p
+                                                                                            class="fs-12 fs-sm-10 pb-2 pb-md-0 pb-lg-0">
+                                                                                            Jan
+                                                                                            5,
+                                                                                            2024
+                                                                                        </p>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="">
+                                                                                    <div class="flex-col-c-m gap-2">
+                                                                                        <p class=" fs-30 fw-semibold fs-sm-20"
+                                                                                            id="percentage-pro">100%
+                                                                                        </p>
+
+                                                                                        <button type="button"
+                                                                                            data-bs-toggle="collapse"
+                                                                                            data-bs-target="#collapseOne"
+                                                                                            aria-expanded="true"
+                                                                                            aria-controls="collapseOne"
+                                                                                            class="btn btn-main-primary w-full w-auto-min-sm fs-12 fs-sm-10"
+                                                                                            style="white-space: nowrap;">View
+                                                                                            Details</button>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div id="collapseOne"
+                                                                                class="accordion-collapse collapse"
+                                                                                aria-labelledby="headingOne"
+                                                                                data-bs-parent="#accordionExample" style="width: 100%;">
+                                                                                <div class="accordion-body">
+                                                                                    <div class="table-responsive1 bg-light bradius-7">
+                                                                                        <table class="table table-hover align-middle fs-12">
+                                                                                            <thead class="fw-semibold bg-gray600">
+                                                                                                <th scope="col">Sl No</th>
+                                                                                                <th scope="col">Progress Date</th>
+                                                                                                <th scope="col">Progress Increased</th>
+                                                                                                <th scope="col">Overall Progress after</th>
+                                                                                                
+                                                                                            </thead>
+                                                                                            <tbody>
+                                                                                                <tr>
+                                                                                                    <!-- <td scope="row">
+                                                                                                    <div
+                                                                                                        class="img-table w-25px h-25px rounded-circle overflow-hidden">
+                                                                                                        <img class="w-full h-full object-center object-cover"
+                                                                                                            src="./assets/images/user.jpg" alt="">
+                                                                                                    </div>
+                                                                                                </td> -->
+                                                                                                    <td>
+                                                                                                        <div class="flex-m gap-2">
+                                    
+                                                                                                            <div class="flex-col gap-1">
+                                                                                                                <p class="fs-14 fw-500">1
+                                                                                                                </p>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </td>
+                                    
+                                                                                                    <td>
+                                                                                                        <p class="fw-500 fs-14">10 Mar 2023</p>
+                                                                                                        
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        <div class=" flex-col gap-1">
+                                                                                                            <p class="fw-500 fs-14">10%</p>
+                                                                                                            
+                                                                                                        </div>
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        <div class=" flex-col gap-1">
+                                                                                                            <p class="fw-500 fs-14">10%
+                                                                                                            </p>
+                                                                                                           
+                                                                                                        </div>
+                                    
+                                                                                                    </td>
+                                                                                                   
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <!-- <td scope="row">
+                                                                                                    <div
+                                                                                                        class="img-table w-25px h-25px rounded-circle overflow-hidden">
+                                                                                                        <img class="w-full h-full object-center object-cover"
+                                                                                                            src="./assets/images/user.webp" alt="">
+                                                                                                    </div>
+                                                                                                </td> -->
+                                                                                                    <td>
+                                                                                                        <div class="flex-m gap-2">
+                                    
+                                                                                                            <div class="flex-col gap-1">
+                                                                                                                <p class="fs-14 fw-500">2
+                                                                                                                </p>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </td>
+                                    
+                                                                                                    <td>
+                                                                                                        <p class="fw-500 fs-14">10 Mar 2023</p>
+                                                                                                        
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        <div class=" flex-col gap-1">
+                                                                                                            <p class="fw-500 fs-14">10%</p>
+                                                                                                            
+                                                                                                        </div>
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        <div class=" flex-col gap-1">
+                                                                                                            <p class="fw-500 fs-14">10%
+                                                                                                            </p>
+                                                                                                           
+                                                                                                        </div>
+                                    
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <!-- <td scope="row">
+                                                                                                    <div
+                                                                                                        class="img-table w-25px h-25px rounded-circle overflow-hidden">
+                                                                                                        <img class="w-full h-full object-center object-cover"
+                                                                                                            src="./assets/images/user.jpg" alt="">
+                                                                                                    </div>
+                                                                                                </td> -->
+                                                                                                    <td>
+                                                                                                        <div class="flex-m gap-2">
+                                    
+                                                                                                            <div class="flex-col gap-1">
+                                                                                                                <p class="fs-14 fw-500">3
+                                                                                                                </p>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </td>
+                                    
+                                                                                                    <td>
+                                                                                                        <p class="fw-500 fs-14">10 Mar 2023</p>
+                                                                                                        
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        <div class=" flex-col gap-1">
+                                                                                                            <p class="fw-500 fs-14">10%</p>
+                                                                                                            
+                                                                                                        </div>
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        <div class=" flex-col gap-1">
+                                                                                                            <p class="fw-500 fs-14">10%
+                                                                                                            </p>
+                                                                                                           
+                                                                                                        </div>
+                                    
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <!-- <td scope="row">
+                                                                                                    <div
+                                                                                                        class="img-table w-25px h-25px rounded-circle overflow-hidden">
+                                                                                                        <img class="w-full h-full object-center object-cover"
+                                                                                                            src="./assets/images/user.webp" alt="">
+                                                                                                    </div>
+                                                                                                </td> -->
+                                                                                                    <td>
+                                                                                                        <div class="flex-m gap-2">
+                                    
+                                                                                                            <div class="flex-col gap-1">
+                                                                                                                <p class="fs-14 fw-500">4
+                                                                                                                </p>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </td>
+                                    
+                                                                                                    <td>
+                                                                                                        <p class="fw-500 fs-14">10 Mar 2023</p>
+                                                                                                        
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        <div class=" flex-col gap-1">
+                                                                                                            <p class="fw-500 fs-14">10%</p>
+                                                                                                            
+                                                                                                        </div>
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        <div class=" flex-col gap-1">
+                                                                                                            <p class="fw-500 fs-14">10%
+                                                                                                            </p>
+                                                                                                           
+                                                                                                        </div>
+                                    
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <!-- <td scope="row">
+                                                                                                    <div
+                                                                                                        class="img-table w-25px h-25px rounded-circle overflow-hidden">
+                                                                                                        <img class="w-full h-full object-center object-cover"
+                                                                                                            src="./assets/images/user.jpg" alt="">
+                                                                                                    </div>
+                                                                                                </td> -->
+                                                                                                    <td>
+                                                                                                        <div class="flex-m gap-2">
+                                    
+                                                                                                            <div class="flex-col gap-1">
+                                                                                                                <p class="fs-14 fw-500">5
+                                                                                                                </p>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </td>
+                                    
+                                                                                                    <td>
+                                                                                                        <p class="fw-500 fs-14">10 Mar 2023</p>
+                                                                                                        
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        <div class=" flex-col gap-1">
+                                                                                                            <p class="fw-500 fs-14">10%</p>
+                                                                                                            
+                                                                                                        </div>
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        <div class=" flex-col gap-1">
+                                                                                                            <p class="fw-500 fs-14">10%
+                                                                                                            </p>
+                                                                                                           
+                                                                                                        </div>
+                                    
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <!-- <td scope="row">
+                                                                                                    <div
+                                                                                                        class="img-table w-25px h-25px rounded-circle overflow-hidden">
+                                                                                                        <img class="w-full h-full object-center object-cover"
+                                                                                                            src="./assets/images/user.webp" alt="">
+                                                                                                    </div>
+                                                                                                </td> -->
+                                                                                                    <td>
+                                                                                                        <div class="flex-m gap-2">
+                                    
+                                                                                                            <div class="flex-col gap-1">
+                                                                                                                <p class="fs-14 fw-500">6
+                                                                                                                </p>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </td>
+                                    
+                                                                                                    <td>
+                                                                                                        <p class="fw-500 fs-14">10 Mar 2023</p>
+                                                                                                        
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        <div class=" flex-col gap-1">
+                                                                                                            <p class="fw-500 fs-14">10%</p>
+                                                                                                            
+                                                                                                        </div>
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        <div class=" flex-col gap-1">
+                                                                                                            <p class="fw-500 fs-14">10%
+                                                                                                            </p>
+                                                                                                           
+                                                                                                        </div>
+                                    
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <!-- <td scope="row">
+                                                                                                    <div
+                                                                                                        class="img-table w-25px h-25px rounded-circle overflow-hidden">
+                                                                                                        <img class="w-full h-full object-center object-cover"
+                                                                                                            src="./assets/images/user.jpg" alt="">
+                                                                                                    </div>
+                                                                                                </td> -->
+                                                                                                    <td>
+                                                                                                        <div class="flex-m gap-2">
+                                    
+                                                                                                            <div class="flex-col gap-1">
+                                                                                                                <p class="fs-14 fw-500">7
+                                                                                                                </p>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </td>
+                                    
+                                                                                                    <td>
+                                                                                                        <p class="fw-500 fs-14">10 Mar 2023</p>
+                                                                                                        
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        <div class=" flex-col gap-1">
+                                                                                                            <p class="fw-500 fs-14">10%</p>
+                                                                                                            
+                                                                                                        </div>
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        <div class=" flex-col gap-1">
+                                                                                                            <p class="fw-500 fs-14">10%
+                                                                                                            </p>
+                                                                                                           
+                                                                                                        </div>
+                                    
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <!-- <td scope="row">
+                                                                                                    <div
+                                                                                                        class="img-table w-25px h-25px rounded-circle overflow-hidden">
+                                                                                                        <img class="w-full h-full object-center object-cover"
+                                                                                                            src="./assets/images/user.webp" alt="">
+                                                                                                    </div>
+                                                                                                </td> -->
+                                                                                                    <td>
+                                                                                                        <div class="flex-m gap-2">
+                                    
+                                                                                                            <div class="flex-col gap-1">
+                                                                                                                <p class="fs-14 fw-500">8
+                                                                                                                </p>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </td>
+                                    
+                                                                                                    <td>
+                                                                                                        <p class="fw-500 fs-14">10 Mar 2023</p>
+                                                                                                        
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        <div class=" flex-col gap-1">
+                                                                                                            <p class="fw-500 fs-14">10%</p>
+                                                                                                            
+                                                                                                        </div>
+                                                                                                    </td>
+                                                                                                    <td>
+                                                                                                        <div class=" flex-col gap-1">
+                                                                                                            <p class="fw-500 fs-14">10%
+                                                                                                            </p>
+                                                                                                           
+                                                                                                        </div>
+                                    
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                            </tbody>
+                                                                                        </table>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </h2>
+                                                            </div>
+                                                           
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -2252,6 +3058,9 @@
     <script src="./assets/pluggins/pagination/jquery.twbsPagination.min.js"></script>
     <script src="./assets/pluggins/scrollreveal/scrollreveal.js"></script>
     <script src="./assets/js/index.js"></script>
+        <!-- Include ApexCharts library -->
+        <script src="./assets/pluggins/apexchart/dist/apexcharts.min.js"></script>
+        <script src="./assets/js/charts-data.js"></script>
     <script>
         const tabs = document.querySelectorAll('.tab-btn');
 
