@@ -4153,6 +4153,9 @@ ul.collection li {
     max-width: 250px;
   }
   
+  .accordion-button{
+     background-color: transparent !important;
+  }
   
 
 
