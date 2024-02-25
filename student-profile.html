@@ -2255,10 +2255,22 @@
                                                                     </div>
                                                                 </div>
                                                                 <hr>
-                                                                <div
+                                                                <!-- <div
                                                                     class="bar-chart h-full bradius-14 bg-light p-3 flex-col">
                                                                     <div id="chart-line"
                                                                         class="rounded-bars-chart h-full"></div>
+                                                                </div> -->
+                                                                <div class="chartCard">
+                                                                    <div class="chartBox">
+                                                                        <div class="colSmall">
+                                                                            <canvas id="myChart4"></canvas>
+                                                                        </div>
+                                                                        <div class="colLarge">
+                                                                            <div class="box">
+                                                                                <canvas id="myChart3"></canvas>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -2276,8 +2288,9 @@
                                                                             <div class="row">
                                                                                 <div class="flex-col gap-3 col-10">
                                                                                     <div class="flex-m gap-5">
-                                                                                        <p class="fs-12">
-                                                                                            English
+                                                                                        <p class="fs-12 fw-500"
+                                                                                            style="color:#4A9F95">
+                                                                                            Main Goal 1
                                                                                         </p>
                                                                                         <div class="">
                                                                                             <p class="fs-12 text-white fw-semibold fs-sm-10 bradius-4 p-2"
@@ -2291,7 +2304,8 @@
                                                                                             Date :
                                                                                             12 Mar 2024</p>
                                                                                     </div>
-                                                                                    <p class="fs-16">Lorem ipsum dolor
+                                                                                    <p class="fs-16 fw-semibold">Lorem
+                                                                                        ipsum dolor
                                                                                         sit amet consectetur adipisicing
                                                                                         elit. Eum nostrum maxime non
                                                                                         sint repellendus, nemo</p>
@@ -2315,6 +2329,19 @@
                                                                                 <div class="accordion-body">
                                                                                     <div
                                                                                         class="table-responsive1 bg-light bradius-7">
+                                                                                        <div class="py-3">
+                                                                                            <div
+                                                                                                class="bradius-7 flex-m gap-5 border">
+                                                                                                <p class="bradius-4 p-1 fs-12"
+                                                                                                    style="background: rgba(0, 149, 255, 0.10); color: #344054;">
+                                                                                                    Sub Goal 1</p>
+                                                                                                <p class="fs-14">Lorem
+                                                                                                    ipsum dolor sit amet
+                                                                                                    consectetur
+                                                                                                    adipisicing elit.
+                                                                                                    Tempore</p>
+                                                                                            </div>
+                                                                                        </div>
                                                                                         <table
                                                                                             class="table table-hover align-middle fs-12">
                                                                                             <thead
@@ -2736,8 +2763,8 @@
                                                                                         <div class="flex-m gap-5">
 
                                                                                             <div class="">
-                                                                                                <p class="fs-12 text-white fw-semibold fs-sm-10 bradius-4 p-2"
-                                                                                                    style="background-color: #00D28C;">
+                                                                                                <p class="fs-12 fw-semibold fs-sm-10 bradius-4 p-2"
+                                                                                                    style="background: rgba(7, 224, 152, 0.10); color: #00BD7E;">
                                                                                                     Completed</p>
                                                                                             </div>
                                                                                             <p class="fs-12 fs-sm-10">
@@ -2748,6 +2775,19 @@
                                                                                                 12 Mar 2024</p>
                                                                                         </div>
                                                                                         <hr>
+                                                                                        <div class="py-3">
+                                                                                            <div
+                                                                                                class="bradius-7 flex-m gap-5 border">
+                                                                                                <p class="bradius-4 p-1 fs-12"
+                                                                                                    style="background: rgba(0, 149, 255, 0.10); color: #344054;">
+                                                                                                    Sub Goal 1</p>
+                                                                                                <p class="fs-14">Lorem
+                                                                                                    ipsum dolor sit amet
+                                                                                                    consectetur
+                                                                                                    adipisicing elit.
+                                                                                                    Tempore</p>
+                                                                                            </div>
+                                                                                        </div>
                                                                                         <table
                                                                                             class="table table-hover align-middle fs-12">
                                                                                             <thead
@@ -3166,6 +3206,20 @@
                                                                                                 </tr>
                                                                                             </tbody>
                                                                                         </table>
+                                                                                        <div class="flex-m gap-5">
+
+                                                                                            <div class="">
+                                                                                                <p class="fs-12 fw-semibold fs-sm-10 bradius-4 p-2"
+                                                                                                    style="background: rgba(255, 137, 0, 0.10); color: #FF8900;">
+                                                                                                    60% Completed</p>
+                                                                                            </div>
+                                                                                            <p class="fs-12 fs-sm-10">
+                                                                                                Start Date :
+                                                                                                12 Mar 2024</p>
+                                                                                            <p class="fs-12 fs-sm-10">
+                                                                                                Start Date :
+                                                                                                12 Mar 2024</p>
+                                                                                        </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -3270,6 +3324,7 @@
     <!-- Include ApexCharts library -->
     <script src="./assets/pluggins/apexchart/dist/apexcharts.min.js"></script>
     <script src="./assets/js/charts-data.js"></script>
+       <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
     <script>
         const tabs = document.querySelectorAll('.tab-btn');
 
@@ -3280,6 +3335,172 @@
                 line.style.left = e.target.offsetLeft + "px";
             })
         })
+    </script>
+     <script>
+        // Chart 1=====================================================================
+        // setup 
+        const data = {
+            labels: ['class1', 'class2', 'class3', 'class4', 'classs5', 'class1', 'class2', 'class3', 'class4', 'classs5', 'class1', 'class2', 'class3', 'class4', 'classs5', 'class1', 'class2', 'class3', 'class4',],
+            datasets: [{
+                label: 'All Students',
+                data: [100, 20, 40, 90, 10, 30, 90, 20, 20, 60, 90, 20, 30, 90, 20, 10, 60, 90, 10,],
+                backgroundColor: [
+                    '#4A9F95',
+                ],
+                borderRadius: 10,
+                barThickness: 8, // Adjust this value to change the width of the bars
+                // categoryPercentage: 0.1, // Adjust this value to reduce padding between bars
+                // barPercentage: 0.9
+
+            },
+            // {
+            //     label: 'Completed Students',
+            //     data: [50, 10, 30, 80, 10, 20, 80, 15, 10, 50, 80, 10, 20, 80, 15, 10, 50, 80, 10,], // Add the completed students data here
+            //     backgroundColor: '#3bd5c8', // Change the background color for completed students
+            //     borderRadius: 10,
+            //     barThickness: 8,
+            //       categoryPercentage: 0.1,
+            //       barPercentage: 0.9
+            // }
+        ]
+        };
+        // const xScaleImage = {
+        //         id: 'xScaleImage',
+        //         afterDatasetsDraw(chart, args, plugins) {
+        //             const { ctx, data, chartArea: { bottom }, scales: { x }
+        //             } = chart;
+        //             ctx.save();
+        //             console.log(data.datasets[0].images)
+        //             data.datasets[0].images.forEach((image, index) => {
+        //                 const label = new Image();
+        //                 label.src = image;
+        //                 const width = 30;
+        //                 ctx.drawImage(label, x.getPixelForValue(index) - (width / 2), x.top, width, width);
+        //             })
+        //         }
+        // };
+
+        // config 
+        const config = {
+            type: 'line',
+            data,
+            options: {
+                
+                maintainAspectRatio: false,
+                layout: {
+                    padding: {
+                        top: 10,
+                        bottom: 10
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            display: false
+                        },
+                        grid: {
+                            drawTicks: false
+                        }
+                    }
+                },
+                interaction: {
+                    mode: 'index'
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            // beforeTitle:function(context){
+                            //     return 'Nims, Dubai'
+                            // },
+                            // afterTitle: function(context){
+                            //     return 'hello'
+                            // },
+                            labelsTextColor: (context) => {
+                                return '#fff';
+                            },
+                        },
+                        backgroundColor: '#000',
+                    }
+                }
+            },
+        };
+
+        // render init block
+        const myChart = new Chart(
+            document.getElementById('myChart3'),
+            config
+        );
+        // Chart 2=====================================================================
+
+        // setup 
+        const data2 = {
+            labels: ['', '', '', '', '', '', ''],
+            datasets: [{
+                label: 'Weekly Sales',
+                data: myChart.data.datasets[0].data,
+
+            }]
+        };
+
+        // config 
+        const config2 = {
+            type: 'line',
+            data: data2,
+            options: {
+                maintainAspectRatio: false,
+                layout: {
+                    padding: {
+                        bottom: 45
+                    }
+                },
+                scales: {
+                    x: {
+                        ticks: {
+                            display: false
+                        },
+                        grid: {
+                            drawTicks: false
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        afterFit: (ctx) => {
+                            console.log(ctx);
+                            ctx.width = 35;
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+
+                }
+            }
+        };
+
+        // render init block
+        const myChart2 = new Chart(
+            document.getElementById('myChart4'),
+            config2
+        );
+
+        const box = document.querySelector('.box');
+        const barLength = myChart.data.labels.length;
+        console.log(barLength)
+
+        if (barLength > 7) {
+            const chartWidth = 700 + ((barLength - 7) * 30)
+            box.style.Width = `${chartWidth}`;
+        }
+
+        // Instantly assign Chart.js version
+        const chartVersion = document.getElementById('chartVersion');
+        chartVersion.innerText = Chart.version;
     </script>
 
 </body>
