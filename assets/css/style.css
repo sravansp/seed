@@ -3453,7 +3453,7 @@ ul.collection li {
 
 .progress4::-webkit-progress-value {
     border-radius: 5px;
-    background-color: var(--bg-main-primary);
+    background-color: #4A9F95;
     background-size: 10px 10px;
 }
 
