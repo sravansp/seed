@@ -4350,6 +4350,42 @@ ul.collection li {
     background:#56beb2;
   }
   
+  .iep-button2{
+    display: flex;
+    align-items: center;
+    padding: 6px 8px 6px 10px;
+    color: #fff;
+    font-size: 12;
+    font-weight: 500;
+    gap: 5px;
+    border-radius: 6px;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    background:#FF6A6A;
+    outline: none;
+    border: none;
+  }
+  .iep-button2:hover{
+    background:#e78080;
+  }
+  
+  .iep-button3{
+    display: flex;
+    align-items: center;
+    padding: 6px 8px 6px 10px;
+    color: #fff;
+    font-size: 12;
+    font-weight: 500;
+    gap: 5px;
+    border-radius: 6px;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    background:#FF8F0D;
+    outline: none;
+    border: none;
+  }
+  .iep-button3:hover{
+    background:#d6a46b;
+  }
+  
   
 
 
