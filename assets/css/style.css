@@ -4035,10 +4035,10 @@ ul.collection li {
     border-radius: 20px;
     background: white;
     display: flex;
-    height: 301px;
+    height: 295px;
   }
   .colSmall{
-    width: 35px;
+    width: 33px;
   }
   .colLarge{
     /* max-width: 700px; */
@@ -4070,7 +4070,7 @@ ul.collection li {
 @media only screen and (min-width:1000px){
     .chartBox{
         width: 100%;
-        height: 345px;
+        height: 300px;
     }
 }
 

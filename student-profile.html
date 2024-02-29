@@ -236,8 +236,10 @@
                                                             <p class="fs-20 fs-sm-14 fw-semibold">Mohammed Nihan Abdullah</p>
                                                             <p class="fs-16 fs-sm-14 fw-500" style="color: #636363;">Class : 8</p>
                                                             <div class="logo-div w-fit">
-                                                                <img src="./assets/images/NIMS_Dubai_Logo 1.png" alt=""
-                                                                    class="">
+                                                                <div class="overflow-hidden" style="width: 20px; height: 20px;">
+                                                                    <img src="./assets/images/NIMS_Dubai_Logo 1.png" alt=""
+                                                                    class="w-full h-full object-center object-cover">
+                                                                </div>
                                                                 <p>NIMS, Dubai</p>
                                                             </div>
                                                         </div>
@@ -2242,14 +2244,14 @@
                                                         <div class="flex-col gap-3 pt-2 pt-md-0 pt-lg-0">
                                                             <div class="bg-light border bradius-14 p-4">
                                                                 <div
-                                                                    class="row gap-3 gap-lg-0 gap-md-0 justify-content-between align-center">
+                                                                    class="row gap-3 gap-lg-2 gap-md-2 gap-xl-0 justify-content-between align-center">
                                                                     <h1
-                                                                        class="fs-20 fw-semibold fs-sm-10 col-6 col-md-12 col-lg-8 pb-2 pb-md-2 pb-lg-0">
+                                                                        class="fs-20 fw-semibold fs-sm-10 col-6 col-md-12 col-lg-12 col-xl-7 pb-2 pb-md-2 pb-lg-0">
                                                                         SKill Progression Overview
                                                                     </h1>
                                                                     <div
-                                                                        class="flex-c-m gap-2 col-6 col-md-6 col-lg-4 pb-2 pb-md-2 pb-lg-0">
-                                                                        <p class="fs-13 fs-sm-8 fw-500">Progression Type</p>
+                                                                        class="flex-c-m gap-2 col-6 col-md-6 col-lg-6 col-xl-5 pb-2 pb-md-2 pb-lg-0">
+                                                                        <p class="fs-13 fs-sm-8 fw-500" style="white-space: nowrap;">Progression Type</p>
                                                                         <select
                                                                             class="form-control select2-select select2-show-search form-select fs-12"
                                                                             data-placeholder="Choose one">
@@ -2282,7 +2284,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="row pt-5">
+                                                <div class="row pt-2">
                                                     <div class="col-md-12">
                                                         <div class="accordion flex-col gap-4"
                                                             id="accordionPanelsStayOpenExample">
@@ -3484,7 +3486,7 @@
                         beginAtZero: true,
                         afterFit: (ctx) => {
                             console.log(ctx);
-                            ctx.width = 35;
+                            ctx.width = 33;
                         }
                     }
                 },
