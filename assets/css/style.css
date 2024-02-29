@@ -4038,7 +4038,7 @@ ul.collection li {
     height: 295px;
   }
   .colSmall{
-    width: 33px;
+    width: 34px;
   }
   .colLarge{
     /* max-width: 700px; */
@@ -4073,6 +4073,7 @@ ul.collection li {
         height: 300px;
     }
 }
+
 
 /* toggle button*/
 
