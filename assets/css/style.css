@@ -3456,7 +3456,31 @@ ul.collection li {
     background-color: #4A9F95;
     background-size: 10px 10px;
 }
+/* Progress 5 */
 
+.progress5 {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 5px;
+    display: block;
+    font-family: sans-serif;
+    height: 5px;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+.progress5::-webkit-progress-bar {
+    background-color: white;
+}
+
+.progress5::-webkit-progress-value {
+    border-radius: 5px;
+    background: #30D5C7;
+    background-size: 10px 10px;
+}
 @keyframes moveIndeterminate {
     from {
         background-position: 200% 0;
@@ -4325,11 +4349,10 @@ ul.collection li {
     outline: none;
     max-width: 250px;
   }
-  
-  .accordion-button{
-     background-color: transparent !important;
-  }
 
+.btn-trans{
+    background-color: transparent !important;
+}
   /* IEP BUTTONS */
 
   .iep-button{

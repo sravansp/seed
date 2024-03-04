@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - SEED</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="./assets/pluggins/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="./assets/pluggins/datetimepicker/css/gijgo.css">
+    <link rel="stylesheet" href="./assets/pluggins/apexchart/dist/apexcharts.css">
+
+    <!-- Icon Used: Remix Icon | https://remixicon.com/-->
+    <link rel="stylesheet" href="./assets/pluggins/remixicon/remixicon.css">
+
+    <link rel="stylesheet" href="./assets/css/pluggins.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/util.css">
+
+
+</head>
+
+<body class="light mode">
+    <div class="popup-toggle toggle-switch d-none">
+        <i class="ri-moon-fill fs-25 text-primary"></i>
+    </div>
+    <!-- Sidebar Start -->
+    <div class="app-sidebar__overlay active" data-bs-toggle="sidebar"></div>
+    <nav class="sidebar open">
+        <header>
+            <div class="image-text">
+                <div class="image">
+                    <img src="./assets/images/brand/logo.png" alt="logo">
+                </div>
+                <div class="text logo-text">
+                    <h1 class="fs-24">SEED</h1>
+                </div>
+            </div>
+        </header>
+        <div class="toggle_icon">
+            <span class="toggle">
+                <i class="ri-arrow-right-s-line"></i>
+            </span>
+        </div>
+        <div class="menu-bar">
+            <div class="menu h-full">
+                <ul class="menu-links flex gap-5 h-full flex-col ps-0 justify-content-evenly">
+                    <div class="top-menu-links">
+                        <p class="p-l-20 p-b-8 fs-12 title-menu">General</p>
+                        <li class="nav-link">
+                            <a href="dash-admin.html">
+                                <i class="ri-home-4-fill icon"></i>
+                                <span class="text nav-text">Dashboard</span>
+                                <span class="tooltip">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="dash-admin-student.html">
+                                <i class="ri-team-fill icon"></i>
+                                <span class="text nav-text">Student Management</span>
+                                <span class="tooltip">Student Management</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="dash-admin-user.html">
+                                <i class="ri-user-2-fill icon"></i>
+                                <span class="text nav-text">User Management</span>
+                                <span class="tooltip">User Management</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="dash-admin-appoinment.html">
+                                <i class="ri-calendar-fill icon"></i>
+                                <span class="text nav-text">Appointments</span>
+                                <span class="tooltip">Appointments</span>
+                            </a>
+                        </li>
+                    </div>
+                    <div class="bottom-menu-links">
+                        <p class="p-l-20 p-b-8 fs-12 title-menu">Others</p>
+                        <li class="nav-link">
+                            <a href="/form-files.html">
+                                <i class="ri-file-copy-2-fill icon"></i>
+                                <span class="text nav-text">Forms and Files</span>
+                                <span class="tooltip">Forms and Files</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="components.html">
+                                <i class="ri-settings-5-fill icon"></i>
+                                <span class="text nav-text">Account Settings</span>
+                                <span class="tooltip">Account Settings</span>
+                            </a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="help.html">
+                                <i class="ri-customer-service-2-fill icon"></i>
+                                <span class="text nav-text">Help and Supporrt</span>
+                                <span class="tooltip">Help and Supporrt</span>
+                            </a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+
+            <div class="bottom-content flex justify-content-center">
+                <!-- <li class="nav-link"> -->
+                <a href="./login.html" class="btn btn-light text-primary">
+                    <div class="p-1 rounded-circle bg-primary">
+                        <i class="ri-shut-down-line text-white fs-20"></i>
+                    </div>
+                    <span class="text nav-text text-primary">Logout</span>
+                    <!-- <span class="tooltip">Logout</span> -->
+                </a>
+                <!-- </li> -->
+            </div>
+        </div>
+    </nav>
+    <!-- Sidebar End  -->
+
+    <div class="overlay_section"></div>
+    <main class="home">
+
+
+        <!-- NAVBAR START  -->
+        <nav class="navbar py-4">
+            <div class="container-fluid px-md-4">
+                <div class="navbar_container navbar-menu-wrapper d-flex align-items-center">
+                    <a aria-label="hide-sidebar" class="d-lg-none app-sidebar__toggle" data-bs-toggle="sidebar"
+                        href="javascript:void(0);">
+                        <i class="ri-menu-2-line text-primary fs-25"></i>
+                    </a>
+                    <form class="d-flex d-none d-md-block" role="search">
+                        <div class="nav-search">
+                            <i class="ri-search-line fs-25"></i>
+                            <input class="" type="search" placeholder="Search" aria-label="Search">
+                        </div>
+                    </form>
+                    <ul class="navbar-nav mb-0 flex-row gap-4 flex-m">
+                        <li class="nav-item d-block d-md-none">
+
+                            <div class="dropdown d-block d-lg-none position-static">
+                                <a href="javascript:void(0);" class="nav-link icon" data-bs-toggle="dropdown">
+                                    <i class="ri-search-line fs-25 text-primary"></i>
+                                </a>
+                                <div class="dropdown-menu header-search dropdown-menu-start">
+                                    <div class="input-group w-100 p-2">
+                                        <input type="text" class="form-control" placeholder="Search....">
+                                        <div class="btn btn-primary">
+                                            <i class="ri-search-line fs-25"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- <li class="nav-item d-none d-lg-block">
+                            <div class="toggle-switch">
+                                <i class="ri-moon-fill fs-25 text-primary"></i>
+                            </div>
+                        </li> -->
+                        <li class="nav-item">
+                            <div class="pos-relative">
+                                <i class="ri-notification-4-fill fs-25 not text-primary"></i>
+                                <div class="nav-notification"></div>
+                            </div>
+                        </li>
+                        <li class="nav-item gap-2 flex-m dropdown user-drop">
+                            <a class="nav-link" data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="pro-pic rounded-circle">
+                                    <img src="./assets/images/user.png" alt="">
+                                </div>
+                            </a>
+                            <div class="pro-data flex-col flex-c d-none d-md-flex">
+                                <p class="pro-name fs-14 fw-500">Harris M</p>
+                                <p class="pro-pos fs-12">Admin</p>
+                            </div>
+                            <div class="dropdown-menu">
+                                <a href="./profile.html" class="dropdown-item fs-14">Profile</a>
+                                <a href="#" class="dropdown-item fs-14">Sign Out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- Main Content Start  -->
+        <div class="content pb-4">
+            <div class="container-fluid px-md-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="wrapper-body admin-dash w-full">
+                            <div class="row">
+                                <div class="col-12 col-md-12 col-lg-5">
+                                    <div class="bradius-14 bg-light shadow-neo h-full">
+                                        <div class="row p-3">
+                                            <div class="col-12 col-md-8 col-lg-6">
+                                                <div class="flex-col gap-3">
+                                                    <p class="fs-18 fw-semibold flex gap-1" style="color: #4D4D4D;">
+                                                        Students <span style="color: #747474;">Registered</span>  </p>
+                                                    
+                                                    <p class="fs-30 fs-sm-22 fw-semibold">1,215</p>
+
+                                                    <div class="flex-m gap-3">
+                                                        <div class="bradius-4"
+                                                            style="background: #41CED0; width: 15px; height: 15px;">
+                                                        </div>
+                                                        <p class="fs-14">NIMS School</p>
+                                                        <div class="bradius-7 p-1 fw-semibold"
+                                                            style="background: rgba(0, 0, 0, 0.05)">356</div>
+                                                    </div>
+                                                    <div class="flex-m gap-3">
+                                                        <div class="bradius-4"
+                                                            style="background: #9CE9E5; width: 15px; height: 15px;">
+                                                        </div>
+                                                        <p class="fs-14">Partner School</p>
+                                                        <div class="bradius-7 p-1 fw-semibold"
+                                                            style="background: rgba(0, 0, 0, 0.05)">216</div>
+                                                    </div>
+                                                    <div class="flex-m gap-3">
+                                                        <div class="bradius-4"
+                                                            style="background: #E5E5E5; width: 15px; height: 15px;">
+                                                        </div>
+                                                        <p class="fs-14">Other Schools</p>
+                                                        <div class="bradius-7 p-1 fw-semibold"
+                                                            style="background: rgba(0, 0, 0, 0.05)">412</div>
+                                                    </div>
+                                                    <div class="bradius-7 w-fit p-2"
+                                                        style="background: rgba(0, 0, 0, 0.05);">
+                                                        <p>View Details</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12 col-md-4 col-lg-6">
+                                                <div class="h-100 pt-3">
+                                                    <canvas id="pie-chart"></canvas>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-7 pt-2 pt-lg-0">
+                                    <div class="bradius-14 bg-light shadow-neo h-full">
+                                        <div class="row p-3">
+                                            <div class="col-12 col-md-8 col-lg-8">
+                                                <div class="flex-col gap-3">
+                                                    <p class="fs-18 fw-semibold flex gap-1" style="color: #4D4D4D;">
+                                                        Users <span style="color: #747474;">Registered</span>  </p>
+                                                    <p class="fs-30 fs-sm-22 fw-semibold">368</p>
+
+                                                    <div class="flex flex-col-l-sm gap-3 gap-md-5 gap-lg-5">
+                                                        <div class="flex-col gap-3">
+                                                            <div class="flex-m gap-3">
+                                                                <div class="bradius-4"
+                                                                    style="background: #9CE9E5; width: 15px; height: 15px;">
+                                                                </div>
+                                                                <p class="fs-14">Consultants</p>
+                                                                <div class="bradius-7 p-1 fw-semibold"
+                                                                    style="background: rgba(0, 0, 0, 0.05)">216</div>
+                                                            </div>
+                                                            <div class="flex-m gap-3">
+                                                                <div class="bradius-4"
+                                                                    style="background: #9CE9E5; width: 15px; height: 15px;">
+                                                                </div>
+                                                                <p class="fs-14">Internees</p>
+                                                                <div class="bradius-7 p-1 fw-semibold"
+                                                                    style="background: rgba(0, 0, 0, 0.05)">216</div>
+                                                            </div>
+                                                            <div class="flex-m gap-3">
+                                                                <div class="bradius-4"
+                                                                    style="background: #9CE9E5; width: 15px; height: 15px;">
+                                                                </div>
+                                                                <p class="fs-14">Teachers</p>
+                                                                <div class="bradius-7 p-1 fw-semibold"
+                                                                    style="background: rgba(0, 0, 0, 0.05)">216</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="flex-col gap-3">
+                                                            <div class="flex-m gap-3">
+                                                                <div class="bradius-4"
+                                                                    style="background: #9CE9E5; width: 15px; height: 15px;">
+                                                                </div>
+                                                                <p class="fs-14">Receptionists</p>
+                                                                <div class="bradius-7 p-1 fw-semibold"
+                                                                    style="background: rgba(0, 0, 0, 0.05)">216</div>
+                                                            </div>
+                                                            <div class="flex-m gap-3">
+                                                                <div class="bradius-4"
+                                                                    style="background: #9CE9E5; width: 15px; height: 15px;">
+                                                                </div>
+                                                                <p class="fs-14">SEN Users</p>
+                                                                <div class="bradius-7 p-1 fw-semibold"
+                                                                    style="background: rgba(0, 0, 0, 0.05)">216</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="bradius-7 w-fit p-2"
+                                                        style="background: rgba(0, 0, 0, 0.05);">
+                                                        <p>View Details</p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-12 col-md-4 col-lg-4">
+                                                <div class="h-100 pt-4">
+                                                    <canvas id="pie-chart2"></canvas>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row pt-4">
+                                    <div class="col-12 col-lg-6">
+                                        <div class="bradius-14 bg-light shadow-neo h-full p-4 flex-col gap-3">
+                                            <div class="bradius-14 p-3" style="background-color: #F6F7F9;">
+                                                <div class="flex-sb-m">
+                                                    <div class="flex gap-3">
+                                                        <div class="bradius-7 w-fit h-fit"
+                                                            style="background: rgba(48, 213, 199, 0.10); padding: 10px;">
+                                                            <i class="ri-lightbulb-flash-line fs-32 fs-sm-22 text-main-primary"
+                                                                style="line-height: normal;"></i>
+                                                        </div>
+
+                                                        <div class="flex-col gap-1">
+                                                            <p class="fs-16 fw-semibold">Consultants</p>
+                                                            <div class="bradius-4 w-fit p-1" style="background: rgba(255, 106, 106, 0.05);">
+                                                                <p class="fs-14 fw-500" style="color:#FF6A6A">1 Consultant on leave</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <p>80</p>
+                                                </div>
+                                                <div class="pt-2">
+                                                    <progress class="progress5 w-100" value="50" max="100"></progress>
+                                                </div>
+                                            </div>
+                                            <div class="bradius-14 p-3" style="background-color: #F6F7F9;">
+                                                <div class="flex-sb-m">
+                                                    <div class="flex gap-3">
+                                                        <div class="bradius-7 w-fit h-fit"
+                                                            style="background: rgba(48, 213, 199, 0.10); padding: 10px;">
+                                                            <i class="ri-lightbulb-flash-line fs-32 fs-sm-22 text-main-primary"
+                                                                style="line-height: normal;"></i>
+                                                        </div>
+
+                                                        <div class="flex-col gap-1">
+                                                            <p class="fs-16 fw-semibold">Assessments</p>
+                                                            <p class="fs-14 fw-500" style="color: #747474;">120 out of 200  Assessments Completed</p>
+                                                        </div>
+                                                    </div>
+                                                    <p>80</p>
+                                                </div>
+                                                <div class="pt-2">
+                                                    <progress class="progress5 w-100" value="50" max="100"></progress>
+                                                </div>
+                                            </div>
+                                            <div class="bradius-14 p-3" style="background-color: #F6F7F9;">
+                                                <div class="flex-sb-m">
+                                                    <div class="flex gap-3">
+                                                        <div class="bradius-7 w-fit h-fit"
+                                                            style="background: rgba(48, 213, 199, 0.10); padding: 10px;">
+                                                            <i class="ri-lightbulb-flash-line fs-32 fs-sm-22 text-main-primary"
+                                                                style="line-height: normal;"></i>
+                                                        </div>
+
+                                                        <div class="flex-col gap-1">
+                                                            <p class="fs-16 fw-semibold">IEP Generated</p>
+                                                            <p class="fs-14 fw-500" style="color: #747474;">70 out of 120 IEP Generated Students</p>
+                                                        </div>
+                                                    </div>
+                                                    <p>80</p>
+                                                </div>
+                                                <div class="pt-2">
+                                                    <progress class="progress5 w-100" value="50" max="100"></progress>
+                                                </div>
+                                            </div>
+                                            <div class="bradius-14 p-3" style="background-color: #F6F7F9;">
+                                                <div class="flex-sb-m">
+                                                    <div class="flex gap-3">
+                                                        <div class="bradius-7 w-fit h-fit"
+                                                            style="background: rgba(48, 213, 199, 0.10); padding: 10px;">
+                                                            <i class="ri-lightbulb-flash-line fs-32 fs-sm-22 text-main-primary"
+                                                                style="line-height: normal;"></i>
+                                                        </div>
+
+                                                        <div class="flex-col gap-1">
+                                                            <p class="fs-16 fw-semibold">IEP Skill Progression</p>
+                                                            <p class="fs-14 fw-500" style="color: #747474;">Overall Skill Progress moved to 60% </p>
+                                                        </div>
+                                                    </div>
+                                                    <p>80</p>
+                                                </div>
+                                                <div class="pt-2">
+                                                    <progress class="progress5 w-100" value="50" max="100"></progress>
+                                                </div>
+                                            </div>
+                                            <div class="bradius-14 p-3" style="background-color: #F6F7F9;">
+                                                <div class="flex-sb-m">
+                                                    <div class="flex gap-3">
+                                                        <div class="bradius-7 w-fit h-fit"
+                                                            style="background: rgba(48, 213, 199, 0.10); padding: 10px;">
+                                                            <i class="ri-lightbulb-flash-line fs-32 fs-sm-22 text-main-primary"
+                                                                style="line-height: normal;"></i>
+                                                        </div>
+
+                                                        <div class="flex-col gap-1">
+                                                            <p class="fs-16 fw-semibold">IEP Subject Progression</p>
+                                                            <p class="fs-14 fw-500" style="color: #747474;">Overall Skill Progress moved to 60% </p>
+                                                        </div>
+                                                    </div>
+                                                    <p>80</p>
+                                                </div>
+                                                <div class="pt-2">
+                                                    <progress class="progress5 w-100" value="50" max="100"></progress>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-6">
+                                        <div class="bradius-14 bg-light shadow-neo h-full p-3">
+                                            <div class="wrapper-calendar">
+                                                <div class="container-calendar flex-col gap-3">
+                                                    <div class="py-2 bg-main-primary bradius-7">
+                                                        <h3 class="fs-16 text-white" id="monthAndYear"></h3>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <select id="month" onchange="jump()"
+                                                                class="form-control select2-select select2-show-search form-select">
+                                                                <option value=0>Jan</option>
+                                                                <option value=1>Feb</option>
+                                                                <option value=2>Mar</option>
+                                                                <option value=3>Apr</option>
+                                                                <option value=4>May</option>
+                                                                <option value=5>Jun</option>
+                                                                <option value=6>Jul</option>
+                                                                <option value=7>Aug</option>
+                                                                <option value=8>Sep</option>
+                                                                <option value=9>Oct</option>
+                                                                <option value=10>Nov</option>
+                                                                <option value=11>Dec</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <select id="year" onchange="jump()"
+                                                                class="form-control select2-select select2-show-search form-select"></select>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <table class="table-calendar" id="calendar" data-lang="en">
+                                                                <thead id="thead-month"></thead>
+                                                                <tbody id="calendar-body"></tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <button id="previous" onclick="previous()"
+                                                                class="btn btn-light w-full fs-14 h-52">Previous
+                                                                Month</button>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <button id="next" onclick="next()"
+                                                                class="btn btn-primary w-full fs-14 h-52">Next
+                                                                Month</button>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row pt-4">
+                                <div class="col-md-12">
+                                    <div class="inner-wrapper table-dash p-4 flex-col gap-4 bg-light">
+                                        <div class="flex-col gap-2">
+                                            <h1 class="fs-24 fs-sm-16 fw-semibold">Student List ( <span
+                                                    id="usercount">326</span> )
+                                            </h1>
+                                            <p class="fs-14 fs-sm-12 fw-normal">These Students are are registered in our
+                                                programme</p>
+                                        </div>
+
+                                        <div class="table-responsive1 bg-light bradius-7">
+                                            <table class="table table-hover align-middle fs-12">
+                                                <thead class="table-light fw-semibold">
+                                                    <th scope="col">Student Name</th>
+                                                    <th scope="col">Standard</th>
+                                                    <th scope="col">School</th>
+                                                    <th scope="col">Consultant</th>
+                                                    <th scope="col">Time</th>
+                                                    <th scope="col">Status</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <!-- <td scope="row">
+                                                                <div
+                                                                    class="img-table w-25px h-25px rounded-circle overflow-hidden">
+                                                                    <img class="w-full h-full object-center object-cover"
+                                                                        src="./assets/images/user.jpg" alt="">
+                                                                </div>
+                                                            </td> -->
+                                                        <td>
+                                                            <div class="flex-m gap-2">
+                                                                <div
+                                                                    class="img-table w-40 h-40 rounded-circle overflow-hidden">
+                                                                    <img class="w-full h-full object-center object-cover"
+                                                                        src="./assets/images/user.webp" alt="">
+                                                                </div>
+                                                                <div class="flex-col gap-1">
+                                                                    <p class="fs-16 fw-semibold">Mohammed Nihal</p>
+                                                                    <p class="text-decoration-underline text-primary">
+                                                                        View Student Profile</p>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="fs-14">10</td>
+                                                        <td>
+                                                            <p class="fw-500 fs-14">NIMS</p>
+                                                            <p class="text-dark-gray fs-14">Dubai</p>
+                                                        </td>
+                                                        <td>
+                                                            <div class=" flex-col gap-1">
+                                                               <p class="fs-14 fw-500">Gladis Martin</p>
+                                                               <p class="fs-14 fw-normal" style="color: #475467;">Speech Therapist</p>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="">
+                                                               <p class="fs-14 fw-normal" style="color: #475467;">12 :30 AM</p>
+                                                            </div>
+
+                                                        </td>
+                                                        <td>
+                                                            <button class="iep-button" type="button">
+                                                                Develop IEP <i class="ri-arrow-right-s-line"></i>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <!-- <td scope="row">
+                                                                <div
+                                                                    class="img-table w-25px h-25px rounded-circle overflow-hidden">
+                                                                    <img class="w-full h-full object-center object-cover"
+                                                                        src="./assets/images/user.webp" alt="">
+                                                                </div>
+                                                            </td> -->
+                                                        <td>
+                                                            <div class="flex-m gap-2">
+                                                                <div
+                                                                    class="img-table w-40 h-40 rounded-circle overflow-hidden">
+                                                                    <img class="w-full h-full object-center object-cover"
+                                                                        src="./assets/images/user.webp" alt="">
+                                                                </div>
+                                                                <div class="flex-col gap-1">
+                                                                    <p class="fs-16 fw-semibold">Mohammed Nihal</p>
+                                                                    <p class="text-decoration-underline text-primary">
+                                                                        View Student Profile</p>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="fs-14">10</td>
+                                                        <td>
+                                                            <p class="fw-500 fs-14">NIMS</p>
+                                                            <p class="text-dark-gray fs-14">Dubai</p>
+                                                        </td>
+                                                        <td>
+                                                            <div class=" flex-col gap-1">
+                                                                <div class="flex-m gap-3">
+                                                                    <progress class="progress w-50" value="50"
+                                                                        max="100"></progress>
+                                                                    <p>60%</p>
+                                                                </div>
+                                                                <div class="flex-sb">
+                                                                    <a class="fs-12 fs-sm-10 text-decoration-underline">
+                                                                        View Details
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class=" flex-col gap-1">
+                                                                <div class="flex-m gap-3">
+                                                                    <progress class="progress3 w-50" value="50"
+                                                                        max="100"></progress>
+                                                                    <p>60%</p>
+                                                                </div>
+                                                                <div class="flex-sb">
+                                                                    <a class="fs-12 fs-sm-10 text-decoration-underline">
+                                                                        View Details
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <button class="iep-button" type="button">
+                                                                Develop IEP <i class="ri-arrow-right-s-line"></i>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <!-- <td scope="row">
+                                                                <div
+                                                                    class="img-table w-25px h-25px rounded-circle overflow-hidden">
+                                                                    <img class="w-full h-full object-center object-cover"
+                                                                        src="./assets/images/user.jpg" alt="">
+                                                                </div>
+                                                            </td> -->
+                                                        <td>
+                                                            <div class="flex-m gap-2">
+                                                                <div
+                                                                    class="img-table w-40 h-40 rounded-circle overflow-hidden">
+                                                                    <img class="w-full h-full object-center object-cover"
+                                                                        src="./assets/images/user.webp" alt="">
+                                                                </div>
+                                                                <div class="flex-col gap-1">
+                                                                    <p class="fs-16 fw-semibold">Mohammed Nihal</p>
+                                                                    <p class="text-decoration-underline text-primary">
+                                                                        View Student Profile</p>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="fs-14">10</td>
+                                                        <td>
+                                                            <p class="fw-500 fs-14">NIMS</p>
+                                                            <p class="text-dark-gray fs-14">Dubai</p>
+                                                        </td>
+                                                        <td>
+                                                            <div class=" flex-col gap-1">
+                                                                <div class="flex-m gap-3">
+                                                                    <progress class="progress w-50" value="50"
+                                                                        max="100"></progress>
+                                                                    <p>60%</p>
+                                                                </div>
+                                                                <div class="flex-sb">
+                                                                    <a class="fs-12 fs-sm-10 text-decoration-underline">
+                                                                        View Details
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class=" flex-col gap-1">
+                                                                <div class="flex-m gap-3">
+                                                                    <progress class="progress3 w-50" value="50"
+                                                                        max="100"></progress>
+                                                                    <p>60%</p>
+                                                                </div>
+                                                                <div class="flex-sb">
+                                                                    <a class="fs-12 fs-sm-10 text-decoration-underline">
+                                                                        View Details
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+
+                                                        </td>
+                                                        <td>
+                                                            <button class="iep-button2" type="button">
+                                                                Develop IEP <i class="ri-arrow-right-s-line"></i>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <!-- <td scope="row">
+                                                                <div
+                                                                    class="img-table w-25px h-25px rounded-circle overflow-hidden">
+                                                                    <img class="w-full h-full object-center object-cover"
+                                                                        src="./assets/images/user.webp" alt="">
+                                                                </div>
+                                                            </td> -->
+                                                        <td>
+                                                            <div class="flex-m gap-2">
+                                                                <div
+                                                                    class="img-table w-40 h-40 rounded-circle overflow-hidden">
+                                                                    <img class="w-full h-full object-center object-cover"
+                                                                        src="./assets/images/user.webp" alt="">
+                                                                </div>
+                                                                <div class="flex-col gap-1">
+                                                                    <p class="fs-16 fw-semibold">Mohammed Nihal</p>
+                                                                    <p class="text-decoration-underline text-primary">
+                                                                        View Student Profile</p>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="fs-14">10</td>
+                                                        <td>
+                                                            <p class="fw-500 fs-14">NIMS</p>
+                                                            <p class="text-dark-gray fs-14">Dubai</p>
+                                                        </td>
+                                                        <td>
+                                                            <div class=" flex-col gap-1">
+                                                                <div class="flex-m gap-3">
+                                                                    <progress class="progress w-50" value="50"
+                                                                        max="100"></progress>
+                                                                    <p>60%</p>
+                                                                </div>
+                                                                <div class="flex-sb">
+                                                                    <a class="fs-12 fs-sm-10 text-decoration-underline">
+                                                                        View Details
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class=" flex-col gap-1">
+                                                                <div class="flex-m gap-3">
+                                                                    <progress class="progress3 w-50" value="50"
+                                                                        max="100"></progress>
+                                                                    <p>60%</p>
+                                                                </div>
+                                                                <div class="flex-sb">
+                                                                    <a class="fs-12 fs-sm-10 text-decoration-underline">
+                                                                        View Details
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <button class="iep-button3" type="button">
+                                                                Develop IEP <i class="ri-arrow-right-s-line"></i>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <!-- <td scope="row">
+                                                                <div
+                                                                    class="img-table w-25px h-25px rounded-circle overflow-hidden">
+                                                                    <img class="w-full h-full object-center object-cover"
+                                                                        src="./assets/images/user.jpg" alt="">
+                                                                </div>
+                                                            </td> -->
+                                                        <td>
+                                                            <div class="flex-m gap-2">
+                                                                <div
+                                                                    class="img-table w-40 h-40 rounded-circle overflow-hidden">
+                                                                    <img class="w-full h-full object-center object-cover"
+                                                                        src="./assets/images/user.webp" alt="">
+                                                                </div>
+                                                                <div class="flex-col gap-1">
+                                                                    <p class="fs-16 fw-semibold">Mohammed Nihal</p>
+                                                                    <p class="text-decoration-underline text-primary">
+                                                                        View Student Profile</p>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="fs-14">10</td>
+                                                        <td>
+                                                            <p class="fw-500 fs-14">NIMS</p>
+                                                            <p class="text-dark-gray fs-14">Dubai</p>
+                                                        </td>
+                                                        <td>
+                                                            <div class=" flex-col gap-1">
+                                                                <div class="flex-m gap-3">
+                                                                    <progress class="progress w-50" value="50"
+                                                                        max="100"></progress>
+                                                                    <p>60%</p>
+                                                                </div>
+                                                                <div class="flex-sb">
+                                                                    <a class="fs-12 fs-sm-10 text-decoration-underline">
+                                                                        View Details
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class=" flex-col gap-1">
+                                                                <div class="flex-m gap-3">
+                                                                    <progress class="progress3 w-50" value="50"
+                                                                        max="100"></progress>
+                                                                    <p>60%</p>
+                                                                </div>
+                                                                <div class="flex-sb">
+                                                                    <a class="fs-12 fs-sm-10 text-decoration-underline">
+                                                                        View Details
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+
+                                                        </td>
+                                                        <td>
+                                                            <button class="iep-button" type="button">
+                                                                Develop IEP <i class="ri-arrow-right-s-line"></i>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <!-- <td scope="row">
+                                                                <div
+                                                                    class="img-table w-25px h-25px rounded-circle overflow-hidden">
+                                                                    <img class="w-full h-full object-center object-cover"
+                                                                        src="./assets/images/user.webp" alt="">
+                                                                </div>
+                                                            </td> -->
+                                                        <td>
+                                                            <div class="flex-m gap-2">
+                                                                <div
+                                                                    class="img-table w-40 h-40 rounded-circle overflow-hidden">
+                                                                    <img class="w-full h-full object-center object-cover"
+                                                                        src="./assets/images/user.webp" alt="">
+                                                                </div>
+                                                                <div class="flex-col gap-1">
+                                                                    <p class="fs-16 fw-semibold">Mohammed Nihal</p>
+                                                                    <p class="text-decoration-underline text-primary">
+                                                                        View Student Profile</p>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="fs-14">10</td>
+                                                        <td>
+                                                            <p class="fw-500 fs-14">NIMS</p>
+                                                            <p class="text-dark-gray fs-14">Dubai</p>
+                                                        </td>
+                                                        <td>
+                                                            <div class=" flex-col gap-1">
+                                                                <div class="flex-m gap-3">
+                                                                    <progress class="progress w-50" value="50"
+                                                                        max="100"></progress>
+                                                                    <p>60%</p>
+                                                                </div>
+                                                                <div class="flex-sb">
+                                                                    <a class="fs-12 fs-sm-10 text-decoration-underline">
+                                                                        View Details
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class=" flex-col gap-1">
+                                                                <div class="flex-m gap-3">
+                                                                    <progress class="progress3 w-50" value="50"
+                                                                        max="100"></progress>
+                                                                    <p>60%</p>
+                                                                </div>
+                                                                <div class="flex-sb">
+                                                                    <a class="fs-12 fs-sm-10 text-decoration-underline">
+                                                                        View Details
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <button class="iep-button" type="button">
+                                                                Develop IEP <i class="ri-arrow-right-s-line"></i>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <!-- <td scope="row">
+                                                                <div
+                                                                    class="img-table w-25px h-25px rounded-circle overflow-hidden">
+                                                                    <img class="w-full h-full object-center object-cover"
+                                                                        src="./assets/images/user.jpg" alt="">
+                                                                </div>
+                                                            </td> -->
+                                                        <td>
+                                                            <div class="flex-m gap-2">
+                                                                <div
+                                                                    class="img-table w-40 h-40 rounded-circle overflow-hidden">
+                                                                    <img class="w-full h-full object-center object-cover"
+                                                                        src="./assets/images/user.webp" alt="">
+                                                                </div>
+                                                                <div class="flex-col gap-1">
+                                                                    <p class="fs-16 fw-semibold">Mohammed Nihal</p>
+                                                                    <p class="text-decoration-underline text-primary">
+                                                                        View Student Profile</p>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="fs-14">10</td>
+                                                        <td>
+                                                            <p class="fw-500 fs-14">NIMS</p>
+                                                            <p class="text-dark-gray fs-14">Dubai</p>
+                                                        </td>
+                                                        <td>
+                                                            <div class=" flex-col gap-1">
+                                                                <div class="flex-m gap-3">
+                                                                    <progress class="progress w-50" value="50"
+                                                                        max="100"></progress>
+                                                                    <p>60%</p>
+                                                                </div>
+                                                                <div class="flex-sb">
+                                                                    <a class="fs-12 fs-sm-10 text-decoration-underline">
+                                                                        View Details
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class=" flex-col gap-1">
+                                                                <div class="flex-m gap-3">
+                                                                    <progress class="progress3 w-50" value="50"
+                                                                        max="100"></progress>
+                                                                    <p>60%</p>
+                                                                </div>
+                                                                <div class="flex-sb">
+                                                                    <a class="fs-12 fs-sm-10 text-decoration-underline">
+                                                                        View Details
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+
+                                                        </td>
+                                                        <td>
+                                                            <button class="iep-button" type="button">
+                                                                Develop IEP <i class="ri-arrow-right-s-line"></i>
+                                                            </button>
+                                                            <!-- <button class="btn p-0 px-2" type="button"
+                                                                    data-bs-toggle="dropdown" aria-expanded="false"><i
+                                                                        class="ri-more-2-fill"></i></button>
+                                                                <ul class="dropdown-menu">
+                                                                    <li><button class="dropdown-item" type="button"><i
+                                                                                class="ri-edit-2-line fs-14 pe-2"></i>Modify</button>
+                                                                    </li>
+                                                                    <li><button class="dropdown-item" type="button"><i
+                                                                                class="ri-key-fill fs-14 pe-2"></i>Reset</button>
+                                                                    </li>
+                                                                    <li><button class="dropdown-item" type="button"><i
+                                                                                class="ri-eye-line fs-14 pe-2"></i>View</button>
+                                                                    </li>
+                                                                </ul> -->
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <!-- <td scope="row">
+                                                                <div
+                                                                    class="img-table w-25px h-25px rounded-circle overflow-hidden">
+                                                                    <img class="w-full h-full object-center object-cover"
+                                                                        src="./assets/images/user.webp" alt="">
+                                                                </div>
+                                                            </td> -->
+                                                        <td>
+                                                            <div class="flex-m gap-2">
+                                                                <div
+                                                                    class="img-table w-40 h-40 rounded-circle overflow-hidden">
+                                                                    <img class="w-full h-full object-center object-cover"
+                                                                        src="./assets/images/user.webp" alt="">
+                                                                </div>
+                                                                <div class="flex-col gap-1">
+                                                                    <p class="fs-16 fw-semibold">Mohammed Nihal</p>
+                                                                    <p class="text-decoration-underline text-primary">
+                                                                        View Student Profile</p>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="fs-14">10</td>
+                                                        <td>
+                                                            <p class="fw-500 fs-14">NIMS</p>
+                                                            <p class="text-dark-gray fs-14">Dubai</p>
+                                                        </td>
+                                                        <td>
+                                                            <div class=" flex-col gap-1">
+                                                                <div class="flex-m gap-3">
+                                                                    <progress class="progress w-50" value="50"
+                                                                        max="100"></progress>
+                                                                    <p>60%</p>
+                                                                </div>
+                                                                <div class="flex-sb">
+                                                                    <a class="fs-12 fs-sm-10 text-decoration-underline">
+                                                                        View Details
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class=" flex-col gap-1">
+                                                                <div class="flex-m gap-3">
+                                                                    <progress class="progress3 w-50" value="50"
+                                                                        max="100"></progress>
+                                                                    <p>60%</p>
+                                                                </div>
+                                                                <div class="flex-sb">
+                                                                    <a class="fs-12 fs-sm-10 text-decoration-underline">
+                                                                        View Details
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <button class="iep-button" type="button">
+                                                                Develop IEP <i class="ri-arrow-right-s-line"></i>
+                                                            </button>
+
+                                                            <!-- <ul class="dropdown-menu">
+                                                                    <li><button class="dropdown-item" type="button"><i
+                                                                                class="ri-edit-2-line fs-14 pe-2"></i>Modify</button>
+                                                                    </li>
+                                                                    <li><button class="dropdown-item" type="button"><i
+                                                                                class="ri-key-fill fs-14 pe-2"></i>Reset</button>
+                                                                    </li>
+                                                                    <li><button class="dropdown-item" type="button"><i
+                                                                                class="ri-eye-line fs-14 pe-2"></i>View</button>
+                                                                    </li>
+                                                                </ul> -->
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+
+                                        <!-- PAGINATION START -->
+                                        <nav class="Pager" aria-label="pagination example">
+                                            <ul class="pagination pagination-circle justify-content-end mb-0">
+
+                                                <!--First-->
+                                                <li class="page-item disabled"><a class="page-link">First</a></li>
+
+                                                <!--Arrow left-->
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" aria-label="Previous">
+                                                        <span aria-hidden="true">&laquo;</span>
+                                                        <span class="visually-hidden">Previous</span>
+                                                    </a>
+                                                </li>
+
+                                                <!--Numbers-->
+                                                <li class="page-item active"><a class="page-link">1</a></li>
+                                                <li class="page-item"><a class="page-link">2</a></li>
+                                                <li class="page-item"><a class="page-link">3</a></li>
+                                                <li class="page-item"><a class="page-link">4</a></li>
+                                                <li class="page-item"><a class="page-link">5</a></li>
+
+                                                <!--Arrow right-->
+                                                <li class="page-item">
+                                                    <a class="page-link" aria-label="Next">
+                                                        <span aria-hidden="true">&raquo;</span>
+                                                        <span class="visually-hidden">Next</span>
+                                                    </a>
+                                                </li>
+
+                                                <!--Last-->
+                                                <li class="page-item"><a class="page-link">Last</a></li>
+
+                                            </ul>
+                                        </nav>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="preloader">
+        <div class="loader">
+            <img src="./assets/images/brand/logo_org.png" alt="">
+            <span></span>
+        </div>
+    </div>
+    <script src="./assets/pluggins/jquery/jquery-3.6.3.min.js"></script>
+    <script src="./assets/pluggins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/tomik23/circular-progress-bar@latest/docs/circularProgressBar.min.js">
+    </script>
+    <script src="./assets/pluggins/select2/js/select2.full.min.js"></script>
+    <script src="./assets/pluggins/scrollreveal/scrollreveal.js"></script>
+
+    <!-- Include ApexCharts library -->
+    <script src="./assets/pluggins/apexchart/dist/apexcharts.min.js"></script>
+    <script src="./assets/js/charts-data.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+
+
+
+    <!-- DATE PICKER  -->
+    <script src="./assets/pluggins/datetimepicker/js/gijgo.min.js"></script>
+
+    <script src="./assets/js/calender.js"></script>
+    <script src="./assets/js/index.js"></script>
+    <script>
+        new Chart(document.getElementById('pie-chart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['html', 'css', 'javascript',],
+                datasets: [{
+                    backgroundColor: ['#41CED0', '#41CED0', '#41CED0',],
+                    data: [418, 434, 986,],
+                    borderRadius: 5,
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+
+                },
+
+            },
+        });
+    </script>
+    <script>
+        new Chart(document.getElementById('pie-chart2'), {
+            type: 'doughnut',
+            data: {
+                labels: ['html', 'css', 'javascript',],
+                datasets: [{
+                    backgroundColor: ['#41CED0', '#41CED0', '#41CED0',],
+                    data: [418, 434, 986,],
+                    borderRadius: 5,
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+
+                },
+
+            },
+        });
+    </script>
+    <!-- SELECT BOX -->
+    <script>
+        (function ($) {
+            $.fn.mySelectDropdown = function (options) {
+                return this.each(function () {
+                    var $this = $(this);
+
+                    $this.each(function () {
+                        var dropdown = $("<div />").addClass("f-dropdown selectDropdown");
+
+                        if ($(this).is(':disabled'))
+                            dropdown.addClass('disabled');
+
+                        $(this).wrap(dropdown);
+
+                        var label = $("<span />").append($("<span />")
+                            .text($(this).attr("placeholder"))).insertAfter($(this));
+                        var list = $("<ul />");
+
+                        $(this)
+                            .find("option")
+                            .each(function () {
+                                var image = $(this).data('image');
+                                if (image) {
+                                    list.append($("<li />").append(
+                                        $("<a />").attr('data-val', $(this).val())
+                                            .html(
+                                                $("<span />").append($(this).text())
+                                            ).prepend('<img src="' + image + '">')
+                                    ));
+                                } else if ($(this).val() != '') {
+                                    list.append($("<li />").append(
+                                        $("<a />").attr('data-val', $(this).val())
+                                            .html(
+                                                $("<span />").append($(this).text())
+                                            )
+                                    ));
+                                }
+                            });
+
+                        list.insertAfter($(this));
+
+                        if ($(this).find("option:selected").length > 0 && $(this).find("option:selected").val() != '') {
+                            list.find('li a[data-val="' + $(this).find("option:selected").val() + '"]').parent().addClass("active");
+                            $(this).parent().addClass("filled");
+                            label.html(list.find("li.active a").html());
+                        }
+                    });
+
+                    if (!$(this).is(':disabled')) {
+                        $(this).parent().on("click", "ul li a", function (e) {
+                            e.preventDefault();
+                            var dropdown = $(this).parent().parent().parent();
+                            var active = $(this).parent().hasClass("active");
+                            var label = active
+                                ? $('<span />').text(dropdown.find("select").attr("placeholder"))
+                                : $(this).html();
+
+                            dropdown.find("option").prop("selected", false);
+                            dropdown.find("ul li").removeClass("active");
+
+                            dropdown.toggleClass("filled", !active);
+                            dropdown.children("span").html(label);
+
+                            if (!active) {
+                                dropdown
+                                    .find('option[value="' + $(this).attr('data-val') + '"]')
+                                    .prop("selected", true);
+                                $(this).parent().addClass("active");
+                            }
+
+                            dropdown.removeClass("open");
+                        });
+
+                        $this.parent().on("click", "> span", function (e) {
+                            var self = $(this).parent();
+                            self.toggleClass("open");
+                        });
+
+                        $(document).on("click touchstart", function (e) {
+                            var dropdown = $this.parent();
+                            if (dropdown !== e.target && !dropdown.has(e.target).length) {
+                                dropdown.removeClass("open");
+                            }
+                        });
+                    }
+                });
+            };
+        })(jQuery);
+
+        $('select.f-dropdown').mySelectDropdown();
+
+    </script>
+
+
+
+</body>
+
+</html>
