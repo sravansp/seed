@@ -133,17 +133,17 @@
         <!-- NAVBAR START  -->
         <nav class="navbar py-4">
             <div class="container-fluid px-md-4">
-                <div class="navbar_container navbar-menu-wrapper d-flex align-items-center">
+                <div class="navbar_container navbar-menu-wrapper d-flex align-items-center justify-content-end">
                     <a aria-label="hide-sidebar" class="d-lg-none app-sidebar__toggle" data-bs-toggle="sidebar"
                         href="javascript:void(0);">
                         <i class="ri-menu-2-line text-primary fs-25"></i>
                     </a>
-                    <form class="d-flex d-none d-md-block" role="search">
+                    <!-- <form class="d-flex d-none d-md-block" role="search">
                         <div class="nav-search">
                             <i class="ri-search-line fs-25"></i>
                             <input class="" type="search" placeholder="Search" aria-label="Search">
                         </div>
-                    </form>
+                    </form> -->
                     <ul class="navbar-nav mb-0 flex-row gap-4 flex-m">
                         <li class="nav-item d-block d-md-none">
 
@@ -526,11 +526,28 @@
                             <div class="row pt-4">
                                 <div class="col-md-12">
                                     <div class="inner-wrapper table-dash p-4 flex-col gap-4 bg-light">
-                                        <div class="flex-col gap-2">
-                                            <h1 class="fs-24 fs-sm-16 fw-semibold">Today’s Appointments ( <span
-                                                    id="usercount">16</span> )
-                                            </h1>
-                                            <p class="fs-14 fs-sm-12 fw-normal">A quick overview of all scheduled appointments for the day</p>
+                                        <div class="flex gap-5 flex-col-l-sm">
+                                            <div class="flex-col gap-2">
+                                                <h1 class="fs-24 fs-sm-16 fw-semibold">Today’s Appointments ( <span
+                                                        id="usercount">16</span> )
+                                                </h1>
+                                                <p class="fs-14 fs-sm-12 fw-normal">A quick overview of all scheduled appointments for the day</p>
+                                            </div>
+                                           
+                                                <div class="flex flex-col-c-sm gap-3 ">
+                                                    <div class="table-search border w-100">
+                                                        <i class="ri-search-line fs-25"></i>
+                                                        <input class="" type="search" placeholder="Search"
+                                                            aria-label="Search">
+                                                    </div>
+                                                    <div>
+                                                        <button
+                                                            class="py-2 px-3 border bradius-7 fs-14 fw-500 flex-c-m"><i
+                                                                class="ri-filter-2-line fs-20"></i>
+                                                            Filters</button>
+                                                    </div>
+                                                </div>
+                                            
                                         </div>
 
                                         <div class="table-responsive1 bg-light bradius-7">
