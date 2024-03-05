@@ -3536,9 +3536,9 @@ ul.collection li {
 
 .btn-color-mode-switch>label.btn-color-mode-switch-inner {
     margin: 0px;
-    width: 150px;
+    width: 170px;
     height: 32px;
-    background: #fff;
+    background: #EBFBFA;
     border-radius: 26px;
     overflow: hidden;
     position: relative;
@@ -3555,7 +3555,7 @@ ul.collection li {
     font-size: 12px;
     font-weight: 500;
     top: 7px;
-    right: 8px;
+    right: 18px;
 }
 
 .btn-color-mode-switch>label.btn-color-mode-switch-inner:after {
@@ -3569,7 +3569,7 @@ ul.collection li {
     top: 2px;
     text-align: center;
     transition: all 0.3s ease;
-    box-shadow: 0px 0px 6px -2px #111;
+    /* box-shadow: 0px 0px 6px -2px #111; */
     padding: 3px 0px;
     color: #fff;
 }
@@ -3594,14 +3594,14 @@ ul.collection li {
 
 .btn-color-mode-switch input[type="checkbox"]:checked+label.btn-color-mode-switch-inner:after {
     content: attr(data-on);
-    left: 55px;
+    left: 75px;
     background: var(--bg-main-primary);
 }
 
 .btn-color-mode-switch input[type="checkbox"]:checked+label.btn-color-mode-switch-inner:before {
     content: attr(data-off);
     right: auto;
-    left: 18px;
+    left: 28px;
 }
 
    /* button-2 */
@@ -3615,7 +3615,7 @@ ul.collection li {
     margin: 0px;
     width: 295px;
     height: 32px;
-    background: #fff;
+    background: #EBFBFA;
     border-radius: 26px;
     overflow: hidden;
     position: relative;
@@ -3646,7 +3646,7 @@ ul.collection li {
     top: 2px;
     text-align: center;
     transition: all 0.3s ease;
-    box-shadow: 0px 0px 6px -2px #111;
+    /* box-shadow: 0px 0px 6px -2px #111; */
     padding: 3px 0px;
     color: #fff;
 }
@@ -3726,7 +3726,7 @@ ul.collection li {
     top: 2px;
     text-align: center;
     transition: all 0.3s ease;
-    box-shadow: 0px 0px 6px -2px #111;
+    /* box-shadow: 0px 0px 6px -2px #111; */
     padding: 3px 0px;
     color: #fff;
     cursor: pointer;
@@ -3807,7 +3807,7 @@ ul.collection li {
     top: 2px;
     text-align: center;
     transition: all 0.3s ease;
-    box-shadow: 0px 0px 6px -2px #111;
+    /* box-shadow: 0px 0px 6px -2px #111; */
     padding: 3px 0px;
     color: #fff;
     cursor: pointer;
@@ -4070,7 +4070,7 @@ ul.collection li {
     height: 295px;
   }
   .colSmall{
-    width: 34px;
+    width: 35px;
   }
   .colLarge{
     /* max-width: 700px; */
