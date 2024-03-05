@@ -3880,7 +3880,7 @@ ul.collection li {
     padding: 5px 10px;
     border: none;
     outline: none;
-    color: var(--bg-main-primary);
+    color: var(--bg-primary-color);
 }
 
 .admin-card1 .card-dash1 {
