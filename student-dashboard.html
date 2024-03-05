@@ -526,14 +526,18 @@
                             <div class="row pt-4">
                                 <div class="col-md-12">
                                     <div class="inner-wrapper table-dash p-4 flex-col gap-4 bg-light">
-                                        <div class="flex gap-5 flex-col-l-sm">
-                                            <div class="flex-col gap-2">
-                                                <h1 class="fs-24 fs-sm-16 fw-semibold">Today’s Appointments ( <span
-                                                        id="usercount">16</span> )
-                                                </h1>
-                                                <p class="fs-14 fs-sm-12 fw-normal">A quick overview of all scheduled appointments for the day</p>
+                                        <div class="row">
+                                            <div class="col-12 col-md-12 col-lg-6">
+                                                <div class="flex-col gap-2">
+                                                    <h1 class="fs-24 fs-sm-16 fw-semibold">Today’s Appointments ( <span
+                                                            id="usercount">16</span> )
+                                                    </h1>
+                                                    <p class="fs-14 fs-sm-12 fw-normal">A quick overview of all
+                                                        scheduled appointments for the day</p>
+                                                </div>
                                             </div>
-                                           
+
+                                            <div class="col-10 col-md-4 col-lg-4 pt-2">
                                                 <div class="flex flex-col-c-sm gap-3 ">
                                                     <div class="table-search border w-100">
                                                         <i class="ri-search-line fs-25"></i>
@@ -547,7 +551,7 @@
                                                             Filters</button>
                                                     </div>
                                                 </div>
-                                            
+                                            </div>
                                         </div>
 
                                         <div class="table-responsive1 bg-light bradius-7">
@@ -1085,7 +1089,7 @@
         new Chart(document.getElementById('pie-chart2'), {
             type: 'doughnut',
             data: {
-                labels: ['Consultants', 'Internees', 'Teachers','Receptionists','SEN Users'],
+                labels: ['Consultants', 'Internees', 'Teachers', 'Receptionists', 'SEN Users'],
                 datasets: [{
                     backgroundColor: ['#41CED0', '#9CE9E5', '#E5E5E5', '#9DE4E8'],
                     data: [418, 434, 986, 216, 350],
