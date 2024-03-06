@@ -233,12 +233,16 @@
                                                                 class="w-100 h-100 object-center object-cover">
                                                         </div>
                                                         <div class="flex-col gap-2">
-                                                            <p class="fs-20 fs-sm-14 fw-semibold">Mohammed Nihan Abdullah</p>
-                                                            <p class="fs-16 fs-sm-14 fw-500" style="color: #636363;">Class : 8</p>
+                                                            <p class="fs-20 fs-sm-14 fw-semibold">Mohammed Nihan
+                                                                Abdullah</p>
+                                                            <p class="fs-16 fs-sm-14 fw-500" style="color: #636363;">
+                                                                Class : 8</p>
                                                             <div class="logo-div w-fit">
-                                                                <div class="overflow-hidden" style="width: 20px; height: 20px;">
-                                                                    <img src="./assets/images/NIMS_Dubai_Logo 1.png" alt=""
-                                                                    class="w-full h-full object-center object-cover">
+                                                                <div class="overflow-hidden"
+                                                                    style="width: 20px; height: 20px;">
+                                                                    <img src="./assets/images/NIMS_Dubai_Logo 1.png"
+                                                                        alt=""
+                                                                        class="w-full h-full object-center object-cover">
                                                                 </div>
                                                                 <p>NIMS, Dubai</p>
                                                             </div>
@@ -253,13 +257,13 @@
                                                     <div>
                                                         <p class="fs-14 fw-500">Skill Progression</p>
                                                         <div class="">
-                                                            
+
                                                             <progress class="progress4" value="72" max="100"></progress>
                                                         </div>
                                                     </div>
                                                     <div>
-                                                        <a href="#" class="fs-12 fw-500 text-gray600 flex-m">View Details <i
-                                                                class="ri-arrow-right-s-line fs-16"></i></a>
+                                                        <a href="#" class="fs-12 fw-500 text-gray600 flex-m">View
+                                                            Details <i class="ri-arrow-right-s-line fs-16"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -270,13 +274,13 @@
                                                     <div>
                                                         <p class="fs-14 fw-500">Skill Progression</p>
                                                         <div class="">
-                                                            
+
                                                             <progress class="progress4" value="65" max="100"></progress>
                                                         </div>
                                                     </div>
                                                     <div>
-                                                        <a href="#" class="fs-12 fw-500 text-gray600 flex-m">View Details <i
-                                                                class="ri-arrow-right-s-line fs-16"></i></a>
+                                                        <a href="#" class="fs-12 fw-500 text-gray600 flex-m">View
+                                                            Details <i class="ri-arrow-right-s-line fs-16"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -3405,8 +3409,9 @@
                     }
                 },
                 scales: {
-
+                    
                     y: {
+                       
                         beginAtZero: true,
                         ticks: {
                             display: false
@@ -3458,6 +3463,12 @@
             datasets: [{
                 label: 'Weekly Sales',
                 data: myChart.data.datasets[0].data,
+                backgroundColor: [
+                    '#fff',
+                ],
+                borderColor: [
+                    '#fff',
+                ],
 
             }]
         };
@@ -3471,22 +3482,29 @@
                 layout: {
                     padding: {
                         bottom: 45,
+
                     }
                 },
                 scales: {
                     x: {
+                        grid: {
+                            drawOnChartArea: false
+                        },
                         ticks: {
                             display: false
                         },
-                        grid: {
-                            drawTicks: false
-                        }
+                        // grid: {
+                        //     drawTicks: false
+                        // }
                     },
                     y: {
+                        grid: {
+                            drawOnChartArea: false
+                        },
                         beginAtZero: true,
                         afterFit: (ctx) => {
                             console.log(ctx);
-                            ctx.width = 33;
+                            ctx.width = 34;
                         }
                     }
                 },
