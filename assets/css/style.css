@@ -3470,6 +3470,7 @@ ul.collection li {
     padding: 0;
     position: relative;
     width: 100%;
+    
 }
 
 .progress5::-webkit-progress-bar {
@@ -3478,8 +3479,9 @@ ul.collection li {
 
 .progress5::-webkit-progress-value {
     border-radius: 5px;
-    background: #30D5C7;
-    background-size: 10px 10px;
+    background: linear-gradient(90deg, #D5F7F4 0%, #30D5C7 100%);
+    /* background-size: 10px 10px; */
+    
 }
 @keyframes moveIndeterminate {
     from {
