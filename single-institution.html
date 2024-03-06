@@ -503,7 +503,7 @@
                                                 <div class="bg-light shadow-neo bradius-14 p-4 h-full">
                                                     <div class="row gap-3 gap-lg-0 gap-md-0 justify-content-between align-center">
                                                         <h1
-                                                            class="fs-20 fw-semibold fs-sm-10 col-6 col-md-12 col-xl-5 col-xxl-5 pb-2 pb-md-2 pb-lg-0">
+                                                            class="fs-20 fw-semibold fs-sm-10 col-6 col-md-12 col-xl-5 col-xxl-6 pb-2 pb-md-2 pb-lg-0">
                                                             Students Overview
                                                         </h1>
                                                         <div class="btn-container col-12 col-md-12 col-xl-7 col-xxl-6 pb-2 pb-md-2 pb-lg-0">
@@ -643,6 +643,11 @@
                     }
                 },
                 scales: {
+                    x:{
+                        grid: {
+                            drawOnChartArea: false
+                        },
+                    },
                     y: {
                         beginAtZero: true,
                         ticks: {

@@ -355,7 +355,7 @@
                                                                     <div class="flex-sb">
                                                                         <div class="overflow-hidden rounded-5"
                                                                             style="width: 40px;">
-                                                                            <img class="w-100 object-center object-cover"
+                                                                            <img class="w-100 object-fit-cover"
                                                                                 src="./assets/images/image 20.png"
                                                                                 alt="">
                                                                         </div>
@@ -380,7 +380,7 @@
                                                                     <div class="flex-sb">
                                                                         <div class="overflow-hidden rounded-5"
                                                                             style="width: 40px;">
-                                                                            <img class="w-100 object-center object-cover"
+                                                                            <img class="w-100 object-fit-cover"
                                                                                 src="./assets/images/image 20.png"
                                                                                 alt="">
                                                                         </div>
@@ -416,7 +416,7 @@
                                                                     <div class="flex-sb">
                                                                         <div class="overflow-hidden rounded-5"
                                                                             style="width: 40px;">
-                                                                            <img class="w-100 object-center object-cover"
+                                                                            <img class="w-100 object-fit-cover"
                                                                                 src="./assets/images/image 20.png"
                                                                                 alt="">
                                                                         </div>
@@ -440,7 +440,7 @@
                                                                     <div class="flex-sb">
                                                                         <div class="overflow-hidden rounded-5"
                                                                             style="width: 40px;">
-                                                                            <img class="w-100 object-center object-cover"
+                                                                            <img class="w-100 object-fit-cover"
                                                                                 src="./assets/images/image 20.png"
                                                                                 alt="">
                                                                         </div>
@@ -502,7 +502,7 @@
                                                 <div class="bg-light shadow-neo bradius-14 p-4">
                                                     <div class="row gap-3 gap-lg-0 gap-md-0 justify-content-between align-center">
                                                         <h1
-                                                            class="fs-20 fw-semibold fs-sm-10 col-6 col-md-12 col-xl-5 col-xxl-5 pb-2 pb-md-2 pb-lg-0">
+                                                            class="fs-20 fw-semibold fs-sm-10 col-6 col-md-12 col-xl-5 col-xxl-6 pb-2 pb-md-2 pb-lg-0">
                                                             IEP Progression
                                                         </h1>
                                                         <div class="btn-container col-12 col-md-12 col-xl-7 col-xxl-6 pb-2 pb-md-2 pb-lg-0">
@@ -540,34 +540,34 @@
                                                         <div id="bar-chart3" class="rounded-bars-chart h-full"></div>
                                                         <div class="flex-sb-m px-3 position-absolute">
                                                             <div class="overflow-hidden" style="border-radius: 50%; width: 25px;">
-                                                                <img class="w-100 object-center object-cover" src="/assets//images/user.png" alt="">
+                                                                <img class="w-100 object-fit-cover" src="/assets//images/user.png" alt="">
                                                             </div>
                                                             <div class="overflow-hidden" style="border-radius: 50%; width: 25px;">
-                                                                <img class="w-100 object-center object-cover" src="/assets//images/user.png" alt="">
+                                                                <img class="w-100 object-fit-cover" src="/assets//images/user.png" alt="">
                                                             </div>
                                                             <div class="overflow-hidden" style="border-radius: 50%; width: 25px;">
-                                                                <img class="w-100 object-center object-cover" src="/assets//images/user.png" alt="">
+                                                                <img class="w-100 object-fit-cover" src="/assets//images/user.png" alt="">
                                                             </div>
                                                             <div class="overflow-hidden" style="border-radius: 50%; width: 25px;">
-                                                                <img class="w-100 object-center object-cover" src="/assets//images/user.png" alt="">
+                                                                <img class="w-100 object-fit-cover" src="/assets//images/user.png" alt="">
                                                             </div>
                                                             <div class="overflow-hidden" style="border-radius: 50%; width: 25px;">
-                                                                <img class="w-100 object-center object-cover" src="/assets//images/user.png" alt="">
+                                                                <img class="w-100 object-fit-cover" src="/assets//images/user.png" alt="">
                                                             </div>
                                                             <div class="overflow-hidden" style="border-radius: 50%; width: 25px;">
-                                                                <img class="w-100 object-center object-cover" src="/assets//images/user.png" alt="">
+                                                                <img class="w-100 object-fit-cover" src="/assets//images/user.png" alt="">
                                                             </div>
                                                             <div class="overflow-hidden" style="border-radius: 50%; width: 25px;">
-                                                                <img class="w-100 object-center object-cover" src="/assets//images/user.png" alt="">
+                                                                <img class="w-100 object-fit-cover" src="/assets//images/user.png" alt="">
                                                             </div>
                                                             <div class="overflow-hidden" style="border-radius: 50%; width: 25px;">
-                                                                <img class="w-100 object-center object-cover" src="/assets//images/user.png" alt="">
+                                                                <img class="w-100 object-fit-cover" src="/assets//images/user.png" alt="">
                                                             </div>
                                                             <div class="overflow-hidden" style="border-radius: 50%; width: 25px;">
-                                                                <img class="w-100 object-center object-cover" src="/assets//images/user.png" alt="">
+                                                                <img class="w-100 object-fit-cover" src="/assets//images/user.png" alt="">
                                                             </div>
                                                             <div class="overflow-hidden" style="border-radius: 50%; width: 25px;">
-                                                                <img class="w-100 object-center object-cover" src="/assets//images/user.png" alt="">
+                                                                <img class="w-100 object-fit-cover" src="/assets//images/user.png" alt="">
                                                             </div>
                                                         </div>
                                                     </div> -->
@@ -680,6 +680,9 @@
                 },
                 scales: {
                     x: {
+                        grid: {
+                            drawOnChartArea: false
+                        },
                         ticks: {
                             callback: ((value, index, values) => {
                                 return ''
@@ -687,6 +690,9 @@
                         }
                     },
                     y: {
+                        grid: {
+                            drawOnChartArea: false
+                        },
                         beginAtZero: true,
                         ticks: {
                             display: false
