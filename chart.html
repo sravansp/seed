@@ -5,87 +5,118 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-
     
     .chartBox {
+      position: relative;
       width: 700px;
       border-radius: 20px;
       background: white;
+    }
+
+    .custom-tooltip {
+      position: absolute;
+      display: none;
+      padding: 10px;
+      background-color: #fff;
+      color: #000;
+      border-radius: 5px;
+      box-shadow: 3px 3px 5px rgb(238, 238, 238);
+      z-index: 1; /* Adjust the z-index */
+      font-family: "Poppins", sans-serif;
+    }
+
+    .blue-background {
+      background: rgba(0, 149, 255, 0.10);  /* Blue background color */
+      color: #0095FF;  /* White text color for better contrast */
+      padding: 5px;  /* Adjust padding for better appearance */
+      margin: 0;  /* Remove margin for better appearance */
+      border-radius: 7px;
+    }
+    .green-background {
+      border-radius: 7px;
+      background: rgba(7, 224, 152, 0.10);  /* Blue background color */
+      color: #00BD7E;  /* White text color for better contrast */
+      padding: 5px;  /* Adjust padding for better appearance */
+      margin: 0;  /* Remove margin for better appearance */
+      border-radius: 7px;
     }
   </style>
 </head>
 <body>
  
-    <div class="chartBox">
-      <canvas id="myChart"></canvas>
-    </div>
-     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
-  <script>
-  // setup 
+
+  <div class="chartBox">
+    <canvas id="myChart"></canvas>
+    <div class="custom-tooltip" id="customTooltip"></div>
+  </div>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+<script>
+  // Setup data and configuration
   const data = {
-    labels: ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar',],
+    labels: ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar'],
     datasets: [{
       label: 'Goal Completed',
-                data: [0, 20, 40, 40, 50, 60, 70, 70, 80, 90, 90, 100,],
-      backgroundColor: [
-                    '#4A9F95',
-                ],
+      data: [0, 20, 40, 40, 50, 60, 70, 70, 80, 90, 90, 100],
+      backgroundColor: ['#4A9F95'],
     }]
   };
 
-  // config 
   const config = {
     type: 'line',
     data,
     options: {
-      responsive:true,
+      responsive: true,
       maintainAspectRatio: true,
       scales: {   
-                    y: {
-                       
-                        beginAtZero: true,
-                        
-                        grid: {
-                            drawTicks: false
-                        }
-                    }
-                },
-                
-                plugins: {
-                    legend: {
-                        display: false
-                    },
-                    tooltip: {
-                        displayColors: false,
-                        callbacks: {
-                            afterBody: function (context) {
-                                return 'Running'
-                            },
-                            beforeFooter: function (context) {
-                                return 'Start Date : 12 Jul 2024'
-                            },
-                            afterFooter: function (context) {
-                                return 'End Date : 18 Aug 2024'
-                            },
-                            labelsTextColor: (context) => {
-                                return '#fff';
-                            },
-                        },
-                        backgroundColor: '#000',
-                    }
-                }
+        y: {
+          beginAtZero: true,
+          grid: {
+            drawTicks: false
+          }
+        }
+      },
+      plugins: {
+        legend: {
+          display: false
+        },
+        tooltip: {
+          enabled: false  // Disable default tooltip
+        }
+      },
+      onHover: (event, chartElement) => {
+        const chartBox = document.querySelector('.chartBox');
+        const customTooltip = document.getElementById('customTooltip');
+        
+        if (chartElement && chartElement.length > 0) {
+          const firstPoint = chartElement[0];
+          const { x, y } = firstPoint.element;
+          const { offsetLeft, offsetTop } = chartBox;
+
+          // Position the custom tooltip
+          customTooltip.style.left = `${offsetLeft + x + 10}px`; // Adjust position
+          customTooltip.style.top = `${offsetTop + y - 20}px`;    // Adjust position
+
+          // Update the content of the custom tooltip
+          customTooltip.style.display = 'block';
+
+          // Display HTML content in the tooltip
+          customTooltip.innerHTML = `
+          <p><strong>${data.datasets[0].label}: </strong><strong> ${data.datasets[0].data[firstPoint.index]}%</strong></p>
+            <p><strong>Running</strong></p>
+            <p class="blue-background">Start Date: 12 Jul 2024</p>
+            <p class="green-background">End Date: 18 Aug 2024</p>
+          `;
+        } else {
+          // Hide the custom tooltip if no data point is hovered
+          customTooltip.style.display = 'none';
+        }
+      },
     }
   };
 
-  // render init block
-  const myChart = new Chart(
-    document.getElementById('myChart'),
-    config
-  );
-
-  // Instantly assign Chart.js version
-  const chartVersion = document.getElementById('chartVersion');
-  chartVersion.innerText = Chart.version;
-  </script>
+  // Render the chart
+  const myChart = new Chart(document.getElementById('myChart'), config);
+</script>
 </body>
 </html>

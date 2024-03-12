@@ -22,7 +22,43 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/util.css">
 
-
+    <style>
+    
+        /* .chartBox {
+          position: relative;
+          width: 700px;
+          border-radius: 20px;
+          background: white;
+        } */
+    
+        .custom-tooltip {
+          position: absolute;
+          display: none;
+          padding: 10px;
+          background-color: #fff;
+          color: #000;
+          border-radius: 5px;
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10);
+          font-family: "Poppins", sans-serif;
+          /* width: 25%; */
+        }
+    
+        .blue-background {
+          background: rgba(0, 149, 255, 0.10);  /* Blue background color */
+          color: #0095FF;  /* White text color for better contrast */
+          padding: 5px;  /* Adjust padding for better appearance */
+          margin: 0;  /* Remove margin for better appearance */
+          border-radius: 7px;
+        }
+        .green-background {
+          border-radius: 7px;
+          background: rgba(7, 224, 152, 0.10);  /* Blue background color */
+          color: #00BD7E;  /* White text color for better contrast */
+          padding: 5px;  /* Adjust padding for better appearance */
+          margin: 0;  /* Remove margin for better appearance */
+          border-radius: 7px;
+        }
+      </style>
 </head>
 
 <body class="light mode">
@@ -2246,7 +2282,7 @@
                                                     </div>
                                                     <div class="col-12 col-md-8">
                                                         <div class="flex-col gap-3 pt-2 pt-md-0 pt-lg-0">
-                                                            <div class="bg-light border bradius-14">
+                                                            <div class="bg-light border bradius-14 pos-relative">
                                                                 <div
                                                                     class="row gap-3 gap-lg-2 gap-md-2 gap-xl-0 justify-content-between align-center px-3 pt-3">
                                                                     <h1
@@ -2272,20 +2308,14 @@
                                                                     <div id="chart-line"
                                                                         class="rounded-bars-chart h-full"></div>
                                                                 </div> -->
-                                                                <div class="chartCard">
-                                                                    <!-- <div class="chartBox">
-                                                                        <div class="colSmall">
-                                                                            <canvas id="myChart4"></canvas>
-                                                                        </div>
-                                                                        <div class="colLarge">
-                                                                            <div class="box">
-                                                                                <canvas id="myChart3"></canvas>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div> -->
+                                                                <!-- <div class="chartCard">
                                                                     <div class="chartBox2">
                                                                         <canvas id="myChart"></canvas>
                                                                       </div>
+                                                                </div> -->
+                                                                <div class="chartBox2 pos-relative">
+                                                                    <canvas id="myChart"></canvas>
+                                                                    <div class="custom-tooltip" id="customTooltip"></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -3539,8 +3569,8 @@
         const chartVersion = document.getElementById('chartVersion');
         chartVersion.innerText = Chart.version;
     </script> -->
-     <script>
-        // setup 
+     <!-- <script>
+       
         const data = {
           labels: ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar',],
           datasets: [{
@@ -3552,7 +3582,7 @@
           }]
         };
       
-        // config 
+        
         const config = {
           type: 'line',
           data,
@@ -3608,8 +3638,76 @@
         // Instantly assign Chart.js version
         const chartVersion = document.getElementById('chartVersion');
         chartVersion.innerText = Chart.version;
-        </script>
-
+    </script> -->
+    <script>
+        // Setup data and configuration
+        const data = {
+          labels: ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar'],
+          datasets: [{
+            label: 'Goal Completed',
+            data: [0, 20, 40, , , , , , , , , ],
+            backgroundColor: ['#4A9F95'],
+          }]
+        };
+      
+        const config = {
+          type: 'line',
+          data,
+          options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            scales: {   
+              y: {
+              min:0,
+              max:100,
+                beginAtZero: true,
+                grid: {
+                  drawTicks: false
+                }
+              }
+            },
+            plugins: {
+              legend: {
+                display: false
+              },
+              tooltip: {
+                enabled: false  // Disable default tooltip
+              }
+            },
+            onHover: (event, chartElement) => {
+              const chartBox = document.querySelector('.chartBox2');
+              const customTooltip = document.getElementById('customTooltip');
+              
+              if (chartElement && chartElement.length > 0) {
+                const firstPoint = chartElement[0];
+                const { x, y } = firstPoint.element;
+                const { offsetLeft, offsetTop } = chartBox;
+      
+                // Position the custom tooltip
+                customTooltip.style.left = `${offsetLeft + x + -100}px`; // Adjust position
+                customTooltip.style.top = `${offsetTop + y + - 60}px`;    // Adjust position
+      
+                // Update the content of the custom tooltip
+                customTooltip.style.display = 'block';
+      
+                // Display HTML content in the tooltip
+                customTooltip.innerHTML = `
+                <p><strong>${data.datasets[0].label}: </strong><strong> ${data.datasets[0].data[firstPoint.index]}%</strong></p>
+                  <p><strong>Running</strong></p>
+                  <p class="blue-background">Start Date: 12 Jul 2024</p>
+                  <p class="green-background">End Date: 18 Aug 2024</p>
+                `;
+              } else {
+                // Hide the custom tooltip if no data point is hovered
+                customTooltip.style.display = 'none';
+              }
+            },
+          }
+        };
+      
+        // Render the chart
+        const myChart = new Chart(document.getElementById('myChart'), config);
+      </script>
 </body>
 
 </html>
