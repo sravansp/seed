@@ -4693,7 +4693,7 @@ ul.collection li {
     .form-input .p-viewer {
         position: absolute;
         right: 1.8rem;
-        bottom: 1.8rem;
+        /* bottom: 1.8rem; */
     }
 
 
