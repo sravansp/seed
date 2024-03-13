@@ -3756,7 +3756,7 @@ ul.collection li {
     font-size: 12px;
     font-weight: 500;
     top: 7px;
-    right: 15px;
+    right: 10px;
     cursor: pointer;
 }
 
@@ -4814,3 +4814,5 @@ ul.collection li {
 
 
 }
+
+/* 13-3-24 */
