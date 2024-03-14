@@ -3692,10 +3692,13 @@
       
                 // Display HTML content in the tooltip
                 customTooltip.innerHTML = `
+                <div class="flex-col gap-2">
                 <p><strong>${data.datasets[0].label}: </strong><strong> ${data.datasets[0].data[firstPoint.index]}%</strong></p>
                   <p><strong>Running</strong></p>
-                  <p class="blue-background">Start Date: 12 Jul 2024</p>
+                 
+                    <p class="blue-background">Start Date: 12 Jul 2024</p>
                   <p class="green-background">End Date: 18 Aug 2024</p>
+                  </div>
                 `;
               } else {
                 // Hide the custom tooltip if no data point is hovered

@@ -3677,6 +3677,8 @@ ul.collection li {
     top: 7px;
     right: 18px;
     cursor: pointer;
+    color: #8195A3;
+    font-weight: 600;
 }
 
 .btn-color-mode-switch>label.btn-color-mode-switch-inner:after {
@@ -3758,6 +3760,8 @@ ul.collection li {
     top: 7px;
     right: 10px;
     cursor: pointer;
+    color: #8195A3;
+    font-weight: 600;
 }
 
 .btn-color-mode-switch2>label.btn-color-mode-switch-inner2:after {
@@ -3839,6 +3843,8 @@ ul.collection li {
     top: 7px;
     right: 25px;
     cursor: pointer;
+    color: #8195A3;
+    font-weight: 600;
 }
 
 .btn-color-mode-switch3>label.btn-color-mode-switch-inner3:after {
@@ -3920,6 +3926,8 @@ ul.collection li {
     top: 7px;
     right: 25px;
     cursor: pointer;
+    color: #8195A3;
+    font-weight: 600;
 }
 
 .btn-color-mode-switch4>label.btn-color-mode-switch-inner4:after {
