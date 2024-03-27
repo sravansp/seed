@@ -4794,7 +4794,7 @@ ul.collection li {
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
     .wrapper-login .image4 {
-        width: 550px;
+        width: 450px;
     }
 }
 
@@ -4811,7 +4811,7 @@ ul.collection li {
     }
 
     .wrapper-login .image4 {
-        width: 650px;
+        width: 550px;
     }
 }
 
