@@ -1816,9 +1816,9 @@ body.dark .navbar_container .nav-search {
     height: 50px;
     padding: 0 0.4rem;
     position: relative;
-    border-radius: 6px;
-    border: 0.6px solid var(--dark-gray);
-    background: var(--body-light);
+    /* border-radius: 6px; */
+    border-bottom: 0.6px solid var(--dark-gray);
+    /* background: var(--body-light); */
     transition: 0.2s all;
 }
 
@@ -4587,6 +4587,31 @@ ul.collection li {
   .iep-button3:hover{
     background:#d6a46b;
   }
+
+  .login-icon{
+    left: 170px;
+    top: 100px;
+  }
+
+  .login-icon2{
+    bottom: -65px;
+  }
+
+  .login-icon3{
+    right: 180px;
+  }
+
+  .login-icon4{
+    top: 0px;
+  }
+  
+  .login-circle {
+    bottom: -784px;
+    border-radius: 100%;
+    width: 1100px;
+    height: 1100px;
+    background: radial-gradient(59.91% 59.91% at 50% 40.09%, rgba(255, 255, 255, 0.00) 51.5%, #FFF 86.5%);
+}
   
   
 

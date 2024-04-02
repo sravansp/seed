@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - SEED</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="./assets/pluggins/bootstrap/css/bootstrap.min.css">
+
+    <!-- Icon Used: Remix Icon | https://remixicon.com/-->
+    <link rel="stylesheet" href="./assets/pluggins/remixicon/remixicon.css">
+
+    <link rel="stylesheet" href="./assets/css/pluggins.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/util.css">
+
+</head>
+
+<body>
+
+
+    <div class="flex-c-m pos-relative overflow-hidden" style="background-color: rgba(74, 159, 149, 1); height: 100vh;">
+        <div class="pos-absolute login-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="151" height="151" viewBox="0 0 171 171" fill="none">
+                <circle cx="85.2209" cy="85.2209" r="85.2209" fill="url(#paint0_radial_721_3200)" />
+                <path
+                    d="M43.0153 73.0153C41.9023 71.9023 41.9023 70.0977 43.0153 68.9847C44.1284 67.8716 45.9329 67.8716 47.046 68.9847C52.0137 73.9524 59.6065 73.5544 66.2318 71.3829C65.3063 73.5021 64.5318 75.6841 63.9142 77.9126C57.5458 79.2628 49.2527 79.2527 43.0153 73.0153Z"
+                    fill="white" />
+                <path
+                    d="M92.5321 106.53C94.7606 105.913 96.9426 105.138 99.0617 104.213C96.8852 110.843 96.4932 118.432 101.46 123.398C102.573 124.511 102.573 126.316 101.46 127.429C100.347 128.542 98.5423 128.542 97.4293 127.429C91.1919 121.192 91.1818 112.899 92.5321 106.53Z"
+                    fill="white" />
+                <path
+                    d="M100.452 69.9924C106.135 75.6756 105.903 83.7066 104.442 89.9441C102.2 90.5258 100.004 91.2735 97.8722 92.1811C103.541 75.5607 94.9349 66.8857 78.2632 72.572C79.1707 70.4405 79.9184 68.2444 80.5002 66.002C86.7376 64.5409 94.7686 64.3091 100.452 69.9924Z"
+                    fill="white" />
+                <path
+                    d="M94.4058 76.0383C94.654 76.2766 94.8769 76.54 95.0709 76.8243C95.1538 76.931 95.2312 77.042 95.3026 77.1568L77.3763 95.0831C76.5769 94.5524 75.8917 93.8672 75.361 93.0678L93.2873 75.1415L93.7105 75.4438C93.9631 75.6162 94.1963 75.8155 94.4058 76.0383Z"
+                    fill="white" />
+                <path
+                    d="M67.1988 48.8315C67.8812 49.5152 68.4584 50.2962 68.9118 51.1491L51.3785 68.6824C51.1669 68.5716 50.9654 68.4507 50.7537 68.3197C50.447 68.1364 50.154 67.9309 49.8771 67.705C49.5907 67.4762 49.3182 67.2305 49.0607 66.9696L67.1988 48.8315Z"
+                    fill="white" />
+                <path
+                    d="M70.2428 55.8649C70.3472 57.2565 70.2999 58.6553 70.1017 60.0366L60.2871 69.8513C59.2897 69.9987 58.2824 70.0694 57.2742 70.0629C56.8409 70.0528 56.458 70.0327 56.0952 70.0125L70.2428 55.8649Z"
+                    fill="white" />
+                <path
+                    d="M121.613 103.245L103.475 121.383C103.197 121.109 102.938 120.816 102.699 120.506C102.472 120.231 102.266 119.938 102.084 119.63C101.964 119.45 101.856 119.261 101.762 119.066L119.295 101.532C120.148 101.986 120.929 102.563 121.613 103.245Z"
+                    fill="white" />
+                <path
+                    d="M114.579 100.202L100.432 114.35C100.402 114.017 100.392 113.624 100.381 113.191C100.376 112.18 100.444 111.169 100.583 110.168L110.408 100.343C111.789 100.145 113.188 100.098 114.579 100.202Z"
+                    fill="white" />
+                <path
+                    d="M88.6718 73.7107L73.9499 88.4326C73.8643 87.0113 73.9387 85.5849 74.1716 84.1803L84.4094 73.9424C85.4579 73.7623 86.5197 73.6713 87.5836 73.6703C87.9468 73.6598 88.3104 73.6733 88.6718 73.7107Z"
+                    fill="white" />
+                <path
+                    d="M96.7341 81.7719C96.7673 82.1471 96.7808 82.5238 96.7745 82.9005C96.768 83.9507 96.677 84.9987 96.5024 86.0343L86.2645 96.2721C84.8599 96.505 83.4335 96.5794 82.0122 96.4938L96.7341 81.7719Z"
+                    fill="white" />
+                <path
+                    d="M70.2222 100.222C80.6595 110.66 98.9939 101.136 99.7709 100.726C99.922 100.645 115.139 92.7403 123.628 101.23C124.741 102.343 126.546 102.343 127.659 101.23C128.772 100.117 128.772 98.3122 127.659 97.1992C116.225 85.7653 97.8795 95.2776 97.1066 95.6857C96.9534 95.7663 81.7146 103.653 74.2528 96.1915C66.7911 88.7298 74.6781 73.4909 74.7587 73.3378C75.1668 72.5649 84.6791 54.2194 73.2452 42.7855C72.1321 41.6724 70.3276 41.6724 69.2145 42.7855C68.1015 43.8985 68.1015 45.7031 69.2145 46.8161C77.7041 55.3057 69.799 70.5224 69.7184 70.6735C69.3082 71.4504 59.7848 89.7848 70.2222 100.222Z"
+                    fill="white" />
+                <defs>
+                    <radialGradient id="paint0_radial_721_3200" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                        gradientTransform="translate(85.2207 80.7209) rotate(89.9998) scale(89.7209)">
+                        <stop offset="0.305" stop-color="white" stop-opacity="0" />
+                        <stop offset="1" stop-color="white" stop-opacity="0.7" />
+                    </radialGradient>
+                </defs>
+            </svg>
+        </div>
+        <div class="pos-absolute login-icon2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="349" viewBox="0 0 1440 349" fill="none">
+                <path
+                    d="M-2 231.902H12L24 198.902C25.3333 195.735 28.6 191.302 31 198.902C33.4 206.502 40.3333 232.735 43.5 244.902C44.3333 247.068 47.3 250.102 52.5 244.902C57.7 239.702 66.6667 231.068 70 227.902H1135L1219 7.90172C1220.83 3.40172 1225.4 -2.89828 1229 7.90172C1232.6 18.7017 1274.17 234.402 1294.5 340.902C1295.5 345.568 1298.9 352.102 1304.5 340.902C1304.5 339.302 1354.83 200.902 1380 131.902C1381.5 127.902 1385.5 122.302 1389.5 131.902C1393.5 141.502 1420.83 222.902 1434 262.402C1434.67 262.735 1437.1 263.202 1441.5 262.402"
+                    stroke="white" stroke-width="2" />
+            </svg>
+        </div>
+        <div class="pos-absolute login-icon3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="170" height="170" viewBox="0 0 250 250" fill="none">
+                <circle cx="125" cy="125" r="124.511" fill="url(#paint0_radial_721_3153)" />
+                <g clip-path="url(#clip0_721_3153)">
+                    <path
+                        d="M144.789 152.775C144.463 153.241 144.006 153.6 143.476 153.806C142.946 154.012 142.367 154.057 141.811 153.934C141.256 153.81 140.75 153.525 140.356 153.114C139.963 152.704 139.7 152.185 139.601 151.625C139.503 151.065 139.572 150.488 139.801 149.967C140.03 149.447 140.409 149.006 140.888 148.7C141.368 148.395 141.928 148.238 142.496 148.25C143.065 148.263 143.617 148.444 144.083 148.77C144.708 149.207 145.133 149.875 145.266 150.626C145.398 151.378 145.227 152.151 144.789 152.775ZM136.182 162.455C133.637 165.486 130.05 167.455 126.127 167.973C122.204 168.492 118.229 167.524 114.984 165.258L107.916 160.31C104.484 157.9 102.147 154.228 101.419 150.098C100.691 145.968 101.63 141.718 104.032 138.28L113.135 125.279C108.873 121.849 106.073 116.928 105.303 111.512C104.532 106.096 105.849 100.589 108.985 96.1072L118.883 81.9722C119.101 81.6598 119.435 81.4471 119.811 81.3809C120.187 81.3146 120.573 81.4003 120.885 81.6191L127.953 86.5678C128.265 86.7865 128.478 87.1204 128.544 87.496C128.61 87.8716 128.525 88.2581 128.306 88.5705C128.087 88.8829 127.753 89.0956 127.378 89.1618C127.002 89.228 126.616 89.1424 126.303 88.9236L120.414 84.7997L111.341 97.7567C109.921 99.7847 108.918 102.075 108.39 104.494C107.862 106.913 107.819 109.412 108.265 111.848C108.711 114.283 109.637 116.606 110.988 118.68C112.339 120.755 114.088 122.541 116.135 123.934C124.548 129.663 136.208 127.426 142.138 118.957L151.04 106.244L145.15 102.12C144.838 101.901 144.625 101.568 144.559 101.192C144.492 100.816 144.578 100.43 144.797 100.117C145.016 99.8051 145.349 99.5923 145.725 99.5261C146.101 99.4599 146.487 99.5456 146.8 99.7643L153.867 104.713C154.179 104.932 154.392 105.266 154.458 105.641C154.525 106.017 154.439 106.403 154.22 106.716L144.494 120.606C137.896 130.03 125.098 132.738 115.489 126.931L106.388 139.929C104.419 142.741 103.648 146.22 104.244 149.6C104.84 152.98 106.754 155.985 109.566 157.954L116.633 162.902C119.255 164.733 122.461 165.529 125.635 165.139C128.808 164.749 131.725 163.199 133.825 160.787C131.343 158.601 129.793 155.547 129.492 152.253C129.192 148.959 130.164 145.675 132.209 143.075C134.254 140.475 137.216 138.757 140.489 138.274C143.761 137.79 147.094 138.578 149.803 140.475C152.513 142.373 154.393 145.235 155.058 148.475C155.723 151.716 155.122 155.087 153.378 157.898C151.635 160.709 148.881 162.746 145.683 163.59C142.485 164.434 139.085 164.021 136.181 162.437L136.182 162.455ZM150.679 156.899C151.821 155.268 152.454 153.336 152.497 151.345C152.54 149.355 151.993 147.396 150.923 145.717C149.853 144.038 148.31 142.714 146.488 141.912C144.665 141.111 142.646 140.867 140.686 141.213C138.725 141.559 136.911 142.478 135.473 143.855C134.035 145.231 133.037 147.003 132.607 148.947C132.176 150.891 132.331 152.918 133.052 154.774C133.774 156.629 135.029 158.229 136.66 159.371C137.743 160.129 138.965 160.667 140.255 160.953C141.546 161.239 142.88 161.268 144.182 161.039C145.483 160.809 146.727 160.325 147.842 159.615C148.957 158.905 149.921 157.982 150.679 156.899Z"
+                        fill="white" />
+                </g>
+                <defs>
+                    <radialGradient id="paint0_radial_721_3153" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                        gradientTransform="translate(125 125) rotate(90) scale(124.511)">
+                        <stop offset="0.55" stop-color="white" stop-opacity="0" />
+                        <stop offset="1" stop-color="white" stop-opacity="0.7" />
+                    </radialGradient>
+                    <clipPath id="clip0_721_3153">
+                        <rect width="92.0299" height="92.0299" fill="white"
+                            transform="translate(114.173 61.1205) rotate(35)" />
+                    </clipPath>
+                </defs>
+            </svg>
+        </div>
+        <div class="pos-absolute login-icon4">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="101" viewBox="0 0 100 101" fill="none">
+                <circle cx="50" cy="50.4014" r="50" fill="url(#paint0_radial_721_3149)"/>
+                <g clip-path="url(#clip0_721_3149)">
+                <path d="M65.1646 36.0315C71.1112 38.1959 74.1505 44.8447 71.6566 51.6966C66.6688 65.4005 49.136 67.8872 43.1729 69.0423C40.1472 65.3106 32.1118 56.288 31.353 45.8976L27.6949 44.564L29.12 40.6486L31.489 41.5129C31.6767 40.1676 32.0065 38.8093 32.5028 37.4458C34.9967 30.5938 41.6722 27.481 47.5453 29.6186C51.1866 30.9439 53.6847 34.0702 54.9299 36.7404C57.6001 35.4953 61.5232 34.7061 65.1646 36.0315ZM63.7395 39.9468C61.6332 39.1802 58.9474 39.4644 56.6907 40.5167L52.9145 42.2776L51.1536 38.5013C50.1013 36.2447 48.2265 34.3006 46.1202 33.534C42.3205 32.151 38.088 34.283 36.4181 38.8708C35.9297 40.2127 35.6319 41.5812 35.5147 42.977L39.7577 44.5204L46.2564 39.2511L48.5668 51.1771L51.5038 48.7957L60.4431 52.0493L59.018 55.9647L52.2957 53.5179L45.7969 58.7874L43.4865 46.8613L40.5495 49.2427L35.7365 47.4922C36.3034 50.7428 37.7221 54.1289 39.8807 57.6522C40.9167 59.343 42.0781 60.9917 43.4083 62.707C43.8586 63.288 44.3101 63.8536 44.8294 64.4911C45.637 64.3365 46.3465 64.1935 47.0649 64.0379C49.1864 63.579 51.1359 63.0625 53.0164 62.4331C60.5366 59.9161 65.6439 56.034 67.7412 50.2715C69.4223 45.6528 67.5824 41.3456 63.7395 39.9468Z" fill="white"/>
+                </g>
+                <defs>
+                <radialGradient id="paint0_radial_721_3149" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(50 45.8014) rotate(90) scale(54.6)">
+                <stop stop-color="white" stop-opacity="0"/>
+                <stop offset="1" stop-color="white" stop-opacity="0.58"/>
+                </radialGradient>
+                <clipPath id="clip0_721_3149">
+                <rect width="50" height="50" fill="white" transform="translate(35 18.4014) rotate(20)"/>
+                </clipPath>
+                </defs>
+                </svg>
+        </div>
+        <div class="pos-absolute login-circle">
+        </div>
+        <div class="bradius-14 p-5" style="background-color: rgb(255, 255, 255,0.8); z-index: 10;">
+            <div class="">
+                <form action="#" class="sign-in-form flex-col-c-m gap-3">
+                    <img class="w-70" src="./assets/images/brand/seedlogin.png" alt="">
+                    <h2 class="title fs-12">Social Educational Emotional Development</h2>
+                    <h1 class="fs-30 fw-semibold">Welcome Back!</h1>
+                    
+                    <div class="input-field flex-m ps-4">
+                        <input type="text" placeholder="Type your username" id="login-username" required />
+                        <span class="p-viewer">
+                            <i class="ri-user-3-fill"></i>
+                        </span>
+                       
+                        <!-- <div class="errorTxt1"><span id="" class="error error-block"> Username is required</span></div> -->
+                    </div>
+                    <div class="input-field flex-m ps-4">
+                        <input type="password" placeholder="Type your password" id="login-password" required />
+                        <span class="p-viewer">
+                            <i toggle="#password-field" class="ri-eye-fill field_icon toggle-password"></i>
+                        </span>
+                        <!-- <div class="errorTxt1"><span id="" class="error error-block"> Password is required</span></div> -->
+                    </div>
+                    <div class="flex-sb-m w-full gap-4">
+                        <div class="flex-m">
+                            <input class="form-check-input" type="checkbox" value="" id="remember-me">
+                            <label class="form-check-label p-l-10 other-text" for="remember-me">
+                                Remember me?
+                            </label>
+                        </div>
+                        
+                        <a href="./forgot-pass.html" class="other-text">Forgot Password?</a>
+                    </div>
+                    <div class="flex-m w-full">
+                        <a href="./dash-admin.html" type="submit" class="btn btn-primary w-full py-2">SIGN IN</a>
+                    </div>
+                    
+                    <!-- <button class="btn btn-light w-full py-2" type="button" id="sign-up-btn">
+                        Create new Account
+                    </button> -->
+
+                    <!-- <p class="other-text">Or</p> -->
+                    <div id="gSignInWrapper" class="w-full">
+                        <div id="customBtn" class="customGPlusSignIn w-full flex-c-m gap-2 py-2 bradius-7">
+                            <img src="./assets/images/Google_Logo.svg" alt="">
+                            <span class="buttonText">Sign in with Google</span>
+                        </div>
+                    </div>
+                    <div id="name"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="preloader">
+        <div class="loader">
+            <img src="./assets/images/brand/logo_org.png" alt="" />
+            <span></span>
+        </div>
+    </div>
+    <script src="./assets/pluggins/jquery/jquery-3.6.3.min.js"></script>
+    <script src="./assets/pluggins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./assets/pluggins/select2/js/select2.full.min.js"></script>
+    <!-- <script src="./assets/pluggins/pagination/jquery.twbsPagination.min.js"></script> -->
+    <script src="./assets/pluggins/scrollreveal/scrollreveal.js"></script>
+    <script src="./assets/js/index.js"></script>
+
+    <script src="https://apis.google.com/js/api:client.js"></script>
+    <script>
+        var googleUser = {};
+        var startApp = function () {
+            gapi.load('auth2', function () {
+                // Retrieve the singleton for the GoogleAuth library and set up the client.
+                auth2 = gapi.auth2.init({
+                    client_id: 'YOUR_CLIENT_ID.apps.googleusercontent.com',
+                    cookiepolicy: 'single_host_origin',
+                    // Request scopes in addition to 'profile' and 'email'
+                    //scope: 'additional_scope'
+                });
+                attachSignin(document.getElementById('customBtn'));
+            });
+        };
+
+        function attachSignin(element) {
+            console.log(element.id);
+            auth2.attachClickHandler(element, {},
+                function (googleUser) {
+                    document.getElementById('name').innerText = "Signed in: " +
+                        googleUser.getBasicProfile().getName();
+                },
+                function (error) {
+                    // alert(JSON.stringify(error, undefined, 2));
+                });
+        }
+    </script>
+
+    <script>
+        startApp();
+    </script>
+
+
+    <style type="text/css">
+        #customBtn {
+            color: #444;
+            white-space: nowrap;
+            background: #FFF;
+            /* Neu new */
+            box-shadow: 2.17893px 2.17893px 6.5368px 0px rgba(174, 174, 192, 0.40), -2.17893px -2.17893px 6.5368px 0px #FFF;
+        }
+
+        #customBtn:hover {
+            cursor: pointer;
+            background-color: var(--bg-main-primary);
+        }
+
+        span.label {
+            font-family: serif;
+            font-weight: normal;
+        }
+
+        .customGPlusSignIn img {
+            width: 20px;
+            height: 20px;
+        }
+
+        #customBtn:hover span.buttonText {
+            color: var(--text-white);
+        }
+
+        span.buttonText {
+            color: var(--Text-Gray, rgba(26, 26, 26, 0.41));
+            font-family: Poppins;
+            font-size: 1rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+    </style>
+</body>
+
+</html>
