@@ -4695,7 +4695,7 @@ ul.collection li {
         bottom: -10px;
       }
       .intro-block svg{
-        bottom: -30px;
+        bottom: 0px;
         right: 10px;
       }
 }
