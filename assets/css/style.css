@@ -4612,8 +4612,46 @@ ul.collection li {
     height: 1100px;
     background: radial-gradient(59.91% 59.91% at 50% 40.09%, rgba(255, 255, 255, 0.00) 51.5%, #FFF 86.5%);
 }
+
+.thin-line{
+    background-color: #000;
+    width: 80px;
+    height: 1px;
+    opacity: 0.2;
+}
   
-  
+@media screen and (max-width: 576px){
+    .login-icon{
+        left: -40px;
+        top: 100px;
+      }
+      .login-icon3{
+        right: 100px;
+        bottom: -50px;
+      }
+}
+@media screen and (min-width: 576px){
+    .login-icon{
+        left: -40px;
+        top: 100px;
+      }
+      .login-icon3{
+        right: 100px;
+        bottom: -50px;
+      }
+}
+
+@media screen and (min-width: 768px){
+    .login-icon{
+        left: 40px;
+        top: 100px;
+      }
+      .login-icon3{
+        right: 10px;
+        bottom: 290px;
+      }
+}
+ 
 
 
 
