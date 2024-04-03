@@ -28,9 +28,17 @@
 
 
     <div class="flex-c-m pos-relative overflow-hidden" style="background-color: rgba(74, 159, 149, 1); height: 100vh;">
-        <div class="pos-absolute login-icon">
+        <div class="pos-absolute login-icon div-rotate">
             <svg xmlns="http://www.w3.org/2000/svg" width="151" height="151" viewBox="0 0 171 171" fill="none">
                 <circle cx="85.2209" cy="85.2209" r="85.2209" fill="url(#paint0_radial_721_3200)" />
+                <!-- <animateTransform
+                attributeName="transform"
+                begin="0s"
+                dur="10s"
+                type="rotate"
+                from="0 85 85"
+                to="360 85 85"
+                repeatCount="indefinite" /> -->
                 <path
                     d="M43.0153 73.0153C41.9023 71.9023 41.9023 70.0977 43.0153 68.9847C44.1284 67.8716 45.9329 67.8716 47.046 68.9847C52.0137 73.9524 59.6065 73.5544 66.2318 71.3829C65.3063 73.5021 64.5318 75.6841 63.9142 77.9126C57.5458 79.2628 49.2527 79.2527 43.0153 73.0153Z"
                     fill="white" />
@@ -73,14 +81,26 @@
                 </defs>
             </svg>
         </div>
-        <div class="pos-absolute login-icon2">
+        <!-- <div class="pos-absolute login-icon2">
             <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="349" viewBox="0 0 1440 349" fill="none">
                 <path
                     d="M-2 231.902H12L24 198.902C25.3333 195.735 28.6 191.302 31 198.902C33.4 206.502 40.3333 232.735 43.5 244.902C44.3333 247.068 47.3 250.102 52.5 244.902C57.7 239.702 66.6667 231.068 70 227.902H1135L1219 7.90172C1220.83 3.40172 1225.4 -2.89828 1229 7.90172C1232.6 18.7017 1274.17 234.402 1294.5 340.902C1295.5 345.568 1298.9 352.102 1304.5 340.902C1304.5 339.302 1354.83 200.902 1380 131.902C1381.5 127.902 1385.5 122.302 1389.5 131.902C1393.5 141.502 1420.83 222.902 1434 262.402C1434.67 262.735 1437.1 263.202 1441.5 262.402"
                     stroke="white" stroke-width="2" />
             </svg>
+        </div> -->
+        <div class="intro-block">
+            <!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" viewBox="0 0 500 200" style="enable-background:new 0 0 500 200;" xml:space="preserve">
+                <g>
+                    <polyline class="ekg"
+                        points="486.6,113.8 328.2,113.8 310.3,132.3 296,70.7 246.8,127.4 241.6,120.2 233.9,166.4 227,27.6 
+                                    213.2,118.3 211.8,112.3 205.1,126.1 198.2,108.5 194.1,124.4 184.5,92.9 174.1,113 4.3,113 	" />
+                </g>
+            </svg>
         </div>
-        <div class="pos-absolute login-icon3">
+
+        <div class="pos-absolute login-icon3 div-rotate2">
             <svg xmlns="http://www.w3.org/2000/svg" width="170" height="170" viewBox="0 0 250 250" fill="none">
                 <circle cx="125" cy="125" r="124.511" fill="url(#paint0_radial_721_3153)" />
                 <g clip-path="url(#clip0_721_3153)">
@@ -101,7 +121,7 @@
                 </defs>
             </svg>
         </div>
-        <div class="pos-absolute login-icon4">
+        <div class="pos-absolute login-icon4 div-rotate">
             <svg xmlns="http://www.w3.org/2000/svg" width="100" height="101" viewBox="0 0 100 101" fill="none">
                 <circle cx="50" cy="50.4014" r="50" fill="url(#paint0_radial_721_3149)"/>
                 <g clip-path="url(#clip0_721_3149)">
@@ -121,26 +141,26 @@
         <div class="pos-absolute login-circle">
         </div>
         <div class="bradius-14 p-5" style="background-color: rgb(255, 255, 255,0.8); z-index: 10;">
-            <div class="">
+            <div class="wrapper-fp">
                 <form action="#" class="sign-in-form flex-col-c-m gap-3">
                     <img class="w-70" src="./assets/images/brand/seedlogin.png" alt="">
                     <h2 class="title fs-12">Social Educational Emotional Development</h2>
                     <h1 class="fs-30 fw-semibold">Welcome Back!</h1>
                     
-                    <div class="input-field flex-m ps-4">
+                    <div class="input-field flex-m">
                         <input type="text" placeholder="Type your username" id="login-username" required />
                         <span class="p-viewer">
                             <i class="ri-user-3-fill"></i>
                         </span>
                        
-                        <!-- <div class="errorTxt1"><span id="" class="error error-block"> Username is required</span></div> -->
+                        <div class="errorTxt1"><span id="" class="error error-block"> Username is required</span></div>
                     </div>
-                    <div class="input-field flex-m ps-4">
+                    <div class="input-field flex-m">
                         <input type="password" placeholder="Type your password" id="login-password" required />
                         <span class="p-viewer">
                             <i toggle="#password-field" class="ri-eye-fill field_icon toggle-password"></i>
                         </span>
-                        <!-- <div class="errorTxt1"><span id="" class="error error-block"> Password is required</span></div> -->
+                        <div class="errorTxt1"><span id="" class="error error-block"> Password is required</span></div>
                     </div>
                     <div class="flex-sb-m w-full gap-4">
                         <div class="flex-m">

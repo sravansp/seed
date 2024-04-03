@@ -1841,7 +1841,7 @@ body.dark .navbar_container .nav-search {
     border: none;
     line-height: 1;
     /* font-weight: 600; */
-    font-size: 1.1rem;
+    /* font-size: 1.1rem; */
     color: #333;
 }
 
@@ -1867,6 +1867,10 @@ body.dark .navbar_container .nav-search {
     color: var(--primary-color);
 }
 
+.input-field .p-viewer .toggle-password2:hover {
+    color: var(--primary-color);
+}
+
 
 .input-field input:focus~.p-viewer .toggle-password {
     color: var(--primary-color);
@@ -1875,11 +1879,12 @@ body.dark .navbar_container .nav-search {
 .errorTxt1 {
     position: absolute;
     top: 40px;
-    background: #fafafa;
+    background: rgb(250, 250, 250, 0.8);
     font-size: 11px;
     padding-left: 6px;
     padding-right: 6px;
     color: red;
+    border-radius: 6px;
 }
 
 .other-text {
@@ -4619,6 +4624,65 @@ ul.collection li {
     height: 1px;
     opacity: 0.2;
 }
+
+.div-rotate{
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.div-rotate2{
+    animation-name: rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+  .intro-block svg {
+      max-width: 100%;
+      /* margin-left: 20px;
+    margin-right: 20px; */
+      position: absolute;
+      transition: all 0.5s ease-in-out;
+      z-index: 10;
+      bottom: -100px;
+      right: 80px;
+  }
+  
+  .intro-block svg .ekg {
+      fill: none;
+      stroke: white;
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-linejoin: miter;
+      opacity: 0;
+      stroke-dashoffset: 1000;
+      stroke-dasharray: 1000;
+      animation: ekg 1.5s linear forwards infinite;
+  }
+  
+
+  @keyframes ekg {
+      0% {
+        opacity: 0;
+      }
+      25% {
+        opacity: 1;
+      }
+      50% {
+        stroke-dashoffset: 2000;
+      }
+      99% {
+        opacity: 0;
+        stroke-dashoffset: 3000;
+      }
+      100% {
+        stroke-dashoffset: 1000;
+      }
+  }
+  
+  
   
 @media screen and (max-width: 576px){
     .login-icon{
@@ -4627,7 +4691,7 @@ ul.collection li {
       }
       .login-icon3{
         right: 100px;
-        bottom: -50px;
+        bottom: -10px;
       }
 }
 @media screen and (min-width: 576px){
@@ -4637,7 +4701,7 @@ ul.collection li {
       }
       .login-icon3{
         right: 100px;
-        bottom: -50px;
+        bottom: -10px;
       }
 }
 
@@ -4698,7 +4762,7 @@ ul.collection li {
     }
 
     .wrapper-fp {
-        width: 400px;
+        width: 500px;
         height: auto;
 
     }

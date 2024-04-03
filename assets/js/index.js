@@ -41,6 +41,17 @@ $(".toggle-password").click(function (e) {
     }
 
 });
+$(".toggle-password2").click(function (e) {
+    e.preventDefault();
+    $(this).toggleClass("ri-eye-fill ri-eye-off-fill");
+    var input = $("#login-password2");
+    if (input.attr("type") === "password") {
+        input.attr("type", "text");
+    } else {
+        input.attr("type", "password");
+    }
+
+});
 
 
 
