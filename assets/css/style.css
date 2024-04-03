@@ -4690,8 +4690,13 @@ ul.collection li {
         top: 100px;
       }
       .login-icon3{
+        display: none;
         right: 100px;
         bottom: -10px;
+      }
+      .intro-block svg{
+        bottom: -30px;
+        right: 10px;
       }
 }
 @media screen and (min-width: 576px){
