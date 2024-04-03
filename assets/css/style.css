@@ -4634,7 +4634,7 @@ ul.collection li {
 
 .div-rotate2{
     animation-name: rotate;
-    animation-duration: 5s;
+    animation-duration: 20s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -4644,7 +4644,7 @@ ul.collection li {
       /* margin-left: 20px;
     margin-right: 20px; */
       position: absolute;
-      transition: all 0.5s ease-in-out;
+      transition: all 8.5s ease-in-out;
       z-index: 10;
       bottom: -100px;
       right: 80px;
@@ -4659,7 +4659,7 @@ ul.collection li {
       opacity: 0;
       stroke-dashoffset: 1000;
       stroke-dasharray: 1000;
-      animation: ekg 1.5s linear forwards infinite;
+      animation: ekg 5.5s linear forwards infinite;
   }
   
 
