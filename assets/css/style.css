@@ -4625,7 +4625,7 @@ ul.collection li {
     opacity: 0.2;
 }
 
-.div-rotate{
+/* .div-rotate{
     animation-name: rotate;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -4637,7 +4637,7 @@ ul.collection li {
     animation-duration: 20s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
-}
+} */
 
   .intro-block svg {
       max-width: 100%;
@@ -4647,7 +4647,7 @@ ul.collection li {
       transition: all 8.5s ease-in-out;
       z-index: 10;
       bottom: -100px;
-      right: 80px;
+      right: 0px;
   }
   
   .intro-block svg .ekg {
@@ -4720,7 +4720,6 @@ ul.collection li {
         bottom: 290px;
       }
 }
- 
 
 
 

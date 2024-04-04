@@ -28,13 +28,13 @@
 
 
     <div class="flex-c-m pos-relative overflow-hidden" style="background-color: rgba(74, 159, 149, 1); height: 100vh;">
-        <div class="pos-absolute login-icon">
+        <div class="pos-absolute login-icon scale-animate animate-scale-up">
             <svg xmlns="http://www.w3.org/2000/svg" width="151" height="151" viewBox="0 0 171 171" fill="none">
                 <circle cx="85.2209" cy="85.2209" r="85.2209" fill="url(#paint0_radial_721_3200)" />
                 <animateTransform
                 attributeName="transform"
                 begin="0s"
-                dur="10s"
+                dur="20s"
                 type="rotate"
                 from="0 15 15"
                 to="360 15 15"
@@ -88,8 +88,7 @@
                     stroke="white" stroke-width="2" />
             </svg>
         </div> -->
-        <div class="intro-block">
-            <!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+        <!-- <div class="intro-block">
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                 x="0px" y="0px" viewBox="0 0 500 200" style="enable-background:new 0 0 500 200;" xml:space="preserve">
                 <g>
@@ -98,9 +97,9 @@
                                     213.2,118.3 211.8,112.3 205.1,126.1 198.2,108.5 194.1,124.4 184.5,92.9 174.1,113 4.3,113 	" />
                 </g>
             </svg>
-        </div>
+        </div> -->
 
-        <div class="pos-absolute login-icon3 div-rotate2">
+        <div class="pos-absolute login-icon3 div-rotate2 scale-animate animate-scale-up">
             <svg xmlns="http://www.w3.org/2000/svg" width="170" height="170" viewBox="0 0 250 250" fill="none">
                 <circle cx="125" cy="125" r="124.511" fill="url(#paint0_radial_721_3153)" />
                 <g clip-path="url(#clip0_721_3153)">
@@ -121,7 +120,7 @@
                 </defs>
             </svg>
         </div>
-        <div class="pos-absolute login-icon4">
+        <div class="pos-absolute login-icon4 scale-animate animate-scale-up">
             <svg xmlns="http://www.w3.org/2000/svg" width="100" height="101" viewBox="0 0 100 101" fill="none">
                 <circle cx="50" cy="50.4014" r="50" fill="url(#paint0_radial_721_3149)"/>
                 <g clip-path="url(#clip0_721_3149)">
@@ -138,9 +137,9 @@
                 </defs>
                 </svg>
         </div>
-        <div class="pos-absolute login-circle">
+        <div class="pos-absolute login-circle scale-animate animate-scale-up">
         </div>
-        <div class="bradius-14 p-5" style="background-color: rgb(255, 255, 255,0.8); z-index: 10;">
+        <div class="scale-animate animate-scale-up bradius-14 p-5" style="background-color: rgb(255, 255, 255,0.8); z-index: 10;">
             <div class="wrapper-fp">
                 <form action="#" class="sign-in-form flex-col-c-m gap-3">
                     <img class="w-70" src="./assets/images/brand/seedlogin.png" alt="">
@@ -234,7 +233,13 @@
                 });
         }
     </script>
-
+<script>
+    window.addEventListener('load', function() {
+      const elementToAnimate = document.querySelector('.scale-animate');
+      elementToAnimate.classList.add('animate-scale-up');
+    });
+  </script>
+  
     <script>
         startApp();
     </script>
@@ -276,6 +281,23 @@
             font-weight: 600;
             line-height: normal;
         }
+        .scale-animate {
+    animation: scaleUpAnimation 1.5s ease-in-out forwards;
+    /* You can adjust the duration and easing as per your preference */
+  }
+  
+ 
+@keyframes scaleUpAnimation {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
     </style>
 </body>
 
