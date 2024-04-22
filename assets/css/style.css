@@ -4721,6 +4721,170 @@ ul.collection li {
       }
 }
 
+.service-bg{
+    background-image: url("/assets/images/servicebg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: calc(100% - 50%);
+}
+
+.service-absolute{
+    background-color: white;
+    border-radius: 20px;
+    padding: 15px;
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    gap: 25px;
+}
+.service-div{
+    padding-top: 110px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.footer-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(48, 213, 199, 0.15);
+    border-radius: 30px;
+    padding: 10px;
+    color: rgba(48, 213, 199, 1);
+    font-size: 20px;
+}
+
+.service-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    background: linear-gradient(129deg, #00B19D -10.88%, #007A6C 128.93%);
+    padding: 16px 20px;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    gap: 10px;
+}
+
+
+
+@media screen and (max-width: 576px){
+    .service-absolute{
+        width: auto;
+        
+    }
+  .service-dis{
+    display: none;
+  }
+  .service-div{
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    transform: translate(0);
+  }
+  .service-bg{
+    background-image: none;
+  }
+}
+@media screen and (min-width: 576px){
+    .service-absolute{
+        width: auto;
+        
+    }
+  .service-dis{
+    display: none;
+  }
+  .service-div{
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    transform: translate(0);
+  }
+  .service-bg{
+    background-image: none;
+  }
+      
+}
+
+@media screen and (min-width: 768px){
+    .service-absolute{
+        width: 100%;
+        
+    }
+    .service-dis{
+        display: none;
+    }
+    .service-div{
+        width: 100%;
+        top: 0%;
+        left: 0%;
+        transform: translate(0);
+      }
+}
+
+@media screen and (min-width: 992px){
+    .service-dis{
+        display: block;
+    }
+    .service-div{
+        width: 80%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      
+}
+
+@media screen and (min-width: 1200px){
+    .service-div{
+        width: 60%;
+        padding-top: 250px;
+      }
+      .service-bg{
+        background-image: url("/assets/images/servicebg.png");
+      }
+         
+}
+
+@media screen and (min-width: 1400px){
+    .service-div{
+        padding-top: 110px;
+    }
+}
+
+.wave {
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;        /* Change to speed up or slow down */
+    animation-iteration-count: infinite;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+    100% { transform: rotate( 0.0deg) }
+  }
+  
+  
+  
+  
+  /* For demonstration purposes only: */
+
+
+
+
+
 
 
 
