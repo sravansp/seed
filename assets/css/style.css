@@ -4881,7 +4881,7 @@ ul.collection li {
 @media screen and (min-width: 1200px){
     .service-div{
         width: 60%;
-        padding-top: 250px;
+        padding-top: 350px;
       }
       .service-bg{
         background-image: url("/assets/images/servicebg.png");
@@ -4889,6 +4889,7 @@ ul.collection li {
       .service-footer{
         display: block;
       }
+     
          
 }
 
