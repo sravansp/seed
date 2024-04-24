@@ -4926,6 +4926,10 @@ ul.collection li {
       .service-btn{
         width: auto;
       }
+      .service-div3{
+        padding-top: 100px;
+        
+      }
 }
 
 @media screen and (min-width: 992px){
@@ -4947,6 +4951,7 @@ ul.collection li {
         
       }
       .service-div3{
+        padding-top: 400px;
         width: 80%;
         top: 50%;
         left: 50%;
@@ -4982,6 +4987,10 @@ ul.collection li {
       }
       .service-div2{
         width: 40%;
+      }
+      .service-div3{
+        padding-top: 300px;
+     
       }
      
          
