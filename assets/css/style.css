@@ -4806,8 +4806,17 @@ ul.collection li {
     font-size: 14px;
   }
 
+  .gray-border{
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    padding: 24px 20px;
+  }
+
+ 
+
 
 @media screen and (max-width: 576px){
+   
     .service-absolute{
         width: auto;
         box-shadow: none;
@@ -4914,6 +4923,11 @@ ul.collection li {
       .service-bg{
         background-image: url("/assets/images/servicebg.png");
         background-color: transparent;
+      }
+      .gray-border{
+        border-radius: 0px;
+        border: none;
+        padding: 0px;
       }
       
 }
