@@ -4737,12 +4737,20 @@ ul.collection li {
     /* justify-content: center;
     align-items: center; */
     gap: 25px;
+    box-shadow: 0px 0px 40px 0px rgba(0, 122, 108, 0.10);
 }
 .service-div{
     padding-top: 110px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
+    
+}
+.service-div2{
+    padding-top: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
     
 }
 
@@ -4777,9 +4785,25 @@ ul.collection li {
 
   .payment-icon{
     background-color: rgba(48, 213, 199, 0.20);
-    border-radius: 30px;
+    border-radius: 100px;
     display: flex;
-    
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .payment-btn{
+    border: 1px solid #007A6C;
+    border-radius: 6px;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #007A6C;
+    font-size: 14px;
   }
 
 
@@ -4793,6 +4817,12 @@ ul.collection li {
   }
   .service-div{
     padding-top: 200px;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    transform: translate(0);
+  }
+  .service-div2{
     width: 100%;
     top: 0%;
     left: 0%;
@@ -4823,6 +4853,12 @@ ul.collection li {
     left: 0%;
     transform: translate(0);
   }
+  .service-div2{
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    transform: translate(0);
+  }
   .service-bg{
     background-image: none;
     background-color: white;
@@ -4847,10 +4883,7 @@ ul.collection li {
     }
     .service-div{
         padding-top: 200px;
-        width: 100%;
-        top: 0%;
-        left: 0%;
-        transform: translate(0);
+        
       }
       .service-btn{
         width: auto;
@@ -4868,9 +4901,13 @@ ul.collection li {
         left: 50%;
         transform: translate(-50%, -50%);
       }
-      
-      
-
+      .service-div2{
+        width: 40%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        
+      }
       .service-bg{
         background-image: url("/assets/images/servicebg.png");
         background-color: transparent;
@@ -4889,6 +4926,9 @@ ul.collection li {
       .service-footer{
         display: block;
       }
+      .service-div2{
+        width: 40%;
+      }
      
          
 }
@@ -4897,6 +4937,9 @@ ul.collection li {
     .service-div{
         padding-top: 50px;
     }
+    .service-div2{
+        width: 40%;
+      }
 }
 
 .wave {
