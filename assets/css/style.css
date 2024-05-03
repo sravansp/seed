@@ -4770,6 +4770,8 @@ ul.collection li {
     padding: 10px;
     color: rgba(48, 213, 199, 1);
     font-size: 20px;
+    width: 38px;
+    height: 38px;
 }
 
 .service-btn{
