@@ -4863,7 +4863,7 @@ ul.collection li {
   }
   .service-footer{
     display: block;
-    bottom: -495px;
+    bottom: -445px;
   }
   .service-btn{
     width: 100%;
@@ -4994,9 +4994,7 @@ ul.collection li {
       .service-bg{
         background-image: url("/assets/images/servicebg.png");
       }
-      .service-footer{
-        display: block;
-      }
+
       .service-div2{
         width: 40%;
       }
