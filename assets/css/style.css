@@ -4790,6 +4790,7 @@ ul.collection li {
 
 .service-footer{
     display: block;
+    bottom: 0px;
   }
 
   .payment-icon{
@@ -4861,7 +4862,8 @@ ul.collection li {
     background-color: white;
   }
   .service-footer{
-    display: none;
+    display: block;
+    bottom: -495px;
   }
   .service-btn{
     width: 100%;
@@ -4909,6 +4911,7 @@ ul.collection li {
   .service-btn{
     width: 100%;
   }
+  
       
 }
 
@@ -4930,7 +4933,10 @@ ul.collection li {
       }
       .service-div3{
         padding-top: 100px;
-        
+      }
+      .service-footer{
+        display: block;
+        bottom: -340px;
       }
 }
 
@@ -4973,6 +4979,10 @@ ul.collection li {
         box-shadow: 0px 0px 40px 0px rgba(0, 122, 108, 0.10);
         
     }
+    .service-footer{
+        display: block;
+        bottom: -195px;
+      }
       
 }
 
@@ -4994,6 +5004,10 @@ ul.collection li {
         padding-top: 300px;
      
       }
+      .service-footer{
+        display: block;
+        bottom: -55px;
+      }
      
          
 }
@@ -5004,6 +5018,11 @@ ul.collection li {
     }
     .service-div2{
         width: 40%;
+      }
+
+      .service-footer{
+        display: block;
+        bottom: 0px;
       }
 }
 
