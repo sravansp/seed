@@ -4822,17 +4822,29 @@ ul.collection li {
     border: 1px solid rgba(0, 0, 0, 0.10);
     padding: 24px 20px;
   }
-
+.mobile-div{
+    width: calc(100% - 20%);
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
  
 
 
 @media screen and (max-width: 576px){
+    .mobile-div{
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
    
     .service-absolute{
         width: auto;
         box-shadow: none;
         
     }
+
   .service-dis{
     display: none;
   }
@@ -4874,6 +4886,12 @@ ul.collection li {
   }
 }
 @media screen and (min-width: 576px){
+
+    .mobile-div{
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
     .service-absolute{
         width: auto;
         box-shadow: none;
@@ -4983,6 +5001,14 @@ ul.collection li {
         display: block;
         bottom: -195px;
       } */
+
+      .mobile-div{
+        width: calc(100% - 20%);
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
       
 }
 
